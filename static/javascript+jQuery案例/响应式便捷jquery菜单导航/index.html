@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>  
+
+<head>
+
+    <meta charset="gb2312" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/flexinav.css" />
+    <link rel="stylesheet" href="css/scrollbars.css" />
+    <link rel="stylesheet" href="fonts/css/font-awesome.css">
+    
+    <title>灵活快速响应jquery导航 - 站长素材</title>
+
+    <script src='js/scripts.js'></script>
+    <script>
+        $(document).ready(function($){
+            $('#flexinav1').flexiNav({
+                flexinav_effect: 'flexinav_click', // Type of event to show the drop downs ('flexinav_hover' or 'flexinav_click')
+                flexinav_show_duration: 300, // Duration to fade in drop downs
+                flexinav_hide_duration: 200, // Duration to fade out drop downs
+                flexinav_show_delay: 200, // Delay before fading in/out drop downs
+                flexinav_trigger : false, // Button to toggle the menu bar (fixed version only)
+                flexinav_hide : false, // Hides the menu bar when the page loads (fixed version only)
+                flexinav_scrollbars: true, // Enables scrollbars within drop downs
+                flexinav_scrollbars_height: 360, // Height of drop downs that use scrollbars (unique value in pixels)
+                flexinav_responsive: true // Enables the responsive version of the menu
+            });
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+
+<div class="container">
+
+
+
+
+    <div id="flexinav1" class="flexinav flexinav_grey"><!-- BEGIN FLEXINAV -->
+
+
+
+        <div class="flexinav_wrapper"><!-- Flexinav Container -->
+
+
+
+            <ul class="flexinav_menu">
+
+
+
+                <li class="flexinav_collapse"><span><i class="fa fa-bars"></i>Navigation</span></li>
+
+
+                <li class="flexinav_logo"><a href="#"></a></li>
+
+
+
+            </ul>
+
+
+
+            <ul class="flexinav_menu flexinav_menu_right">
+
+                
+
+                <li><span><i class="fa fa-plus"></i>Fly-Outs</span>
+
+                    <div class="flexinav_ddown flexinav_ddown_fly_out flexinav_ddown_240">
+
+                        <ul class="dropdown_flyout flexinav_icons">
+
+                            <li class="flyout_heading">Marketplaces</li>
+                        
+                            <li><a href="#"><i class="fa fa-music"></i>Audiojungle</a></li>
+                            
+                            <li class="dropdown_parent"><span><i class="fa fa-code"></i>Codecanyon</span>
+
+                                <ul class="dropdown_flyout_level">
+
+                                    <li><a href="#">Javascript</a></li>
+                                    <li><a href="#">PHP Scripts</a></li>
+                                    <li><a href="#">Wordpress</a></li>
+                                    <li><a href="#">Plugins</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">HTML5</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    <li><a href="#">Apps</a></li>
+
+                                </ul>
+
+                            </li>
+                            
+                            <li class="dropdown_parent"><span><i class="fa fa-heart"></i>Themeforest</span>
+
+                                <ul class="dropdown_flyout_level">
+
+                                    <li><a href="#">Site Templates</a></li>
+                                    <li><a href="#">Wordpress</a></li>
+                                    <li><a href="#">CMS Themes</a></li>
+                                    <li><a href="#">eCommerce</a></li>
+                                    <li><a href="#">Blogging</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                    <li><a href="#">Forums</a></li>
+                                    <li><a href="#">PSD Templates</a></li>
+
+                                </ul>
+                                
+                            </li>
+                            
+                            <li><a href="#"><i class="fa fa-video-camera"></i>Videohive</a></li>
+                            <li><a href="#"><i class="fa fa-magic"></i>Graphicriver</a></li>
+                            <li><a href="#"><i class="fa fa-camera"></i>Photodune</a></li>
+                            <li class="last"><a href="#"><i class="fa fa-star"></i>3Docean</a></li>
+                            
+                        </ul>                       
+
+                    </div>
+
+                </li>
+
+
+                <li><span><i class="fa fa-arrows-v"></i>Scrollbars</span>
+
+                    <div class="flexinav_ddown_scroll flexinav_ddown flexinav_ddown_320">
+
+                        <div class="colrow">
+
+                            <div class="col12">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ipsa ab illum natus earum eum officia dolor ipsam sed vel adipisci sapiente voluptas placeat consequuntur reiciendis aut cupiditate id fuga.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, obcaecati, sit, laboriosam, laborum id ex eos veritatis aspernatur nihil corporis optio nobis totam aut aliquid et adipisci inventore. Est, sunt, sit modi cum inventore laudantium possimus rem maiores asperiores aliquid ipsum quod saepe non sapiente tempora ducimus dignissimos consectetur doloremque nostrum sed nulla. Assumenda, hic fuga repellat velit adipisci modi.</p>
+                                <img src="img/320x180.gif" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, perspiciatis nulla dolorum tenetur placeat corporis nesciunt. Porro, soluta, repellendus eius animi facere beatae minima velit numquam. Quod neque architecto repudiandae!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ipsum, vero, doloribus accusantium autem nisi voluptatum nobis natus perspiciatis animi amet soluta aliquam fugit hic velit quo dicta. Animi, dolor, at quibusdam quod quia atque.</p>
+                            </div>                            
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+                <li class="flexnav_mega"><span><i class="fa fa-bars"></i>Grid</span>
+
+                    <div class="flexinav_ddown flexinav_ddown_full">
+
+                        <div class="colrow">
+
+                            <div class="col12">
+                                <p class="coldemo">col12</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col11">
+                                <p class="coldemo">col11</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col10">
+                                <p class="coldemo">col10</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col9">
+                                <p class="coldemo">col9</p>
+                            </div>
+                            <div class="col3">
+                                <p class="coldemo">col3</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col8">
+                                <p class="coldemo">col8</p>
+                            </div>
+                            <div class="col4">
+                                <p class="coldemo">col4</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col7">
+                                <p class="coldemo">col7</p>
+                            </div>
+                            <div class="col5">
+                                <p class="coldemo">col5</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col6">
+                                <p class="coldemo">col6</p>
+                            </div>
+                            <div class="col6">
+                                <p class="coldemo">col6</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col4">
+                                <p class="coldemo">col4</p>
+                            </div>
+                            <div class="col4">
+                                <p class="coldemo">col4</p>
+                            </div>
+                            <div class="col4">
+                                <p class="coldemo">col4</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col3">
+                                <p class="coldemo">col3</p>
+                            </div>
+                            <div class="col3">
+                                <p class="coldemo">col3</p>
+                            </div>
+                            <div class="col3">
+                                <p class="coldemo">col3</p>
+                            </div>
+                            <div class="col3">
+                                <p class="coldemo">col3</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+                            <div class="col2">
+                                <p class="coldemo">col2</p>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+                            <div class="col1">
+                                <p class="coldemo">col1</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+                <li class="flexnav_mega"><span><i class="fa fa-list-ul"></i>List</span>
+
+                    <div class="flexinav_ddown flexinav_ddown_mega">
+
+                        <div class="colrow">
+
+                            <div class="col2">
+                                <h3>Marketplaces</h3>
+                                <ul>
+                                    <li><a href="#">Codecanyon</a></li>
+                                    <li><a href="#">Themeforest</a></li>
+                                    <li><a href="#">Graphicriver</a></li>
+                                    <li><a href="#">Videohive</a></li>
+                                    <li><a href="#">Audiojungle</a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <h3>Tutorials</h3>
+                                <ul>
+                                    <li><a href="#">Psdtuts+</a></li>
+                                    <li><a href="#">Nettuts+</a></li>
+                                    <li><a href="#">Vectorstuts+</a></li>
+                                    <li><a href="#">Webdesigntuts+</a></li>
+                                    <li><a href="#">WPtuts+</a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <h3>Freelancing</h3>
+                                <ul>
+                                    <li><a href="#">Microlancer</a></li>
+                                    <li><a href="#">Creaticca</a></li>
+                                    <li><a href="#">Rockable&nbsp;Press</a></li>
+                                    <li><a href="#">Envato</a></li>
+                                    <li><a href="#">FreelanceSwitch</a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <h3>Graphics</h3>
+                                <ul>
+                                    <li><a href="#">Graphicriver</a></li>
+                                    <li><a href="#">Videohive</a></li>
+                                    <li><a href="#">Audiojungle</a></li>
+                                    <li><a href="#">Codecanyon</a></li>
+                                    <li><a href="#">Themeforest</a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <h3>Learning</h3>
+                                <ul>
+                                    <li><a href="#">Vectorstuts+</a></li>
+                                    <li><a href="#">Webdesigntuts+</a></li>
+                                    <li><a href="#">WPtuts+</a></li>
+                                    <li><a href="#">Psdtuts+</a></li>
+                                    <li><a href="#">Nettuts+</a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <h3>Network</h3>
+                                <ul>
+                                    <li><a href="#">Rockable&nbsp;Press</a></li>
+                                    <li><a href="#">Envato</a></li>
+                                    <li><a href="#">FreelanceSwitch</a></li>
+                                    <li><a href="#">Microlancer</a></li>
+                                    <li><a href="#">Creaticca</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="colrow">
+
+                            <div class="col8">
+                                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, unde, deleniti est magnam deserunt quia quas impedit. Beatae, deserunt, dolores totam perferendis quam unde molestias a eveniet et quae quisquam minima enim vitae cumque laboriosam. Adipisci, deleniti, error, ratione, rem odio quo.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, unde ullam quia facere incidunt reprehenderit nobis! Similique, voluptatibus, quis amet eveniet deleniti soluta officia distinctio esse vel dolorum laborum nobis commodi nesciunt cupiditate nam.</p>
+                            </div>
+                            <div class="col4">
+                                <div class="video_container">
+                                    <iframe src="http://sc.chinaz.com/"></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+                <li><span><i class="fa fa-columns"></i>Texts</span>
+
+                    <div class="flexinav_ddown flexinav_ddown_640 flexinav_ddown_right">
+
+                        <div class="colrow">
+
+                            <div class="col8">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eaque corporis quod deserunt eligendi nisi quidem! Facere, earum, suscipit voluptates omnis modi quos quia eius officia quam ab iste vitae asperiores autem reiciendis fuga facilis quis excepturi reprehenderit quasi soluta accusantium deserunt quaerat culpa provident enim.</p>
+                                <h2>Lorem ipsum dolor sit</h2>
+                                <p>Tempora, delectus, incidunt voluptatum dignissimos doloribus exercitationem omnis tempore nostrum minima quo deleniti voluptate similique laborum repudiandae in qui et perferendis accusamus consequatur eaque optio esse explicabo inventore vel adipisci impedit rerum maxime aperiam officiis ?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aliquam, ea voluptas unde repudiandae natus dolorem repellat sint nobis nam labore voluptate nostrum sed quod quidem quibusdam eveniet error blanditiis nulla!</p>
+                            </div>                            
+                            <div class="col4">
+                                <p class="greybox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eaque corporis quod deserunt eligendi nisi quidem!</p>
+                                <ul class="flexinav_icons">
+                                    <li><a href="#"><i class="fa fa-gears"></i>Codecanyon</a></li>
+                                    <li><a href="#"><i class="fa fa-heart"></i>Themeforest</a></li>
+                                    <li><a href="#"><i class="fa fa-magic"></i>Graphicriver</a></li>
+                                    <li><a href="#"><i class="fa fa-video-camera"></i>Videohive</a></li>
+                                    <li><a href="#"><i class="fa fa-music"></i>Audiojungle</a></li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, labore dignissimos ut placeat ex dicta ad soluta asperiores cum sit quisquam.</p>                            
+                            </div>                            
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+            </ul><!-- Flexinav -->
+
+
+
+        </div><!-- Flexinav Container -->
+
+
+
+    </div><!-- END FLEXINAV -->
+
+
+</div>
+<script type="text/javascript">
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({'overflow':'visible'});
+        })
+</script>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+
+</div>
+</body>
+</html>

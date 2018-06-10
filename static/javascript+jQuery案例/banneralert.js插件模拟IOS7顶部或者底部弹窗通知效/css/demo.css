@@ -1,0 +1,172 @@
+/*这些CSS仅为demo页面，如无特殊需要请不要引入*/
+body{
+	font-family:"微软雅黑", "Microsoft Yahei";
+	margin:0;
+}
+h1{
+	margin:0;
+	font-weight:normal;
+	text-align:center;
+	color:#09C;
+	text-shadow:0px 0px 10px #06C;
+	font-size:48px;
+	padding-bottom:5px;
+	border-bottom:2px solid #CCC;
+}
+.section{
+	margin:5px;
+	border:1px solid #EEE;
+	border-radius:4px;
+}
+h3{
+	margin:2px;
+}
+button{
+	outline:none;
+	padding:7px;
+	color:#FFF;
+	font-family:inherit;
+	font-size:20px;
+	border-radius:4px;
+	background: #09C;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0099cc', endColorstr='#0033cc');
+	background: -webkit-gradient(linear, left top, left bottom, from(#09C), to(#03C));
+	background: -moz-linear-gradient(top, #09C, #03C);
+	border:none;
+	cursor:hand;
+	cursor:pointer;
+	margin:5px;
+	box-shadow:0px 2px 7px #000;
+}
+button:hover{
+	background: #0BC;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00bbcc', endColorstr='#0055cc');
+	background: -webkit-gradient(linear, left top, left bottom, from(#0BC), to(#05C));
+	background: -moz-linear-gradient(top, #0BC, #05C);
+}
+button:active{
+	background: #03C;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0033cc', endColorstr='#0099cc');
+	background: -webkit-gradient(linear, left top, left bottom, from(#03C), to(#09C));
+	background: -moz-linear-gradient(top, #03C, #09C);
+}
+pre{
+	font-family:"Courier New", Courier, monospace;
+	font-size:12px;
+	background:#EEE;
+	border:1px solid #999;
+	margin:5px;
+	margin-top:0;
+	padding:3px;
+	border-radius:4px;
+	white-space:pre-wrap;
+}
+hr{
+	height:0px;
+	border:none;
+	border-bottom:1px solid #EEE;
+	margin:5px;
+}
+table{
+	border:1px solid #999;
+	margin-top:5px;
+	border-radius:5px;
+}
+td{
+	border:1px solid #999;
+	padding:2px;
+	color:#222;
+}
+.note{
+	color:#666;
+	font-size:12px;
+	font-style:italic;
+	margin-left:5px;
+	margin-bottom:5px;
+}
+.togglea{
+	color:#363;
+	text-decoration:none;
+	cursor:hand;
+	cursor:pointer;
+	font-size:14px;
+	margin-left:5px;
+}
+.togglea:hover{
+	color:#3C3;
+}
+.topa{
+	color:#06C;
+	text-decoration:none;
+	cursor:hand;
+	cursor:pointer;
+	font-size:16px;
+	margin-right:5px;
+	margin-bottom:5px;
+	float:right;
+}
+.topa:hover{
+	color:#0CC;
+}
+ol{
+	margin:5px;
+}
+li{
+	margin-bottom:2px;
+}
+.smallpre{
+	font-family:"Courier New", Courier, monospace;
+	font-size:12px;
+	background:#EEE;
+	border:1px solid #999;
+	padding:0px 3px;
+	margin:0px 2px;
+	border-radius:4px;
+	color:#222;
+}
+	
+/*自定义样式*/
+.banneralert.mybannerstyle1{
+	background:#FFF;
+	background:rgba(255,255,255,.85);
+	border-bottom:1px solid #999;
+}
+.banneralert.mybannerstyle1 .bannertitlebar{
+	color:#333;
+}
+.banneralert.mybannerstyle1 .bannericon{
+	border-radius:50%;
+	border:1px solid #999;
+}
+.banneralert.mybannerstyle1 .bannercontent{
+	color:#333;
+}
+.banneralert.mybannerstyle1 .bannerhandle{
+	background:#333;
+	height:8px;
+	width:30px;
+	border-radius:50%;
+}
+
+.banneralert.mybannerstyle2{
+	background-color: #444;
+	background-color: rgba(68,68,68,.9);
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGA4A8QmQAwGjDAGNgGwSgwVAFVOAgV/1mwxAAAAAElFTkSuQmCC");
+}
+.banneralert.mybannerstyle2 .bannertitlebar{
+	color:#CCC;
+	text-align:center;
+	font-size:16px;
+}
+.banneralert.mybannerstyle2 .bannercontent{
+	color:#EEE;
+	text-align:center;
+	margin:5px auto;
+	font-size:14px;
+}
+.banneralert.mybannerstyle2 .bannerhandle{
+	background:none;
+	width:30px;
+	border:1px solid #999;
+}
+/* 代码整理：小白 www.mysite.com */

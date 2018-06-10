@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery模拟阿里云购买服务器页面时间定位选择效果</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<ul class="sliderBar clear" id="slider-index">
+		<li>
+			1
+			<div class="indexP">
+				<div>购买1个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+			
+		</li>
+		<li>
+			2
+			<div class="indexP">
+				<div>购买2个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			3
+			<div class="indexP">
+				<div>购买3个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			4
+			<div class="indexP">
+				<div>购买4个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			5
+			<div class="indexP">
+				<div>购买5个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			6
+			<div class="indexP">
+				<div>购买6个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			7
+			<div class="indexP">
+				<div>购买7个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			8
+			<div class="indexP">
+				<div>购买8个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			9
+			<div class="indexP">
+				<div>购买9个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			10
+			<div class="indexP">
+				<div>购买10个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			11
+			<div class="indexP">
+				<div>购买11个月</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			1年
+			<div class="indexP">
+				<div>购买1年</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			2年
+			<div class="indexP">
+				<div>购买2年</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+		<li>
+			3年
+			<div class="indexP">
+				<div>购买3年</div>
+				<div class="shanjiao-out"></div>
+				<div class="shanjiao-inner"></div>
+			</div>
+		</li>
+	</ul>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script>
+		var arOB = [];
+		var ULobj = $('#slider-index>li');
+		for(var i=0;i<ULobj.length;i++){
+			arOB.push(ULobj[i]);
+		}
+		function changeCS(ints){
+			for(var i=0;i<arOB.length;i++){
+				if( i <= ints ){
+					arOB[i].style.backgroundColor="#FCF8E3";
+				}else{
+					arOB[i].style.backgroundColor="#F2F2F2";
+				}
+				
+			}
+		}
+		$(function(){
+			$("#slider-index>li").each(function(){
+				$(this).click(function(){
+					$(this).children(".indexP").show();
+					$(this).siblings().children(".indexP").hide();
+					var number=$(this).index();
+					var $j=$("#slider-index>li").length;
+					changeCS(number);
+				})
+			})
+		})
+	</script>
+	<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+	<title>jquery分类展开折叠代码 - 站长素材</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>      
+    <style type="text/css">
+    *{padding:0;margin:0;outline:none;}
+    html{min-height:101%}
+    *html{background-image:url(about:blank);background-attachment:fixed;}
+    body{font-family:'MicroSoft Yahei',verdana,arial,tahoma;font-size:12px;color:#333;-webkit-text-size-adjust: none;}
+    div{margin:0 auto}
+    ul,ol,li {list-style:none}
+    a{text-decoration:none;word-wrap:break-word;outline:none;hide-focus:expression(this.hideFocus=true);transition:all 0.2s ease-in-out;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;}
+    a:hover{text-decoration:none;}
+    .lanmu-content{width:160px;overflow:hidden;}
+    .lanmu-content .listmore{display:block;text-align:center;height:25px;width:160px;border-top:0;background:#eee;color:#1594d1;font:normal 12px/25px Tahoma,Verdana;}
+    .lanmu-list{display:block;}
+    .lanmu-list dt{display:block;height:40px;background:#0066CC;font:bold 14px/40px "宋体"; color:#fff;padding-left:10px;}
+    .lanmu-list dd{padding-top:2px;}
+    .lanmu-list dd a{display:block;height:33px;background:#f9f9f9;border-bottom:1px solid #eee;border-top:2px solid #fff;border-left:2px solid #999;border-right:1px solid #eee;font:normal 12px/33px Georgia "宋体"; color:#adadad;padding-left:25px; line-height: 33px;}
+    .lanmu-list dd a:hover{padding-left:35px;}
+    .lanmu-list dd a:hover,.lanmu-list dd a.current{border-left:2px solid #1160ba;background-color:#f6f6f6;color:#1160ba;font-weight:bold;}
+
+    </style>
+	<div class="lanmu-content">
+	<dl class="lanmu-list">
+    	<dt>JS特效代码分类</dt>
+        <dd><a href='' class='current'  title="焦点幻灯">焦点幻灯</a></dd>
+        <dd><a href='' title="触屏特效">触屏特效</a></dd>
+        <dd><a href='' title="相册特效">相册特效</a></dd>
+        <dd><a href='' title="图片特效">图片特效</a></dd>
+        <dd><a href='' title="文字特效">文字特效</a></dd>
+        <dd><a href='' title="窗口图层">窗口图层</a></dd>
+        <dd><a href='' title="表格表单">表格表单</a></dd>
+        <dd><a href='' title="JSHTML5/CSS3">HTML5/CSS3</a></dd>
+        <dd><a href='' title="JS其他代码">其他代码</a></dd>    
+    </dl>
+    	<a class="listmore" style="display:none;" href="javascript:;">查看更多 ↓</a>
+    </div>
+<script type="text/javascript">
+    var LanMu = $(".lanmu-list");
+    var lanMuSun = LanMu.children('dd');
+    if((lanMuSun.size()) > 8){
+        LanMu.children("dd:gt(5)").hide();
+        $(".listmore").show();
+    }
+    $(".listmore").bind("click", function(){
+       if(!$(".listmore").hasClass('ListMoreOn')){
+           $(".listmore").addClass('ListMoreOn');
+           LanMu.children("dd:gt(5)").slideDown();
+            $(".listmore").html("折叠栏目 ↑")
+       }else{
+            $(".listmore").removeClass('ListMoreOn');
+            LanMu.children("dd:gt(5)").slideUp();
+            $(".listmore").html("查看更多 ↓");
+
+       }
+    })
+</script>
+
+<div style="text-align:center;clear:both"><br><br><br><br><br><br><br><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja-JP">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="Author" content="Bitmeister Inc.">
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.moatext-min.js"></script>
+        <script type="text/javascript"><!--
+            $(function(){
+                $(".moamix1").moatext({effects:["lens","wave"]});
+                $(".moamix1w").moatext({effects:["lens","wave"],parser:jQuery.fn.moatext.parser_byword});
+                $(".moamix2").moatext({effects:["lens","wave","opacity"]});
+                $(".moafunc").moatext({hover:[
+                    function(target){jQuery(target).css({
+                        color: "#FF0000",
+                        fontWeight: "bold"
+                    });},
+                    function(target){jQuery(target).css({
+                        color: "#000000",
+                        fontWeight: "normal"
+                    });}
+                ]});
+				$(".omikuji").css({opacity:"0.0"})
+						.eq(Math.floor(Math.random()*3))
+						.css({opacity:"1.0"})
+						.moatext({
+							effects:["opacity"],
+							oneway:true,
+							values:{opacity:{base:"0.0"}}
+							});
+				$(".moaoptions").moatext({
+					effects: ["lens","wave","opacity"],
+					values:{
+						"opacity": {
+							"base": "1.0",
+							"enter": "0.1",
+							"leave": "1.0"
+						},
+						"wave": {
+							"enter": ["-50px","20px"]
+						}
+					},
+					duration:2000,
+					easing:"swing"
+				});
+            	$(".smiley").moatext({
+			    	effects:["lens","wave"],
+				    action_type: "hover"
+				});
+            });
+        // -->  
+        </script>
+		<title>Demo page of MOA Text</title>
+	</head>
+	<body>
+<h1><a name="top">Demo page of <a href="http://sourceforge.jp/projects/moatext/">MOA Text</a></a></h1>
+<h5 align="right">Copyright (C) 2009 <a href="http://www.bitmeister.jp" target="_blank">Bitmeister Inc.</a><br>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</h5>
+<hr>
+<div>
+<h3>Demo Index</h3>
+<ul>
+<li><a href="#lens">Lens</a></li>
+<li><a href="#wave">Wave</a></li>
+<li><a href="#opacity">Opacity</a></li>
+<li><a href="#lensandwave">Lens and Wave</a></li>
+<li><a href="#lensandwave2">Lens and Wave(animate by word)</a></li>
+<li><a href="#lenswaveandopacity">Lens, Wave and Opacity</a></li>
+<li><a href="#originalfunctions">Original functions</a></li>
+<li><a href="#omikuji">Omikuji</a></li>
+<li><a href="#greeting">Greeting</a></li>
+<li><a href="#smiley">Japanese Smiley</a></li>
+</ul>
+</div>
+<h2><a name="lens">Lens</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;div class="moatext_lens"&gt;
+I have a dream ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moatext_lens">
+I have a dream that one day this nation will rise up and live out the true meaning of its creed. "We hold these truths to be self-evident: that all men are created equal." 
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="wave">Wave</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;div class="moatext_wave"&gt;
+I have a dream ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moatext_wave">
+I have a dream that one day out in the red hills of Georgia the sons of former slaves and the sons of former slave owners will be able to sit down together at the table of brotherhood. 
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="opacity">Opacity</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;div class="moatext_opacity"&gt;
+I have a dream ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moatext_opacity">
+I have a dream that one day even the state of Mississippi, a state sweltering with the heat of oppression, will be transformed into an oasis of freedom and justice. 
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="lensandwave">Lens and Wave</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+    $(".moamix1").moatext({effects:["lens","wave"]});
+  });
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="moamix1"&gt;
+I have a dream ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moamix1">
+I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by their character. 
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="lensandwave2">Lens and Wave(animate by word)</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+    $(".moamix1w").moatext({effects:["lens","wave"],parser:jQuery.fn.moatext.parser_byword});
+  });
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="moamix1w"&gt;
+I have a dream ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moamix1w">
+I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by their character. 
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="lenswaveandopacity">Lens, Wave and Opacity</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+    $(".moamix2").moatext({effects:["lens","wave","opacity"]});
+  });
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="moamix2"&gt;
+もちろん日本語でも大丈夫です。No problem about Japanese language.
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moamix2">
+もちろん日本語でも大丈夫です。No problem about Japanese language.
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="originalfunctions">Original functions</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+    $(".moafunc").moatext({hover:[
+        function(){$(this).css({
+            color: "#FF0000",
+            fontWeight: "bold"
+        });},
+        function(){$(this).css({
+            color: "#000000",
+            fontWeight: "normal"
+        });}
+    ]});
+  });
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="moafunc"&gt;
+Please visit our site ...
+&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moafunc">
+Please visit out site <a href="http://labs.bitmeister.jp/moamoa/">http://labs.bitmeister.jp/moamoa/</a>
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="omikuji">Omikuji</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+	$(".omikuji").css({opacity:"0.0"})
+			.eq(Math.floor(Math.random()*3))
+			.css({opacity:"1.0"})
+			.moatext({
+				effects:["opacity"],
+				oneway:true,
+				values:{opacity:{base:"0.0"}}
+				});
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="omikuji"&gt;大吉 Great blessing!&lt;/div&gt;
+&lt;div class="omikuji"&gt;吉 Blessing!&lt;/div&gt;
+&lt;div class="omikuji"&gt;凶 Curse!&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px">
+Omikuji<br>
+<div class="omikuji">大吉 Great blessing!</div>
+<div class="omikuji">吉 Blessing!</div>
+<div class="omikuji">凶 Curse!</div>
+</div>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="greeting">Greeting</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+	$(".moaoptions").moatext({
+		effects: ["lens","wave","opacity"],
+		values:{
+			"opacity": {
+				"base": "1.0",
+				"enter": "0.1",
+				"leave": "1.0"
+			},
+			"wave": {
+				"enter": ["-50px","20px"]
+			}
+		},
+		duration:2000,
+		easing:"swing"
+	});
+  });
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="moaoptions">Hello　こんにちは...&lt;/div&gt;
+
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px" class="moaoptions">
+<p>
+Hello こんにちは 你好　안녕하세요 สวัสดี Merhaba Здравствуйте Ciao Bonjour Hola Buenas tardes Guten tag Hoi Hej Päivää</p>
+</div>
+<p>These greeting messages in various languages are quoted from <a href="http://suemari.com/hello/hello.html" target="_blank">here</a></p>
+<p align="right"><a href="#top">back to TOP</a></p>
+<h2><a name="smiley">Japanese smiley</a></h2>
+<h3>Source</h3>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+&lt;script type="text/javascript" language="JavaScript"&gt;&lt;!--
+  $(function(){
+	$(".smiley").moatext({
+				effects:["lens","wave"],
+				action_type: "hover"
+				});
+--&gt;
+&lt;/script&gt;
+
+&lt;div class="smiley"&gt;(^_^)(^○^)(^-^)(^_-)-☆(^-^)&lt;/div&gt;
+</pre>
+<h3>Try it</h3>
+<div style="border: 1px solid #000; padding: 5px 5px 5px 5px">
+<div class="smiley">(^_^)(^○^)(^-^)(^_-)-☆(^-^)</div>
+</div>
+<p>These smileys are quoted from <a href="http://ja.wikipedia.org/wiki/%E9%A1%94%E6%96%87%E5%AD%97" target="_blank">Wikipedia</a></p>
+<p align="right"><a href="#top">back to TOP</a></p>
+<hr>
+<p align="right">Copyright (C) 2009 <a href="http://www.bitmeister.jp" target="_blank">Bitmeister Inc.</a><br>
+</p>
+	</body>
+</html>

@@ -1,0 +1,767 @@
+﻿@charset "utf-8";
+/* 代码整理：小白 www.mysite.com */
+* {
+	padding:0px;
+	margin:0px;
+	list-style:none
+}
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, tr, td, th, dl, dd, dt {
+	margin:0;
+	padding:0;
+	border:0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:14px;
+}
+.floatL {
+	float:left
+}
+.floatR {
+	float:right
+}
+.blnk1 {
+	height:5px;
+	display:block;
+}
+.blnk2 {
+	height:10px;
+	display:block;
+}
+.blnk3 {
+	height:15px;
+	display:block;
+}
+.blnk4 {
+	height:20px;
+	display:block;
+}
+label {
+	float:left;
+	margin-top:2px;
+	_margin-top:4px;
+}
+.inputradio {
+	float:left;
+*margin:-1px 0;
+	margin:6px 5px 0 0px;
+	height:24px;
+	line-height:24px;
+	cursor:pointer
+}
+body {
+	color:#333;
+	font-size:12px;
+	font-family:"SimSun", "Arial Narrow";
+}
+.wrap {
+	width:100%;
+	clear:both;
+}
+select, input, img, select {
+	vertical-align:middle;
+}
+a {
+	text-decoration:none;
+	color:#145EA9
+}
+a:hover {
+	color:#ec9205;
+	text-decoration:underline
+}
+.clearit, .clearb {
+	clear:both;
+	font-size:0;
+	width:0;
+	height:0;
+	line-height:0;
+	visibility:hidden;
+	overflow:hidden;
+}
+.field-validation-error {
+	color:red;
+}
+.none {
+	display:none
+}
+/*nav*/
+
+.nav{  height:36px;  position:relative; *z-index:1000; width:960px; margin:0 auto; background:#03C}
+
+*+html .nav{margin-top:2px; margin-bottom:15px;}
+
+.nav .tc{ display:none;}
+
+.home01{ display:block;background:url(../images/home01.jpg) no-repeat 0 0px; width:18px; height:16px; position:absolute; left:175px; top:7px}
+
+.home01:hover{background:url(../images/home01_h.jpg) no-repeat 0 0px;}
+
+.navli12{ display:none!important;}
+
+.sy1_ul li.home02{ width:50px; float:left; line-height:30px;}
+
+.sy1_ul li.home02 a{ color:#eee; display:block; padding-left:15px; font-size:14px;}
+
+.sy1_ul li.home02 a:hover{color:#FFF; text-decoration:none}
+
+.sy1_ul{font-size:12px; line-height:29px;height:42px; margin-top:12px; *margin:12px 0 12px 0; _margin:15px 0 0 0; position:relative; z-index:1111;}
+
+.sy1_li{width:82px; float:left; display:inline;}
+
+.sy1_ul li a.sy1_tit{ color:#FFF}
+
+.sy1_ul li a:hover{color:#145EA9;}
+
+.sy1_ul li.sy1_li{ float:left;  z-index:10000; line-height:25px;}
+
+.sy1_ul li.sy1_li .sy1_tit{ line-height:30px; font-size:14px; display:block; text-align:center}
+
+.sy2_ul{position:absolute; left:0; top:38px; z-index:1112; display:none;border:#d7dadc solid 1px; border-top:none; padding:20px 5px;/*background:#fff url(../images/bg_sy2_ul.jpg) repeat-x; */ background:#fff;width:948px;  text-align:left}
+
+.sy2_li{float:left;color:#fff; line-height:27px; font-size:12px; text-align:left; margin:0 5px;_margin-left:2px; position:relative; width:100px;}
+
+.sy2_tit{ padding:0 0 12px 10px; overflow:hidden}
+
+.sy2_tit:hover{ color:#ec9205!important}
+
+.sy1_ul .sy1_li .sy2_li_h{ border-left:solid 1px #014c6c;border-top:solid 1px #014c6c;border-bottom:solid 1px #014c6c!important; display:block; z-index:2000; }
+
+.sy1_ul .sy1_li .sy2_li_h a{color:#333!important}
+
+.sy1_ul .sy1_li .sy2_li_h a:hover{ color:#ec9205!important;}
+
+.bod_1{ border-bottom:solid 1px #E1F5FD; border-left:solid 1px #fff; border-top:solid 1px #fff}
+
+.sy3_ul{display:none; position:absolute; left:85px; width:110px; color:#cdf892; line-height:24px; border:solid 1px #0a8870; border-left:none; background:#FFFFFF; top:-1px; z-index:9999;  background:url(../images/bg_1.jpg)  #fff no-repeat 0 2px; padding:0 10px;}
+
+.sy3_li{ height:25px; line-height:25px; overflow:hidden;text-align:left; border-bottom:solid 1px #E1F5FD; width:100px;}
+
+.sy3_tit { color:#333!important;}
+
+.sy3_tit:hover{color:#ec9205!important}
+
+
+
+/*科室与医生*/
+
+.menu{ padding:5px 0 5px 10px; overflow:hidden; height:1%;}
+
+.menu li{ width:177px; margin-right:10px; _margin-right:5px; height:25px; float:left; overflow:hidden; display:inline}
+
+.navli2 .sy2_ul h3{ text-align:left; border-bottom:#CCC solid 1px; width:918px; margin-left:14px; margin-top:-10px}
+
+.menu li a{ color:#333; font-weight:normal}
+
+.menu li a:hover{ color:#ec9205}
+
+.menu li img{ padding-left:5px;}
+
+/*医生 20121231wsq*/
+
+.doctor_boss{background:#F5F5F5;float: left;margin: 10px 0;padding: 10px;width: 322px; text-align:left!important; font-weight:normal!important}
+
+.doctor_boss img {float: left;width: 125px;border:#ccc solid 1px;}
+
+.doctor_boss img:hover{ border-color:#F93}
+
+.doctor_boss h2{background:#044f6f;color:#FFF;float: right;font: bold 16px/27px "宋体";height: 27px;padding-left: 10px;width: 180px;}
+
+.doctor_boss h2 span {font-size: 14px;}
+
+.doctor_boss h2 a {color: #FFF;}
+
+.doctor_boss h2 a:hover{ color:#fff}
+
+.doctor_titie{background: url(../images/head_tit.jpg) repeat-x center bottom;border: 1px solid #E8E8E8;height: 32px;line-height: 32px;padding-left: 8px; margin-top:10px!important;}
+
+.doctor_titie a{ color:#333!important; font-size:14px; font-weight:bold; text-decoration:none}
+
+.doctor_titie a:hover{ color:#ec9205!important}
+
+.doctor_boss p {float: right;font-size: 14px;line-height: 24px;width: 180px;}
+
+.doctor_boss p span {color: #145EA9;}
+
+.doctor_listBoss{float: right;width:600px;margin-top:15px;position:relative;}
+
+.doctor_top_right1 {margin: 10px 0;text-align:left!important; font-weight:normal!important; height:166px;overflow:hidden;}
+
+.doctor_listBoss .doc_list1 img {float: left;height: 102px;margin: 0px 5px 0 0;width: 75px; border:#ccc solid 1px; padding:2px}
+
+.doctor_listBoss .doc_list1 img:hover{ border-color:#F93}
+
+.doctor_listBoss .doc_list1 h3 {line-height: 30px;margin: 0 10px 0 0; border:none!important; width:100%}
+
+.doctor_listBoss .doc_list1 h3 a img {border:none;height: 15px;margin: 5px;vertical-align: middle;width: 17px;}
+
+.doctor_listBoss .doc_list1 .doc_cont1 {float: left;margin: 4px 0;padding-bottom: 10px;}
+
+.doctor_listBoss .doc_list1 .doc_cont1 strong {color: #145EA9;display: block;height: 30px;line-height: 30px;}
+
+.doctor_listBoss .doc_list1 .doc_cont1 strong a{color: #145EA9!important;}
+
+.doctor_listBoss .doc_list1 .doc_cont1 strong a:hover{color:#ec9205;}
+
+.doctor_listBoss .doc_list1 .doc_cont1 p {line-height: 20px;}
+
+.doc_list1 .doc_cont1 span {color: #145EA9!important;}
+
+.doc_list1 dd{ float:left; width:58px; font-size:12px; padding-right:2px; height:34px; line-height:34px;}
+
+.doc_list1 dd a{ color:#145EA9!important}
+
+.doc_list1 dd a:hover{ color:#ec9205}
+
+.doc_list1 dd a.Ahover{ background:#ec9205; color:#FFF}
+
+.doc_list1{height:336px}
+
+.doc_list1 .doc_cont1{ display:none; position:absolute; top:30px; right:10px; width:280px; height:107px; border:#ccc solid 1px; padding:5px; background:#FFF; z-index:20; font-size:12px;}
+
+
+
+.sy1_li_bg{background:url(../images/nav_bgq.jpg) no-repeat 0 0px; height:41px!important; display:block; text-align:center; }
+
+.sy1_li_bg a.sy1_tit {color:#333!important; font-weight:bold;}
+
+.sy1_li_bg a.sy1_tit:hover{color:#333!important; text-decoration:none}
+
+.sy1_ul li a.sy2_tit{ color:#333; font-size:12px;}
+
+.sy1_ul li a.sy1_tit:hover{ color:#333!important;}
+
+.navli3 li a.sy2_tit{font-weight:100}
+
+.navli5 li a.sy2_tit{font-weight:100}
+
+
+
+
+
+
+
+/*组织结构  科室 */
+
+.tab_title{ overflow:hidden; height:1%;}
+
+/*选项卡*/
+
+.tab_title1{ background: url(../images/Bg_tab_title.jpg) repeat-x left bottom; height:38px; line-height:38px; padding-left:20px}
+
+.tab_title li { cursor: pointer; float: left; margin-left:15px; display:inline; width:93px;  height:38px; line-height:38px; text-align:center; font-size:14px; }
+
+.tab_title li a { color: #333; font-size:14px; font-weight:bold; float: none; }
+
+.tab_title li span { font-size: 14px; font-weight:bold; }
+
+.tab_title li span a { color: #41920F; }
+
+.tab_title li.sy_keshihover { background: url(../images/ks_an.jpg) no-repeat; display:block; color:#004F9F; width:102px!important;  }
+
+.keshi_content { border:1px solid #d6d6d6; width:480px; clear:both; overflow:hidden; padding:8px 0px; }
+
+.tab_title01 li.hover02 { background: url(../images/tabimg02.jpg) no-repeat  0 0 ; color:#333; display: inline; line-height:30px; height:30px; font-weight:bold; }
+
+.tab_title01 li.hover02 a { color:#333!important; }
+
+.tab_title01 li { float: left; line-height: 30px; height: 30px; margin-left:2px; display:inline; margin-right: 10px; text-align: center; width: 87px; cursor:pointer;}
+
+
+
+
+
+/*就医指南*/
+
+.left_nav_1{width:155px; float:left; margin-right:5px; margin-left:6px;_margin-left:3px; _z-index:1001; margin-top:47px}
+
+.tz_box{border:solid 2px #61b486; border-top:none; z-index:1002}
+
+.left_nav_1Tit{ height:40px; width:155px;  font-size:14px; font-weight:bold;line-height:40px; color:#fff;}
+
+.tz_box{ width:151px; background:url(../images/bg_left_nav_1.png) top left repeat-y; line-height:30px;}
+
+.tz_box li{background:#fafff4 url(../images/jiantoui1.jpg) no-repeat 120px 10px;}
+
+.tz_box li a{border-bottom:#e5dec3 solid 1px;  font-size:14px;padding:0 0 0 15px; display:block; margin:0 10px; color:#333333; height:28px; line-height:28px}
+
+.tz_box li a:hover{ color:#333; background:#d2f9bc; display:block; border:none; margin:0px 10px; border-bottom:#fafff4 solid 1px; text-decoration:none; top:-1px; position:relative; height:27px; line-height:27px;}
+
+
+
+
+
+/*20121220wsq*/
+
+.sy2_ul .sy2_inside{ width:200px; float:left}
+
+.sy2_ul .sy2_inside li{ float:left; width:100px}
+
+.sy2_ul .sy2_inside li .sy3_ul{ width:95px}
+
+.sy2_ul .sy2_inside li .sy3_ul .sy2_inside{ width:95px}
+
+.sy2_ul .sy2_inside li .sy3_ul li{ width:89px;}
+
+.nav2_cent_div{ width:435px;border-left:1px solid #DDD;border-right:1px solid #DDD; float:left}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li{ float:left; padding:0 12px; width:180px;_padding:0 8px; overflow:hidden; position:relative}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li p{ line-height:20px; font-size:12px; font-weight:normal}
+
+.sy1_ul li .sy2_ul .nav2_cent_div h4{ font-size:14px; line-height:30px;}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li h4 a{color:#145EA9; height:auto; width:auto; border:none}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li h4 a:hover{ color:#ec9205}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li img{ width:180px}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li a{width:180px; height:103px; display:block; overflow:hidden; border:#d6d6d6 solid 1px}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li a:hover{ border-color:#F93}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li p a{ display:none}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li h2 a{ color:#333; border:none; width:auto; height:auto; display:block; margin-top:5px; line-height:30px; font-size:12px; font-weight:normal}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li h2 a:hover{ color:#ec9205}
+
+.nav2_cent_img, .nav2_cent_img0{ float:left; padding-left:18px; width:282px; text-align:left}
+
+.nav2_cent_img img, .nav2_cent_img0 img{ width:280px;border:#d6d6d6 solid 1px}
+
+.nav2_cent_img img, .nav2_cent_img0 img:hover{border-color:#F93}
+
+.nav2_cent_img h2, .nav2_cent_img0 h2{ margin-top:5px; font-size:12px}
+
+.nav2_cent_img h2 a, .nav2_cent_img0 h2 a{ color:#333; font-weight:normal}
+
+.nav2_cent_img h2 a:hover, .nav2_cent_img0 h2 a:hover{ color:#ec9205}
+
+.navli2 .sy2_ul{ float:left}
+
+.sy2_ul li a:hover{ color:#EC9205!important;}
+
+/*导航就医指南*/
+
+.navli3 .sy2_ul .sy2_inside li{ float:left; width:89px; margin-left:0px}
+
+.nav2_cent_img0 h4{ text-align:left; line-height:30px;}
+
+.nav2_cent_img0 h4 a{ color:#145EA9; text-decoration:none}
+
+.nav2_cent_img0 h4 a:hover{ color:#ec9205}
+
+.nav2_cent_img0 p,.nav2_cent_div p{ font-weight:normal; font-size:12px; line-height:20px; text-align:left}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li p a.a_yuyue {
+
+    background: url(../images/show_box_bu.jpg);
+
+    color: #FFFFFF;
+
+    display: block;
+
+    float: left;
+
+    height: 22px;
+
+    line-height: 22px;
+
+    margin: 5px;
+
+    text-align: center;
+
+    width: 72px;
+
+	border:none;
+
+}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li p a.a_yuyue:hover {
+
+    background: url(../images/show_box_bun.jpg);
+
+    color: #FFFFFF;!important
+
+}
+
+
+
+
+
+/*医院概况*/
+
+.navli5 .sy2_ul .sy2_inside li{ float:left; width:89px; margin-left:0px}
+
+/*特色医疗*/
+
+.navli3 .nav2_cent_div li a{ color:#333!important;}
+
+.nav2_tese_div{ border-left:1px solid #ddd; border-right:1px solid #ddd; width:300px; float:left;}
+
+.nav2_tese_div p{
+
+	background: url(../images/btn_bg.jpg) no-repeat scroll 0 0 transparent;
+
+    border: 1px solid #DCCFAC;
+
+    height: 137px;
+
+    width: 231px;
+
+	margin:0 auto;
+
+}
+
+.nav2_tese_div p a{background: url(../images/button_1.jpg) no-repeat scroll 0 0 transparent;
+
+    color: #FFFFFF!important;
+
+    display: block;
+
+    height: 24px;
+
+    left: 140px;
+
+    line-height: 24px;
+
+    position: relative;
+
+    text-align: center;
+
+    top: 100px;
+
+    width: 79px;}
+
+.nav2_tese_img{ float:left; width:738px; overflow:hidden}
+
+.nav2_tese_img dl dt{ width:185px; padding:0 20px; float:left;  border-left:1px solid #ddd;}
+
+.nav2_tese_img dl dd{ width:210px; padding:0 20px; float:left; border-left:1px solid #ddd; overflow:hidden; display:inline}
+
+.nav2_tese_img dl dt ul li{  margin-left:0!important; background:url(../images/ico008.jpg) left 10px no-repeat; padding-left:10px; line-height:25px; font-size:12px; font-weight:normal; }
+
+.nav2_tese_img dl dd ul li{  margin-left:0!important; background:url(../images/ico008.jpg) left 10px no-repeat; float:left; padding-left:10px; line-height:25px; height:25px; overflow:hidden; font-size:12px; font-weight:normal; width:95px!important}
+
+.nav2_tese_img ul li a{ color:#333!important;}
+
+
+
+/*医院文化*/
+
+.nav2_yywh_img{ border-left:1px solid #ddd; border-right:1px solid #ddd; width:300px; float:left;}
+
+.nav2_yywh_img a img{ width:300px; height:150px;}
+
+.navli6 .sy2_ul .sy2_inside{ width:250px;}
+
+.nav2_yywh_div{ width:370px; float:left;}
+
+.nav2_yywh_div h2{ padding-left:30px;}
+
+.nav2_yywh_div ul li{ width:150px; float:left; padding-left:30px;}
+
+
+
+/*工作动态*/
+
+.navli7 .sy2_ul .sy2_inside{ width:250px;}
+
+.nav2_gzdt_img{ width:360px; float:left;border-left:1px solid #ddd; border-right:1px solid #ddd; }
+
+.nav2_gzdt_img .titleSt1{ line-height:normal!important; margin-bottom:10px; padding:0 15px!important;}
+
+.nav2_gzdt_img a img{ width:150px; height:120px;}
+
+.nav2_gzdt_img ul li{ width:150px; float:left; margin-left:20px; display:inline;}
+
+.nav2_gzdt_img ul li a{ display:block; text-align:center!important;}
+
+.nav2_gzdt_img ul li a span{ display:none;}
+
+.nav2_gztt_div{ width:270px; float:left; padding-left:20px;}
+
+.nav2_gztt_div .titleSt1{line-height:normal!important; margin-bottom:15px; padding:0!important;}
+
+.nav2_gztt_div ul li{margin-left:0!important; background:url(../images/ico008.jpg) left 10px no-repeat;  padding-left:10px; line-height:25px; font-size:12px; font-weight:normal;}
+
+
+
+/*科学研究*/
+
+.navli8 .sy2_ul .sy2_inside{ width:250px;}
+
+.nav2_kxyj_img{ width:450px; float:left;border-left:1px solid #ddd; border-right:1px solid #ddd; }
+
+.nav2_kxyj_img .titleSt1{ line-height:normal!important; margin-bottom:10px; padding:0 20px!important;}
+
+.nav2_kxyj_img a img{ width:194px; height:150px;}
+
+.nav2_kxyj_img ul li{ width:195px; float:left; margin-left:20px; display:inline;}
+
+.nav2_kxyj_img ul li a{ display:block; text-align:center!important;}
+
+.nav2_kxyj_img ul li a span{ display:none;}
+
+.nav2_kxyj_div{ width:200px; float:left; padding-left:20px;}
+
+.nav2_kxyj_div .titleSt1{line-height:normal!important; margin-bottom:15px; padding:0!important;}
+
+.nav2_kxyj_div ul li{margin-left:0!important; background:url(../images/ico008.jpg) left 10px no-repeat; padding-left:10px; line-height:25px; font-size:12px; font-weight:normal; height:25px; overflow:hidden}
+
+
+
+/*在线服务*/
+
+/*化验单查询*/
+
+.nav_cx{border-left: 1px solid #DDDDDD;
+
+    float: left;
+
+    min-height: 180px;
+
+    padding: 0 20px;
+
+    width: 205px;}
+
+.nav_cx_form h4{ line-height:30px; text-align:left;}
+
+.nav_cx_form tr{ height:40px;}
+
+.nav_cx_form h4 a{ color:#333;}
+
+.nav_cx_txt{ border:1px solid #7F9EBA; height:19px; line-height:19px; width:150px;}
+
+.nav_cx_btn{display:block; float:left; width:56px; text-align:center; margin-right:10px; line-height:23px; font-weight:normal; font-size:12px; height:23px;background: url(../images/searchbtn1.jpg); color:#fff!important; text-decoration:none}
+
+.nav_cx_btn:hover{color:#FFF;background: url(../images/searchbtn2.jpg)}
+
+
+
+.nav2_cent_div1{ padding:0 20px; border-left:#ddd solid 1px;float:left; min-height:180px; width:205px}
+
+.nav2_cent_div1 h4{ text-align:left; line-height:30px;}
+
+.nav2_cent_div1 h4 a{ color:#145EA9; text-decoration:none}
+
+.nav2_cent_div1 h4 a:hover{ color:#ec9205}
+
+.nav2_cent_div1 .main_right_zixun{ width:182px; border:none; background:none; padding:0}
+
+.nav2_cent_div1 .main_right_zixun .searchinput{ width:202px; border:1px solid #D2D2D2; height:80px}
+
+.nav2_cent_div1 .main_right_zixun .searchbtn02{ margin-top:10px; background:url(../images/btnbg.jpg); border:none; height:34px; cursor:pointer; width:129px; float:left; color:#FFF}
+
+.nav2_cent_div1 .main_right_zixun .searchbtn02:hover{background:url(../images/btnbg_h.jpg); }
+
+.nav2_cent_div1 p.myd_tit{ line-height:28px; font-size:12px; font-weight:normal;color:#145EA9}
+
+.nav2_cent_div1 .dc_p {color: #333333;margin-bottom: 0px; font-weight:normal; text-align:left; line-height:22px; font-size:12px}
+
+.inp_p{ padding:5px 0 25px 0}
+
+.inp_p a{ display:block; float:left; width:56px; text-align:center; margin-right:10px; line-height:23px; font-weight:normal; font-size:12px; height:23px;background: url(../images/searchbtn1.jpg); color:#fff!important; text-decoration:none}
+
+.inp_p a:hover{ color:#FFF;background: url(../images/searchbtn2.jpg)}
+
+.xinxiang_nav p.youxiang_p{background: url(../images/img2.jpg) left center no-repeat; padding-left:60px; font-weight:normal; line-height:21px; text-align:left; text-indent:2EM; font-size:12px;padding-bottom:20px}
+
+.xinxiang_nav .inp_p{ text-indent:0; margin-top:2px}
+
+
+
+.linchang{ width:227px;overflow:hidden; line-height:25px; margin-top:5px}
+
+.linchang li{ width:40%!important; float:left; font-weight:normal!important; font-size:12px; padding-left:7px;background:url(../images/ico008.jpg) left 10px no-repeat; }
+
+.linchang li a{ color:#444!important;}
+
+.linchang li a:hover{ color:#ec9205}
+
+
+
+/*健康教育*/
+
+.jk_div01{ width:210px; padding:0 15px; float:left;  border-left:1px solid #ddd;}
+
+.jk_div01 h4{ margin-bottom:10px;}
+
+.nav_agly li{float:left; margin-left:0!important; background:url(../images/ico008.jpg) left center no-repeat; padding-left:10px; line-height:25px; font-size:12px; font-weight:normal; width:90px!important; height:25px; overflow:hidden}
+
+.nav_agly li a{padding:0; color:#555;}
+
+.bodn{ border-left:none!important;}
+
+.w215{ width:215px; height:185px; padding:0 10px; float:left; border-left:1px solid #ddd;overflow:hidden}
+
+.w215 h4{ margin-bottom:10px;}
+
+.jk_div02{ width:200px; padding:0 10px; float:left; border-left:1px solid #ddd;overflow:hidden}
+
+.jk_div02 h4{ margin-bottom:10px;}
+
+.jk_div02 li a img{ width:180px; height:134px;}
+
+.jk_div02 li{float: left;
+
+    overflow: hidden;
+
+    padding: 0 12px;
+
+    position: relative;
+
+    width: 200px;}
+
+.jk_div02 li a.video_btn{background: url("../images/videoico.png") no-repeat scroll 0 0 transparent;
+
+    height: 34px;
+
+    left: 82px;
+
+    position: absolute;
+
+    top: 47px;
+
+    width: 44px;
+
+	border:none;}
+
+.jk_div02 li a.video_btn:hover{ background: url("../images/videoico_h.png") no-repeat scroll 0 0 transparent;}
+
+.jk_div03{ width:270px; float:left; padding-left:15px; text-align:left; border-left:1px solid #ddd;}
+
+.jk_div03 li{float:left; margin-left:0!important; background:url(../images/ico008.jpg) left center no-repeat; padding-left:10px; line-height:25px; font-size:12px; font-weight:normal; width:121px!important}
+
+.jk_div03 li a{ padding:0; color:#555; }
+
+.navli4 .sy2_ul .sy2_inside{ width:130px!important;}
+
+.navli2 .sy2_ul .sy2_inside{ width:210px!important; margin-top:5px;}
+
+.navli2 .sy2_ul .sy2_inside li{ width:90px!important;}
+
+/*纪检监察*/
+
+.navli11 .sy2_ul .sy2_inside li{ width:88px;}
+
+
+
+
+
+.nav2_cent_img li{ float:left; margin-left:0!important; background:url(../images/ico008.jpg) left center no-repeat; padding-left:10px; line-height:25px; font-size:12px; font-weight:normal; width:121px!important}
+
+.nav2_cent_img li a{ padding:0; color:#555;}
+
+
+
+.sy1_ul li .sy2_ul .nav2_cent_div li a.video_btn {
+
+    background: url("../images/videoico.png") no-repeat scroll 0 0 transparent;
+
+    height: 34px;
+
+    left: 82px;
+
+    position: absolute;
+
+    top: 47px;
+
+    width: 44px;
+
+	border:none;
+
+}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li a.video_btn:hover {
+
+    background: url("../images/videoico_h.png") no-repeat scroll 0 0 transparent;
+
+}
+
+.sy1_ul li .sy2_ul .nav2_cent_div li a.video_img{ height:134px}
+
+.yygklogoDiv{width:280px; height:97px; overflow:hidden}
+
+.yygklogoDiv img{ width:280px;}
+
+.linchang_mz{ width:180px; margin-top:5px; padding-top:5px; border-top:#d6d6d6 dashed 1px; height:70px; overflow:hidden}
+
+.linchang_mz a{ width:80px!important; font-weight:normal!important; line-height:22px; height:22px!important; float:left!important; border:none!important; padding-left:10px;background:url(../images/ico008.jpg) left 10px no-repeat;color:#333!important}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*纪检检查*//*护理动态*/
+
+.inspection_content{float:left; padding:0 10px; border-left:solid 1px #d9d9d9; border-right:solid 1px #d9d9d9; display:inline; width:285px;}
+
+.inspection_content li{ float:left; display:inline; width:114px; margin:0 14px;}
+
+.inspection_content li img{ width:110px; height:140px; padding:1px; border:solid 1px #d9d9d9;}
+
+.inspection_content h2{ font-size:14px; font-weight:normal; height:25px; line-height:25px;}
+
+.inspection_new{ float:left}
+
+.inspection_new .new_conlist{ width:205px; padding:0 20px; border-left:1px solid #ddd;}
+
+.inspection_new .new_conlist h1 a:hover{ color:#EC9205!important;}
+
+.inspection_new .new_conlist ul li{ background:url(../images/ico008.jpg) no-repeat left 10px; padding:0 0 0 10px; height:25px; line-height:25px; overflow:hidden}
+
+.nursing_conlist{width:200px;margin:0 0 0 15px; display:inline}
+
+.nursing_conlist li{background:url(../images/ico008.jpg) no-repeat left 10px; padding:0 0 0 10px; height:25px; line-height:25px; overflow:hidden}
+
+.nursing_content{ float:left; width:555px; border-right:solid 1px #d9d9d9; padding:0 0 0 20px;border-left:solid 1px #d9d9d9;}
+
+.nursing_content h1 a:hover{ color:#EC9205!important;}
+
+.nursing_content img{ float:left}
+
+.nursing_new{ float:left; width:200px!important; display:inline}
+
+.nursing_list li{float:left; width:125px; margin:0 20px 0 0px; display:inline; text-align:center}
+
+.nursing_list li img{ width:121px; height:90px; border:solid 1px #d9d9d9; padding:1px;}
+
+
+
+.hl_l{ width:234px; float:left; padding:0 15px 0 0;}
+
+.hl_r{ width:290px; float:right; border-left:1px solid #d9d9d9; padding:0 0 0 15px;}
+
+.hl_r h1{ margin-bottom:5px;}
+
+/*教学动态*/
+
+.doctor_nav{float:left; padding:0 20px; width:480px;border-left:solid 1px #d9d9d9;border-right:solid 1px #d9d9d9}
+
+.doctor_nav li{ float:left; width:230px; margin:0 5px; display:inline}
+
+.doctor_nav li img{ width:99px; height:134px; float:left; display:block; margin:0 10px 0 0px;}
+
+.doctor_nav li p{ line-height:22px;}
+
+.doctor_nav li .title_type{ font-size:14px; height:25px; line-height:25px; font-weight:bold;}
+
+.navli9 .sy2_ul .sy2_inside{ width:222px;}
+
+.doctor_new{width:180px;margin:0 0 0 20px;}
+
+.doctor_new li{background:url(../images/ico008.jpg) no-repeat left 10px; padding:0 0 0 10px; height:25px; line-height:25px; overflow:hidden}
+
+.navli10 .sy2_ul .sy2_inside{ width:150px;}
+

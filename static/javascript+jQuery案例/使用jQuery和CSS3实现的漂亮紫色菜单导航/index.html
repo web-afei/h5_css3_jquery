@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用jQuery和CSS3实现的漂亮紫色导航</title>
+<style type="text/css">
+<!--
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+body {margin:0; padding:0; background:#ddd;}
+#nav{position:relative; margin:40px; background:#eee; padding:0; font-family:'Lobster', Arial, Helvetica, sans-serif; font-size:21px; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:2px 2px 3px #ccc; -webkit-box-shadow:2px 2px 3px #ccc; box-shadow:2px 2px 3px #ccc;}
+#nav .clear{clear:both;}
+#nav ul{padding:0 0 0 5px; margin:0; list-style:none;}
+#nav li{float:left; margin:5px 10px 5px 0; background:#eee; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+#nav li a{text-decoration:none; color:#9e0039; display:block; padding:10px 15px;}
+-->
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!-- rounded corners for IE -->
+<script src="DD_roundies_0.0.2a-min.js"></script>
+<script>
+DD_roundies.addRule("#nav", "5px");
+DD_roundies.addRule("#nav li", "5px");
+</script>
+<script>
+$(document).ready(function(){
+	$nav_li=$("#nav li");
+	$nav_li_a=$("#nav li a");
+	var animSpeed=450; //fade speed
+	var hoverTextColor="#fff"; //text color on mouse over
+	var hoverBackgroundColor="#9e0039"; //background color on mouse over
+	var textColor=$nav_li_a.css("color");
+	var backgroundColor=$nav_li.css("background-color");
+	//text color animation
+	$nav_li_a.hover(function() {
+		var $this=$(this);
+		$this.stop().animate({ color: hoverTextColor }, animSpeed);
+	},function() {
+		var $this=$(this);
+		$this.stop().animate({ color: textColor }, animSpeed);
+	});
+	//background color animation
+	$nav_li.hover(function() {
+		var $this=$(this);
+		$this.stop().animate({ backgroundColor: hoverBackgroundColor }, animSpeed);
+	},function() {
+    	var $this=$(this);
+		$this.stop().animate({ backgroundColor: backgroundColor }, animSpeed);
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="nav">
+	<ul>
+    	<li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#recent">Recent projects</a></li>
+        <li><a href="#experiments">Experiments / miscellaneous</a></li>
+        <li><a href="#contact">Contact me</a></li>
+    </ul>
+    <div class="clear"></div>
+</div>
+</body>
+</html>

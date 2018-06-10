@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css3和HTML5特效jquery筛选器插件选项卡</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+
+<!--演示内容开始-->
+<p> <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<nav id="filter"></nav>  <section id="container">
+<ul id="stage">
+    <li data-tags="印刷设计"><img alt="Illustration" src="img/1.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/2.jpg" /></li>
+    <li data-tags="网站设计,商标设计"><img alt="Illustration" src="img/3.jpg" /></li>
+    <li data-tags="网站设计,印刷设计"><img alt="Illustration" src="img/4.jpg" /></li>
+    <li data-tags="商标设计"><img alt="Illustration" src="img/5.jpg" /></li>
+    <li data-tags="网站设计,商标设计,印刷设计"><img alt="Illustration" src="img/6.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/7.jpg" /></li>
+    <li data-tags="网站设计"><img alt="Illustration" src="img/8.jpg" /></li>
+    <li data-tags="网站设计,商标设计"><img alt="Illustration" src="img/9.jpg" /></li>
+    <li data-tags="网站设计"><img alt="Illustration" src="img/10.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/11.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/12.jpg" /></li>
+    <li data-tags="印刷设计"><img alt="Illustration" src="img/13.jpg" /></li>
+    <li data-tags="网站设计,商标设计"><img alt="Illustration" src="img/14.jpg" /></li>
+    <li data-tags="印刷设计"><img alt="Illustration" src="img/15.jpg" /></li>
+    <li data-tags="商标设计"><img alt="Illustration" src="img/16.jpg" /></li>
+    <li data-tags="网站设计,商标设计,印刷设计"><img alt="Illustration" src="img/17.jpg" /></li>
+    <li data-tags="网站设计"><img alt="Illustration" src="img/18.jpg" /></li>
+    <li data-tags="网站设计,印刷设计"><img alt="Illustration" src="img/19.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/20.jpg" /></li>
+    <li data-tags="网站设计,商标设计"><img alt="Illustration" src="img/21.jpg" /></li>
+    <li data-tags="印刷设计"><img alt="Illustration" src="img/22.jpg" /></li>
+    <li data-tags="商标设计,印刷设计"><img alt="Illustration" src="img/23.jpg" /></li>
+</ul>
+</section> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.quicksand.js"></script> <script type="text/javascript">
+$(document).ready(function(){
+	
+	var items = $('#stage li'),
+		itemsByTags = {};
+	
+	// Looping though all the li items:
+	
+	items.each(function(i){
+		var elem = $(this),
+			tags = elem.data('tags').split(',');
+		
+		// Adding a data-id attribute. Required by the Quicksand plugin:
+		elem.attr('data-id',i);
+		
+		$.each(tags,function(key,value){
+			
+			// Removing extra whitespace:
+			value = $.trim(value);
+			
+			if(!(value in itemsByTags)){
+				// Create an empty array to hold this item:
+				itemsByTags[value] = [];
+			}
+			
+			// Each item is added to one array per tag:
+			itemsByTags[value].push(elem);
+		});
+		
+	});
+
+	// Creating the "Everything" option in the menu:
+	createList('所有分类',items);
+
+	// Looping though the arrays in itemsByTags:
+	$.each(itemsByTags,function(k,v){
+		createList(k,v);
+	});
+	
+	$('#filter a').live('click',function(e){
+		var link = $(this);
+		
+		link.addClass('active').siblings().removeClass('active');
+		
+		// Using the Quicksand plugin to animate the li items.
+		// It uses data('list') defined by our createList function:
+		
+		$('#stage').quicksand(link.data('list').find('li'));
+		e.preventDefault();
+	});
+	
+	$('#filter a:first').click();
+	
+	function createList(text,items){
+		
+		// This is a helper function that takes the
+		// text of a menu button and array of li items
+		
+		// Creating an empty unordered list:
+		var ul = $('<ul>',{'class':'hidden'});
+		
+		$.each(items,function(){
+			// Creating a copy of each li item
+			// and adding it to the list:
+			
+			$(this).clone().appendTo(ul);
+		});
+
+		ul.appendTo('#container');
+
+		// Creating a menu item. The unordered list is added
+		// as a data parameter (available via .data('list'):
+		
+		var a = $('<a>',{
+			html: text,
+			href:'#',
+			data: {list:ul}
+		}).appendTo('#filter');
+	}
+});
+</script></p>
+
+</body>
+</html>

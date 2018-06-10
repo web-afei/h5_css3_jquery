@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; chaRset=gb2312" />
+	<title>JS实现单个图片选中美化框 - 站长素材</title>
+	<link rel="stylesheet" href="css/base.css"/>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<div id="radio_wrap">
+	<ul>
+		<li class="c checked">
+			<input type="radio" id="radio_a_01" name="radio_a" />
+			<label for="radio_a_01"><img src="images/taobao1.jpg" alt="" disabled/></label>
+			<i></i>
+		</li>
+		<li class="c">
+			<input type="radio" id="radio_a_02" name="radio_a" />
+			<label for="radio_a_02"><img src="images/taobao2.jpg" alt="" disabled/></label>
+			<i></i>
+		</li>
+		<li class="c">
+			<input type="radio" id="radio_a_03" name="radio_a" />
+			<label for="radio_a_03"><img src="images/taobao3.jpg" alt="" disabled/></label>
+			<i></i>
+		</li>
+		<li class="c">
+			<input type="radio" id="radio_a_04" name="radio_a" />
+			<label for="radio_a_04"><img src="images/taobao4.jpg" alt="" disabled/></label>
+			<i></i>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+
+(function() {
+    var radioWrap = document.getElementById("radio_wrap"),
+        li = radioWrap.getElementsByTagName("li");
+  
+    for(var i = 0; i < li.length; i++){
+        li[i].onclick = function() {
+            for(var i = 0; i < li.length; i++){
+                li[i].className = "";
+            }
+            this.className = "checked";
+        }
+    }
+})();
+</script>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br>
+
+</div>
+</body>
+</html>

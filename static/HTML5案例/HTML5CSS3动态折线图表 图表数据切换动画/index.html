@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5/CSS3动态折线图表DEMO演示</title>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+<main ng-app="myApp">
+    <figure ng-controller="graphCtrl">
+        <div graph data="sampleData">
+            <div> <span data-point></span> </div>
+            <div> <span data-point></span> </div>
+            <div> <span data-point></span> </div>
+            <div> <span data-point></span> </div>
+            <div> <span data-point></span> </div>
+        </div>
+    </figure>
+</main>
+<script src='js/angular.min.js'></script> 
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>jquery+css3圆角动画导航</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="css/lanrenzhijia.css" />
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.color.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('#menu-jquery li a').hover(
+				
+					function() {
+						
+						$(this).css('padding', '5px 15px')
+								 .animate({'paddingLeft'	: '25px', 
+											 'paddingRight'	: '25px', 
+											 'backgroundColor':'rgba(0,0,0,0.5)'}, 
+											 'fast');
+					}, 
+					
+					function() {
+						
+						$(this).css('padding', '5px 25px')
+								 .animate({'paddingLeft'	: '15px', 
+								 			'paddingRight'		: '15px', 
+								 			'backgroundColor' :'rgba(0,0,0,0.2)'}, 
+								 			'fast');
+				
+				}).mousedown(function() {
+			
+					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.1)'}, 'fast');
+
+				}).mouseup(function() {
+				
+					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.5)'}, 'fast');
+				});				
+			});
+			
+		</script>
+</head>
+<body>
+<div id="container">
+	<span class="title">Using Pure CSS Animation</span>
+	<ul id="menu-css">
+		<li><a href="http://www.mysite.com">Home</a></li>
+		<li><a href="http://www.mysite.com">About</a></li>
+		<li><a href="http://www.mysite.com">Portfolio</a></li>
+		<li><a href="http://www.mysite.com">Contact</a></li>
+	</ul>
+	
+	<span class="title">Using jQuery Animation</span>
+	<ul id="menu-jquery">
+		<li><a href="http://www.mysite.com">Home</a></li>
+		<li><a href="http://www.mysite.com">About</a></li>
+		<li><a href="http://www.mysite.com">Portfolio</a></li>
+		<li><a href="http://www.mysite.com">Contact</a></li>
+	</ul>
+	
+	<span class="title">更多代码请访问：<a href="http://www.mysite.com/" title="网页设计之家">www.mysite.com </a></span>
+</div>
+</body>

@@ -1,0 +1,103 @@
+*{margin:0;padding:0;list-style: none}
+.chrome {
+	position:relative;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+	border-radius:50%;
+	margin:100px auto;
+	animation:spin 3s linear infinite;
+}
+@keyframes spin{
+	0%{transform:rotate(0deg)}
+	100%{transform:rotate(360deg)}
+}
+.chrome div {
+	position:absolute;
+}
+.chrome::before {
+	content:"";
+	position: absolute;
+	z-index:100;
+	top:95px;
+	left:95px;
+	width:110px;
+	height:110px;
+	background:#fff;
+	border-radius:110px;
+	overflow:hidden;
+}
+.chrome::after {
+	content:"";
+	position: absolute;
+	z-index: 101;
+	top:105px;
+	left:105px;
+	width:90px;
+	height:90px;
+	background:#f00;
+	border-radius:90px;
+	background:-webkit-gradient(linear, left top, left bottom, from(#80B1DA), to(#165E98));
+}
+.chrome_part_color {
+	width:200px;
+	height:210px;
+	opacity:0.94;
+}
+.chrome_part_red {
+	z-index:3;
+	top:-44px;
+	left:55px;
+	-webkit-transform:rotate(60deg);
+	border-bottom-right-radius:30px;
+	background:-webkit-gradient(radial, 20% 30%, 20, 40% 30%, 100, from(#ED5F51), to(#DF2228));
+}
+.chrome_part_red2 {
+	z-index:9;
+	width:160px;
+	height:80px;
+	top:50px;
+	left:18px;
+	-webkit-transform:rotate(60deg);
+	background:-webkit-gradient(radial, 30% 0, 30, 40% 30%, 60, from(#E54745), to(#E12F35));
+}
+.chrome_part_yellow {
+	z-index:5;
+	top:95px;
+	right:-30px;
+	border-top-left-radius:30px;
+	background:-webkit-gradient(radial, 30% 40%, 130, 40% 20%, 60, from(#DBA328), to(#FDD207));
+}
+.chrome_part_green {
+	z-index:7;
+	top:82px;
+	left:-25px;
+	-webkit-transform:rotate(117deg);
+	border-top-left-radius:30px;
+	background:-webkit-gradient(radial, 30% 40%, 120, 30% 40%, 60, from(#419643), to(#4DB749));
+}
+.chrome_mask_color {
+	width:110px;
+	height:110px;
+	background:#fff;
+}
+.chrome_mask_red {
+	z-index:8;
+	height:40px;
+	top:60px;
+	left:25px;
+	-webkit-transform:rotate(50deg);
+	background:#E12F35;
+}
+.chrome_mask_yellow {
+	z-index:4;
+	top:105px;
+	right:-10px;
+	-webkit-transform:rotate(-12deg);
+}
+.chrome_mask_green {
+	z-index:6;
+	top:185px;
+	left:38px;
+	-webkit-transform:rotate(15deg);
+}

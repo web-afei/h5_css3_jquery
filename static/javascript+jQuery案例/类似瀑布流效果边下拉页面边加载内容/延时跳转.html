@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS倒计时网页自动跳转代码</title>
+<style>
+body {text-align:center;padding:100px;}
+#time{ background:#ff0000;}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<span id="time">6</span>秒钟后自动跳转，如果不跳转，请点击下面的链接<a href="http://www.mysite.com">网页设计之家</a>
+<script>
+	function delayUrl(url){
+		var lanrenzhijia = document.getElementById('time').innerHTML;
+		if(lanrenzhijia > 0){
+			lanrenzhijia--;
+			document.getElementById('time').innerHTML = lanrenzhijia;
+		}else{
+			window.location.href = url ;
+		}
+		setTimeout("delayUrl('" + url + "')",1000);
+	}
+	delayUrl("http://www.mysite.com");
+	
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

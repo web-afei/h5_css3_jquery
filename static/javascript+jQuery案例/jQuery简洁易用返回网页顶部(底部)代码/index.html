@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>jQuery简洁易用返回网页顶部(底部)代码</title>
+<style>
+body {font-size:12px;}
+#scroll {position:fixed;top:300px;right:100px;}
+.scrollItem {width:20px;height:70px;border:#e1e1e1 1px solid;cursor:pointer;text-align:center;padding-top:10px;}
+</style>
+</head>
+<body>
+<div style="height:1200px; width:200px; float:left;"></div>
+
+<!-- 代码部分begin -->
+<div id="scroll">
+  <div class="scrollItem" id="toTop">返回顶部</div>
+  <div class="scrollItem" id="toBottom">回到底部</div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.7.0/jquery.min.js"></script>
+<script>
+$(function () {
+	var speed = 400;//滚动速度
+	var h = document.documentElement.clientWidth;
+	//回到顶部
+	$("#toTop").click(function () {
+		$('html,body').animate({
+			scrollTop: '0px'
+		},speed);			
+	});
+	//回到底部
+	var windowHeight = parseInt($("body").css("height"));//整个页面的高度
+	$("#toBottom").click(function () {
+		$('html,body').animate({
+			scrollTop: h+'px'
+		},speed);
+	});
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

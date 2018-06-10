@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生网页左侧居中链接图片动画效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+body{ background:#ccc;}
+
+.lanrenzhijia{ width:50px; height:250px; position:fixed; left:0; top:50%; margin-top:-125px; z-index:900;}
+.lanrenzhijia a{ width:50px; height:50px; line-height:50px; float:left; display:block; text-align:right;}
+.lanrenzhijia .lanren1{ background:#305790;}
+.lanrenzhijia .lanren2{ background:#2BA9D2;}
+.lanrenzhijia .lanren3{ background:#CF4C3A;}
+.lanrenzhijia .lanren4{ background:#4698CA;}
+.lanrenzhijia .lanren5{ background:#F9694E;}
+/* 凡是注明“原生”的效果，转载请注明出处 */
+</style>
+</head>
+<body>
+
+<!-- 代码部分 begin -->
+<div class="lanrenzhijia">
+	<a href="http://www.mysite.com/" class="lanren1"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren01.jpg" alt="小白" width="50" height="50" /></a>
+	<a href="http://www.mysite.com/" class="lanren2"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren02.jpg" alt="小白" width="50" height="50" /></a>
+	<a href="http://www.mysite.com/" class="lanren3"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren03.jpg" alt="小白" width="50" height="50" /></a>
+	<a href="http://www.mysite.com/" class="lanren4"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren04.jpg" alt="小白" width="50" height="50" /></a>
+	<a href="http://www.mysite.com/" class="lanren5"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren05.jpg" alt="小白" width="50" height="50" /></a>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.lanrenzhijia a').hover(function(){
+		$(this).animate({width:'65px'},300);	
+	},function(){
+	$(this).animate({width:'50px'},300);	
+	});
+});
+</script>
+<!-- 代码部分 end -->
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 代码整理：小白 www.mysite.com */
+
+.wrapper{ overflow:hidden; margin:0 auto; position:relative;}
+.wrapper input{position:absolute}
+.wrapper input.grow{-webkit-animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275);-moz-animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275);animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275)}
+@-webkit-keyframes grow{
+	0%{-webkit-transform:scale(1)}
+	30%{-webkit-transform:scale(2.5)}
+	100%{-webkit-transform:scale(1)}
+}
+@-moz-keyframes grow{
+	0%{-moz-transform:scale(1)}
+	30%{-moz-transform:scale(2.5)}
+	100%{-moz-transform:scale(1)}
+}
+@keyframes grow{
+	0%{transform:scale(1)}
+	30%{transform:scale(2.5)}
+	100%{transform:scale(1)}
+}

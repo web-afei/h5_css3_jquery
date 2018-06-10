@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家mysite.com */
+body {
+	background-color: #000;
+	color:#FFFFFF;
+}
+/* Center the website */
+			#wrapper {
+	width:920px;
+	margin:0 auto;
+}
+/* Give the header a height and a background image */
+			#header {
+	height:300px;
+	background: #000 url(../images/background.jpg) repeat-y scroll left top;
+	text-align:center;
+}
+/* Create a Shadow Overlay */ 
+			#header div {
+	width:920px;
+	height:300px;
+	background: transparent url(../images/overlay.png) no-repeat scroll left top;
+}
+/* Vertically position header text and style it*/
+			#header h1 {
+	padding-top:125px;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	color:white;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生块级区域内元素上下左右垂直居中方法</title>
+	<style>
+	*{margin:0;padding:0;list-style:none;}
+	.lanren{width:200px;height:200px;border:1px solid #ccc;position:relative;margin:150px auto;}
+	.lanren .box{width:80px;height:80px;padding:10px;background-color:#aaa;
+		/* 关键CSS样式 begin */
+		position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;
+		/* 关键CSS样式 end */
+	}
+	</style>
+</head>
+<body>
+	<div class="lanren">
+		<div class="box">小白</div>
+	</div>
+</body>
+</html>

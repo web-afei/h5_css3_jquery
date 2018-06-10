@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery.label_better插件让你的输入框变得生动有趣起来</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery.label_better.js"></script>
+	<script>
+	  $(document).ready( function() {
+	    $(".label_better").label_better({
+	      easing: "bounce"
+	    });
+	  });
+		
+	</script>
+</head>
+
+<body>
+<div class="main">
+	    <div class="header">
+        <h1>jQuery Label Better</h1>
+  	  </div>
+      <div class="page-container">
+        <form class="bl_form">
+          <input type="text" value=""  class="label_better" data-new-placeholder="Username" placeholder="Username" >
+          <input type="email" value=""  class="label_better" data-new-placeholder="Email Address" placeholder="Email Address">
+          <input type="password" value=""  class="label_better" data-new-placeholder="Password" placeholder="Password">
+          <input type="password" value="" class="label_better" data-new-placeholder="Shhh.." placeholder="Confirm Password">
+        </form>
+      </div>
+    </div>
+</body>
+</html>

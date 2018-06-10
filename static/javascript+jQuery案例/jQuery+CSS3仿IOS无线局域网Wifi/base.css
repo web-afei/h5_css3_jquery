@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:url(images/bg.PNG);
+	margin:0;
+	padding:0;
+}
+
+.clear{
+	clear:both;
+}
+
+.container{
+	margin:0 auto;
+	width:950px;
+	height:500px;
+	-webkit-transform:scale(0.8);
+	-moz-transform:scale(0.8);
+	-ms-transform:scale(0.8);
+	-o-transform:scale(0.8);
+}
+
+.outline,.list{
+	width:700px;
+	margin:50px auto;
+	height:auto;
+	border:2px solid #A1A7AE;
+	background:#FFF;
+	padding:5px 10px;
+	border-radius:20px; 
+}
+
+.outline span{
+	float:left;
+	margin:0 20px;
+	font:38px "黑体";
+	font-weight:600;
+	height:90px;
+	line-height:90px;
+	letter-spacing:2px;
+}
+
+.button{
+	float:right;
+	background:url(images/button.png);
+	background-position:-102px 0;
+	width:156px;
+	height:56px;
+	margin:15px 5px;
+	cursor:pointer;
+	-webkit-transition:0.3s ease-in-out;
+	-moz-transition:0.3s ease-in-out;
+	border-radius:32px;
+}
+
+.button.hover{
+	background-position:0 0;
+}
+
+
+.buttonIE{
+	float:right;
+	background:url(images/msie.png);
+	background-position:-156px 0;
+	width:156px;
+	height:56px;
+	margin:15px 5px;
+	cursor:pointer;
+}
+
+
+.load{
+	width:700px;
+	height:30px;
+	margin:0 auto;
+	display:none;
+}
+
+.load span{
+	float:left;
+	margin:0 20px;
+	font:32px "微软雅黑";
+	line-height:30px;
+	letter-spacing:2px;
+	color:#4C566C;
+	text-shadow:0 2px #E7EAED;
+}
+
+
+.load img{
+	float:left;
+	margin:0 10px;
+}
+
+.list{
+	margin:20px auto;
+	height:258px;/****IE Suppert****/
+	display:none;
+}
+
+
+.list span{
+	float:left;
+	margin:0 50px;
+	font:bold 32px "微软雅黑";
+	line-height:90px;
+	letter-spacing:2px;
+}
+
+
+.list ul{
+	list-style:none;
+	margin:0 auto;
+	width:720px;
+	margin:-6px 0;
+}
+
+.list li{
+	position:relative;
+	left:-10px;
+	width:720px;
+	height:90px;
+	cursor:pointer;
+}
+
+li:hover{
+	background:#007FEA; /* default background for browsers without gradient support */
+	color:#FFF;
+    /* css3 */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#007FEA), to(#4DA5F0));
+    background:-moz-linear-gradient(#007FEA, #4DA5F0);
+    background:-o-linear-gradient(#007FEA, #4DA5F0);
+    background:linear-gradient(#007FEA, #4DA5F0);
+	text-shadow: 0 0 90px #fff, 0 0 40px #fff, 0 0 10px #fff;
+
+}
+
+
+.line{
+	position:relative;
+	top:90px;
+	width:720px;
+	height:2px;
+	background:#A1A7AE;
+}
+
+.direct{
+	display:block;
+	float:right;
+	margin:20px;
+	border-radius:30px;
+}
+
+.signal{
+	background:url(images/signal.png);
+	display:block;
+	float:right;
+	margin:22px 0px;
+	width:40px;
+	height:40px;
+}
+
+.signal.hover{
+	background:url(images/signal2.png);
+}
+
+
+
+
+.mask{
+	width:100%;
+	height:100%;
+	position:fixed;
+	display:none;
+	background:#000;
+	background: -webkit-radial-gradient(center,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 1) 80%);
+	background: -moz-radial-gradient(center,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 1) 80%);
+	background: radial-gradient(center,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 1) 80%);
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-webkit-transition:0.2s ease-in-out;
+	-moz-transition:0.2s ease-in-out;
+	top:0;
+	left:0;
+}
+
+/*****************dialogue******************/
+.floatBox{
+	background:url(images/dialogue.png);
+	width:286px;
+	height:138px;
+	display:none;
+	position:absolute;
+	z-index:1;
+	
+	-webkit-transform:scale(1.3);
+	-moz-transform:scale(1.3);
+	-ms-transform:scale(1.3);
+	-o-transform:scale(1.3);
+	
+}
+
+
+
+.Info{
+	width:95%;
+	height:70px;
+	margin:5px auto 0;
+	font:18px "微软雅黑";
+	color:#FFF;
+	text-align:center;
+	letter-spacing:2px;
+	line-height:70px;
+}
+
+.BtnSet{
+	width:98%;
+	height:50px;
+	margin:0px auto;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	 background-color: transparent;
+				padding: 0;  
+				border: 0;
+				cursor:pointer;
+                }
+.ok,.cancel{
+	float:left;
+	width:128px;
+	height:43px;
+	border:none;
+	color:#FFF;
+	margin:5px;
+}
+
+.ok{
+	background-image:url(images/ok.png);
+}
+.cancel{
+	background-image:url(images/cancel.png);
+}
+
+.ok:active{
+	background-image:url(images/ok1.png);
+}
+.cancel:active{
+	background-image:url(images/cancel1.png);
+}

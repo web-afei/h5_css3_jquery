@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery带图标文字标签滑动选项卡 </title>
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+
+	//Get all the LI from the #tabMenu UL
+	$('#tabMenu > li').click(function(){
+		//remove the selected class from all LI    
+		$('#tabMenu > li').removeClass('selected');
+		//Reassign the LI
+		$(this).addClass('selected');
+		//Hide all the DIV in .boxBody
+		$('.boxBody div').slideUp('1500');
+		//Look for the right DIV in boxBody according to the Navigation UL index, therefore, the arrangement is very important.
+		$('.boxBody div:eq(' + $('#tabMenu > li').index(this) + ')').slideDown('1500');
+	}).mouseover(function(){
+		//Add and remove class, Personally I dont think this is the right way to do it, anyone please suggest    
+		$(this).addClass('mouseover');
+		$(this).removeClass('mouseout');
+	}).mouseout(function(){
+		//Add and remove class
+		$(this).addClass('mouseout');
+		$(this).removeClass('mouseover');
+	});
+	
+	//Mouseover with animate Effect for Category menu list
+	$('.boxBody li').mouseover(function(){
+		//Change background color and animate the padding
+		$(this).css('backgroundColor','#61f5fd');
+		$(this).children().animate({paddingLeft:"10px"}, {queue:false, duration:200});
+	}).mouseout(function(){
+		//Change background color and animate the padding
+		$(this).css('backgroundColor','');
+		$(this).children().animate({paddingLeft:"0"}, {queue:false, duration:200});
+	});
+	
+	//Mouseover effect for Posts, Comments, Famous Posts and Random Posts menu list.
+	$('.boxBody li').click(function(){
+		window.location = $(this).find("a").attr("href");
+	}).mouseover(function() {
+		$(this).css('backgroundColor','#61f5fd');
+	}).mouseout(function() {
+		$(this).css('backgroundColor','');
+	});
+	
+});
+</script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+body{font-family:arial;font-size:10px;color:#555;background-color:#fff}
+a{font-size:14px;color:#000;text-decoration:none;}
+a:hover{color:#555;text-decoration:none}
+
+/* tabMenu */
+#tabMenu{padding:0 0 0 15px;height:32px;overflow:hidden;}
+#tabMenu li{float:left;padding:0px 10px 0 50px;height:32px;width:auto;font-size:14px;font-weight:bold;line-height:32px;cursor:pointer;cursor:hand}
+
+#tabMenu li.comments{background:url(images/tabComment.gif) no-repeat -0px -32px;}
+#tabMenu li.posts{background:url(images/tabStar.gif) no-repeat 0 -32px;}
+#tabMenu li.category{background:url(images/tabFolder.gif) no-repeat 0 -32px;}
+#tabMenu li.famous{background:url(images/tabHeart.gif) no-repeat 0 -32px;}
+#tabMenu li.random{background:url(images/tabRandom.gif) no-repeat 0 -32px;}
+#tabMenu li.edu{background:url(images/edu.gif) no-repeat 0 -32px;}
+#tabMenu li.mouseover{background-position:0 0;}
+#tabMenu li.mouseout{background-position:0 -32px;}
+#tabMenu li.selected{background-position:0 0;}
+
+/* box */
+.box{width:952px;margin:0 auto;}
+.boxTop{background:url(images/boxTop.gif) no-repeat;height:11px;overflow:hidden;}
+.boxBody{background:url(images/box.gif) repeat-y;height:100px;overflow:hidden;}
+.boxBottom{background:url(images/boxBottom.gif) no-repeat;height:11px;overflow:hidden;}
+
+.boxBody div{display:none;}
+.boxBody div.show{display:block;}
+
+.boxBody div ul{margin:0 20px;}
+.boxBody div li{float:left;width:220px;height:24px;line-height:24px;overflow:hidden;vertical-align:bottom;padding:4px 0;display:inline;}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+	<ul id="tabMenu">
+		<li class="posts selected">安全生产</li>
+		<li class="comments">电网实时</li>
+		<li class="category">企业经营与服务</li>
+		<li class="famous">企业综合管理</li>
+		<li class="random">档案管理</li>
+		<li class="edu">教育培训</li>
+	</ul>
+
+	<div class="boxTop"></div>
+	
+	<div class="boxBody">
+		<div id="posts" class="show">
+			<ul>
+				<li><a href="#">95598停电信息</a></li>
+				<li><a href="#">生产管理系统</a></li>
+				<li><a href="#">生产技术网站</a></li>
+				<li><a href="#">安全监察王赞</a></li>
+				<li><a href="#">调度中心网站</a></li>
+				<li><a href="#">班组长谈安全</a></li>
+				<li><a href="#">市区调度信息</a></li>
+				<li><a href="#">资中调度信息</a></li>
+				<li><a href="#">东兴调度信息</a></li>
+				<li><a href="#">隆昌调度信息</a></li>
+				<li><a href="#">安全培训考试系统</a></li>
+				<li><a href="#">四川雷电定位系统</a></li>
+			</ul>  
+		</div>  
+		<div id="comments">
+			<ul>
+				<li><a href="#">open3000调度系统</a></li>
+				<li><a href="#">市区调度信息</a></li>
+				<li><a href="#">资中调度信息</a></li>
+				<li><a href="#">东兴调度信息</a></li>
+				<li><a href="#">隆昌调度信息</a></li>
+				<li><a href="#">威远调度信息</a></li>
+				<li><a href="#">自动化报表(地调)</a></li>
+				<li><a href="#">调度日报(省调)</a></li>
+			</ul>
+		</div>
+		<div id="category">
+			<ul>
+				<li><a href="#">自助服务</a></li>
+				<li><a href="#">95598服务网站</a></li>
+				<li><a href="#">SG186营销系统</a></li>
+				<li><a href="#">SG186农电系统</a></li>
+				<li><a href="#">安全监察王赞</a></li>
+				<li><a href="#">调度中心网站</a></li>
+				<li><a href="#">班组长谈安全</a></li>
+				<li><a href="#">电费中心网站</a></li>
+				<li><a href="#">农电管理门户</a></li>
+				<li><a href="#">城乡营业服务网点</a></li>
+				<li><a href="#">监控一体化平台</a></li>
+			</ul>  
+		</div>
+		<div id="famous">
+			<ul>
+				<li><a href="#">企业同业对标系统</a></li>
+				<li><a href="#">四川造价管理系统</a></li>
+				<li><a href="#">电力工业标准汇编</a></li>
+				<li><a href="#">企业标准管理</a></li>
+				<li><a href="#">国电视觉识别方案</a></li>
+			</ul>
+		</div>
+		<div id="random">
+			<ul>
+				<li><a href="#">计算机培训教程</a></li>
+				<li><a href="#">ERP学习宣传资料</a></li>
+				<li><a href="#">95598服务网站</a></li>
+				<li><a href="#">SG186营销系统</a></li>
+				<li><a href="#">SG186农电系统</a></li>
+				<li><a href="#">安全监察王赞</a></li>
+				<li><a href="#">CCTV新闻频道</a></li>
+				<li><a href="#">视频节目点播</a></li>
+				<li><a href="#">安全生产视频</a></li>
+				<li><a href="#">农电管理视频</a></li>
+				<li><a href="#">安全培训考试系统</a></li>
+				<li><a href="#">四川雷电定位系统</a></li>
+			</ul>
+		</div>
+		<div id="edu">
+			<ul>
+				<li><a href="#">计算机培训教程1</a></li>
+				<li><a href="#">ERP学习宣传资料1</a></li>
+				<li><a href="#">CCTV新闻频道1</a></li>
+				<li><a href="#">视频节目点播1</a></li>
+				<li><a href="#">安全生产视频1</a></li>
+				<li><a href="#">农电管理视频</a></li>
+				<li><a href="#">安全培训考试系统</a></li>
+				<li><a href="#">四川雷电定位系统</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="boxBottom"></div>
+
+</div>
+<div style="text-align:center;clear:both;margin-top:30px">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

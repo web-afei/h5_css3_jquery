@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>自定义select下拉列表样式</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/lanrenzhijia.css" />
+</head>
+<body>
+<!-- 代码部分begin -->
+<center>
+<div class="example_1">
+  <p></p>
+  <label for="demo-select_1">Example 1:</label>
+  <select name="" id="demo-select_1">
+    <optgroup label="项目一">
+    <option value="1" data-modifier="mod">item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3" disabled>Item 3</option>
+    <option value="4">Item 4</option>
+    <option value="5">Item 5</option>
+    <option value="6" disabled>Item 6</option>
+    <option value="7">Item 7</option>
+    <option value="8">Item 8</option>
+    <option value="9">Item 9</option>
+    <option value="10">Item 10</option>
+    </optgroup>
+    <optgroup label="项目二">
+    <option value="11">Item</option>
+    <option value="12">Item</option>
+    <option value="13">item</option>
+    <option value="14">Item</option>
+    <option value="15" disabled>Item</option>
+    <option value="16">Item</option>
+    <option value="17">Item</option>
+    <option value="18">Item</option>
+    <option value="19">Item</option>
+    <option value="20">Item</option>
+    </optgroup>
+  </select>
+  <button id="button_1">Set disable</button>
+</div>
+<div class="example_2">
+  <p></p>
+  <label for="demo-select_2">Example 2:</label>
+  <select name="" id="demo-select_2">
+    <option value="1">American</option>
+    <option value="2">Bangladesh</option>
+    <option value="3">China</option>
+    <option value="4">Denmark</option>
+    <option value="5">ESTONIA</option>
+    <option value="6">France</option>
+    <option value="7">Georgia</option>
+    <option value="8">Hong Kong</option>
+    <option value="9">Indonesia</option>
+    <option value="10">Japan</option>
+  </select>
+  <button id="button_2_add">Add some items</button>
+  <button id="button_2_del">Delete some items</button>
+</div>
+</center>
+<script src="http://www.lanrenzhijia.com/ajaxjs/1.8.3/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.custom-select.js"></script>
+<script>
+$(function(){
+	$('select').not('#demo-select_2').CustomSelect();
+	$('#demo-select_2').CustomSelect({visRows:10, search:true, modifier: 'mod'});				
+	$('#button_1').on('click', function(event){
+		event.preventDefault();
+		var $btn = $(this);
+		if($('#demo-select_1').is(':disabled')){
+			$btn.text('Set disable');
+			$('#demo-select_1').removeAttr('disabled').trigger('update');
+		}else{
+			$btn.text('Set enable');
+			$('#demo-select_1').attr({'disabled':'disabled'}).trigger('update');
+		}
+	});
+	$('#button_2_add').on('click', function(event){
+		event.preventDefault();
+		$('#demo-select_2').append($('#demo-select_2 option:odd').clone());
+		$('#demo-select_2').trigger('update');
+	});
+	$('#button_2_del').on('click', function(event){
+		event.preventDefault();
+		$('#demo-select_2 option:even').remove();
+		$('#demo-select_2').trigger('update');
+	});
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.curpos.js插件获textarea输入框下光标的位置</title>
+	<style>
+	body { margin: 50px; }
+	textarea{ padding: 10px; border: 1px solid #DCDCDC;     outline: none;}
+	</style>
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<textarea id="textarea" type="text" style="width:600px;height:200px;">JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需要定义id即可。
+	jQuery是一个兼容多浏览器的javascript库，核心理念是write less,do more(写得更少,做得更多)。jQuery在2006年1月由美国人John Resig在纽约的barcamp发布，吸引了来自世界各地的众多JavaScript高手加入，由Dave Methvin率领团队进行开发。如今，jQuery已经成为最流行的javascript库，在世界前10000个访问最多的网站中，有超过55%在使用jQuery。</textarea>
+	<button type="button" id="button">点击查看光标位置</button>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/CurPos.js"></script>
+	<script>
+	$(function(){
+		$('#button').on('click', function(event) {
+			var CurPositon = $('#textarea').getCurPos();
+			alert(CurPositon);
+		});
+	})
+	</script>
+	<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>jquery+html5实现3D立体星星动画效果</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/lanrenzhijia.js"></script>
+<script language="javascript" type="text/javascript">
+    $(function() {
+        $("#html5_3d_animation").html5_3d_animation({
+            window_width: '600',
+            window_height: '300',
+            window_background: '#00113F',
+            star_count: '1000',
+            star_color: '#FBFFAF',
+            star_depth: '100'
+        });
+    });
+    
+</script>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="html5_3d_animation">Internet Explorer Not
+    Supported</canvas>
+  <div id="show"></div>
+</div>
+</body>
+</html>

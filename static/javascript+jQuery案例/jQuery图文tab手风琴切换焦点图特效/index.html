@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery图文tab手风琴切换焦点图特效</title>
+<link href="css/lanren.css" type="text/css"  rel="stylesheet" />
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="lanren">
+	<ul>
+    	<li class="first">
+        	<div class="imgTop"><img src="images/ruili_img1.jpg" width="538" height="405" class="tm"/></div>
+            <div class="imgCen">给你15分钟做“对”的时尚人</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/ruili_img2.jpg" width="538" height="405" /></div>
+            <div class="imgCen">蒂芙尼为你吟唱一曲自然颂</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/ruili_img3.jpg" width="538" height="405" /></div>
+            <div class="imgCen">瑞丽·妆 线上精品轻杂志</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/ruili_img4.jpg" width="538" height="405" /></div>
+            <div class="imgCen">《ar》刘海造型 女孩只需这样即刻焕然一新</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/ruili_img5.jpg" width="538" height="405" /></div>
+            <div class="imgCen">电影×大明星 见证传奇从戛纳诞生</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/ruili_img6.jpg" width="538" height="405" /></div>
+            <div class="imgCen">重返20岁试用周</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li class="fast">
+        	<div class="imgTop"><img src="images/ruili_img7.jpg" width="538" height="405" /></div>
+            <div class="imgCen">玩美女孩盖天天 阳光女神进阶攻略</div>
+            <div class="imgBot"><a href="#"><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+    </ul>	
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+var _index7=0;
+$(".lanren ul li").mouseover(function(){
+	_index7=$(this).index();
+	$(this).stop().stop().animate({width:538},500).siblings("li").stop().animate({width:106},500);
+	$(".imgCen").eq(_index7).css("display","block").siblings(".imgCen").css("display","none");
+	$("p.bt_2").eq(_index7).css("display","block").siblings("p.bt_2").css("display","none");
+	$(".imgTop img").eq(_index7).addClass("tm").siblings(".imgTop img").removeClass("tm");
+});
+$(".lanren ul li").mouseout(function(){
+	$(this).eq(_index7).stop().animate({width:106},500);
+	$(".imgCen").css("display","none");
+});
+$(".lanren ul li").mouseout(function(){
+	$(this).eq(_index7).stop().animate({width:106},500);
+	$("p.bt_2").css("display","none");
+});
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

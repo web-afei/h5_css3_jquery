@@ -1,0 +1,28 @@
+.notify { font-family: Georgia,"Times New Roman",Times,serif; font-size: 12pt; height: 40px; }
+
+.notify-marker .messagespace,
+.notify .messagespace { width: 800px; margin: 0px auto; height: 40px;  }
+
+/* website specifiv */
+.notify-marker .messagespace,
+.notify .messagespace { width: 744px; margin: 0px 0px 0px 280px; height: 40px;  }
+
+.notify { background: url(gradients.png) repeat-x 0px 0px; top: -40px; position: fixed; z-index: 100; width: 100%; overflow: hidden; }
+.notify-ie6 { position: absolute; }
+.notify-blue { background-position: 0px -40px; }
+.notify-green { background-position: 0px -80px; }
+.notify-pink { background-position: 0px -120px; }
+.notify .messagespace p { color: #fff; text-shadow: 1px 1px 1px #767676; -moz-text-shadow: 1px 1px 1px #767676; -webkit-text-shadow: 1px 1px 1px #767676; line-height: 2.5em; font-style: italic; font-weight: bold; float: left; }
+.notify .messagespace .hide { width: 20px; float: right; /*height: 40px; */ padding: 10px; }
+.notify .messagespace .hide a { background: url(close.png) no-repeat; display: block; height: 18px; width: 20px; }
+.notify .messagespace .hide a:hover { background-position: 0px -18px; }
+
+.notify-marker .messagespace { width: 800px; position: relative; height: 0px; }
+
+/* website specifiv */
+.notify-marker .messagespace { width: 744px; position: relative; height: 0px; }
+
+.notify-marker .messagespace a { background: url(ribbon.png) no-repeat; display: none; top: -40px; height: 43px; width: 41px; right: 0px; position: absolute;}
+.notify-marker .messagespace a.green { background-position: -51px;  }
+.notify-marker .messagespace a.blue { background-position: -101px;  }
+.notify-marker .messagespace a.pink { background-position: -152px;  }

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js彩色拼图导航下拉菜单 - 站长素材</title>
+<link type="text/css" rel="stylesheet" href="css/NewDefault.css">
+<style type="text/css">
+body{background:#;}
+
+
+.downMenu ul li a{color:white!important;font-size:14px;height:24px;letter-spacing:4px;border-bottom:1px solid #fff;border-left:none;border-right:none;}
+#divDown2 ul li a{background:#EB8932;color:white!important;width:102px;}
+#divDown2 ul li a:hover{background:#F6C370;color:#000!important;}
+#divDown3 ul li a{background:#91BD41;color:white!important;width:78px;}
+#divDown3 ul li a:hover{background:#B8DA6A;color:#000!important;}
+#divDown4 ul li a{background:#FEA901;color:white!important;width:114px;}
+#divDown4 ul li a:hover{background:#FDE374;color:#000!important;}
+#divDown5 ul li a{background:#CA699C;color:white!important;width:115px;}
+#divDown5 ul li a:hover{background:#DDA6BD;color:#000!important;}
+</style>
+</head>
+<body>
+
+<div id="navmaster">
+	<ul>
+		<li id="ctl01_liIndex" class="M1Common M1">
+			<div style="padding-top:27px;"><a href="http://blog.junengliang.com/">首&nbsp;页</a></div>
+		</li>
+		<li id="ctl01_liQCenter" class="M2Common M2">
+			<div style="padding-top:44px;"><a title="问卷中心" href="#">问卷中心</a><span class="bordCss bordBottomCssN"></span></div>
+		</li>
+		<li id="ctl01_liPrice" class="M3Common M3">
+			<div style="padding-top:32px;"><a style="padding:9px 0 0px 21px;" href="#">自助服务</a></div>
+		</li>
+		<li id="ctl01_liUseCase" class="M4Common M4">
+			<div style="padding-top:23px;"><a href="#">样本服务</a><span class="bordCss bordBottomCssN"></span></div>
+		</li>
+		<li id="ctl01_liCustomer" class="M5Common M5">
+			<div style="padding-top:37px;text-align:left;padding-left:14px;"><a style="" href="#">典型应用</a></div>
+		</li>
+	</ul>
+</div>
+
+    
+<!--下拉菜单2开始-->
+<div id="divDown2" class="downMenu" pdleft="23" style="display:none;z-index:10999;position:absolute;">
+	<ul>
+		<li><a title="公开问卷" href="#" style="border-top:1px solid #fff;">公开问卷</a> </li>
+		<li><a title="问卷调查模板" href="#">问卷模板</a> </li>
+		<li><a title="有奖调查" href="#" target="_blank">有奖调查</a> </li>
+		<li><a title="热门测评" href="#">热门测评</a> </li>
+	</ul>
+</div>
+<!--下拉菜单2结束--> 
+    
+<!--下拉菜单4开始-->
+<div id="divDown4" class="downMenu" pdleft="5" style="display:none;z-index:10999;left:933px;position:absolute;top:130px;">
+	<ul>
+		<li><a title="服务介绍" href="#" style="border-top:1px solid #fff;">服务介绍</a> </li>
+		<li><a title="服务价格" href="#">服务价格</a></li>
+		<li><a title="需求&amp;报价" href="#">需求&amp;报价</a></li>
+		<li><a title="流程说明" href="#">流程说明</a></li>
+		<li><a title="流程说明" href="#">成功案例</a></li>
+	</ul>
+</div>
+<!--下拉菜单4结束--> 
+    
+<script type="text/javascript">
+var navmaster = document.getElementById("navmaster");
+var lis = navmaster.getElementsByTagName("li");
+var hrefas = navmaster.getElementsByTagName("a");
+for (var i = 0; i < lis.length; i++) {
+	lis[i].index = i + 1;
+	if (lis[i].className.toLowerCase().indexOf("hover") > -1) {
+		hoverLi(lis[i]);lis[i].isHover = true;
+	}
+	lis[i].onmouseover = function () {
+		hoverLi(this); sb_setmenunav('divDown' + this.index, true, this);
+	}
+	lis[i].onmouseout = function () {
+		sb_setmenunav('divDown' + this.index, false, this); unHoverLi(this);
+	}
+	lis[i].onclick = function () {
+		var href = this.getElementsByTagName("a")[0].href;
+		if (href)
+			window.location = href;
+	}
+
+}
+function getSpanByClassName(ele, className) {
+	var spans = ele.getElementsByTagName("span");
+	for (var i = 0; i < spans.length; i++) {
+		var cName = spans[i].className || "";
+		if (cName.toLowerCase() == className.toLowerCase()) {
+			return spans[i];
+		}
+	}
+}
+function hoverLi(obj) {
+	// obj.style.background = 'url(/images/MasterNew/menu_hover_ico' + obj.index + '.png) top left'; obj.style.color = '#fff';
+	obj.className = "M" + obj.index + "Common M" + obj.index + "Hover";
+	var dda = obj.getElementsByTagName("a")[0];
+	//if(!dda.prevColor && dda.style.color!="#ffffff")dda.prevColor = dda.style.color;
+	dda.style.color = "#ffffff";
+	var span = getSpanByClassName(obj, "bordCss bordBottomCssN") || obj.spanCursor;
+	if (span) {
+		span.className = "bordCss bordBottomCssNF";
+		obj.spanCursor = span;
+	}
+}
+function unHoverLi(obj) {
+	if (!obj.isHover) {
+		obj.className = "M" + obj.index + "Common M" + obj.index;
+		var dda = obj.getElementsByTagName("a")[0];
+		dda.style.color = "";
+		if (obj.spanCursor) obj.spanCursor.className = "bordCss bordBottomCssN";
+	}
+}
+function openwindowSup(url, name, iWidth, iHeight) {
+
+	var url;                                 //转向网页的地址;
+	var name;                           //网页名称，可为空;
+	var iWidth;                          //弹出窗口的宽度;
+	var iHeight;                        //弹出窗口的高度;
+	var iTop = (window.screen.availHeight + 30 - iHeight) / 2;       //获得窗口的垂直位置;
+	var iLeft = (window.screen.availWidth + 208 - iWidth) / 2;           //获得窗口的水平位置;
+	var param = 'height=' + iHeight + ',width=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',border=no,toolbar=no,menubar=no,scrollbars=no,resizable=yes,location=no,status=no';
+	var o = window.open(url, name, param);
+	o.focus();
+}
+
+function getCoordsNav(el) {
+	var box = el.getBoundingClientRect(),
+	doc = el.ownerDocument,
+	body = doc.body,
+	html = doc.documentElement,
+	clientTop = html.clientTop || body.clientTop || 0,
+	clientLeft = html.clientLeft || body.clientLeft || 0,
+	top = box.top + (self.pageYOffset || html.scrollTop || body.scrollTop) - clientTop,
+	left = box.left + (self.pageXOffset || html.scrollLeft || body.scrollLeft) - clientLeft
+	return { 'top': top, 'left': left };
+};
+function sb_setmenunav(name, vis, obj) {
+	var d = document.getElementById(name); //要显示隐藏的div
+	if (!d) return;
+	var padLeft = parseInt(d.getAttribute("pdLeft") || 0);
+	if (vis) {
+		if (d.timeArray) {
+			window.clearTimeout(d.timeArray);
+			d.timeArray = 0;
+		}
+		d.style.display = "block";
+		if (!d.onmouseover) {
+			d.onmouseover = function () {
+				sb_setmenunav(name, true);
+			}
+			d.onmouseout = function () {
+				sb_setmenunav(name, false);
+				unHoverLi(obj);
+			}
+		}
+		if (obj) {
+			var objp = obj;
+			if (objp.parentNode.tagName.toLowerCase() == "li")
+				objp = obj.parentNode;
+			var xy = getCoordsNav(objp);
+			var xias = xy.left;
+			//alert(d.offsetWidth);
+			var yias = xy.top + objp.offsetHeight;
+			padLeft = padLeft || 0;
+			d.style.left = xias + padLeft + "px";
+			d.style.top = yias + "px"; //;
+			
+		}
+	}
+	if (obj && obj.tagName.toLowerCase() == "li") {
+		d.needSaveClass = obj;
+		d.prevClass = obj.className;
+
+	}
+	else if (d.needSaveClass) {
+		hoverLi(d.needSaveClass);
+	}
+	if (!vis) {//延时隐藏，可以移动上去
+		if (d.spanCursor) d.spanCursor.className = "bordCss bordBottomCssN";
+		d.timeArray = window.setTimeout(function () {
+			d.style.display = "none"; d.style.height = "";
+		}, 100);
+	}
+
+}
+</script>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br>
+
+</div>
+</body>
+</html>

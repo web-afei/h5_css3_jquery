@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>jQuery无图片网站回到顶部特效</title>
+	<style type="text/css">
+	body,div,ul,li,a,img,h1,h2,h3,h4,h5,p,input{
+		margin:0;
+		padding:0;		
+	}
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+		display: block;
+	}
+	body{
+		font-family:"微软雅黑",Verdana, Arial, Helvetica, sans-serif;	
+		position:relative;	
+	}
+	img,input{
+		outline:none;
+	}
+	ul{
+		list-style:none;
+	}
+	a:link{
+		text-decoration:none;
+		color:#545454;
+	}
+	a:visited{
+		color:#525252;
+	}
+	a:hover{
+		color:#4D4D4D;
+	}
+	.clear{
+	  clear:both;
+	}
+	.ui-page { 
+		-webkit-backface-visibility: hidden; 
+	}
+	.container{
+		padding:5px;
+		min-width:320px;
+	}
+	#one{
+		width:100%;
+		
+	}
+	#one li{
+	float:left;
+	}
+	#one li .a-1{
+		
+		min-height:70px;
+		
+	}
+	#one li a{
+		display:block;
+		margin:5px;
+		background:yellow;
+	}
+	#one li img{
+		width:100%;
+		min-height:70px;
+		vertical-align: middle;
+	}
+	.scroll{
+		width:80px;
+		height:80px;
+		background:#64BFAE;
+		color:#fff;
+		line-height:80px;
+		text-align:center;
+		position:fixed;
+		right:30px;
+		bottom:50px;
+		cursor:pointer;
+		font-size:14px;
+	}
+	</style>
+ </head>
+ <body>
+<br><br><br><br><br><br><br><br>
+<p align="center"><font size="5" color="#FF0000">向下拉滚动条即可看到效果!</font>
+<div style="height:1000px;"></div>
+	<div class="scroll" id="scroll" style="display:none;">
+		回到顶部
+	</div>
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		showScroll();
+		function showScroll(){
+			$(window).scroll( function() { 
+				var scrollValue=$(window).scrollTop();
+				scrollValue > 100 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+			} );	
+			$('#scroll').click(function(){
+				$("html,body").animate({scrollTop:0},200);	
+			});	
+		}
+	})
+	</script>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+ </body>
+</html>

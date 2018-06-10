@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="Author" content="Gerard Ferrandez at /">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/lanrenzhijia.css">
+<title>鼠标拨乱屏幕(css3+html5特效)</title>
+<script src="js/lanrenzhijia.js"></script>
+<script>
+"use strict";
+
+var fluid = function () {
+	// ----- private vars -----
+	var scr, ctx, pointer, pmX = 0, pmY = 0, nbX, nbY, res, psi,
+		nbP, grid = [], particles = [];
+	// ----- Particle prototype -----
+	var Particle = function (x, y) {
+		this.x = this.px = x;
+		this.y = this.py = y;
+		this.xvel = 0;
+		this.yvel = 0;
+		this.next = true;
+	};
+	Particle.prototype.update = function () {
+		if (this.x > 0 && this.x < scr.width && this.y > 0 && this.y < scr.height) {
+			var x = (0.5 + this.x / res) | 0;
+			var y = (0.5 + this.y / res) | 0;
+			if (x >= nbX) x = nbX - 1;
+			if (y >= nbY) y = nbY - 1;
+			// ----- apply grid -----
+			var cell = grid[y * nbX + x];
+			var ax = (this.x % res) / res;
+			var ay = (this.y % res) / res;
+			this.xvel += (1 - ax) * cell.xvel * 0.05 + ax * cell.R.xvel * 0.05 + ay * cell.B.xvel * 0.05;
+			this.yvel += (1 - ay) * cell.yvel * 0.05 + ax * cell.R.yvel * 0.05 + ay * cell.B.yvel * 0.05;
+			this.x += this.xvel;
+			this.y += this.yvel;
+			// ----- canvas painting -----
+			var speed = (0.5 + this.xvel + this.yvel) | 0;
+			ctx.lineWidth = speed * 0.8 + 2;
+			ctx.lineCap = "round";
+			ctx.beginPath();
+			ctx.moveTo((0.5 + this.x) | 0, (0.5 + this.y) | 0);
+			ctx.lineTo((0.5 + this.px) | 0, (1.5 + this.py) | 0);
+			ctx.strokeStyle = "rgba(" + (speed * 25) + "," + 255 + "," + (speed * 25) + ", 1)";
+			ctx.stroke();
+			this.px = this.x;
+			this.py = this.y;
+		}
+		else {
+			// ----- new particle -----
+			this.x = this.px = Math.random() * scr.width;
+			this.y = this.py = Math.random() * scr.height;
+			this.xvel = 0;
+			this.yvel = 0;
+		}
+		this.xvel *= 0.5;
+		this.yvel *= 0.5;
+		// ---- fast loop ----
+		return this.next;
+	};
+	// ----- Grid prototype -----
+	var Grid = function (x, y) {
+		this.x = x;
+		this.y = y;
+		this.xvel = 0;
+		this.yvel = 0;
+		this.pressure = 0;
+		this.L  = new nullGrid();
+		this.B  = new nullGrid();
+		this.T  = new nullGrid();
+		this.R  = new nullGrid();
+		this.TL = new nullGrid();
+		this.TR = new nullGrid();
+		this.BL = new nullGrid();
+		this.BR = new nullGrid();
+		this.next = true;
+	};
+	var nullGrid = function () {
+		this.x = 0;
+		this.y = 0;
+		this.xvel = 0;
+		this.yvel = 0;
+		this.pressure = 0;
+	};
+	Grid.prototype.update = function () {
+		//----- mouse ------
+		var dx = this.x - pointer.X;
+		var dy = this.y - pointer.Y;
+		var dist  = Math.sqrt(dy * dy + dx * dx);
+		if (dist < psi) { 
+			if (dist < 4) dist = psi;
+			var p = psi / dist;
+			this.xvel += (pointer.X - pmX) * p;
+			this.yvel += (pointer.Y - pmY) * p;
+		}
+		// ----- pressure -----
+		this.pressure = (
+			this.TL.xvel * 0.5 + this.L.xvel + this.BL.xvel * 0.5 - this.TR.xvel * 0.5 - this.R.xvel - this.BR.xvel * 0.5 +
+			this.TL.yvel * 0.5 + this.T.yvel + this.TR.yvel * 0.5 - this.BL.yvel * 0.5 - this.B.yvel - this.BR.yvel * 0.5 
+		) * 0.25;
+		// ----- velocity -----
+		this.xvel += (this.TL.pressure * 0.5 + this.L.pressure + this.BL.pressure * 0.5 - this.TR.pressure * 0.5 - this.R.pressure - this.BR.pressure * 0.5) * 0.25;
+		this.yvel += (this.TL.pressure * 0.5 + this.T.pressure + this.TR.pressure * 0.5 - this.BL.pressure * 0.5 - this.B.pressure - this.BR.pressure * 0.5) * 0.25;
+		this.xvel *= 0.99;
+		this.yvel *= 0.99;
+		// ---- fast loop ----
+		return this.next;
+	};
+	// ----- create grid -----
+	var createGrid = function () {
+		grid = [];
+		particles = [];
+		// ----- create grid -----
+		for (var y = 0; y < nbY; y++) { 
+				for (var x = 0; x < nbX; x++) { 
+					grid[y * nbX + x] = new Grid(x * res, y * res);
+				}
+		}
+		grid[grid.length - 1].next = false;
+		// ----- link surrounding cells ----- 
+		for (var x = 0; x < nbX; x++) { 
+			for (var y = 0; y < nbY; y++) { 
+				var cell = grid[y * nbX + x];
+				if (y > 0) {
+					var T = grid[(y - 1) * nbX + x];
+					cell.T = T;
+					T.B = cell;
+				}
+				if (x > 0) {
+					var L = grid[y * nbX + x - 1];
+					cell.L = L;
+					L.R = cell;
+				}
+				if (y > 0 && x > 0) {
+					var TL = grid[(y - 1) * nbX + x - 1];
+					cell.TL = TL;
+					TL.BR = cell;
+				}
+				if (y > 0 && x < nbX - 1) {
+					var TR = grid[(y - 1) * nbX + x + 1];
+					cell.TR = TR;
+					TR.BL = cell;
+				}
+			}
+		}
+		// ---- create particles -----
+		for (var i = 0; i < nbP; i++) {
+			particles.push(new Particle(
+				Math.random() * scr.width,
+				Math.random() * scr.height
+			));
+		}
+		particles[particles.length - 1].next = false;
+	}
+	// ----- main loop -----
+	var run = function () {
+		ctx.fillStyle = "rgba(0,0,0,0.05)";
+		ctx.fillRect(0, 0, scr.width, scr.height);
+		for (
+			var i = 0;
+			grid[i++].update();
+		);
+		for (
+			var i = 0;
+			particles[i++].update();
+		);
+		pmX = pointer.X;
+		pmY = pointer.Y;
+		// ---- next frame ----
+		requestAnimFrame(run);
+	};
+	// ----- initialization -----
+	var init = function (params) {
+		res = params.resolution;
+		nbP = params.nParticles;
+		psi = params.penSize;
+		// ---- canvas ----
+		scr = new ge1doot.Screen({
+			container: "screen",
+			resize: function () {
+				nbX = Math.round(scr.width / res);
+				nbY = Math.round(scr.height / res);
+				createGrid();
+			}
+		});
+		ctx = scr.ctx;
+		scr.resize();
+		// ---- pointer ----
+		pointer = new ge1doot.Pointer({});
+		// ----- start engine -----
+		run();
+	};	
+	return {
+		load : function (params) {
+			window.addEventListener('load', function () {
+				init(params);
+			}, false);
+		}  
+	}
+}().load({
+	nParticles: 300,
+	resolution: 20,
+	penSize: 80
+});
+</script>
+</head>
+
+<body>
+<canvas id="screen">black is black!</canvas>
+
+</body>
+</html>

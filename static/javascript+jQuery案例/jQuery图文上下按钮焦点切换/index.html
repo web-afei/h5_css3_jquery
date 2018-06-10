@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery图文上下按钮焦点切换</title>
+<link href="css/lanren.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="activityBox" style="margin:30px auto">
+  <div class="title">
+    <h2>活动进行中..</h2>
+    <span class="ac_List"><a href="#">全部</a><span class="pageState"><span>1</span>/5</span></span><span class="prev"></span><span class="next"></span></div>
+  <div class="content"><span class="leftZone"></span>
+    <div class="contentInner">
+      <div class="tempWrap" style="overflow:hidden; position:relative; height:240px">
+        <ul style="position: relative; padding: 0px; margin: 0px; top: 0px;">
+          <li style="height: 240px;"><a href="#" target="_blank"><img src="images/1.jpg"></a>
+            <p class="mt5"><a href="#">盘点男色赢积分</a></p>
+            <p>截止日期：12月10日<span>246人关注</span></p>
+          </li>
+          <li style="height: 240px;"><a href="#" target="_blank"><img src="images/2.jpg"></a>
+            <p class="mt5"><a href="#">表白：那些没有好好说的再见</a></p>
+            <p>截止日期：12月12日<span>1001人关注</span></p>
+          </li>
+          <li style="height: 240px;"><a href="#" target="_blank"><img src="images/3.jpg"></a>
+            <p class="mt5"><a href="#">10点特价围观《王的盛宴》</a></p>
+            <p>截止日期：12月04日<span>797人关注</span></p>
+          </li>
+          <li style="height: 240px;"><a href="#" target="_blank"><img src="images/4.jpg"></a>
+            <p class="mt5"><a href="#">横扫沪上影院特价票</a></p>
+            <p>截止日期：12月27日<span>892人关注</span></p>
+          </li>
+          <li style="height: 240px;"><a href="#" target="_blank"><img src="images/5.jpg"></a>
+            <p class="mt5"><a href="#">写影评赢原版周边《少年派》</a></p>
+            <p>截止日期：12月07日<span>1591人关注</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <span class="rightZone"></span></div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="js/jquery.SuperSlide.js"></script>
+<script>
+	jQuery(".activityBox").slide({ 
+		mainCell:".contentInner ul", 
+		effect:"top",
+		delayTime:400
+	});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

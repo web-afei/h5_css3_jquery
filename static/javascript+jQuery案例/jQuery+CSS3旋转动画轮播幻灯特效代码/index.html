@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>jQuery+CSS3旋转动画轮播幻灯特效代码</title>
+<link rel="stylesheet" type="text/css" media="all" href="slide/style/style.css">
+<script type="text/javascript" src="slide/js/jquery.js"></script>
+<script type="text/javascript">
+tf_script={"img_number":5,"slideShowDelayOption":"5000","easeEffect":"random","disableDragOption":true}
+</script>
+<link rel="stylesheet" href="slide/style/jquery.onebyone.css" type="text/css" media="all">
+<link rel="stylesheet" href="slide/style/animate.css" type="text/css" media="all">
+<!--CSS3 Html5动画-->
+<script type="text/javascript" src="slide/js/jquery.onebyone.js"></script>
+<script type="text/javascript" src="slide/js/onebyone.js"></script>
+</head>
+<body>
+<div style="margin:0 auto;width:728px;clear:both;">
+  <script type="text/javascript">BAIDU_CLB_fillSlot("175922");</script>
+</div>
+<div class="headernewslide headernewslide_mid" style="background-color:#343637; background-image:url(slide/images/pattern_pixels.png)">
+  <div class="headernewslide_inner">
+    <!-- headernewslide slider -->
+    <div class="headernewslide_slider">
+      <div class="oneByOne1" style="overflow-x: hidden; overflow-y: hidden; ">
+        <div class="topSlider" style="display: block; left: 0px; ">
+          <div class="oneByOne_slide" style="left: 0px; display: block; ">
+            <div class="slide_image animate0 rotateIn" style="display: block; "> <img src="slide/slider_img_1.png"
+              alt=""> </div>
+            <div class="slide_text animate1 rotateIn" style="display: block; ">
+              <div class="slide_title"> <a href="http://www.mysite.com/" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; "> <strong> The Best HOSTING For Ebadu </strong> </a> </div>
+              <div class="slide_description"> <a href="http://www.mysite.com/" target="_self"
+                hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; ">
+                <p> 八度网络致力于提供 <strong> 稳定 &amp; 快速 </strong> 的网络服务，为中国的信息化产业做出贡献！ </p>
+                </a> </div>
+            </div>
+          </div>
+          <div class="oneByOne_slide" style="left: 940px; display: none; ">
+            <div class="slide_image animate0" style="display: none; "> <img src="slide/slider_img_2.png"
+              alt=""> </div>
+            <div class="slide_text animate1" style="display: none; ">
+              <div class="slide_title"> <a href="#" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; "> <strong> 八度云主机全场年付最低至8.8折 </strong> </a> </div>
+              <div class="slide_description"> <a href="http://www.mysite.com/" target="_self"
+                hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; ">
+                <p> 利用 <strong> 虚拟化技术， </strong> 将八度的资源化为资源池，提供云主机即租即用服务！ </p>
+                </a> </div>
+              <div class="slide_list">
+                <ul>
+                  <li> CPU：4核Q8300 </li>
+                  <li> 通电: 保证99.9% </li>
+                  <li> 硬盘：500G </li>
+                  <li> 24/7 技术支持 </li>
+                  <li> 内存：2GB </li>
+                  <li> 电信、双线、香港 </li>
+                </ul>
+                <div class="clear"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="oneByOne_slide" style="left: 1880px; display: none; ">
+            <div class="slide_image animate0" style="display: none; "> <img src="slide/slider_img_3.png"
+              alt=""> </div>
+            <div class="slide_text animate1" style="display: none; ">
+              <div class="slide_title"> <a href="#" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; "> <strong> 八度云主机全场年付最低至8.8折 </strong> </a> </div>
+              <div class="slide_description"> <a href="http://www.mysite.com/" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; ">
+                <p> 利用 <strong> 虚拟化技术， </strong> 将八度的资源化为资源池，提供云主机即租即用服务！ </p>
+                </a> </div>
+              <div class="slide_list">
+                <ul>
+                  <li> CPU：4核Q8300 </li>
+                  <li> 通电: 保证99.9% </li>
+                  <li> 硬盘：500G </li>
+                  <li> 24/7 技术支持 </li>
+                  <li> 内存：2GB </li>
+                  <li> 电信、双线、香港 </li>
+                  <li> 金盾8GB防护 </li>
+                  <li> 支持月季年付 </li>
+                </ul>
+                <div class="clear"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="oneByOne_slide" style="left: 2820px; display: none; ">
+            <div class="slide_image animate0" style="display: none; "> <img src="slide/slider_img_4.png"
+              alt=""> </div>
+            <div class="slide_text animate1" style="display: none; ">
+              <div class="slide_title"> <a href="http://www.mysite.com/wangyetexiao/slideshow/" target="_self"
+                hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; "> <strong> 强大易用的的Zkeys主机管理后台 </strong> </a> </div>
+              <div class="slide_description"> <a href="#" target="_self"
+                hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; ">
+                <p> Zkeys虚拟主机管理系统是 <strong> 中国最早 &amp; 功能最强大 </strong> 的主机管理系统，易用、简单、功能强大是它的优点. </p>
+                </a> </div>
+            </div>
+          </div>
+          <div class="oneByOne_slide" style="left: 3760px; display: none; ">
+            <div class="slide_image animate0" style="display: none; "> <img src="slide/slider_img_5.png"
+              alt=""> </div>
+            <div class="slide_text animate1" style="display: none; ">
+              <div class="slide_title"> <a href="#" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; "> <strong> 应用中心支持Android/IOS/Wp7平台 </strong> </a> </div>
+              <div class="slide_description"> <a href="http://www.mysite.com/wangyetexiao/slideshow/" target="_self" hidefocus="true" style="outline-style: none; outline-width: initial; outline-color: initial; ">
+                <p> 手机应用管理中心全面支持 <strong> Android &amp; iOS &amp; Wp7 </strong> 等系统的操作设备 </p>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttonArea">
+          <div class="buttonCon" style="cursor: pointer; "> <a class="theButton active" rel="0"> 1 </a> <a class="theButton" rel="1"> 2 </a> <a class="theButton" rel="2"> 3 </a> <a class="theButton" rel="3"> 4 </a> <a class="theButton" rel="4"> 5 </a> </div>
+        </div>
+        <div class="arrowButton" style="cursor: pointer; ">
+          <div class="prevArrow"> </div>
+          <div class="nextArrow"> </div>
+        </div>
+      </div>
+      <!--/ topSlider -->
+    </div>
+    <!--/ headernewslide slider -->
+  </div>
+</div>
+</body>
+</html>

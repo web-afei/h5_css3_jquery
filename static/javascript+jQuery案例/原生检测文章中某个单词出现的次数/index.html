@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生检测文章中某个单词出现的次数</title>
+	<style>
+		#result{color: red;}
+		#result b{font-family: 'Georgia';font-size:50px;}
+	</style>
+</head>
+<body>
+	<p id="lanren">
+		小白致力于网页脚本代码以及Flash素材的收集与整理，努力为国内前端工作者提供最全面的素材，帮您节约时间做更多的事情！
+	</p>
+	<p id="result"></p>
+	<script>
+		var lanren = {
+			str:function(){
+				return document.getElementById('lanren').innerHTML;
+			},
+			find:"的",
+			count:function(){
+				var target = this.str();
+				return target.split(this.find).length - 1;
+			}
+		}
+		document.getElementById('result').innerHTML = '经过检测发现，上面一句话中，关键词“的”出现了<b>' + lanren.count() +'</b>次';
+	</script>
+</body>
+</html>

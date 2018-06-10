@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生两个随风飘动的竹支效果</title>
+	<style>
+	body{background-color:#ff4745;margin:0;padding:0;}
+	.lanren_box {width:500px;height:1030px;margin:100px auto;}
+	.bamboo1 {
+		width:250px;
+		height:430px;
+		float:left;
+		background: url("images/b1.png")  0 0 no-repeat;
+		background-size: 100%;
+		-webkit-animation: spin 8s ease forwards infinite;
+		transform-origin: right bottom;
+	}
+	.bamboo2 {
+		width:350px;
+		height:600px;
+		float:left;
+		margin-left:-100px;
+		background: url("images/b2.png")  0 0 no-repeat;
+		background-size: 100%;
+		-webkit-animation: spin 10s ease forwards infinite;
+		transform-origin: left bottom;
+	}
+	@-webkit-keyframes spin {
+		0% {-webkit-transform: rotate(0);}
+		10% {-webkit-transform: rotate(0);}
+		40% {-webkit-transform: rotate(5deg);}
+		60% {-webkit-transform: rotate(0);}
+		80% {-webkit-transform: rotate(-5deg);}
+		100% {-webkit-transform: rotate(0);}
+	}
+	</style>
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<div class="lanren_box">
+        <div class="bamboo1"></div>
+        <div class="bamboo2"></div>
+    </div>
+    <!-- 代码部分end -->
+</body>
+</html>

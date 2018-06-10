@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html5 canvas绘制时钟表时间 - 站长素材</title>
+
+<style type="text/css">
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label,div,canvas{margin:0;padding:0;}
+body{color:#dddddd;font-size:13px;background: #302b23;font-family:Arial, Helvetica, sans-serif;}
+
+
+canvas{background:cornflowerblue;cursor:pointer;box-shadow:3px 3px 6px rgba(0,0,0,0.5);}
+</style>
+
+</head>
+<body>
+
+<div style="width:500px;height:500px;margin:20px auto 0 auto">
+
+	<canvas width='500' height='500' id='canvas'><canvas>
+	
+</div>
+
+<script type="text/javascript" src='js/requestNextAnimationFrame.js'></script>
+<script type="text/javascript">
+var Sprite=function(name,painter,behaviors){
+	if(name!==undefined) this.name=name;
+	if(painter!==undefined) this.painter=painter;
+	
+	this.top=0;
+	this.left=0;
+	this.width=0;
+	this.height=0;
+	this.velocityX=0;
+	this.velocityY=0;
+	this.visible=true;
+	this.animating=false;
+	this.behaviors=behaviors||[];
+	
+	return this;
+};
+
+Sprite.prototype={
+	paint:function(context){
+		if(this.painter!==undefined&&this.value){
+			this.painter.paint(this,context);
+		}
+	},
+	update:function(context,time){
+		for(var i=0;i<this.behaviors.length;++i){
+			this.behaviors[i].execute(this,context,time);
+		}
+	}
+};
+
+var canvas=document.getElementById('canvas'),
+	context=canvas.getContext('2d'),
+	
+	clock_radius=canvas.width/2-35,
+	hour_hand=55,
+	ball=new Sprite('ball',ballPainter),
+	ballPainter={
+		paint:function(sprite,context){
+			var x=sprite.left+sprite.width/2,
+				y=sprite.top+sprite.height/2,
+				radius=sprite.width/2,
+				width=sprite.width,
+				height=sprite.height;
+			context.save();
+			context.beginPath();
+			context.arc(x,y,radius,0,Math.PI*2,false);
+			context.clip();
+			
+			context.shadowColor='rgb(0,0,0)';
+			context.shadowOffsetX=-4;
+			context.shadowOffsetY=-4;
+			context.shadowBlur=8;
+			
+			context.lineWidth=2;
+			context.strokeStyle='rgb(100,100,195)';
+			context.fillStyle='rgba(30,144,255,0.15)';
+			context.fill();
+			context.stroke();
+			context.restore();
+		}
+	};
+	
+	
+	function drawGrid(color,stepx,stepy){
+		context.strokeStyle=color;
+		context.lineWidth=0.5;
+	
+		for(var i=stepx+0.5;i<context.canvas.width;i+=stepx){
+		context.beginPath();
+		context.moveTo(i,0);
+		context.lineTo(i,context.canvas.height);
+		context.stroke();
+		
+		}
+		for(var i=stepx+0.5;i<context.canvas.height;i+=stepy){
+		context.beginPath();
+		context.moveTo(0,i);
+		context.lineTo(context.canvas.width,i);
+		context.stroke();
+		
+		}
+	}
+	
+	function drawHand(loc,isHour){
+		var angle=(Math.PI*2)*(loc/60)-Math.PI/2,
+		handRadius=isHour?clock_radius-hour_hand:clock_radius,
+		
+		lineEnd={
+			x:canvas.width/2+Math.cos(angle)*(handRadius-ball.width/2),
+			y:canvas.height/2+Math.sin(angle)*(handRadius-ball.width/2)
+		};
+		context.beginPath();
+		//context.strokeStyle='rgba(0,0,0,0.5)';
+		context.lineWidth=2;
+		context.moveTo(canvas.width/2,canvas.height/2);
+		context.lineTo(lineEnd.x,lineEnd.y);
+		context.stroke();
+		
+		ball.left=canvas.width/2+Math.cos(angle)*handRadius-ball.width/2;
+		ball.top=canvas.height/2+Math.sin(angle)*handRadius-ball.width/2;
+		
+		ballPainter.paint(ball,context);
+		
+	}
+	
+	function  drawClock(){
+		drawClockFace();
+		drawHands();
+	}
+	
+	function drawHands(){
+		var date=new Date(),
+			hour=date.getHours();
+			
+		ball.width=20;
+		ball.height=20;
+		drawHand(date.getSeconds(),false);
+		
+		ball.width=35;
+		ball.height=35;
+		drawHand(date.getMinutes(),false);
+		
+		hour=hour>12?hour-12:hour;
+		ball.width=50;
+		ball.height=50;
+		drawHand(hour*5+(date.getMinutes()*5/60));
+		
+		ball.width=10;
+		ball.height=10;
+		ball.left=canvas.width/2-ball.width/2;
+		ball.top=canvas.height/2-ball.height/2;
+		ballPainter.paint(ball,context);
+	}
+	
+	function drawClockFace(){
+		context.beginPath();
+		context.arc(canvas.width/2,canvas.height/2,clock_radius,0,Math.PI*2,false);
+		context.save();
+		context.strokeStyle='rgba(0,0,0,0.8)';
+		context.stroke();
+		context.restore();
+	}
+	
+	function animate(){
+		context.clearRect(0,0,canvas.width,canvas.height);
+		drawGrid('lightgray',10,10);
+		drawClock();
+		window.requestNextAnimationFrame(animate);
+	}
+	
+	context.lineWidth=0.5;
+	context.strokeStyle='rgba(0,0,0,0.2)';
+	context.shadowStyle='rgba(0,0,0,0.5)';
+	context.shadowOffsetX=2;
+	context.shadowOffsetY=2;
+	context.shadowBlur=4;
+	context.stroke();
+	
+	window.requestNextAnimationFrame(animate);
+	drawGrid('lightgray',10,10);
+	
+	
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+
+</div>
+</body>
+</html>

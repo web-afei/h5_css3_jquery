@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>jquery+css3实现图片动态背景</title>
+        <link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+		<!--[if lte IE 6]>
+			<style type="text/css" media="screen">
+				#header div{
+					background-image: none;
+					filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/overlay.png', sizingMethod='scale');
+				}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				
+				<!-- Div is for Shadow Overlay-->
+				<div>
+					<h1>Animated Header Background</h1>	
+				</div>	
+			</div>
+	</div>
+	
+More script and css style
+: <a href="http://www.mysite.com/" title="网页设计之家--可能是JS网页特效代码收集最全的网站">www.mysite.com </a>
+	</body>		
+	
+	<!-- Import jQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		
+			var scrollSpeed = 70; 		// Speed in milliseconds
+			var step = 1; 				// How many pixels to move per step
+			var current = 0;			// The current pixel row
+			var imageHeight = 4300;		// Background image height
+			var headerHeight = 300;		// How tall the header is.
+			
+			//The pixel row where to start a new loop
+			var restartPosition = -(imageHeight - headerHeight);
+			
+			function scrollBg(){
+				
+				//Go to next pixel row.
+				current -= step;
+				
+				//If at the end of the image, then go to the top.
+				if (current == restartPosition){
+					current = 0;
+				}
+				
+				//Set the CSS of the header.
+				$('#header').css("background-position","0 "+current+"px");
+				
+				
+			}
+			
+			//Calls the scrolling function repeatedly
+			var init = setInterval("scrollBg()", scrollSpeed);
+
+			
+	</script>	
+
+</html>

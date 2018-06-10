@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>不含jQuery的页面背景切换 - 站长素材</title>
+</head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+<link href='css/prettify.css' rel='stylesheet' type='text/css'>
+<link href='css/index.css' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='js/javascript.js'></script>
+<script type='text/javascript' src='js/analytics.js'></script>
+</script>
+<body class='body' onload='cdj()'>
+	<div class='container'>
+		<div class='header'>
+			<span>
+				justParallax.js 
+			</span>
+			An easy to use parallax plugin.
+		</div>
+		<div class='content'>
+			<div class='head'>
+				Feature navigation
+			</div>
+			<a class='scroll-to' href='#introduction'>
+				Introduction
+			</a>
+			<br>
+			<a class='scroll-to'  href='#support'>
+				Wide browser support
+			</a>
+			<br>
+			<a class='scroll-to'  href='#setup'>
+				Easy set-up
+			</a>
+			<br>
+			<a class='scroll-to'  href='#customize'>
+				Customizable parallax settings
+			</a>
+			<br>
+			<a class='scroll-to'  href='#jquery'>
+				No jQuery needed
+			</a>
+			<br>
+			<a class='scroll-to'  href='#notes'>
+				Notes
+			</a>
+			<br>
+			<a class='scroll-to'  href='#playground'>
+				Playground
+			</a>
+		</div>
+		<hr>
+		<div class='content' id='introduction'>
+			<div class='head'>
+				Introduction
+			</div>
+			<p>
+				<strong>justParallax.js</strong> is a lightweight javascript plugin which allows users to make the background of their webpage have a subtle parallax effect with just 2 lines of code. 
+				<br><br>
+				<strong>justParallax.js</strong> is also fully customizable and does not depend on any Javascript library to function.
+				<br><br>
+				<strong class='pull-right'>
+					Click the background to change it. <i class='icon icon-arrow-right'></i>
+				</strong>
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='support'>
+			<div class='head'>
+				Wide browser support
+			</div>
+			<p>
+				<strong>justParallax.js</strong> supports all major browsers including  IE7+, Google Chrome, Mozilla Firefox, Safari, Opera and many more.
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='setup'>
+			<div class='head'>
+				Easy set-up
+			</div>
+			<p>
+				Get <strong>justParallax.js</strong> up and running in just 4 easy steps.
+				<ol class='sum'>
+					<li>
+						Add a background to your &lt;body&gt; tag.
+					</li>
+					<li>
+						Include <strong>justParallax.js</strong> to your html document.
+					</li>
+					<li>
+						Customize your parallax settings. (optional)
+					</li>
+					<li>
+						Call &uml;initParallax(settings);&uml; when your page is ready.
+					</li>
+				</ol>
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='customize'>
+			<div class='head'>
+				Customizable parallax settings
+			</div>
+			<p>
+				<strong>justParallax.js</strong> supports multiple customizations, here is a list of all options and it's default values.
+				<br>
+				<pre class='prettyprint linenums'><ol class='linenums'><li><span class='tag'>&lt;script src='./js/justParallax.js' type='text/javascript'&gt;&lt;script&gt;</span></li><li><span class='tag'>&lt;script&gt;</span></li><li>//Default settings</li><li><span class='pln'>speed: 8;</span> //The speed of the scrolling background, 1 is faster than 10.</li><li><span class='pln'>vertical: true;</span> //Set to true if the background should scroll vertically.</li><li><span class='pln'>vertical_inversed: false;</span> //Set to true if the vertical direction should be inversed.</li><li><span class='pln'>horizontal: true;</span> //Set to true if the background should scroll horizontally.</li><li><span class='pln'>horizontal_inversed: false;</span> //Set to true if the horizontal direction should be inversed.</li><li></li><li>//An example of the usage of justParallax.js</li><li><span class='pln'>var settings = {</span></li><li>	<span class='pln'>speed: 5,</span></li><li><span class='pln'>	vertical: true,</span></li><li><span class='pln'>	vertical_inversed: true,</span></li><li><span class='pln'>	horizontal: true,</span></li><li><span class='pln'>	horizontal_inversed: false</span></li><li><span class='pln'>};</span></li><li><span class='pln'>initParallax(settings);</span></li><li><span class='tag'>&lt;/script&gt;</span></li></ol></pre>
+				You only have to define the settings in the variable that you want to change. All undefined settings will fall back to their default setting. 
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='jquery'>
+			<div class='head'>
+				No jQuery needed
+			</div>
+			<p>
+				<strong>justParallax.js</strong> works with plain Javascript which gives the best performance and doesn&acute;t need jQuery or any other Javascript library to function.
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='notes'>
+			<div class='head'>
+				Notes
+			</div>
+			<p>
+				<strong>justParallax.js</strong> is merely a tool to achieve a great website, here are some tips and tricks about how to use the tool.
+				<br>
+				<br>
+				<ol class='sum'>
+					<li>
+						<strong>Watch the users screen size.</strong>
+						<br>
+						When the user scrolls, the background image will move and it will repeat itself when it has reached it's max. A good solution for this is to use patterns, patterns will repeat themselves and no one will have this problem.
+						<br><br>
+					</li>
+					<li>
+						<strong>Play around with the settings</strong>
+						<br>
+						By playing with the settings you will create the most wonderfull effects. For example: when you combine the vertical and horizontal scroll, the background will scroll diagonal.
+						<br><br>
+					</li>
+					<li>
+						<strong>Request new features</strong>
+						<br>
+						When you have some new ideas for features to this tool you can report them to this e-mail address or you can add a comment on the Codecanyon page .
+						<br><br>
+					</li>
+				</ol>
+			</p>
+		</div>
+		<hr>
+		<div class='content' id='playground'>
+			<div class='head'>
+				Playground
+			</div>
+			<p>
+				<strong>
+					<i class='icon icon-arrow-left'></i>Click the background to change it.
+				</strong>
+				<table id='settingTable' class='table table-hover'>
+					<thead>
+						<tr>
+							<th>
+								Option
+							</th>
+							<th>
+								Setting
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Speed:
+							</td>
+							<td>
+								<select class='speed active'>
+									<option value='1'>
+										1
+									</option>
+									<option value='2'>
+										2
+									</option>
+									<option value='3'>
+										3
+									</option>
+									<option value='4'>
+										4
+									</option>
+									<option value='5'>
+										5
+									</option>
+									<option value='6'>
+										6
+									</option>
+									<option value='7'>
+										7
+									</option>
+									<option selected='true' value='8'>
+										8
+									</option>
+									<option value='9'>
+										9
+									</option>
+									<option value='10'>
+										10
+									</option>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								vertical:
+							</td>
+							<td>
+								<div class='btn-group' data-toggle="buttons-radio">
+									<button class='btn  btn-small active'value=true>
+										true
+									</button>
+									<button class='btn btn-danger btn-small'value=false>
+				 						false
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								vertical_inversed:
+							</td>
+							<td>
+								<div class='btn-group' data-toggle="buttons-radio">
+									<button class='btn  btn-small ' value=true>
+										true
+									</button>
+									<button class='btn btn-danger btn-small active' value=false>
+										false
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								horizontal:
+							</td>
+							<td>
+								<div class='btn-group' data-toggle="buttons-radio">
+									<button class='btn  btn-small ' value=true>
+										true
+									</button>
+									<button class='btn btn-danger btn-small active' value=false>
+										false
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								horizontal_inversed:
+							</td>
+							<td>
+								<div class='btn-group' data-toggle="buttons-radio">
+									<button class='btn  btn-small ' value=true>
+										true
+									</button>
+									<button class='btn btn-danger btn-small active' value=false>
+										false
+									</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</p>
+		</div>
+	</div>
+	<div class="modal hide fade">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<strong>Choose background.</strong>
+		</div>
+		<div class="modal-body">
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/robots.png' />
+			</div>
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/cartographer.png' />
+			</div>
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/escheresque_ste.png' />
+			</div>
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/cuppycake.png' />
+			</div>
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/monsturs.png' />
+			</div>
+			<div class='img-holder img-rounded pull-left'>
+				<img src='images/colours.png' />
+			</div>
+		</div>
+		<div class="modal-footer">
+		<button class="btn" data-toggle='modal' data-target=".modal">Close</button>
+		</div>
+	</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+</body>
+</html>

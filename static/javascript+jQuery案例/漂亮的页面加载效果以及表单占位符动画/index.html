@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>漂亮的页面加载效果以及表单占位符动画</title>
+<link href="css/lanrenzhijia.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+  <h1 class="fade">Placeholdem</h1>
+  <h2 class="fade">Placeholder Caret Animation</h2>
+  <p class="fade">Placeholdem is a JavaScript plugin that animates placeholder carets on inputs and textareas. The placeholder value will incrementally delete on focus, and restore on blur.</p>
+  <h3 class="fade">Try It</h3>
+  <form>
+    <label class="fade">
+    <input name="field1" placeholder="Triggered on Focus/Blur" />
+    <div class="arrow"></div>
+    </label>
+    <label class="fade">
+    <textarea name="field2" placeholder="Inputs or Textareas"></textarea>
+    <div class="arrow"></div>
+    </label>
+  </form>
+  <h3 class="fade">Get It</h3>
+  <h3 class="fade">Use It</h3>
+  <div class="code-wrap">
+    <pre class="fade"><code><span>&lt;!-- add placeholder to input or textarea --/&gt;</span>
+&lt;input name="fieldname" placeholder="Placeholder Value" /&gt;</code></pre>
+    <pre class="fade"><code><span>// run Placeholdem on all elements with placeholders</span>
+Placeholdem( document.querySelectorAll( '[placeholder]' ) );
+</code></pre>
+  </div>
+</div>
+<script src="js/placeholdem.min.js"></script>
+<script>
+			Placeholdem( document.querySelectorAll( '[placeholder]' ) );
+
+			var fadeElems = document.body.querySelectorAll( '.fade' ),
+				fadeElemsLength = fadeElems.length,
+				i = 0,
+				interval = 50;
+
+				function incFade() {
+					if( i < fadeElemsLength ) {
+						fadeElems[ i ].className += ' fade-load';
+						i++;
+						setTimeout( incFade, interval );
+					}
+				}
+
+				setTimeout( incFade, interval );
+</script>
+</body>
+</html>

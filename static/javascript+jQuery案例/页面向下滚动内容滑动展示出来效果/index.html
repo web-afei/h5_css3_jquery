@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>页面向下滚动内容滑动展示出来效果</title>
+<style>
+body{ margin:0; padding:0; font-size:14px;}
+p{height: 10em;text-align: center; vertical-align: middle;line-height: 10em; font-size: 1.5em; margin: 2em 1em; }
+p.div1{ background: #A3C6BE; color: #403F31;}
+p.div2{ background: #87A18E; color: #000; }
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<p class="div1"><a href='http://www.mysite.com/'>小白</a></p>
+<p class="div2"><a href='http://www.mysite.com/flash/'>Flash素材</a></p>
+<p class="div1"><a href='http://www.mysite.com/nav/'>菜单导航</a></p>
+<p class="div2"><a href='http://www.mysite.com/time/'>时间日期</a></p>
+<p class="div1"><a href='http://www.mysite.com/banner/'>焦点图</a></p>
+<p class="div2"><a href='http://www.mysite.com/tab/'>tab标签</a></p>
+<p class="div1"><a href='http://www.mysite.com/jquery/'>jquery特效</a></p>
+<p class="div2"><a href='http://www.mysite.com/service/'>在线客服</a></p>
+<p class="div1"><a href='http://www.mysite.com/ads/'>广告代码</a></p>
+<p class="div2"><a href='http://www.mysite.com/album/'>相册代码</a></p>
+<p class="div1"><a href='http://www.mysite.com/pic/'>图片特效</a></p>
+<p class="div2"><a href='http://www.mysite.com/famous/'>名站特效</a></p>
+<p class="div1"><a href='http://www.mysite.com/others/'>其他代码</a></p>
+<p class="div2"><a href='http://www.mysite.com/adam/first/'>亚当学院</a></p>
+<p class="div1"><a href='http://www.mysite.com/js/css3/'>HTML5</a></p>
+<script src="http://www.lanrenzhijia.com/ajaxjs/1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/flowup.js"></script>
+<script>
+$(function(){
+	$("body").flowUp("p", { transalteY: 350, duration: 1 });
+});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

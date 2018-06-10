@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5中的SVG属性实现圆形进度条效果</title>
+</head>
+<body>
+	<svg width="440" height="440">
+		<text style="fill:black;" font-size="80" x="160" y="240" width="440" height="440">70%</text>
+	    <circle cx="220" cy="220" r="170" stroke-width="40" stroke="#C9CACA" fill="none"></circle>
+	    <circle id="c1" cx="220" cy="220" r="170" stroke-width="40" stroke="#E73468" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray=""></circle>
+	</svg>
+	<script>
+	var circle = document.getElementById("c1");
+	var percent = 0.7, perimeter = Math.PI * 2 * 170;
+    circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter * (1- percent));
+	</script>
+</body>
+</html>

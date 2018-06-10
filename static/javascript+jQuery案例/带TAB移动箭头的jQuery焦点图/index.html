@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>TAB箭头标签jQuery幻灯片 - 站长素材</title>
+<link rel="stylesheet" type="text/css" href="css/zzsc.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+var pageid = 4;
+</script>
+</head>
+
+<body>
+
+<!-- Banner -->
+<div class="slide" id="PicSlide">
+	<ul class="img">
+		<li style="display: list-item;">
+		<a href="http://sc.chinaz.com" target="_blank" title=" 中国“和平方舟”号医院船抵达亚丁湾">
+		<img src="images/thumb_640_360_1349779141347.jpg" width="640" height="360" alt="当地时间9月15日，执行“和谐使命—2010”任务的中国“和平方舟”号医院船航行5300余海里驶抵亚丁湾。2天后，医院船将与正在亚丁湾海域执行护航任务的中国海军第六批舰艇编队会合，展开全方位的医疗服务。" data-pinit="registered"></a></li>
+		<li class="hidden" style="display: none;">
+		<a href="http://sc.chinaz.com" target="_blank" title="美国自然历史博物馆幕后鲜为人知的工作">
+		<img src="images/thumb_640_360_1349779282588.jpg" width="640" height="360" alt="美国自然历史博物馆幕后鲜为人知的工作- sc.chinaz.com" data-pinit="registered"></a></li>
+		<li class="hidden" style="display: none;">
+		<a href="http://sc.chinaz.com" target="_blank" title="张召忠：解决南海争端时擦枪走火很正常">
+		<img src="images/thumb_640_360_1349776343282.jpg" width="640" height="360" alt="越南19日连续第三个周末发生反华抗议，一些示威者喊出“打倒中国”之类的激烈口号。在对示威管控严密的越南，这种连续公开抗议被认为非常罕见。与中国 关系紧张之际，越南又向美国靠了一步，两国17日发表共同声明，呼吁南海“航行自由”，并探讨把双方关系提升到“战略级”。" data-pinit="registered"></a></li>
+		<li class="hidden" style="display: none;">
+		<a href="http://sc.chinaz.com" target="_blank" title=" 北京市区17日拥堵路段峰值超140条创纪录">
+		<img src="images/thumb_640_360_1349778701818.jpg" width="640" height="360" alt="9月17日，北京市区晚高峰拥堵路段峰值超140条，已经超过今年年初因大雪造成90余条拥堵路段峰值的纪录。" data-pinit="registered"></a></li>
+		<li class="hidden" style="display: none;">
+		<a href="http://sc.chinaz.com" target="_blank" title=" 全国141万人参加国考争1.6万岗位">
+		<img src="images/thumb_640_360_1349778567239.jpg" width="640" height="360" alt="国家公务员招录公共科目笔试开考，今年考生超过140万，将竞争137个招考单位的1.6万余岗位，平均竞争比达到88比1。据统计，今年是笔试资格审核考生人数连续第3年突破百万人，而2003年这一数字仅为8.7万。" data-pinit="registered"></a></li>
+	</ul>
+	<!-- 标题区 -->
+	<div class="title">
+		<p class="h3 pos-a"><a title href="http://sc.chinaz.com">当地时间9月15日，执行“和谐使命—2010”任务的中国“和平方舟”号医院船航行5300余海里驶抵亚丁湾。2天后，医院船将与正在亚丁湾海域执行护航任务的中国海军第六批舰艇编队会合，展开全方位的医疗服务。</a></p>
+		<div class="shadow">
+		</div>
+	</div>
+	<!-- 缩略图 -->
+	<div class="thumb">
+		<ul>
+			<li>
+			<a href="http://sc.chinaz.com" target="_blank" title=" 中国“和平方舟”号医院船抵达亚丁湾">
+			<img src="images/thumb_120_60_1349779141347.jpg" width="120" height="60" alt=" 中国“和平方舟”号医院船抵达亚丁湾"></a></li>
+			<li>
+			<a href="http://sc.chinaz.com" target="_blank" title="美国自然历史博物馆幕后鲜为人知的工作">
+			<img src="images/thumb_120_60_1349779282588.jpg" width="120" height="60" alt="美国自然历史博物馆幕后鲜为人知的工作"></a></li>
+			<li>
+			<a href="http://sc.chinaz.com" target="_blank" title="张召忠：解决南海争端时擦枪走火很正常">
+			<img src="images/thumb_120_60_1349776343282.jpg" width="120" height="60" alt="张召忠：解决南海争端时擦枪走火很正常"></a></li>
+			<li>
+			<a href="http://sc.chinaz.com" target="_blank" title=" 北京市区17日拥堵路段峰值超140条创纪录">
+			<img src="images/thumb_120_60_1349778701818.jpg" width="120" height="60" alt=" 北京市区17日拥堵路段峰值超140条创纪录"></a></li>
+			<li>
+			<a href="http://sc.chinaz.com" target="_blank" title=" 全国141万人参加国考争1.6万岗位">
+			<img src="images/thumb_120_60_1349778567239.jpg" width="120" height="60" alt=" 全国141万人参加国考争1.6万岗位"></a></li>
+		</ul>
+		<div class="now-status" style="left: 0px;">
+		</div>
+	</div>
+</div>
+<!-- @end Banner -->
+<script type="text/javascript" src="js/zzsc.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //幻灯片调用
+        slider.init({'id': $('#PicSlide'), way:'left', interval: 4000});
+    });
+</script>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br>
+
+</div>
+</body>
+</html>

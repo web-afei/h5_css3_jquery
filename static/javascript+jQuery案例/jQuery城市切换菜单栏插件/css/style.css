@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+table{border-collapse:collapse;border-spacing:0;}
+/* header */
+.header{background:url(../images/tuan_head_01.gif) repeat-x;height:32px;}
+.header .topctiy{height:22px;padding:4px 10px 0 0;}
+.header .topctiy ul{float:right}
+.header .topctiy li{padding:0 10px;display:inline;float:left;margin-left:3px;color:#fff;line-height:22px;}
+.header .topctiy li.i1{padding:0px 13px;font-weight:bold;font-size:14px;background:#e16e6e;}
+.header .topctiy li.i2{cursor:pointer}
+.header .topctiy li a{color:#fff}
+.header .topctiy li a:hover{color:#fff}
+/* selcity */
+.selcity{padding:2px 0 4px 0;z-index:10;background:#7e2725;position:relative;}
+.selcity .none{left:47.5%;bottom:-18px;position:absolute}
+.selcity .none a{display:block;background:url(../images/tuan_bg15.gif) no-repeat;width:68px;text-indent:-3000px;height:21px;text-decoration:none}
+.selcity .none a:hover{display:block;text-indent:-3000px;height:21px;text-decoration:none}
+.selcity table{margin:0px auto;width:950px;border-collapse:collapse}
+.selcity table td{border:#8b3d3b 1px dashed;font-size:14px;vertical-align:middle;width:157px;color:#fff;height:39px;text-align:center}
+.selcity table td a{display:block;color:#fff;line-height:40px;height:40px;text-decoration:none}
+.selcity table td a:hover{background:#a86e6d;color:#fff;text-decoration:none}
+.selcity table td a.cur{background:#a86e6d}

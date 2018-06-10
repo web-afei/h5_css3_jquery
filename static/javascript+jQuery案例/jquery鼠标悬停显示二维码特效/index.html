@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery鼠标悬停显示二维码特效</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+.lanren{width:440px;height:260px;margin:100px auto;}
+.lanren dl{width:210px;height:260px;margin:5px;overflow: hidden;float:left;position:relative;}
+.lanren dl dd{display:none;cursor:pointer;}
+.lanren dl dt img{position:absolute;left:0;top:0;z-index:1;}
+.lanren dl dd.hide{width:220px;height:260px;position:absolute;left:0;top:0;z-index:2;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+.lanren dl dd.wx img{position:absolute;left:35px;top:55px;z-index:3;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="lanren">
+    <dl>
+        <dt><img src="images/1.jpg" height="260" width="210" alt="" /></dt>
+        <dd class="hide"></dd>
+        <dd class="wx"><img src="images/2.jpg" height="140" width="140" alt="" /></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/3.jpg" height="260" width="210" alt="" /></dt>
+        <dd class="hide"></dd>
+        <dd class="wx"><img src="images/4.jpg" height="140" width="140" alt="" /></dd>
+    </dl>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".lanren dl").hover(function(){
+        $(this).find(".hide,.wx").show();
+    },function(){
+        $(this).find(".hide,.wx").hide();
+    })
+})
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

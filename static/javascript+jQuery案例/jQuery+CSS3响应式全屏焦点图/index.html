@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+<title>jquery+css3响应式图片轮播 - 站长素材</title>
+</head>
+<body>
+<!-- one bt one slider -->
+<div class="wrape homeone">
+	<!-- <div class="fallback"><img src="images/home_page_1_fallback.jpg" alt="" /></div> -->
+	<div id="obo_slider">  				
+		<div class="oneByOne_item">
+			<a href="http://sc.chinaz.com/"><img src="images/home1_slide_1.png" class="wp1_3 slide1_bot" alt="sc.chinaz.com , ChinaCoder关注前端开发、关注中国IT从业者" /></a>		            
+			<span class="txt1">创意生活！创意生活！如您所想！与众不同！</span>			
+			<span class="txt2">无设计，不生活<br />好的设计令人心旷神怡</span>												
+			<span class="txt3 short">我们擅长新颖、简练的视觉设计表现手法，并整合创新战略，品牌建设，为客户提供创新的解决方案，以帮助提高品牌知名度和提升消费者体验的客户。
+</span>												
+			<span class="txt4 txt4up"><a href="http://sc.chinaz.com/"  onclick="javascript:window.open('http://sc.chinaz.com/');" class="btn_l">Contact Us</a></span>
+		</div>
+		<div class="oneByOne_item">                                 	
+			<a href="http://sc.chinaz.com/"><img src="images/home7_slide_2.png" class="wp1_3 wp1_left slide2_bot" alt="sc.chinaz.com , ChinaCoder关注前端开发、关注中国IT从业者" /></a>			            
+			<span class="txt1 blue txt_right2">这是一个以国际4A标准来打造的团队</span>			
+			<span class="txt2 blue txt_right2" style="width:380px">一次合作，终身朋友</span>												
+			<span class="txt2 blue txt_right2" style="width:350px">一对一量身定制</span>												
+			<span class="txt4 txt_right2 txt4up"><a href="http://sc.chinaz.com/" onclick="javascript:window.open('http://sc.chinaz.com/');" class="btn_l">Contact Us</a></span>												
+		</div>	
+		<div class="oneByOne_item">
+			<a href="http://sc.chinaz.com/"><img src="images/home7_slide_3.png" class="wp1_3 slide2_bot" alt="sc.chinaz.com , ChinaCoder关注前端开发、关注中国IT从业者" />	</a>	            
+			<span class="txt1">我们依然活着，因为我们一直在挑战</span>			
+			<span class="txt2">整合创意来诠释品牌的高<br />贵气质，前所未有的高端<br />
+			享受</span>												
+			<span class="txt3">创意是思维意识的表现，设计创意表现的结果，创意生活，从本站开始。</span>												
+			<span class="txt4" style="margin-top:15px"><a target="_blank" href="http://sc.chinaz.com/');" class="btn_l">+企业QQ为好友</a></span>
+		</div>                                                                                              
+		<div class="oneByOne_item">                                 	
+			<a href="http://sc.chinaz.com/"><img src="images/home7_slide_4.png" class="wp1_3 slide3_bot" alt="sc.chinaz.com , ChinaCoder关注前端开发、关注中国IT从业者" />	</a>		            
+			<span class="txt1 blue">细节决定成败！服务决定价值！ </span>			
+			<span class="txt2 blue">我们的宗旨！</span>												
+			<span class="txt3 short">多年来，本站传播广结良友，和客户朋友们建立了忠实而坚定的亲密伙伴关系。本站始终坚守着“信、合、赢、上”的核心经营理念，得到了客户的广泛认可。
+</span>												
+			<span class="txt4 txt4up"><a href="http://sc.chinaz.com/" onclick="javascript:window.open('http://sc.chinaz.com/');" class="btn_l">Contact Us</a></span>
+		</div>
+	</div>    
+</div>
+<!-- /one bt one slider -->
+
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery-runbanner.js"></script> 
+<script type="text/javascript">
+$(function(){
+    $('#obo_slider').runbanner({
+		className: 'oneByOne1', 	             
+		easeType: 'random',  //动画参数
+		/*
+		"rollIn", "fadeIn", "fadeInUp", "fadeInDown", "fadeInLeft", "fadeInRight", "fadeInRight", "bounceIn", "bounceInDown", "bounceInUp", "bounceInLeft",        "bounceInRight", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight" (18种动画类型可调用)
+		*/
+		slideShow: true  //为false时不会自动播放
+	});  
+})
+
+</script>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、世界之窗。</p>
+</div>
+</html>
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jquery+css3渐变显示“更多”隐藏内容</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() { 
+		$("span.spoiler").hide();
+	  	 $('<a class="reveal">Reveal Spoiler &gt;&gt;</a> ').insertBefore('.spoiler');
+		$("a.reveal").click(function(){
+			$(this).parents("p").children("span.spoiler").fadeIn(2500);
+			$(this).parents("p").children("a.reveal").fadeOut(600);
+		});
+	}); 
+	</script>
+</head>
+<body>
+	<div id="page-wrap">
+		<p>In the movie <em>Citizen Kane</em>, Charles Foster Kane's last word "Rosebud" turns out to <span class="spoiler">be a sled.</span></p> 
+		
+		<br /><br />
+		
+		<p>In the movie <em>The Village</em>, the monster <span class="spoiler">is really one of the village elders in a stupid costume. Plus, the whole thing takes place in modern times.</span></p>
+	</div>
+</body>
+</html>

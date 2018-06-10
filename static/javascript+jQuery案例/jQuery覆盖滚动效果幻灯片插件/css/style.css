@@ -1,0 +1,117 @@
+/*reset*/
+html { color:#666; background:#f4f4f4;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0;padding:0;}
+body{font: 12px/1.5 \微软雅黑,黑体,tahoma, arial;color:#666; min-height: 100%; position: relative; top: 0; overflow-x:hidden}
+section, header, article, time, nav, footer, figure, figcaption {display:block;margin:0;padding:0;}
+input:focus, a:focus {outline:none;}
+fieldset, img {border:0;}
+address, caption, cite, code, dfn, em, strong, th, var {font-style:normal;font-weight:normal;}
+ol, ul {list-style:none;}
+caption, th {text-align:left;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:normal;}
+q:before, q:after {	content:'';}
+abbr, acronym {	border:0;font-variant:normal;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input{ border:none;}
+button, input, textarea, select {font-family:微软雅黑,黑体,tahoma, arial;font-size:inherit;font-weight:inherit;line-height:1.5;vertical-align:middle;}
+button, input, textarea, select {*font-size:100%;}
+textarea {resize:none;}
+table {border-collapse:collapse;border-spacing:0;}
+th {text-align:inherit;}
+a {	color:#666;vertical-align:baseline;}
+a:hover { color: #00bbdf; text-decoration:none;}
+ins, a {text-decoration:none;}
+img { border: 0 none; vertical-align: middle;}
+
+/* ------ mobilyslider
+-----------------------------------------------*/
+.banner{ height:450px; background-color:#0bb7cf;}
+#content {
+width:100%;
+margin:100px auto 0;
+}
+.slider {
+margin:0 auto;
+width:100%;
+height:450px;
+position:relative;
+}
+
+.sliderContent {
+float:left;
+width:100%;
+height:450px;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+background-image:url(../images/prev_next.png);
+width:42px;
+height:42px;
+position:absolute;
+top:50%;
+margin-top:-34px;
+}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {
+position:absolute;
+width:100%;
+height:450px;
+background:#fff;
+text-align:center;
+}
+
+.sliderBullets {
+position:absolute;
+bottom:20px;
+left:85%;
+z-index:50;
+margin-left:-45px;
+}
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:10px;
+height:11px;
+background:url(../images/bullets.png) no-repeat;
+}
+.sliderBullets .active {
+background-position:0 -11px;
+}
+.sliderContent a {
+outline:none;
+}
+.slider a {
+color:#fff;
+}
+.slider a img {
+border:none;
+}

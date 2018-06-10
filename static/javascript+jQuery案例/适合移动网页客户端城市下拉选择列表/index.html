@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8">
+<title>适合移动网页客户端城市下拉选择列表</title>
+<meta content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<link href="css/lanren.css" type="text/css" rel="stylesheet" />
+<script>
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {  
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+function $(id){
+	return document.getElementById(id);
+}
+function showProvince(){
+	$("selectProvince").onclick = showAllProvince;
+	selectProvince();
+}
+function showAllProvince(){
+	$("allProvince").style.display = "block";
+	$("selectProvince").style.color = "#CCC";
+	$("selectProvince").style.backgroundPosition = "189px -17px";
+}
+function hideAllProvince(){
+	$("allProvince").style.display = "none";
+	$("selectProvince").style.color = "#000";
+	$("selectProvince").style.backgroundPosition = "189px -2px";
+}
+function selectProvince(){
+	var pro = $("allProvince").getElementsByTagName("li");
+	var links;
+	for(var i=0;i<pro.length;i++){
+		links = pro[i].getElementsByTagName("a");
+		for(var j=0;j<links.length;j++){
+			links[j].onclick = function(){
+				$("selectProvince").innerHTML = this.innerHTML;
+				hideAllProvince();
+			}
+		}
+	}
+}
+addLoadEvent(showProvince);
+</script>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="province">
+    <span class="left">送货至</span>
+    <span id="selectProvince" class="right">北京</span>
+    <ul id="allProvince" class="show">
+        <li><b>A</b><a href="javascript:void(0);">安徽</a></li>
+        <li><b>B</b><a href="javascript:void(0);">北京</a></li>
+        <li><b>C</b><a href="javascript:void(0);">重庆</a></li>
+        <li><b>F</b><a href="javascript:void(0);">福建</a></li>
+        <li><b>G</b><a href="javascript:void(0);">广东</a><a href="javascript:void(0);">广西</a></li>
+        <li><b>H</b><a href="javascript:void(0);">河北</a><a href="javascript:void(0);">河南</a><a href="javascript:void(0);">黑龙江</a></li>
+        <li><b>J</b><a href="javascript:void(0);">吉林</a><a href="javascript:void(0);">江苏</a></li>
+        <li><b>L</b><a href="javascript:void(0);">辽宁</a></li>
+        <li><b>N</b><a href="javascript:void(0);">内蒙古</a></li>
+        <li><b>Q</b><a href="javascript:void(0);">青海</a></li>
+        <li><b>S</b><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">山东</a></li>
+        <li><b>T</b><a href="javascript:void(0);">天津</a></li>
+        <li><b>X</b><a href="javascript:void(0);">新疆</a></li>
+        <li><b>Y</b><a href="javascript:void(0);">云南</a></li>
+        <li><b>Z</b><a href="javascript:void(0);">浙江</a></li>
+    </ul>
+</div>
+<!-- 代码部分end -->
+
+</body>
+</html>

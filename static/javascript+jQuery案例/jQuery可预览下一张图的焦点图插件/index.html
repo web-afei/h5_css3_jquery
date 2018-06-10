@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=gb2312" />
+		<title>jQuery下一个素描预览幻灯片 - 站长素材</title>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#carousel-zw').carouFredSel({
+					auto: false,
+					items: {
+						visible: 1,
+						start: 1
+					}
+				});
+				$('#carousel-txt').carouFredSel({
+					auto: false,
+					items: 1,
+					scroll: {
+						fx: 'fade',
+						duration: 2000
+					}
+				});
+				$('#carousel-fc').carouFredSel({
+					synchronise: [ ['#carousel-zw'], ['#carousel-txt', false] ],
+					items: 1,
+					scroll: {
+						duration: 1000,
+						timeoutDuration: 3000
+					},
+					prev: '#prev',
+					next: '#next'
+				});
+			});
+		</script>
+		<style type="text/css">
+			html, body {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background: rgb( 150, 50, 50 );
+			}
+			body * {
+				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+				font-size: 14px;
+				color: #222;
+				line-height: 20px;
+			}
+
+			#outer {
+				width: 100%;
+				height: 100%;
+				min-width: 800px;
+				min-height: 400px;
+				position: relative;
+			}
+			#inner {
+				width: 800px;
+				height: 300px;
+				margin: -150px 0 0 -400px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			#inner:after {
+				content: url( img/shadow.png );
+				opacity: 0.5;
+				position: absolute;
+				bottom: -50px;
+				left: 70px;
+			}
+			.carousel {
+				width: 400px;
+				height: 300px;
+				overflow: hidden;
+				float: left;
+			}
+			.carousel img {
+				display: block;
+				float: left;
+			}
+			#carousel-txt {
+				height: 30px;
+				position: absolute;
+				top: 135px;
+				right: 0;
+				z-index: 2;
+			}
+			#carousel-txt h3 {
+				text-shadow: 0 2px 5px rgb( 150, 50, 50 );
+				color: #fff;
+				font-size: 30px;
+				font-weight: bold;
+				line-height: 30px;
+				width: 400px;
+				height: 30px;
+				padding-left: 30px;
+				margin: 0;
+				float: left;
+			}
+			#overlay {
+				background: rgba( 150, 50, 50, 0.5 );
+				width: 400px;
+				height: 300px;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			#prev,
+			#next {
+				background: rgb( 150, 50, 50 );
+				color: #fff;
+				font-size: 30px;
+				font-weight: bold;
+				line-height: 37px;
+				text-align: center;
+				text-decoration: none;
+				display: block;
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+				position: absolute;
+				top: 50%;
+				z-index: 4;
+			}
+			#prev {
+				right: 50px;
+			}
+			#next {
+				right: 0;
+			}
+			#prev:hover {
+				text-indent: -5px;				
+			}
+			#next:hover {
+				text-indent: 5px;
+			}
+
+			#donate-spacer {
+				height: 0;
+			}
+			#donate {
+				border-top: 1px solid #999;
+				width: 750px;
+				padding: 50px 75px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			#donate p, #donate form {
+				margin: 0;
+				float: left;
+			}
+			#donate p {
+				width: 650px;
+				color: #fff;
+			}
+			#donate form {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner">
+				<div id="carousel-fc" class="carousel">
+					<img src="img/bugs-fc.jpg" width="400" height="300" />
+					<img src="img/toystory-fc.jpg" width="400" height="300" />
+					<img src="img/rat-fc.jpg" width="400" height="300" />
+					<img src="img/cars-fc.jpg" width="400" height="300" />
+				</div>
+				<div id="carousel-zw" class="carousel">
+					<img src="img/bugs-zw.jpg" width="400" height="300" />
+					<img src="img/toystory-zw.jpg" width="400" height="300" />
+					<img src="img/rat-zw.jpg" width="400" height="300" />
+					<img src="img/cars-zw.jpg" width="400" height="300" />
+				</div>
+				<div id="carousel-txt" class="carousel">
+					<h3>A Bug's Life</h3>
+					<h3>Toy Story</h3>
+					<h3>Ratatouille</h3>
+					<h3>Cars</h3>
+				</div>
+				<div id="overlay"></div>
+				<a href="#" id="prev">&lsaquo;</a>
+				<a href="#" id="next">&rsaquo;</a>
+			</div>
+		</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+	</body>
+</html>

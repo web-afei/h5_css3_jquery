@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>jQuery下一张图预览幻灯片 - 站长素材</title>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#carousel').carouFredSel({
+					width: 800,
+					align: false,
+					items: {
+						visible: 1,
+						width: 700
+					},
+					auto: false,
+					next: '#next',
+					scroll: {
+						onBefore: function( data ) {
+							data.items.visible.animate({
+								'marginLeft': 0
+							}, data.scroll.duration);
+						},
+						onAfter: function( data ) {
+							data.items.old.css({
+								'zIndex': 0,
+								'marginLeft': -300
+							});
+							data.items.visible.css( 'zIndex', 2 );
+							data.items.visible.next().css( 'zIndex', 1 );
+						}
+					},
+					onCreate: function( data ) {
+						data.items.css({
+							'marginLeft': 0,
+							'zIndex': 2
+						});
+						data.items.next().css( 'zIndex', 1 );
+					}
+				});
+			});
+		</script>
+		<style type="text/css">
+			html, body {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background-color: #eee;
+				min-height: 600px;
+			}
+			body * {
+				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+				font-size: 14px;
+				color: #333;
+				line-height: 22px;
+			}
+
+			#wrapper {
+				background-color: #fff;
+				width: 800px;
+				height: 525px;
+				padding: 10px;
+				margin: -265px 0 0 -410px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				box-shadow: 0 0 10px #666;
+			}
+			#carousel {
+				width: 800px;
+				height: 525px;
+				overflow: hidden;
+			}
+			#carousel img {
+				border: none;
+				display: block;
+				margin-left: -300px;
+				float: left;
+				position: relative;
+				z-index: 0;
+				box-shadow: 0 0 10px #333;
+			}
+			#next {
+				background: url( img/gui-next.png ) center center no-repeat #999;
+				display: block;
+				width: 100px;
+				height: 525px;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				z-index: 5;
+				opacity: 0.1;
+
+				-o-transition: opacity 1s ease;
+				-ms-transition: opacity 1s ease;
+				-moz-transition: opacity 1s ease;
+				-webkit-transition: opacity 1s ease;
+				transition: opacity 1s ease;
+			}
+			#next:hover {
+				opacity: 0.5;
+			}
+			
+			#donate-spacer {
+				height: 100%;
+			}
+			#donate {
+				border-top: 1px solid #999;
+				width: 750px;
+				padding: 50px 75px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			#donate p, #donate form {
+				margin: 0;
+				float: left;
+			}
+			#donate p {
+				width: 650px;
+			}
+			#donate form {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="carousel">
+				<img src="img/stan.jpg" width="700" height="525"/ >
+				<img src="img/francine.jpg" width="700" height="525" />
+				<img src="img/roger.jpg" width="700" height="525" />
+				<img src="img/hayley.jpg" width="700" height="525" />
+				<img src="img/steve.jpg" width="700" height="525" />
+				<img src="img/klaus.jpg" width="700" height="525" />
+			</div>
+			<a id="next" href="#"></a>
+		</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+	</body>
+</html>

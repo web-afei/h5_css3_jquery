@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3倾斜图片相册特效</title>
+<link rel="stylesheet" href="css/lanrenzhijia.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+<style type="text/css">
+<!--
+body{ color:#FFFFFF;}
+a { color:#FFCC00;
+}
+-->
+</style>
+</head>
+
+<body id="home">
+
+<div id="header">
+	<img src="images/banner.png" alt="banner"/>
+</div><!--end header-->
+
+<div class="clear"></div>
+
+<div id="container">
+
+<div id="gallery">
+<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-top" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+	<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-top" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+		<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-top" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+			<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-top" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+
+<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-bottom" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+	<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-bottom" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+		<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-bottom" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+			<a href="images/skate1.jpg" title="You can write anything in here"><img class="thumb-bottom" src="images/skate1.jpg" alt="skateboarder" title="skateboarder"/></a>
+</div><!--end gallery-->
+
+</div><!--end container-->
+
+<div class="clear"></div>
+
+<div id="footer">
+More script and css style
+: <a href="http://www.mysite.com/" title="js网页特效，小白代码，网页特效代码">www.mysite.com </a>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$(".thumb-top,.thumb-bottom").fadeTo("slow", 0.3);
+$(".thumb-top,.thumb-bottom").hover(function(){
+$(this).fadeTo("slow", 1.0);
+},function(){
+$(this).fadeTo("slow", 0.3);
+});
+});
+
+$(function() {
+    $('#gallery a').lightBox();
+});
+</script>
+
+</body>
+</html>

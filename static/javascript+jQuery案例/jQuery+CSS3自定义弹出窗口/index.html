@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>jQuery+CSS3动画模态窗口</title>
+<script type="text/javascript" src="js/vue1oix.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<link rel="stylesheet" href="css/ss-standard.css" />
+<link rel="stylesheet" href="css/head.css" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+<script src="js/jquery.js"></script>
+<script src="js/modernizr.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/javascript.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	$('#block-slide').blockSlide({
+		
+		'imgurl':	'images/background.jpg',
+		'animation':'slide'
+		
+	}, 
+	
+	{
+		'images/1.jpg' :    "<h1>Some Title</h1>"
+						+"<p>Hey there! I see you want to learn more about this. Well here you can learn more.</p>"
+						+"<p>'How?' you ask? well, just click that big button on the bottom right you devil, you.</p>"
+						+"<div class='button'>Lets go!</div>"
+					+"</div>",
+					
+		'images/2.jpg' :    "<h1>Another Title</h1>"
+						+"<p>Filler text can be quite boring, but perhaps this will give you something to see, this text is "
+						+"actually poetry.</p>"
+						+"<p>Whether it's parallel to development, or maybe it's a CSS animation of a ball, I think it's" 
+						+"quite easy to see, that InsertHTML has it all!</p>"
+						+"<div class='button'>Lets go!</div>"
+					+"</div>",
+					
+		'images/3.jpg' :    "<h1>One More Title</h1>"
+						+"<p>Did you know that an organism called Amoeboid Flourescesis latches itself onto meat"
+						+"and can cause pneumonia?</p>"
+						+"<p>No? Well that's because I just made it up.</p>"
+						+"<div class='button'>Lets go!</div>"
+					+"</div>",
+					
+		'images/4.jpg' :    "<h1>I Wanna Celebrate</h1>"
+						+"<p>The title for this is a reference to a song! It's by Daft Punk.</p>"
+						+"<p>Daft punk are from France, a country in Europe! Europe is a Continent on Earth.</p>"
+						+"<div class='button'>Lets go!</div>"
+					+"</div>",
+					
+		
+	});
+	
+});
+
+</script>
+
+
+</head>
+<body>
+
+<div id="block-slide">
+
+</div>
+
+<div style="text-align:center;clear:both">
+<p>适用浏览器：FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、360、世界之窗。</p>
+
+</div>
+
+</body>
+</html>

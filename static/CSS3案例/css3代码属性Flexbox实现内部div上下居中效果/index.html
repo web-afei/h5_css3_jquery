@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3代码属性Flexbox实现内部div上下居中效果</title>
+	<style>
+	*{margin:0;padding:0;}
+	.lanren{width:600px;height:150px;margin:0 auto;background-color:#ccc;
+		/* 以下为核心CSS代码 */
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-webkit-box-align: center;
+		align-items: center;
+	}
+	.lanren .demo1{width:100px;height:100px;margin:20px;background-color:#fff;}
+	.lanren .demo2{width:200px;height:70px;margin:20px;background-color:#fff;}
+	</style>
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<div class="lanren">
+		<div class="demo1">demo1</div>
+		<div class="demo2">demo2</div>
+	</div>
+	<!-- 代码部分end -->
+</body>
+</html>

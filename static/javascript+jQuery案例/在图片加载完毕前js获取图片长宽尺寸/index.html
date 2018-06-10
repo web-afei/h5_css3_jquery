@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在图片加载完毕前js获取图片长宽尺寸</title>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<img src="http://demo.lanrenzhijia.com/2014/album0703/images/bp2.jpg" alt="在图片加载完毕前js获取图片长宽尺寸">
+<script src="js/lanren.js"></script>
+<script>
+	//使用案例
+	imgReady('http://demo.lanrenzhijia.com/2014/album0703/images/bp2.jpg', function () {
+		alert('图片的宽度：' + this.width + '; 高度：' + this.height);
+	});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

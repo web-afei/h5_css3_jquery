@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3左右全屏流畅滑动幻灯片插件</title>
+<link rel="stylesheet" type="text/css" media="screen" href="css/lanrenzhijia.css" />
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" media="screen" href="css/lanrenzhijia-ie.css" /><![endif]-->
+<link href="http://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined'){
+	    document.write(unescape("%3Cscript src=js/jquery.js type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+<script type="text/javascript" src="js/sequence.jquery-min.js"></script>
+<script type="text/javascript">	
+		$(document).ready(function(){
+			var options = {
+				autoPlay: false,
+				autoPlayDirection: 1,
+				nextButton: ".next",
+				prevButton: ".prev",
+				prependNextButton: false,
+				prependPrevButton: false,
+				pauseIcon: false,
+				animateStartingFrameIn: false, 
+				delayDuringOutInTransitions: false
+			};
+
+			var slideShow = $("#slideshow").sequence(options).data("sequence");
+			
+			$(".prev, .next").show();
+		})
+	</script>
+</head>
+
+<body>
+<div id="header">
+  <div id="slideshow"> <img class="prev" src="images/bt-prev.png" alt="Previous" /> <img class="next" src="images/bt-next.png" alt="Next" />
+    <ul>
+      <li>
+        <div class="info animate-in">
+          <h2>Built using Sequence.js</h2>
+          <p>The jQuery Slider Plugin with Infinite Style</p>
+        </div>
+        <img class="sky animate-in" src="images/bg-clouds.png" alt="Blue Sky" /> <img class="balloon animate-in" src="images/balloon.png" alt="Balloon" /> </li>
+      <li>
+        <div class="info">
+          <h2>Creative Control</h2>
+          <p>Create unique sliders using CSS3 transitions -- no jQuery knowledge required!</p>
+        </div>
+        <img class="sky" src="images/bg-clouds.png" alt="Blue Sky" /> <img class="aeroplane" src="images/aeroplane.png" alt="Aeroplane" /> </li>
+      <li>
+        <div class="info">
+          <h2>Cutting Edge</h2>
+          <p>Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</p>
+        </div>
+        <img class="sky" src="images/bg-clouds.png" alt="Blue Sky" /> <img class="kite" src="images/kite.png" alt="Kite" /> </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

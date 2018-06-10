@@ -1,0 +1,173 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery滑盖式选择框按钮 - 站长素材</title>
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/jtumbler.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-jtumbler-1.0.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+            // Initialize jTumbler
+            $(".radio-switch").jTumbler();
+
+            // Change color
+            $(".colors a").click(function(){
+                $(".colors li").removeClass("current");
+                var className = $(this).parent().attr("class");
+
+                $(this).parent().addClass("current");
+                $("#options-container").attr("class", className);
+
+                if(className === "jtumbler-white" || className === "jtumbler-light-gray" || className === "jtumbler-pink") {
+                    $("body").addClass("inverse");
+                } else {
+                    $("body").removeClass("inverse");
+                }
+                return false;
+            });
+
+            var isOn = true;
+            $("#toggle-jtumbler").click(function(){
+                isOn = !isOn;
+
+                if(!isOn){
+                    $(".radio-switch").show();
+                    $(".jtumbler").hide();
+                } else {
+                    $(".radio-switch").hide();
+                    $(".jtumbler").show();
+                }
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="page">
+        <section id="content">
+
+            <h1>jTumbler jQuery Plugin Demonstration</h1>
+            <form action="#">
+            <div class="options-page">
+                <div class="left-column">
+                    <div class="options">
+                        <p>Below is example of how jTumbler works. It simply converts generic radio buttons and labels to nice-looking groupped UI controls.</p>
+                        <h3>Toggle jTumbler</h3>
+                        <p><button id="toggle-jtumbler">Turn jTumbler On/Off</button></p>
+
+                        <h3>Change Appearance</h3>
+                        <p>
+                            <ul class="colors">
+                                <li class="jtumbler-magenta"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-purple"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-teal"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-lime"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-brown"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-pink"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-orange"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-blue"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-red"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-green"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-marine"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-white"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-black"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-dark-gray current"><a href="javascript:;">&nbsp;</a></li>
+                                <li class="jtumbler-light-gray"><a href="javascript:;">&nbsp;</a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </p>
+
+                        <div id="options-container">
+                            <div class="option-left">
+                                <h4>Quality Assurance</h4>
+                                <div class="radio-switch">
+                                    <input type="radio" name="options[qa]" value="no" id="no-qa">
+                                    <label for="no-qa">No QA</label>
+
+                                    <input type="radio" name="options[qa]" value="standard" id="standard-qa" checked="true">
+                                    <label for="standard-qa">Standard QA</label>
+
+                                    <input type="radio" name="options[qa]" value="middle" id="middle-qa">
+                                    <label for="middle-qa">Middle QA</label>
+
+                                    <input type="radio" name="options[qa]" value="full" id="full-qa">
+                                    <label for="full-qa">Full QA</label>
+                                </div>
+                            </div>
+                            <div class="option-right">
+                                <h4>Turnaround Time</h4>
+                                <div class="radio-switch">
+                                    <input type="radio" name="options[time]" value="no" id="no-rush">
+                                    <label for="no-rush">No Rush</label>
+
+                                    <input type="radio" name="options[time]" value="normal" id="normal-delivery" checked="true">
+                                    <label for="normal-delivery">Normal Delivery</label>
+
+                                    <input type="radio" name="options[time]" value="rush" id="rush-delivery">
+                                    <label for="rush-delivery">Rush Delivery</label>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="option-left">
+                                <h4>Images</h4>
+                                <div class="radio-switch">
+                                    <input type="radio" name="options[images]" value="yes" id="images-yes" checked="true">
+                                    <label for="images-yes">Yes</label>
+
+                                    <input type="radio" name="options[images]" value="no" id="images-no">
+                                    <label for="images-no">No</label>
+                                </div>
+                            </div>
+                            <div class="option-right">
+                                <h4>Simple</h4>
+                                <div class="radio-switch">
+                                    <input type="radio" name="options[notarized]" value="yes" id="notarized-yes" checked="true">
+                                    <label for="notarized-yes">Yes</label>
+
+                                    <input type="radio" name="options[notarized]" value="no" id="notarized-no">
+                                    <label for="notarized-no">No</label>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="option-left">
+                                <h4>Certified</h4>
+                                <div class="radio-switch">
+                                    <input type="radio" name="options[certified]" value="1" id="certified-1" checked="true">
+                                    <label for="certified-1">1</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-2">
+                                    <label for="certified-2">2</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-3">
+                                    <label for="certified-3">3</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-4">
+                                    <label for="certified-4">4</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-5">
+                                    <label for="certified-5">5</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-6">
+                                    <label for="certified-6">6</label>
+
+                                    <input type="radio" name="options[certified]" value="" id="certified-7">
+                                    <label for="certified-7">7</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <button>Submit Form</button>
+            </div></form>
+        </section>
+    </div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+</body>
+</html>

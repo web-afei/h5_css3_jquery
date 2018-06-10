@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>兼容PC和移动页面的mobiscroll日期插件</title>
+<meta content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<style>
+    .appoint-order{width:80%;border:1px solid #aaa;background:none;height:40px;}
+</style>
+<link href="css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css" />
+<link href="css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css" />
+<!-- S 可根据自己喜好引入样式风格文件 -->
+<script src="js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+<link href="css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css" />
+<!-- E 可根据自己喜好引入样式风格文件 -->
+<script src="js/jquery.min.js"></script>
+<script src="js/mobiscroll.core-2.5.2.js"></script>
+<script src="js/mobiscroll.core-2.5.2-zh.js"></script>
+<script src="js/mobiscroll.datetime-2.5.1.js"></script>
+<script src="js/mobiscroll.datetime-2.5.1-zh.js"></script>
+</head>
+<body>
+    <label>请输入日期</label>
+    <input type="button" name="appDate" id="appDate" class="appoint-order" placeholder="请输入日期" />
+
+<script>
+$(function(){
+    //调出时间插件
+    var currYear = (new Date()).getFullYear();  
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.datetime = {preset : 'datetime'};
+    opt.time = {preset : 'time'};
+    opt.default = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'modal', //显示方式 
+        mode: 'scroller', //日期选择模式
+        lang:'zh',
+            startYear:currYear, //开始年份
+            endYear:currYear + 1 //结束年份
+    };
+    $("#appDate").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery上下点击翻转列表效果</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 代码部分 begin -->
+<div class="scrollbox">
+    <div id="scrollDiv">
+        <ul>
+            <li><h3><a href="#" class="linktit">移动娱乐业务突飞</a></h3> <div>为了探索推进公车改革后，新能源汽车分时租赁项目试点工作，并成立了试点工作小组... </div></li>
+            <li><h3><a href="#" class="linktit">不停转动向上滚动可控制向上向下滚动特效</a></h3> <div>DIV CSS JS自动不断向上一个一个滚动可控制向上向下滚动特效... </div></li>
+            <li><h3><a href="#" class="linktit">全国涂料总产量呈现直线下滑态势</a></h3> <div>我国涂料工业将面临涂料消费税征收全面铺开，环保压力持续增加，2015年的形势不容乐观... </div></li>
+            <li><h3><a href="#" class="linktit">镂空渔网超吸睛</a></h3> <div>镂空罩衫，短短的版型穿起来显高又俏皮，内搭长款连衣裙，非常大方哦... </div></li>
+            <li><h3><a href="#" class="linktit">主题创业街亮相</a></h3> <div>目前已有包括咖啡厅、酒吧、餐厅、瑜伽室在内的8家商铺入驻该火车... </div></li>
+        </ul>
+    </div>
+    <div class="scroltit"><div class="updown" id="but_down">向上</div><div class="updown" id="but_up">向下</div></div>
+</div>
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/jq_scroll.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#scrollDiv").Scroll({line:1,speed:500,timer:3000,up:"but_up",down:"but_down"});
+})
+</script>
+<!-- 代码部分 end -->
+
+</body>
+</html>

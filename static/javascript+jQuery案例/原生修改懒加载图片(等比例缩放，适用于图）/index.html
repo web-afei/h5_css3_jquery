@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8">
+<title>原生修改懒加载图片(等比例缩放，适用于图片不规则的情况下)</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ background-repeat:no-repeat; background-position:center center; background-size:100%;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<img src="images/1px.gif" data-echo="images/lanren.jpg" width="400" height="520" />
+<script src="js/jquery.min.js"></script>
+<script src="js/echo.min.js"></script>
+<script>
+$(function(){
+	echo.init();
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

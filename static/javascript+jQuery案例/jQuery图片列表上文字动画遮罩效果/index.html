@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery图片列表上文字动画遮罩效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+body{ background:#5EBCFC;}
+
+.teacher{width:1100px;height:360px;position:relative;margin:0 auto; overflow:hidden;}
+.teacher .teacherPic{width:1100px;height:360px;}
+.teacher .teacherPic .content{width:180px;height:360px;float:left;position:relative;overflow:hidden;margin-left:3px;}
+.teacher .teacherPic .content .txt{width:156px;height:100px;background:rgba(18,21,44,0.7); position:absolute;left:0px;bottom:0px;padding:0 12px;border-top:2px solid #CB5412;}
+.teacher .teacherPic .content .txt h3{color:#CB5412;font-size:24px;font-weight:100;margin:10px 0 6px 0;}
+.teacher .teacherPic h4{color:#fff;font-size:14px;font-weight:100;}
+.teacher .teacherPic .content .txt p{color:#fff;margin-top:20px;padding-top:12px;border-top:1px solid #CB5412;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="teacher">
+	<div class="teacherPic">
+
+		<div class="content">
+			<img src="images/t1.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>马老师</h3>
+				<h4>中国注会师、注册税务师<br/>注会、职称高级讲师</h4>
+				<p>拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密，化繁为简，直击要点。</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/t2.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>吴老师</h3>
+				<h4>中国注会师、注册税务师<br/>金融学博士、注册会计师</h4>
+				<p>金融学博士，金融、财会专业双重思维带你深入浅出的学习CPA《财管》课程，通俗易懂的授课技巧，便捷、高效的学习方法让你信心百倍的通关CPA！</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/t3.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>刘老师</h3>
+				<h4>中国注会师、注册税务师<br/>经济师、中级会计师</h4>
+				<p>管理学博士，丰富的海外企管经历，理论实践相结合的教学方法，让公司战略与风险管理课程不再抽象，用企业管理思维帮你破解考试之谜！实属京城实力派注册会计师讲师！</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/t4.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>王老师</h3>
+				<h4>拥有注会、注税、司法三大执业资格证书</h4>
+				<p>管理学博士，丰富的海外企管经历，理论实践相结合的教学方法，让公司战略与风险管理课程不再抽象，用企业管理思维帮你破解考试之谜！、重难点把握精准，解析细致；</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/t5.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>贾老师</h3>
+				<h4>法学硕士<br/>会计职称《经济法》</h4>
+				<p>独创了考点讲解、重点训练、考前串讲的“三轮教学”法，为希望短期攻克经济法课程的学员指明正确的道路；对学生真诚亲切，认真负责；授课风格幽默，擅长互动式教学!</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/t6.jpg" width="180" height="360" />
+			<div class="txt">
+				<h3>杨老师</h3>
+				<h4>管理学博士</h4>
+				<p>管理学博士，丰富的海外企管经历，理论实践相结合的教学方法，让公司战略与风险管理课程不再抽象，用企业管理思维帮你破解考试之谜！</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".content").hover(function(){
+		$(this).children(".txt").stop().animate({height:"360px"},200);
+		$(this).find(".txt h3").stop().animate({paddingTop:"130"},550);
+		$(this).find(".txt p").stop().show();
+	},function(){
+		$(this).children(".txt").stop().animate({height:"100px"},200);
+		$(this).find(".txt h3").stop().animate({paddingTop:"0px"},550);
+		$(this).find(".txt p").stop().hide();
+	})
+})
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

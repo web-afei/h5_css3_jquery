@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery«–∏Óπ˝∂…–ßπ˚ÕºœÒª¨øÈ - ’æ≥§Àÿ≤ƒ</title>
+    <link href="css/quake.slider.css" rel="stylesheet" type="text/css" />
+    <link href="skins/dark-room/quake.skin.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/quake.slider-min.js" type="text/javascript"></script>
+    <script src="js/demo.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.quake-slider').quake({
+                thumbnails: true,
+                animationSpeed: 500,
+                applyEffectsRandomly: true,
+                navPlacement: 'inside',
+                navAlwaysVisible: true,
+                captionOpacity: '0.3',
+                captionsSetup: [
+                                 {
+                                     "orientation": "top",
+                                     "slides": [0, 1],
+                                     "callback": captionAnimateCallback
+                                 },
+                                  {
+                                      "orientation": "left",
+                                      "slides": [2, 3],
+                                      "callback": captionAnimationCallback1
+                                  }
+                                  ,
+                                  {
+                                      "orientation": "bottom",
+                                      "slides": [4, 5],
+                                      "callback": captionAnimateCallback
+                                  }
+                                  ,
+                                  {
+                                      "orientation": "right",
+                                      "slides": [6, 7],
+                                      "callback": captionAnimationCallback1
+                                  }
+                                ]
+
+            });
+
+            function captionAnimateCallback(captionWrapper, captionContainer, orientation) {
+                captionWrapper.css({ left: '-990px' }).stop(true, true).animate({ left: 0 }, 500);
+                captionContainer.css({ left: '-990px' }).stop(true, true).animate({ left: 0 }, 500);
+            }
+            function captionAnimationCallback1(captionWrapper, captionContainer, orientation) {
+                captionWrapper.css({ top: '-330px' }).stop(true, true).animate({ top: 0 }, 500);
+                captionContainer.css({ top: '-330px' }).stop(true, true).animate({ top: 0 }, 500);
+            }
+        });
+    </script>
+</head>
+<body><center>
+    <!-- Quake Image Slider -->
+    <div class="quake-slider">
+        <div class="quake-slider-images">
+            <a target="_blank" href="javascript:">
+                <img src="images/nature/1.jpg" alt="" />
+            </a><a target="_blank" href="javascript:">
+                <img src="images/nature/2.jpg" alt="" /></a> <a target="_blank" href="javascript:">
+                    <img src="images/nature/3.jpg" alt="" />
+                </a><a target="_blank" href="javascript:">
+                    <img src="images/nature/4.jpg" alt="" />
+                </a><a target="_blank" href="javascript:">
+                    <img src="images/nature/5.jpg" alt="" />
+                </a>
+        </div>
+        <div class="quake-slider-captions">
+            <div class="quake-slider-caption">
+                This is a caption. You can put HTML here.
+            </div>
+            <div class="quake-slider-caption">
+                This is a caption. You can put HTML here.
+            </div>
+            <div class="quake-slider-caption">
+                This is a caption. You can put HTML here.
+            </div>
+            <div class="quake-slider-caption">
+                This is a caption. You can put HTML here.
+            </div>
+            <div class="quake-slider-caption">
+                This is a caption. You can put HTML here.
+            </div>
+        </div>
+    </div>
+    <!-- /Quake Image Slider --></center>
+<div style="text-align:center;clear:both"><br>
+<p>  ”√‰Ø¿¿∆˜£∫IE8°¢360°¢FireFox°¢Chrome°¢Safari°¢Opera°¢∞¡”Œ°¢À—π∑°¢ ¿ΩÁ÷Æ¥∞. </p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生鼠标悬停图片轻微位移动画效果</title>
+	<style type="text/css">
+	*{margin:0;padding: 0;}
+
+	.lanren{width: 663px;border: solid #E5E5E5; border-width: 1px 0 0 1px;margin:50px auto;}
+	.lanren ul{overflow: hidden;}
+	.lanren ul li{float:left;width:200px;height:100px;padding:15px 10px 10px 10px;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;
+  	overflow: hidden;position: relative;list-style: none;}
+  	.lanren ul li img{float: left;margin-right:10px;}
+	.lanren ul li p{text-align: left;color: #666;font-size: 12px;margin-bottom: 5px;line-height: 140%;max-height: 32px;overflow: hidden;}
+	.lanren ul li b{color: #e12228;font-size: 16px;font-weight: 700;}
+	</style>
+</head>
+<body>
+	<!--代码部分begin-->
+	<div class="lanren">
+		<ul>
+			<li><img src="images/lanren01.jpg" alt=""><p>艾美特 五片落地扇/电风扇</p><b>￥179.00</b></li>
+			<li><img src="images/lanren02.jpg" alt=""><p>Anker Mini 蓝牙音箱黑色 NFC</p><b>￥128.00</b></li>
+			<li><img src="images/lanren03.jpg" alt=""><p>开博尔 H7 真八核芯 网络电视机顶</p><b>￥279.00</b></li>
+			<li><img src="images/lanren04.jpg" alt=""><p>韩后 雪玲珑透白晶采特惠六件</p><b>￥219.00</b></li>
+			<li><img src="images/lanren05.jpg" alt=""><p>施华洛世奇 晶莹泰迪熊链坠</p><b>￥520.00</b></li>
+			<li><img src="images/lanren06.jpg" alt=""><p>可瑞康爱他美金装1,2,3,4段【全</p><b>￥459.00</b></li>
+		</ul>
+	</div>
+	<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$('.lanren li').hover(function(){
+			$(this).find('img').stop().animate({
+				'margin-left':'-7px',
+				'margin-right':'17px'
+			})
+		},function(){
+			$(this).find('img').stop().animate({
+				'margin-left':'0',
+				'margin-right':'10px'
+			})
+		})
+	})
+	</script>
+	<!--代码部分end-->
+</body>
+</html>

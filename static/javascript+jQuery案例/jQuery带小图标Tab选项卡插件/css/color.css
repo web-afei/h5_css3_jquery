@@ -1,0 +1,52 @@
+body {
+	background-image:url(../images/back.png);
+	background-repeat:repeat;
+}
+
+/* Content */
+.content{
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	border-color: #FF1493;                 /*Main Color*/              
+}
+.content p{                       
+	border-color: #FF1493;                 /*Main Color*/
+	color:#333333;	
+}
+.content h4{
+	color:#FF1493;                         /*Main Color*/                   
+}
+.content h6{
+	color:#333333;
+}
+.content h6 i{
+	color: #FF1493;                        /*Main Color*/     
+}
+
+/* Label */
+.label i{
+	color:#333333;
+}
+/* Label default background */
+.default{
+	background: #F1F1F1;                         
+	color:#333333;
+}
+/* Label Clicked background */
+.clicked{
+	background: #FF1493;                    /*Main Color*/                  
+	color:#FFFFFF;
+}
+/* Label hover background */
+.hover{
+	background: #FF1493;                    /*Main Color*/                   
+	color:#FFFFFF;
+}
+

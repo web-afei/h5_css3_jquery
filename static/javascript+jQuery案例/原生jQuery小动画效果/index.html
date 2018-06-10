@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生jQuery小动画效果</title>
+<style>
+    *{margin: 0;padding: 0;list-style: none;}
+    #lanren{width: 120px;height: 255px;overflow: hidden;position: relative; margin:100px auto;}
+    #lanren img{position: absolute;top: 0}
+    #lanren img#left{left: 0;z-index: 2;opacity:0; filter:alpha(opacity=0);}
+    #lanren img#middle{left: 0;z-index: 1;}
+    #lanren img#right{right: 0;z-index: 2;opacity:0; filter:alpha(opacity=0);}
+</style>
+</head>
+<body>
+
+<div id="lanren">
+<img src="images/2.jpg" height="255" width="60" alt="" id="left" />
+<img src="images/3.jpg" height="255" width="120" alt="" id="middle" />
+<img src="images/1.jpg" height="255" width="60" alt="" id="right" />
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+    $('#lanren img#middle').animate({
+        'opacity':'0.3',
+        'filter':"alpha(opacity=30)"
+    },2000,function(){
+        $('#lanren img#left').animate({
+           'opacity':'0.7',
+           'filter':'alpha(opacity=70)'
+        },1400,function(){
+            $('#lanren img#right').animate({
+                'opacity':'0.7',
+                'filter':"alpha(opacity=70)"
+            },900);
+        });
+    });
+})
+</script>
+
+</body>
+</html>

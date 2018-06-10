@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<meta name="viewport" content="width=device-width">
+<title>jquery图标多功能下拉导航 - 站长素材</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<link rel="stylesheet" type="text/css" href="exo-demibold/stylesheet.css"> <!-- Free Font -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">         <!-- Icon -->
+<link rel="stylesheet" type="text/css" href="css/sea-green/style.css">
+<link rel="stylesheet" type="text/css" href="css/sea-green/color.css">
+<link rel="stylesheet" type="text/css" href="live-font/stylesheet.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+
+<!--[if IE 7]>
+	<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<![endif]-->
+
+<!--[if lte IE 9]>
+    <style type="text/css">
+		#home li p,
+        #about li p{
+			border-bottom:1px solid rgb(51,51,51);
+		}
+        .menu li:hover > a{
+			background-color:#595959;
+		}
+        img{
+			background-color:rgb(255,255,255);
+		}
+         #top-block li#social a i{
+			margin-top:4px;
+		}
+	</style>
+<![endif]-->
+
+</head>
+<body>
+<br><br><br><br>
+<ul class="nav">
+  <!-- Start top-block -->
+  <li id="top-block">
+    <ul>
+      <li id="sign-in"><a href="#">Sign In</a></li>
+      <li id="sign-up"><a href="#">Sign Up</a></li>
+      <li id="social"> <a href="#"><i class="icon-facebook-sign" ></i></a> <a href="#"><i class="icon-twitter-sign" ></i></a> <a href="#"><i class="icon-linkedin-sign" ></i></a> <a href="#"><i class="icon-google-plus-sign" ></i></a> </li>
+      <li id="text">
+        <p>Welcome to your site. For contact with me, please send an email to amir.silent@gmail.com or call with me...</p>
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Home -->
+  <li id="first">
+    <div class="text"><a href="#">Home<i class="icon-chevron-down"></i></a></div>
+    <div class="icon"><i class="icon-home" ></i></div>
+    <ul class="menu" id="home">
+      <li>
+        <h3><i class="icon-user"></i>Welcome</h3>
+        <p>In the past, HTML alone provided basic formatting options for text, images, tables, and other web page elements. But today, professional web designers use CSS to style their pages. In fact, the older HTML tags used to format text and other page elements have been phased out by the World Wide Web Consortium (W3C), the organization that defines Web standards, in favor of CSS.</p>
+        <img src="img/thumb2.png">
+        <h6>Is there a way to apply styles to an element only if it’s embedded within a particular element, rather than universally? In other words.</h6>
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Portfolio -->
+  <li>
+    <div class="text"><a href="#Portfolio">Portfolio<i class="icon-chevron-down"></i></a></div>
+    <div class="icon"><i class="icon-briefcase" ></i></div>
+    <ul class="menu" id="Portfolio">
+      <li><a href="#">sample 1</a></li>
+      
+      <!-- Start Portfolio 2 -->
+      <li> <a href="#sample2">sample 2<i class="icon-chevron-right"></i><i class="icon-chevron-down"></i></a>
+        <ul class="menu" id="sub-menu">
+          <li><a href="#">Page 1</a></li>
+          
+          <!-- Start page 2 -->
+          <li> <a href="#">Page 2<i class="icon-chevron-right"></i></a>
+            <ul class="menu test" id="sub-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+              <li><a href="#">Page 4</a></li>
+            </ul>
+          </li>
+          <!-- End page 2 -->
+          
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </li>
+      <!-- End service 2 -->
+      
+      <li ><a href="#">sample 3</a></li>
+    </ul>
+  </li>
+  
+  <!-- Start Services -->
+  <li>
+    <div class="text"><a href="#service">Service<i class="icon-chevron-down"></i></a></div>
+    <div class="icon"><i class="icon-truck" ></i></div>
+    <ul class="menu" id="service">
+      <li><a href="#">Sample 1</a></li>
+      <li><a href="#">Sample 2</a></li>
+      
+      <!-- Start Service 3 -->
+      <li> <a href="#" class="sub-menu">Sample 3<i class="icon-chevron-right"></i><i class="icon-chevron-down"></i></a>
+        <ul class="menu" id="sub-menu">
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </li>
+      <!-- End Service 3 -->
+      
+      <li ><a href="#">Sample 4</a></li>
+    </ul>
+  </li>
+  
+  <!-- Start Gallery -->
+  <li>
+    <div class="text"><a href="#gallery">Gallery</a></div>
+    <div class="icon"><i class="icon-picture" ></i></div>
+  </li>
+  
+  <!-- Start About -->
+  <li>
+    <div class="text"><a href="#about">About Us<i class="icon-chevron-down"></i></a></div>
+    <div class="icon"><i class="icon-book" ></i></div>
+    <ul class="menu" id="about">
+      <li><img src="img/thumb1.png" width="100" height="100" alt="image">
+        <h3><i class="icon-user"></i>About Us</h3>
+        <p>In the past, HTML alone provided basic formatting options for text, images, tables, and other web page elements. But today, professional web designers use CSS to style their pages. In fact, the older HTML tags used to format text and other page elements have been phased out by the World Wide Web Consortium (W3C), the organization that defines Web standards, in favor of CSS.</p>
+        <h6><i class="icon-quote-left"></i>Is there a way to apply styles to an element only if it’s embedded within a
+          particular element, rather than universally? In other words, can you ask for
+          example that italics within headlines be boldface<i class="icon-quote-right"></i></h6>
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Contact -->
+  <li>
+    <div class="text"><a href="#contact">Contact<i class="icon-chevron-down"></i></a></div>
+    <div class="icon"><i class="icon-envelope" ></i></div>
+    <ul class="menu" id="contact">
+      <li id="part-right">
+        <p>Name<em>*</em></p>
+        <input name="name" type="text" id="name">
+        <p>E-mail<em>*</em></p>
+        <input name="email" type="text" id="email">
+        <p>Message<em>*</em></p>
+        <textarea name="comment" cols="" rows="" id="comment"></textarea>
+        <input name="send" type="button" id="send" value="Send">
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Search -->
+  <li id="search">
+    <input name="search" type="text" placeholder="Search" id="txt_search2">
+    <a href="#"><i class="icon-search"></i></a> </li>
+</ul>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p><br>
+
+</div>
+</body>
+</html>

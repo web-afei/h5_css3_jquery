@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery自定义实时搜索插件 </title>
+  <!-- MODERNIZR -->
+  <script type="text/javascript" src="javascripts/vendor/modernizr.custom.js"></script>
+
+  <!-- STYLES -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/typography.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8">      <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9">           <![endif]-->
+<!--[if gt IE 9]>  <body class="ie">                    <![endif]-->
+<!--[if !IE]><!--> <body>                               <!--<![endif]-->
+<img src="images/hideseek_logo.png" class="screenshot">
+
+<div id="wrapper">
+
+  <!-- HEADER -->
+  <div id="header_wrapper">
+  </div>
+  <!-- HEADER ends -->
+
+  <!-- MAIN CONTAINER -->
+  <div id="body_wrapper">
+    <!-- <h3>About</h3> -->
+
+
+    <h3>Demonstration</h3>
+    <!-- CONTENT -->
+	<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+    <section>
+      <!-- CONTENT BLOCK -->
+      <article>
+        <div class="column">
+        <h2>Default usage</h2>
+<pre data-language="javascript">
+$('#search-1').hideseek();
+</pre>
+        </div>
+        <div class="column">
+        <label for="search">Programming Language Popularity</label>
+        <input id="search" name="search" placeholder="Start typing here" type="text" data-list=".default_list" autocomplete="off">
+        <ul class="vertical default_list">
+          <li>C</li>
+          <li>Java</li>
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>Shell</li>
+          <li>Ruby</li>
+          <li>Objective C</li>
+          <li>C#</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+      <article id="highlight">
+        <div class="column">
+        <h2>Highlight</h2>
+<pre data-language="javascript">
+$('#search-highlight').hideseek({
+  highlight: true
+});
+</pre>
+        </div>
+        <div class="column">
+        <label for="search-highlight">Browser Statistics and Trends</label>
+        <input id="search-highlight" name="search-highlight" placeholder="Start typing here" type="text" data-list=".highlight_list" autocomplete="off">
+        <ul class="vertical highlight_list">
+          <li>Chrome</li>
+          <li>Firefox</li>
+          <li>Internet Explorer</li>
+          <li>Safari</li>
+          <li>Opera</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+      <article id="nodata">
+        <div class="column">
+        <h2>No results message</h2>
+<pre data-language="javascript">
+$('#search-nodata').hideseek({
+  nodata: 'No results found'
+});
+</pre>
+        </div>
+        <div class="column">
+        <label for="search-nodata">Top Greatest Movies of All Time</label>
+        <input id="search-nodata" name="search-nodata" placeholder="Start typing here" type="text" data-list=".nodata_list" autocomplete="off">
+        <ul class="vertical nodata_list">
+          <li>The Godfather</li>
+          <li>Schindler's List</li>
+          <li>Raging Bull</li>
+          <li>The Shawshank Redemption</li>
+          <li>Casablanca</li>
+          <li>One Flew Over the Cuckoo's Nest</li>
+          <li>Gone with the Wind</li>
+          <li>Citizen Kane</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+      <!-- CONTENT BLOCK -->
+      <article id="navigation">
+        <div class="column">
+        <h2>Navigation</h2>
+<pre data-language="javascript">
+$('#search-navigation').hideseek({
+  nodata: 'No results found',
+  navigation: true
+});
+</pre>
+        </div>
+        <div class="column">
+        <label for="search">Top 10 Most Popular Frameworks</label>
+        <input id="search-navigation" name="search" placeholder="Start typing here" type="text" data-list=".navigation_list" data-nodata="No results found" autocomplete="off">
+        <ul class="vertical navigation_list">
+          <li><a href="http://www.asp.net/">ASP.NET</a></li>
+          <li><a href="http://flask.pocoo.org/">Flask</a></li>
+          <li><a href="http://codeigniter.com/">CodeIgniter</a></li>
+          <li><a href="http://framework.zend.com/">Zend</a></li>
+          <li><a href="http://rubyonrails.org/">Ruby on Rails</a></li>
+          <li><a href="http://angularjs.org/">AngularJS</a></li>
+          <li><a href="http://www.djangoproject.com/">Django</a></li>
+          <li><a href="http://www.yiiframework.com/">Yii</a></li>
+          <li><a href="http://symfony.com/">Symfony</a></li>
+          <li><a href="http://cakephp.org/">CakePHP</a></li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+    </section>
+    <h3 id="custom_event">Custom Events</h3>
+    <section>
+      <!-- CONTENT BLOCK -->
+      <article>
+        <div class="column">
+        <h2>Custom event "_after"</h2>
+<pre data-language="javascript">
+$('.after_event').hideseek();
+$('.after_event').on("_after", function() {
+  alert('This alert comes after the search is finished!')
+});
+</pre>
+        </div>
+        <div class="column">
+        <label for="search">Top 10 Countries That Offer Mail-Order Brides</label>
+        <input id="search-custom-event" name="search" placeholder="Start typing here" type="text" data-list=".custom_event_list" data-nodata="No results found" autocomplete="off">
+        <ul class="vertical custom_event_list">
+          <li>Russia</li>
+          <li>The Philippines</li>
+          <li>Colombia</li>
+          <li>Dominican Republic</li>
+          <li>Ukraine</li>
+          <li>Thailand</li>
+          <li>India</li>
+          <li>China</li>
+          <li>Brazil</li>
+          <li>Vietnam</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+      <article>
+        <div class="column">
+        <h2>Custom event "_after_each"</h2>
+<pre data-language="javascript">
+$('.after_each_event').hideseek();
+$('.after_each_event').on("_after_each", function() {
+  alert('This alert comes after the procession of each element!')
+});
+</pre>
+        </div>
+        <div class="column">
+        <label for="search">Top 10 Crazy Structures Made With Legos</label>
+        <input id="search-custom-event-2" name="search" placeholder="Start typing here" type="text" data-list=".custom_event_2_list" data-nodata="No results found" autocomplete="off">
+        <ul class="vertical custom_event_2_list">
+          <li>House made from Lego’s</li>
+          <li>Gigantic Aircraft Carrier model</li>
+          <li>Enormous replica of A380 Airbus</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+    </section>
+    <!-- CONTENT ends-->
+    <h3>Use of data attribute to load</h3>
+    <section>
+      <!-- CONTENT BLOCK -->
+      <article id="attribute">
+        <div class="column">
+        <h2>The attribute "data-toggle"</h2>
+<pre data-language="javascript">
+<input data-toggle="hideseek">
+</pre>
+        </div>
+        <div class="column">
+        <label for="search">Top 10 Front-End Development Frameworks</label>
+        <input id="search" name="search" placeholder="Start typing here" type="text" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No results found" autocomplete="off">
+        <ul class="vertical default_list_data">
+          <li>Bootstrap</li>
+          <li>Fbootstrapp</li>
+          <li>BootMetro</li>
+          <li>Kickstrap</li>
+          <li>Foundation</li>
+          <li>GroundworkCSS</li>
+          <li>Gumby</li>
+          <li>HTML KickStart</li>
+          <li>IVORY</li>
+          <li>Kube</li>
+        </ul>
+        </div>
+        <div class="clear"></div>
+      </article>
+    </section>
+  </div>
+  <!-- MAIN CONTAINER ends -->
+
+ 
+
+</div>
+
+  <!-- JQuery -->
+  <script src="javascripts/vendor/jquery-1.9.1.min.js"></script>
+
+  <!-- JS -->
+  <script type="text/javascript" src="javascripts/vendor/waypoints.min.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/waypoints-sticky.min.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/jquery.hideseek.min.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/rainbow-custom.min.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/jquery.anchor.js"></script>
+  <script src="javascripts/initializers.js"></script>
+  <!-- JS ends -->
+
+</body>
+</html>

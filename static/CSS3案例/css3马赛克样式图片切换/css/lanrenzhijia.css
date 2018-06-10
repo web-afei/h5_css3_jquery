@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 www.mysite.com */
+html {
+	overflow: hidden;
+}
+body {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background:#000;
+}
+#screen {
+	position: absolute;
+	width: 891px;
+	height: 550px;
+	left: 50%;
+	top: 50%;
+	margin-left:-445px;
+	margin-top:-275px;
+	background: #111;
+	overflow: hidden;
+}
+#screen .grid {
+	position: absolute;
+	background: #333;
+	font-size: 0px;
+	overflow: hidden;
+}
+#screen .txt {
+	position: absolute;
+	font-size: 14px;
+	color: #fff;
+	font-family: arial;
+	overflow: hidden;
+}
+#screen .menu {
+	position: absolute;
+	font-size: 12px;
+	color: #fff;
+	font-family: arial;
+	overflow: hidden;
+	cursor: pointer;
+}
+#screen .menubackgroundcolor {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+#screen .wrapper {
+	position:absolute;
+	left: 2%;
+	top: 2%;
+	width: 96%;
+	height: 96%;
+	overflow: hidden;
+}
+#screen .wrapper img {
+	float: left;
+	margin-right: 6px;
+	margin-bottom: 0px;
+}
+#screen h1 {
+	position:relative;
+	top: 20px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0px;
+	font-size: 2.5em;
+}
+#screen .menucontent {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 128px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	top: -10px;
+}
+#screen .submenucontent {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#screen .submenutitle {
+	position: absolute;
+	top: -12px;
+	font-size: 64px;
+	font-weight: bold;
+}
+#screen .submenu {
+	position: absolute;
+	width: 100%;
+	top: 55px;
+}
+#screen .submenuline {
+	position: relative;
+	height: 18px;
+	font-size: 14px;
+	margin-top: 1px;
+}
+#screen .lineover {
+	background: #fff;
+	color: #0064a0;
+	font-weight: bold;
+}
+#loader {
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	width: 50px;
+	margin-left: -25px;
+	margin-top: -14px;
+	text-align: center;
+	font-family: arial;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	background: #000;
+	outline: #111 solid 3px;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	z-index: 1000;
+}
+#htmlBank {
+	display: none;
+	visibility: hidden;
+}
+/* 代码整理：网页设计之家 www.mysite.com */

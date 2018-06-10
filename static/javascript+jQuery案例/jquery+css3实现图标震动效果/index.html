@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3实现图标震动效果</title>
+<script src="js/jquery-1.5.1.min.js"></script>
+<script>
+$(function(){
+		 function state1(){
+			 $(".rotate").removeClass("r2"); 
+			 $(".rotate").addClass("r1");
+			 setTimeout(state2,90);
+		 }
+		function state2(){	   
+		     $(".rotate").removeClass("r1");
+		     $(".rotate").addClass("r2"); 
+			 setTimeout(state1,90);
+		}
+		state1();
+		
+})
+
+
+</script>
+<style>
+body {
+	background:url(images/wood-oak.jpg);
+}
+.tips {
+	width:650px;
+	margin:110px auto 0;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#FFC;
+	font-size:26px;
+}
+.dock {
+	margin:90px auto 0;
+	width:500px;
+}
+.board {
+	float:left;
+	margin-top:-60px;
+	z-index:0;
+}
+.rotate {
+	width:70px;
+	height:70px;
+	margin:20px 10px;
+	z-index:1;
+}
+.r1 {
+	-moz-transform:rotate(-3deg);
+	-webkit-transform:rotate(-3deg);
+	-o-transform:rotate(-3deg);
+}
+.r2 {
+	-moz-transform:rotate(2deg);
+	-webkit-transform:rotate(2deg);
+	-o-transform:rotate(2deg);
+}
+</style>
+</head>
+<body>
+<p class="tips">Tip: You may need to use the browser like chrome， firefox or safari  which supports CSS attribute to watch this rotate effect...</p>
+<div class="dock">
+<img src="images/Chrome.png" class="rotate" alt="icon"/>
+<img src="images/FireFox.png" class="rotate" alt="icon"/>
+<img src="images/IE.png" class="rotate" alt="icon"/>
+<img src="images/Opera.png" class="rotate" alt="icon"/>
+<img src="images/Safari.png" class="rotate" alt="icon"/> 
+</div>
+<img  class="board" src="images/woodboard1.png" />
+</body>
+</html>

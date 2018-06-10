@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生图片列表向左滚动结束后再向右滚动(如此反复)代码</title>
+<style>
+#lanren {width: 1000px;height: 100px;margin: 0 auto;overflow: hidden;position: relative;border:1px solid #ccc;}
+#lanren2{position: absolute;left: 0;top: 0;}
+#lanren2 li {width: 190px;height:100px; text-align:center; line-height:100px;background-color: #999;margin:0 5px;display: block;float: left;list-style: none;}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<div id="lanren">
+    <div id="lanren2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+(function(){
+	var speed = 10; //滚动速度
+    var lis = 200; //单个单位的宽度
+	var i = 0;
+    var t = true;
+	var a = parseInt($('#lanren').css('width'));
+    var b = parseInt($('#lanren2 li').length * lis);
+    $('#lanren2').css('width',b)
+	var distance = b-a;
+    // console.log(distance);
+    function add(){
+        i++;
+    }
+    function reduce(){
+        i--;
+    }
+    function jia(){
+        if((i< distance || i<i) && t){
+            add();
+        }else if(i >= distance || !t){
+            t= false;
+            reduce();
+        }
+        if(i==0){
+            t = true;
+        }
+    $('#lanren2').css('left',-i)
+    }
+    var d = setInterval(jia, speed);
+	$('#lanren').mouseover(function(){
+		clearInterval(d);
+	});
+	$('#lanren').mouseleave(function(){
+		d = setInterval(jia, speed);
+	});
+}());
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

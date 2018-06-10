@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery模仿百度关键词下拉匹配效果</title>
+<link rel="stylesheet" href="css/jquery.bigautocomplete.css" type="text/css" />
+<style>
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+.demo{width:720px;margin:30px auto;}
+.demo h2{font-size:16px;color:#3366cc;height:30px;}
+.demo li{float:left;}
+.text{width:529px;height:22px;padding:4px 7px;padding:6px 7px 2px;border:1px solid #cdcdcd;border-color:#9a9a9a #cdcdcd #cdcdcd #9a9a9a;vertical-align:top;outline:none;margin:0 5px 0 0;font-size:16px;}
+.button{width:95px;height:32px;padding:0;padding-top:2px;border:0;background-position:0 -35px;background-color:#ddd;cursor:pointer;outline:none;}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="demo">
+	<h2>仿百度首页搜索提示框效果</h2>
+	<form action="http://www.mysite.com" method="post" name="searchform" id="searchform" class="searchinfo">
+		<ul>
+			<li><input type="text" id="lanren" value="" class="text" /></li>
+			<li><input type="submit" value="搜索" class="button" /></li>
+		</ul>
+	</form>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.bigautocomplete.js"></script>
+<script>
+$(function(){
+	$("#lanren").bigAutocomplete({
+		width:543,
+		data:[
+			{title:"小白网页代码"},
+			{title:"小白官网"},
+			{title:"小白js"},
+			{title:"小白代码"},
+			{title:"小白特效"},
+			{title:"小白jQuery特效"},
+			{title:"小白菜单导航"},
+			{title:"原生"}
+		],
+		callback:function(data){
+			alert(data.title);	
+		}
+	});
+})
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

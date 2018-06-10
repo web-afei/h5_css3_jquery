@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生左右多图滚动展示效果</title>
+<style>
+/* 滚动部分 */
+*{ margin:0; padding:0;}
+body{ background:#000;}
+.scroll{ width:960px; height:380px; margin:30px auto 0 auto; overflow:hidden;}
+.v_out{width:960px;margin:0px auto;overflow:hidden;}
+.v_show{width:885px;overflow:hidden;position:relative;height:380px;float:left}
+.u_lanren{ width:6650px;position:absolute;left:0px;top:0px;}
+.u_lanren ul{float:left;text-align:center;line-height:50px;}
+.u_lanren ul li{width:885px;height:380px;float:left; overflow:hidden;}
+.u_lanren ul li dd{ width:210px; height:377px; margin:0px 5px; float:left; overflow:hidden; position:relative; list-style:none;}
+.u_lanren ul li dd img{ position:absolute; left:0; top:0; z-index:10; width:210px; height:377px;}
+.u_lanren ul li dd a.link{ width:210px; height:302px; display:block; position:absolute; left:0; top:0; z-index:20;}
+.u_lanren ul li dd span.info{ width:51px; height:51px; display:block; position:absolute; right:10px; bottom:10px;background:url(images/3.png) no-repeat;z-index:30;}
+.prev,.next{float:left; padding-top:170px;}
+.prev a{ background:url(images/left.png) no-repeat center center;}
+.next a{ background:url(images/right.png) no-repeat center center;}
+.prev,.prev a,.next,.next a{width:30px;height:40px; display:block}
+</style>
+</head>
+<body>
+<!--代码部分begin-->
+<div class="scroll">
+
+<div class="v_out v_out_p">
+	<div class="prev"><a href="javascript:void(0)"></a></div>
+	
+    <div class="v_show">
+		<div class="u_lanren">
+			<ul>
+				<li index="0">
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f2.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f1.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f3.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f4.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                </li>
+				<li index="1">
+                	<dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f5.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f6.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f7.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f8.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                </li>
+                <li index="2">
+                	<dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f9.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f10.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f11.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f12.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                </li>
+                <li index="3">
+                	<dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f13.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                    <dd>
+                    <img onerror="onerror=null;src='http://www.mysite.com/images/error.jpg'"  src="images/f14.jpg" width="210" height="377" />
+                    <a href="#" class="link"></a>
+                    <span class="info"></span>
+                    </dd>
+                </li>
+			</ul>
+		</div>
+	</div>
+	
+    <div class="next"><a href="javascript:void(0)"></a></div>
+
+</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+	//控制滚动代码begin
+	var animateEnd = 1;
+	$(".next a").on('click',function() {
+		nextscroll()
+	});
+	function nextscroll() {
+		var vcon = $(".u_lanren ");
+		var offset = ($(".u_lanren li").width()) * -1;
+		vcon.stop().animate({
+			left: offset
+		}, "slow", function() {
+			var firstItem = $(".u_lanren ul li").first();
+			vcon.find("ul").append(firstItem);
+			$(this).css("left", "0px");
+		})
+	};
+	$(".prev a").on('click',function() {
+		var vcon = $(".u_lanren ");
+		var offset = ($(".u_lanren li").width() * -1);
+		var lastItem = $(".u_lanren ul li").last();
+		vcon.find("ul").prepend(lastItem);
+		vcon.css("left", offset);
+		vcon.animate({
+			left: "0px"
+		}, "slow")
+	});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

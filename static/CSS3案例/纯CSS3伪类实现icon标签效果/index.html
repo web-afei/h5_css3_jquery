@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>纯CSS3伪类实现icon标签效果</title>
+	<style>
+	body{margin:0;padding:0;text-align:center;}
+	a.lanren{background-color:#777;border-radius:0 2px 2px 0;display:inline-block;margin:200px 50px;color:#fff;text-decoration:none;font-size:12px;padding:4px 8px 4px 4px;position:relative;}
+	a.lanren::before{border-top: 10px solid transparent;border-right: 8px solid #777;border-bottom: 10px solid transparent;content: "";height: 0;position: absolute;top: 0;left: -8px;width: 0;}
+    a.lanren::after{width:2px;height:2px;border:2px solid #777;background-color:#fff;border-radius:3px;position:absolute;left:-18px;top:8px;content:"";}
+	</style>
+</head>
+<body>
+	<a href="http://www.mysite.com" class="lanren">小白</a>
+	<a href="http://www.mysite.com/js" class="lanren">小白js</a>
+	<a href="http://www.mysite.com/nav" class="lanren">菜单导航</a>
+</body>
+</html>

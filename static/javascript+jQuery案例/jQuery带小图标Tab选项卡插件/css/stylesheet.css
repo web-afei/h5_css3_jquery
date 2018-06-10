@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: 'titilliumregular';
+    src: url('font/titillium-regular-webfont.eot');
+    src: url('font/titillium-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/titillium-regular-webfont.woff') format('woff'),
+         url('font/titillium-regular-webfont.ttf') format('truetype'),
+         url('font/titillium-regular-webfont.svg#titilliumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'exodemi_bold';
+    src: url('font/exo-demibold.eot');
+    src: url('font/exo-demibold.eot?#iefix') format('embedded-opentype'),
+         url('font/exo-demibold.woff') format('woff'),
+         url('font/exo-demibold.ttf') format('truetype'),
+         url('font/exo-demibold.svg#exodemi_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

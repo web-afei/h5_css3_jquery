@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轻量级简单易用的jQuery投票界面效果</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div id="Demo" style="text-align:center;">
+  <div id="VoteMain"> </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+var Vote={
+	voteJson:[
+	{Name:"LeeSin",Img:"LeeSin.png",Value:220},
+	{Name:"Ahri",Img:"Ahri.png",Value:161},
+	{Name:"Sona",Img:"Sona.png",Value:130},
+	{Name:"JarvanIV",Img:"JarvanIV.png",Value:211}
+	],
+	Init:function(){
+		for(var i=0;i<Vote.voteJson.length;i++){
+			var mName=Vote.voteJson[i].Name;
+			var mImg=Vote.voteJson[i].Img;
+			var mValue=Vote.voteJson[i].Value;
+			var VoteItem=$("<div></div>");
+			VoteItem.attr("class","VoteItem");
+			$("#VoteMain").append(VoteItem);
+			
+			var VoteImg=$("<img title='支持一下' src='images/"+ mImg +"' />");
+			VoteImg.attr("class","VoteImg");
+			VoteImg.click(function(){
+				$(this).next().css("height",$(this).next().height()+1+"px");
+				$(this).next().css("margin-top",300-20-$(this).next().height()+"px");
+				$(this).next().find(".VoteSpan").html($(this).next().height());
+				var VoteSpanTri=$("<span></span>");
+			    VoteSpanTri.attr("class","VoteSpanTri");
+			    $(this).next().find(".VoteSpan").append(VoteSpanTri);
+			});
+			VoteItem.append(VoteImg);
+
+			var VoteValue=$("<div></div>");
+			VoteValue.attr("class","VoteValue");
+			VoteValue.css("margin-top",300-20-mValue+"px");
+			VoteValue.animate({height:mValue+"px"},500);
+			VoteItem.append(VoteValue);
+			
+			var VoteSpan=$("<div>"+mValue+"</div>");
+			VoteSpan.attr("class","VoteSpan");
+			VoteValue.append(VoteSpan);
+			
+			var VoteSpanTri=$("<span></span>");
+			VoteSpanTri.attr("class","VoteSpanTri");
+			VoteSpan.append(VoteSpanTri);
+			
+			
+			var VoteText=$("<p></p>");
+			VoteText.html(mName);
+			VoteText.attr("class","VoteText");
+			VoteItem.append(VoteText);
+		}
+	}
+}
+$(document).ready(function(e) {
+	Vote.Init();
+});
+</script>
+<!-- 代码部分 end -->
+
+</html>

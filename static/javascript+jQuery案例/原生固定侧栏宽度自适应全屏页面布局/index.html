@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生固定侧栏宽度自适应全屏页面布局</title>
+	<style>
+	*{margin:0;padding:0;}
+	html,body{height:100%;}
+	.layout{padding-right:200px;}
+	.layout .layout-left{width:100%;float:left;height:400px;background-color:#999;}
+	.layout .layout-right{width:200px;margin-right:-200px;float:left;height:400px;background-color:#ccc;}
+	</style>
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<div class="layout">
+		<div class="layout-left">左侧:这里是自适应的，无论你的屏幕多少宽度，左侧栏目始终是屏幕宽度减去200px大小</div>
+		<div class="layout-right">右侧：这里固定200px宽度</div>
+	</div>
+	<!-- 代码部分end -->
+</body>
+</html>

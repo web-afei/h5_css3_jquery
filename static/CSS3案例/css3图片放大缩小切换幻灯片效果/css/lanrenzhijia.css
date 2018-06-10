@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 www.mysite.com */
+.textboxstyle {
+	font-family:Arial;
+	font-size:16pt;
+	color:black;
+	text-align:center;
+	vertical-align:top;
+}
+.textboxbackgroundstyle {
+	background-color:white;
+	padding:5px;
+	/* rounded corners for Firefox */
+-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomright: 15px;
+	/* rounded corners for for Safari and Chrome */
+-webkit-border-top-left-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	/* rounded corners for Opera */
+border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.curveandshadowstyle {
+	/* shadow and rounded corners for Firefox */
+-moz-box-shadow: 5px 5px 8px #818181;
+	-moz-border-radius-topleft: 25px;
+	-moz-border-radius-bottomright: 25px;
+	/* shadow and rounded corners for Safari and Chrome */
+-webkit-box-shadow: 5px 5px 8px #818181;
+	-webkit-border-top-left-radius: 25px;
+	-webkit-border-bottom-right-radius: 25px;
+	/* shadow and rounded corners for Opera */
+box-shadow: 5px 5px 5px #818181;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+
+/* shadow for Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#818181');
+	border-style:solid;
+	border-width:1px;
+	border-color:white;
+}
+/* 代码整理：网页设计之家 www.mysite.com */

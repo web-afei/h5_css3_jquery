@@ -1,0 +1,19 @@
+.divClass{ float:left;margin-top:2px; font-weight:bolder;}
+.divMain
+{
+    border:1px solid #00CD00; width:500px; height:60px; line-height:20px; margin-top:10px; padding:2px;
+}
+.divSmall
+{
+    width:auto; height:15px; float:left; margin-left:4px; margin-top:2px; background-color:#FFFFFF; padding:3px; line-height:15px;
+   cursor:pointer;
+}
+.divSmall2
+{
+   border:1px solid #00C5CD; width:auto; height:20px; float:left; margin-left:4px; margin-top:2px; line-height:20px; padding:3px;
+}
+.image{ float:right;}
+div{ font-size:14px;}
+body{ background-color:#FFFFFF;}
+.divVersion{ width:500px; height:auto; margin-top:10px; border:1px solid #00CD00;}
+span{ color:Red;}

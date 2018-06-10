@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3d房子室内布局设计效果</title>
+
+<style type="text/css">
+body{text-align:center;}
+#container{position:relative;background-color:black;width:1200px;height:600px;overflow:hidden;cursor:pointer;margin:0 auto;}
+</style>
+
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript">
+var room = (function() {
+
+	var _room = function(id, options) {
+		this.init(id, options);
+
+	}
+	_room.prototype = (function() {
+		var containerPos; //容器位置
+		var times = 0; //缩放倍数
+		var scrollable = true; //是否可滚动缩放
+		var timeId2;
+		var Tween = {			//缓动对象
+			linear: function(t, b, c, d) {
+				return c * t / d + b;
+			},
+			easeIn: function(t, b, c, d) {
+				return c * (t /= d) * t + b;
+			},
+			easeOut: function(t, b, c, d) {
+				return c * ((t = t / d - 1) * t * t + 1) + b;
+			}
+
+		};
+		var $ = function(id) { return document.getElementById(id); }
+		var emptyFunction=function(){};
+
+		var getContainerPos = function(container) {//获取容器位置
+			var left = 0;
+			var top = 0;
+			while (container.offsetParent) {
+				left += container.offsetLeft;
+				top += container.offsetTop;
+				container = container.offsetParent;
+
+			}
+			return [left, top];
+
+		}
+
+		var updatePos = function(elem, x, y, scale) {//根据元素的x y坐标 更新元素位置，缩放比和大小
+			elem._x = x;
+			elem._y = y;
+
+			elem.scale = scale;
+			if (scale > 1.05) {		//缩放比大于1.05则消失
+				elem.style.display = 'none';
+			}
+			else {
+				elem.style.display = 'block';
+			}
+			elem.style.left = this.centerX + scale * x + 'px';
+			elem.style.top = this.centerY - scale * y + 'px';
+			elem.style.width = elem.initWidth * scale + 'px';
+			elem.style.height = elem.initHeight * scale + 'px';
+
+		};
+	  
+		var changeInTween = function(startTime, marginX, marginY, duration) {
+
+			var self = this;
+			var arr=self.arr;
+			window.clearTimeout(timeId2);
+			return function() {
+				var time = new Date().getTime() - startTime;
+				var distantX = Tween[self.tweenType](time, 0, marginX, duration);
+				var distantY = Tween[self.tweenType](time, 0, marginY, duration);
+
+
+				if (time <= duration) {
+					for (var i = 0; i < arr.length; i++) {
+						var img = arr[i];
+						updatePos.call(self, img, img.initX + distantX, img.initY + distantY, img.scale); //更新所有元素位置
+
+					}
+					timeId2 = window.setTimeout(arguments.callee, 50);
+				}
+				else {
+					for (var i = 0; i < arr.length; i++) {
+						var img = arr[i];
+						img.initX = img._x;
+						img.initY = img._y;
+
+					}
+					window.clearTimeout(timeId2);
+					bindClickHandler.call(self);
+					bindHandlerForAllImg.call(self);
+
+				}
+			}
+
+		}
+
+		var clickHandler = function() {
+			var self = this;
+			return function(eve) {
+				removeClickHandler();
+				removeHandlerForAllImg(self.arr);
+				eve = eve || window.event;
+				var containerLeft = containerPos[0];
+				var containerTop = containerPos[1];
+				var pageX = eve.pageX || eve.clientX + document.documentElement.scrollLeft - document.documentElement.clientLeft;
+				var pageY = eve.pageY || eve.clientY + document.documentElement.scrollTop - document.documentElement.clientTop;
+				var marginX = (pageX - containerLeft - self.centerX) * (-1); //鼠标在容器的X坐标
+				var marginY = (pageY - containerTop - self.centerY); //鼠标在容器的Y坐标
+
+				var startTime = new Date().getTime();
+
+				changeInTween.call(self, startTime, marginX, marginY, self.moveDuration)();
+
+
+			}
+
+		}
+
+
+
+		var bindClickHandler = function() {//绑定鼠标事件处理程序
+			$('container').onclick = clickHandler.call(this);
+		}
+		var removeClickHandler = function() {//删除鼠标事件处理程序
+			$('container').onclick = emptyFunction;
+		}
+		//是否达到最大值
+		var hasToMax = function(currentScale, maxScale, minScale, detail) {
+			return (currentScale >= maxScale && detail < 0) || (currentScale <= minScale && detail > 0) || (currentScale > minScale && currentScale < maxScale)
+		}
+
+		var ScrollHandler = function(self) {
+
+			return function(eve) {//绑定鼠标滚动时处理程序，动态改变房子内所有元素缩放比
+
+				eve = eve || window.event;
+				var arr = self.arr;
+				if (navigator.userAgent.indexOf("Firefox") > 0) {
+					//如果已到达最大值，只能向负方向滚动缩小比例，如果已到最小值，则只能向正方向滚动扩大比例，如果处于中间值，则正负方向都可以滚动
+					if (hasToMax(self.currentScale, self.maxScale, self.minScale, eve.detail)) {
+						times += eve.detail / 3;
+						scrollable = true;
+					}
+					else {
+						scrollable = false;
+
+					}
+
+				}
+				else {
+					if (hasToMax(self.currentScale, self.maxScale, self.minScale, eve.wheelDelta)) {
+						times += eve.wheelDelta / 120;
+						scrollable = true;
+					}
+					else {
+						scrollable = false;
+
+					}
+				}
+
+				if (scrollable) {//如果可以滚动缩放
+					self.currentScale = 0;
+					for (var i = 0; i < arr.length; i++) {
+						var newScale = arr[i].initScale + times * 0.02; //更新缩放比scale
+						(newScale > self.currentScale) && (self.currentScale = newScale); //获取最近图像（最大图像）当前缩放比
+
+						updatePos.call(self, arr[i], arr[i]._x, arr[i]._y, newScale);
+
+					}
+				}
+				eve.preventDefault ? eve.preventDefault() : eve.returnValue = false;
+			}
+
+		};
+
+		var bindScrollHandler = function() {	//绑定鼠标滚动处理程序
+
+			if (navigator.userAgent.indexOf("Firefox") < 0) {
+				document.onmousewheel = ScrollHandler(this);
+
+			}
+			else {
+				document.addEventListener("DOMMouseScroll", ScrollHandler(this), false);
+			}
+		}
+		var removeScrollHandler = function() {//取消鼠标滚动处理程序
+			if (navigator.userAgent.indexOf("Firefox") < 0) {
+				document.onmousewheel = emptyFunction;
+
+			}
+			else {
+				document.removeEventListener("DOMMouseScroll", ScrollHandler, false);
+			}
+		}
+
+		var setImgPositionInTween = function(img, xMargin, yMargin, scaleMargin, target) {//以缓动方式改变元素位置
+			var startTime = img.startTime;
+			var duration = this.selectedDuration; //缓动总耗时
+			var tweenType = this.tweenType;
+			var time = new Date().getTime() - startTime; //缓动经过时间
+
+			var bX = img.initX;
+			var dX = xMargin;
+
+			var bY = img.initY;
+			var dY = yMargin;
+
+			var bScale = img.initScale;
+			var dScale = scaleMargin;
+
+
+			var newX = Tween[tweenType](time, bX, dX, duration);
+			var newY = Tween[tweenType](time, bY, dY, duration);
+			var newScale = Tween[tweenType](time, bScale, dScale, duration);
+			updatePos.call(this, img, newX, newY, newScale);
+
+
+
+		}
+
+		var bindHandlerForImage = function(img) {//为图片点击绑定事件处理程序
+			var self = this;
+			img.onclick = function(eve) {
+				eve = eve || window.event;
+				var enhance; //是否放大（否则缩小）
+				var target = eve.target || eve.srcElement;
+				//如果该图片的缩放比已经为1，或点击的是容器，或timeId不为undefined（之前的选择动画还没结束）则返回
+				if (target.initScale == 1 || target == self.container || typeof timeId != 'undefined') {
+					return;
+				}
+				removeClickHandler(); //选中图片期间，取消鼠标移动处理程序
+				removeScrollHandler();  //选中图片期间，取消鼠标滚动处理程序
+
+
+				var scaleMargin = 1 - target.scale; //所选中图片的缩放比距离1的差距	
+				var newX = target.initWidth / 2 * (-1); //被选中的图片的新X坐标，处于容器正中央
+				var newY = target.initHeight / 2; //被选中的图片的新Y坐标，处于容器正中央
+				var xMargin = newX - img._x; //到新位置X方向所要移动的位移
+				var yMargin = newY - img._y; //到新位置Y方向所要移动的位移
+
+				var arr = self.arr;
+				for (var i = 0; i < arr.length; i++) {//用现在的xy坐标和scale重新设置initX，initY和initScale
+					arr[i].initX = arr[i]._x;
+					arr[i].initY = arr[i]._y;
+					arr[i].initScale = arr[i].scale;
+				}
+				times = 0;
+				target.scale >= 1 ? enhance = false : enhance = true; //如果所选中scale大于1，则需要缩小，小于1，则要放大	
+				timeId = window.setTimeout(function() {
+
+					for (var i = 0; i < arr.length; i++) {
+						var ele = arr[i];
+						if (typeof arr[i].startTime == 'undefined') {
+							ele.startTime = new Date().getTime();
+
+						}
+
+						setImgPositionInTween.call(self, ele, xMargin, yMargin, scaleMargin, target); //缓动方式改变元素位置
+
+					}
+
+					if ((enhance && target.scale >= 1) || (!enhance && target.scale < 1)) {
+
+						for (var i = 0; i < arr.length; i++) {
+							var ele = arr[i];
+							ele.startTime = undefined;
+							ele.initScale = ele.scale;
+							ele.initX = ele._x;
+							ele.initY = ele._y;
+
+
+						}
+						window.clearTimeout(timeId);
+						timeId = undefined;
+						bindClickHandler.call(self);
+						bindScrollHandler.call(self);
+					}
+					else {
+						window.setTimeout(arguments.callee, 20);
+					}
+				}, 20);
+
+			}
+
+		}
+		var removeHandlerForAllImg=function(arr){//移除所有图片选择处理程序
+			for(var i=0;i<arr.length;i++){
+				arr[i].onclick=emptyFunction;
+			}
+		
+		}
+		var bindHandlerForAllImg=function(){//绑定所有图片选择处理程序
+			for(var i=0;i<this.arr.length;i++){
+				bindHandlerForImage.call(this,this.arr[i]);
+			}
+		
+		}
+
+
+
+		return {
+			init: function(id, options) {//初始化
+				options = options || {};
+				this.container = $(id || 'container'); //容器
+				this.arr = []; //保存所有元素
+				this.centerX = this.container.clientWidth / 2; //原点坐标的left
+				this.centerY = this.container.clientHeight / 2; //原点坐标的top
+				this.maxScale = options.maxScale || 1.5; //最近图像最大缩放比
+				this.minScale = options.minScale || 0.7; //最近图像最小缩放比
+				this.selectedDuration = options.selectedDuration || 1000; //选中图片时，视觉移向被选中图片所需要的时间
+				this.moveDuration = options.moveDuration || 1000; //点击视觉移动需要的时间
+				this.tweenType = options.tweenType || 'easeOut';
+				this.currentScale = 1; //最近图像当前缩放比
+				containerPos = getContainerPos(this.container); //获取容器位置
+				bindScrollHandler.call(this); //绑定鼠标滚动处理程序
+				bindClickHandler.call(this); //绑定鼠标移动处理程序
+
+			},
+			addTweenType: function(type, func) {//添加缓动方式
+				(typeof func == 'function' || typeof func == 'object') && (Tween[type] = func);
+
+			},
+			addElem: (function() {//为房子添加元素 参数：x坐标 y坐标 缩放比 图片地址 元素id 
+
+				var setImgHover = function(img) {//鼠标在元素上显示白框
+					img.onmouseover = function(eve) {
+						eve = eve || window.event;
+						var target = eve.target || eve.srcElement;
+						target.style.border = '1px white solid';
+					}
+
+
+				}
+				var setImgOut = function(img) {//鼠标离开元素白框消失
+					img.onmouseout = function(eve) {
+						eve = eve || window.event;
+						var target = eve.target || eve.srcElement;
+						target.style.border = 'none';
+					}
+
+
+				}
+				return function(x, y, scale, src, id) {
+					var elem = new Image();
+					var arr = this.arr;
+					var container = this.container;
+					var self = this;
+
+					elem.onload = function() {	//元素加载处理程序
+						container.appendChild(elem);
+						elem.id = id;
+						elem.style.position = 'absolute';
+						elem.style.zIndex = Math.floor(scale * 1000);
+						elem.initWidth = elem.clientWidth;
+						elem.initHeight = elem.clientHeight;
+						elem.initScale = scale;
+						elem.initX = x;
+						elem.initY = y;
+
+						updatePos.call(self, elem, x, y, scale); //更新元素位置
+						arr.push(elem);
+						bindHandlerForImage.call(self, elem);
+						setImgHover(elem);
+						setImgOut(elem);
+
+
+					}
+					elem.src = src;
+				}
+			})()
+		}
+
+	})();
+	return _room;
+
+})();
+
+
+var r=new room();
+
+/*	草	*/
+r.addElem(350,-60,1,'grass.gif','grass1');
+r.addElem(-600,-60,1,'grass.gif','grass2');
+r.addElem(350,-60,0.7,'grass.gif','grass3');
+r.addElem(-600,-60,0.7,'grass.gif','grass4');
+
+/*	门	*/
+r.addElem(-225,200,0.65,'door.gif','door');
+
+/* 灯 */
+r.addElem(-400,600,0.63,'x-light.jpg','xlight');
+r.addElem(-99,600,0.63,'light.gif','light');
+
+
+
+/* 方桌 */
+r.addElem(-480,-73,0.63,'table1.gif','table1');
+
+
+/* 圆桌 */
+r.addElem(600,0,0.6,'chair3.gif','chair2');
+r.addElem(100,42,0.59,'chair1.gif','chair1');
+r.addElem(180,-74,0.59,'table2.gif','table2');
+r.addElem(360,24,0.57,'chair2.gif','chair2');
+
+/* 钢琴 */
+r.addElem(-850,246,0.56,'piano.gif','piano');
+
+/* 书桌 */
+r.addElem(600,240,0.5,'booktable.gif','booktable');
+
+/* 电视 */
+r.addElem(-206,79,0.4,'tv.gif','tv');
+</script>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

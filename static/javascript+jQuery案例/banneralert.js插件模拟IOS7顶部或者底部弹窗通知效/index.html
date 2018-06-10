@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>banneralert.js插件模拟IOS7顶部或者底部弹窗通知效果</title>
+<link href="css/banneralert.css" rel="stylesheet" />
+<link href="css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+<h1>Banneralert.js 演示</h1>
+
+<div class="section">
+<h3>基本演示</h3>
+<button class="basicdemo">弹出横幅</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet et purus non mattis. Curabitur bibendum magna at augue convallis, placerat luctus tellus faucibus."
+});</pre>
+</div>
+
+<div class="section">
+<h3>图标</h3>
+<button class="noico">无图标</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	content : "无图标横幅演示"
+});</pre>
+<hr />
+<button class="myico">自定义图标</button>
+<pre>$("body").showbanner({
+	title : "Chrome",
+	icon : "images/chrome.png",
+	content : "自定义图标横幅演示"
+});</pre>
+</div>
+
+<div class="section">
+<h3>不显示把手</h3>
+<button class="nohandle">弹出横幅</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	handle : false,
+	content : "No handle"
+});</pre>
+<div class="note">把手的作用：点击后直接消除横幅，忽略持续时间设置。</div>
+</div>
+
+<div class="section">
+<h3>声音</h3>
+<button class="soundban">弹出横幅</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "带有声音的横幅",
+	sound : "sounds/sms-received1.mp3"
+});</pre>
+<div class="note">此功能不支持IE8及更低版本的浏览器。</div>
+</div>
+
+<div class="section">
+<h3>位置</h3>
+<button class="bottomdemo">底部</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "底部横幅演示",
+	position : "bottom"
+});</pre>
+</div>
+
+<div class="section">
+<h3>显示、停留与隐藏的持续时间</h3>
+<button class="noanim">无动画</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "无动画",
+	show_duration : 0,
+	hide_duration : 0
+});</pre>
+<hr />
+<button class="durtest1">200毫秒进入 持续时间1000毫秒 700毫秒退出</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "200毫秒进入 持续时间1000毫秒 700毫秒退出",
+	show_duration : 200,
+	duration : 1000,
+	hide_duration : 700
+});</pre>
+<hr />
+<button class="easingtest">匀速进入和匀速退出</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "匀速进入和匀速退出横幅",
+	show_easing : "linear",
+	hide_easing : "linear"
+});</pre>
+</div>
+
+<div class="section">
+<h3>事件属性</h3>
+<button class="clickevt">点击事件</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "点这里",
+	onClick : function(){
+		alert("横幅点击事件测试");
+	}
+});</pre>
+<div class="note">该事件在用户点击横幅后触发。</div>
+<hr />
+<button class="hideevt">消失事件</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "请等待这条横幅消失",
+	onHide : function(){
+		alert("横幅已消失");
+	}
+});</pre>
+<div class="note">该事件在横幅消失后触发。</div>
+</div>
+
+<div class="section">
+<h3>通过附加class功能来自定义样式</h3>
+<button class="css1">测试1</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "横幅样式演示",
+	addclass : "mybannerstyle1"
+});</pre>
+<div class="note">Demo页面中的css写在demo.css中</div>
+<a onclick="$('.toggle1').slideToggle()" class="togglea">点击这里展开/隐藏CSS部分</a>
+<pre class="dtoggle toggle1">.banneralert.mybannerstyle1{
+	background:#FFF;
+	background:rgba(255,255,255,.85);
+	border-bottom:1px solid #999;
+}
+.banneralert.mybannerstyle1 .bannertitlebar{
+	color:#333;
+}
+.banneralert.mybannerstyle1 .bannericon{
+	border-radius:50%;
+	border:1px solid #999;
+}
+.banneralert.mybannerstyle1 .bannercontent{
+	color:#333;
+}
+.banneralert.mybannerstyle1 .bannerhandle{
+	background:#333;
+	height:8px;
+	width:30px;
+	border-radius:50%;
+}</pre>
+<hr />
+<button class="css2">测试2</button>
+<pre>$("body").showbanner({
+	title : "lanrenzhijia.com",
+	icon : "images/icon.png",
+	content : "横幅样式演示2",
+	addclass : "mybannerstyle2"
+});</pre>
+<a onclick="$('.toggle2').slideToggle()" class="togglea">点击这里展开/隐藏CSS部分</a>
+<pre class="dtoggle toggle2">.banneralert.mybannerstyle2{
+	background-color: #444;
+	background-color: rgba(68,68,68,.9);
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGA4A8QmQAwGjDAGNgGwSgwVAFVOAgV/1mwxAAAAAElFTkSuQmCC");
+}
+.banneralert.mybannerstyle2 .bannertitlebar{
+	color:#CCC;
+	text-align:center;
+	font-size:16px;
+}
+.banneralert.mybannerstyle2 .bannercontent{
+	color:#EEE;
+	text-align:center;
+	margin:5px auto;
+	font-size:14px;
+}
+.banneralert.mybannerstyle2 .bannerhandle{
+	background:none;
+	width:30px;
+	border:1px solid #999;
+}</pre>
+</div>
+
+<div class="section">
+<h3>HTML</h3>
+<button class="htmldemo">弹出横幅</button>
+<pre>$("body").showbanner({
+	title : "还可以在横幅上使用&lt;i&gt;HTML&lt;/i&gt;",
+	icon : "images/lanrenlogo.png",
+	content : "HTML横幅演示&lt;input value='文本框'&gt;&lt;select&gt;&lt;option&gt;下拉选择框&lt;/option&gt;&lt;/select&gt;\n&lt;input type='button' value='按钮'&gt;\n&lt;font color='#FF0000'&gt;颜色&lt;/font&gt;",
+	html: true
+});</pre>
+<div class="note">如果不声明HTML所有字符将直接显示，例如：</div>
+<a onclick="$('.nohtmlsection').slideToggle()" class="togglea">点击这里展开/隐藏未显示的部分</a>
+<div class="dtoggle nohtmlsection">
+<button class="nohtmldemo">弹出横幅</button>
+<pre>$("body").showbanner({
+	title : "还可以在横幅上使用&lt;i&gt;HTML&lt;/i&gt;",
+	icon : "images/lanrenlogo.png",
+	content : "HTML横幅演示&lt;input value='文本框'&gt;&lt;select&gt;&lt;option&gt;下拉选择框&lt;/option&gt;&lt;/select&gt;\n&lt;input type='button' value='按钮'&gt;\n&lt;font color='#FF0000'&gt;颜色&lt;/font&gt;"
+});</pre>
+</div>
+</div>
+
+<div class="section" style="padding-left:5px;padding-right:5px;padding-bottom:5px;">
+<h3>选项说明</h3>
+<table width="100%" border="0" cellspacing="0">
+  <tr style="background:#DDD;color:#333;">
+    <td width="130" style="border-top-left-radius:5px;"><b>选项名称</b></td>
+    <td width="60"><b>默认值</b></td>
+    <td style="border-top-right-radius:5px;"><b>描述</b></td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>&nbsp;</td>
+    <td>横幅的标题。</td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>&nbsp;</td>
+    <td>横幅的图标。</td>
+  </tr>
+  <tr>
+    <td>content</td>
+    <td>&nbsp;</td>
+    <td>横幅的内容。</td>
+  </tr>
+  <tr>
+    <td>handle</td>
+    <td>true</td>
+    <td>是否显示把手，把手的作用：点击后直接消除横幅，忽略持续时间设置。</td>
+  </tr>
+  <tr>
+    <td>addClass</td>
+    <td>&nbsp;</td>
+    <td>要附加到横幅元素上的class，可用于自定义样式等，多个class请用空格分隔。</td>
+  </tr>
+  <tr>
+    <td>sound</td>
+    <td>&nbsp;</td>
+    <td>横幅弹出时播放的声音。</td>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>top</td>
+    <td>横幅的位置，包含top（顶部）和bottom（底部）两个可用的值。</td>
+  </tr>
+  <tr>
+    <td>html</td>
+    <td>false</td>
+    <td>是否把标题和内容作为HTML添加到横幅元素上。</td>
+  </tr>
+  <tr>
+    <td>show_duration</td>
+    <td>400</td>
+    <td>横幅弹出动画的持续时间（单位：毫秒）。</td>
+  </tr>
+  <tr>
+    <td>show_easing</td>
+    <td>swing</td>
+    <td>横幅弹出动画的时间曲线，包含swing（缓动）和linear（匀速）两个可用的值。</td>
+  </tr>
+  <tr>
+    <td>duration</td>
+    <td>3000</td>
+    <td>横幅停留在页面上的时间（单位：毫秒）。</td>
+  </tr>
+  <tr>
+    <td>hide_duration</td>
+    <td>400</td>
+    <td>横幅收回动画的持续时间（单位：毫秒）。</td>
+  </tr>
+  <tr>
+    <td>hide_easing</td>
+    <td>swing</td>
+    <td>横幅收回动画的时间曲线，包含swing（缓动）和linear（匀速）两个可用的值。</td>
+  </tr>
+  <tr>
+    <td>onClick</td>
+    <td></td>
+    <td>回调函数，点击横幅时执行的脚本。</td>
+  </tr>
+  <tr>
+    <td style="border-bottom-left-radius:5px;">onHide</td>
+    <td></td>
+    <td style="border-bottom-right-radius:5px;">回调函数，横幅消失后执行的脚本。</td>
+  </tr>
+</table>
+</div>
+
+<div class="section">
+<h3>用法</h3>
+<ol>
+	<li>首先，在页面上引入jQuery，然后引入<span class="smallpre">banneralert.js</span>和<span class="smallpre">banneralert.css</span>两个文件。（或压缩版<span class="smallpre">banneralert.min.js</span>）</li>
+	<div class="note">其中，banneralert.js是插件主要部分的js，banneralert.css中定义的是横幅的默认样式，可以根据需要进行编辑。<br />
+	横幅的HTML结构是通过js动态添加到页面上的，所以不需要在页面上额外准备内容。</div>
+	<li>只需要运行<span class="smallpre">$("body").showbanner(选项);</span>即可，选项说明和示例在上文已经列出。</li>
+</ol>
+</div>
+
+<div class="note" style="display:inline;font-size:16px">浏览器支持：IE(7+) Chrome Firefox Safari Opera …</div>
+<a onclick="$('html, body').animate({scrollTop:0})" class="topa">回顶部</a>
+
+<script src="js/jquery-1.11.0.min.js" language="javascript"></script>
+<script src="js/banneralert.min.js" language="javascript"></script>
+<script src="js/example.js" language="javascript"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery旋转式动画导航特效</title>
+<link href='css/lanren.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--代码部分begin-->
+<div id="test-element"></div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="js/feature.presenter.1.5.min.js"></script>
+<script>
+var settings = [ 
+	{image: 'images/lanren1.jpg', heading: '菜单导航', description: 'http://www.mysite.com/nav'}, 
+	{image: 'images/lanren2.jpg', heading: 'jQuery特效', description: 'http://www.mysite.com/jquery'}, 
+	{image: 'images/lanren3.jpg', heading: '图片特效', description: 'http://www.mysite.com/pic'}, 
+	{image: 'images/lanren4.jpg', heading: '焦点图', description: 'http://www.mysite.com/banner'}, 
+	{image: 'images/lanren5.jpg', heading: 'css3特效', description: 'http://www.mysite.com/js/css3'},
+	{image: 'images/lanren6.jpg', heading: '在线客服', description: 'http://www.mysite.com/service'}
+];
+var options = {
+	circle_radius: 220,
+	normal_feature_size: 100,
+	highlighted_feature_size: 150,
+	top_margin: 100,
+	bottom_margin: 50,
+	spacing: 40,
+	min_padding: 50,
+	heading_font_size: 30,
+	description_font_size: 20,
+	type: 'image'
+};
+var fp = new FeaturePresenter($("#test-element"), settings, options);
+fp.createPresenter();
+</script>
+<!--代码部分end-->
+</body>
+</html>

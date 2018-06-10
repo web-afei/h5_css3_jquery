@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3图片查看器(水平滚动导航条)</title>
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" />
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia2.css" />
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:regular,bold&v1' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="js/lanrenzhijia.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#lanrenzhijia_outer').horizontalScroll();
+});
+</script>
+</head>
+<body>
+<ul id="lanrenzhijia_outer">
+  <li id="lanrenzhijia_inner">
+    <ul id="lanrenzhijia">
+      <li><img src="images/lanrenzhijia01.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia02.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia03.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia04.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia05.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia06.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia07.png" width="500px" height="300px" alt="网页设计之家" /></li>
+      <li><img src="images/lanrenzhijia08.png" width="500px" height="300px" alt="网页设计之家" /></li>
+    </ul>
+  </li>
+</ul>
+<div id="scrollbar"> <a id="left_scroll" class="mouseover_left" href="#"></a>
+  <div id="track">
+    <div id="dragBar"></div>
+  </div>
+  <a id="right_scroll" class="mouseover_right" href="#"></a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery实现输入框下拉列表树插件代码</title>
+<link href="css/dtreeck.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<!--代码部分begin-->
+<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="1" valign="top" width="35%" style="padding-left: 30px;">
+		</td>
+		<td valign="top" height="65%" align="left">
+			<form method="post" id="regform">
+				<table width="70%" cellpadding="1" cellspacing="0" border="0" style="margin-top: 10px;">
+					<tr>
+						<td width="20%" align="right">
+						父 菜 单：
+						</td>
+						<td width="30%" align="left">
+						<input type="text" id="menu_parent_name" style="width: 150px;">
+						<input type="hidden" id="menu_parent" name="menu_parent">
+						<input type="hidden" id="oprate" name="oprate">
+						<input type="hidden" id="menu_id" name="menu_id">
+						</td>
+						<td width="20%" align="right">
+						</td>
+						<td width="30%" align="left">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="js/dtreeck.js"></script>
+<div id="treediv">
+	<div align="right">
+		<a href="javascript:viod(0);" id="closed"><font color="#000">关闭</font></a>
+    </div>
+    <script src="js/lanren.js"></script>
+</div>    
+<script>
+//生成弹出层的代码
+<!-- 弹出层-->
+xOffset = 0;//向右偏移量
+yOffset = 25;//向下偏移量
+var toshow = "treediv";//要显示的层的id
+var target = "menu_parent_name";//目标控件----也就是想要点击后弹出树形菜单的那个控件id
+$("#"+target).click(function (){
+	$("#"+toshow)
+	.css("position", "absolute")
+	.css("left", $("#"+target).position().left+xOffset + "px")
+	.css("top", $("#"+target).position().top+yOffset +"px").show();
+});
+//关闭层
+$("#closed").click(function(){
+	$("#"+toshow).hide();
+});
+
+//判断鼠标在不在弹出层范围内
+ function   checkIn(id){
+	var yy = 20;   //偏移量
+	var str = "";
+	var   x=window.event.clientX;   
+	var   y=window.event.clientY;   
+	var   obj=$("#"+id)[0];
+	if(x>obj.offsetLeft&&x<(obj.offsetLeft+obj.clientWidth)&&y>(obj.offsetTop-yy)&&y<(obj.offsetTop+obj.clientHeight)){   
+		return true;
+	}else{   
+		return false;
+	}   
+  }   
+//点击body关闭弹出层
+	$(document).click(function(){
+		var is = checkIn("treediv");
+		if(!is){
+			$("#"+toshow).hide();
+		}
+	});
+<!-- 弹出层-->
+//生成弹出层的代码
+
+//点击菜单树给文本框赋值------------------菜单树里加此方法
+function setvalue(id,name){
+	$("#menu_parent_name").val(name);
+	$("#menu_parent").val(id);
+	$("#treediv").hide();
+}
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

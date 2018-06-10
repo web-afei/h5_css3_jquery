@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生可拖拽右侧在线客服代码效果</title>
+	<style>
+	*{margin: 0;padding: 0;list-style: none;}
+	#floatTool{ 
+		width:130px; 
+		height:270px; 
+		overflow:hidden; 
+		background:url(http://demo.lanrenzhijia.com/2015/service0515/images/service.png) no-repeat; 
+		position:absolute; 
+		left:85%; 
+		top:130px;
+		z-index:1000;
+	}
+	#floatTool .move{
+		width: 100%;
+		height: 80px;
+		cursor:move;
+	}
+	</style>
+</head>
+<body style="height:2000px;">
+	<!--代码部分begin-->
+	<div id="floatTool">
+		<div class="move"></div>
+	</div>
+	<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+	<script>
+	var floatTool = {};
+		floatTool._move = false;
+		floatTool.ismove = false;
+		floatTool._x;
+		floatTool._y;
+		floatTool.moveBox = $('#floatTool'); //整体悬浮框
+		floatTool.drag = $('#floatTool .move'); //可拖动部分
+		floatTool.defaultTop = (window.screen.height - floatTool.moveBox.height())/2 - 200; //默认顶部保持上下居中，再往上去200像素
+	$(window).scroll(function(){
+		var offsetTop = floatTool.defaultTop + $(window).scrollTop()+'px';
+		floatTool.moveBox.animate({top:offsetTop},{
+			duration: 600,
+   			queue: false
+   		});						  
+	});
+	//拖动
+	floatTool.drag.mousedown(function (e) {
+        floatTool._move = true;
+        floatTool._x = e.pageX - parseInt(floatTool.moveBox.css("left"));
+        floatTool._y = e.pageY - parseInt(floatTool.moveBox.css("top"));
+    });
+    $(document).mousemove(function (e) {
+        if (floatTool._move) {
+        	var x = e.pageX - floatTool._x;
+            var y = e.pageY - floatTool._y;
+            var wx = $(window).width() - floatTool.moveBox.width();
+            var dy = $(document).height() - floatTool.moveBox.height();
+            if(x >= 0 && x <= wx && y > 0 && y <= dy) {
+                floatTool.moveBox.css({
+                    top: y,
+                    left: x
+                });
+            	floatTool.ismove = true;
+            }
+        }
+    }).mouseup(function () {
+        floatTool._move = false;
+    });
+	</script>
+	<!--代码部分end-->
+</body>
+</html>

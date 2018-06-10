@@ -1,0 +1,4 @@
+/* 代码整理：网页设计之家 mysite.com */
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}

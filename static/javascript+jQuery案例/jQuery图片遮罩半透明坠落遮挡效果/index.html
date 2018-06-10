@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery图片遮罩半透明坠落遮挡效果</title>
+<style>
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{color:#898989;font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+a{color:#898989;text-decoration:none}
+a:hover{cursor:pointer;color:#9f8054;}
+/* 代码整理：小白 www.mysite.com */
+.sgw_img{width:981px;height:382px;overflow:hidden;border:1px solid #dcdcdc;padding:3px;margin:40px auto 0 auto;}
+.sgw_img dt{margin-right:3px;float:left;display:inline;width:315px;height:382px;position:relative;overflow:hidden;}
+.sgw_img dd{float:left;position:relative;overflow:hidden;}
+.sgw_img_dd1{width:196px;height:382px;float:left;margin-right:3px;display:inline;}
+.sgw_img_dd1 dd{height:125px;overflow:hidden;float:left;}
+.sgw_img_dd1 #dd2{margin:3px 0px 4px 0;}
+.sgw_img_dd2{float:left;width:464px;height:382px;overflow:hidden;}
+.sgw_img_dd2 dd{margin-right:3px;height:207px;overflow:hidden;display:inline;}
+.sgw_img_dd2 dd#dd3, .sgw_img_dd2 dd#dd4{margin:0;}
+.sgw_img_dd2 dd#dd3, .sgw_img_dd2 dd#dd5{margin-bottom:3px;height:172px;}
+.box{width:100%;height:100%;background:url(http://demo.lanrenzhijia.com/2015/pic0129/images/sgw_bg.jpg) no-repeat left top #020000;position:absolute;left:0;line-height:18px;color:#e69714;top:-382px;filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;text-align:center;padding-top:30px;}
+.box h3{color:#fff;font-size:14px;font-weight:bold;}
+.box a{display:block;margin-top:5px;}
+.sgw_img dt .box{padding-top:100px;top:-482px;}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<dl class="sgw_img">
+	<dt>
+		<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t1.png" width="315" height="382"/>
+		<div class="box">
+			<h3>揭秘化妆水四大隐藏功效</h3>
+			<p>介绍...</p>
+			<a href="http://www.mysite.com/">查看详细</a>
+		</div>
+	</dt>
+	<div class="sgw_img_dd1">
+		<dd>
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t2.png" width="196" height="125"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd id="dd2">
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t3.png" width="196" height="126"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd>
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t4.png" width="196" height="125"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+	</div>
+	<div class="sgw_img_dd2">
+		<dd id="dd5">
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t5.png" width="284" height="172"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd id="dd3">
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t6.png" width="176" height="172"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd>
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t7.png" width="152" height="207"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd>
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t8.jpg" width="152" height="207"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+		<dd id="dd4">
+			<img src="http://demo.lanrenzhijia.com/2015/pic0129/images/t9.png" width="152" height="207"/>
+			<div class="box">
+				<h3>标题</h3>
+				<p>介绍...</p>
+				<a href="http://www.mysite.com/">查看详细</a>
+			</div>
+		</dd>
+	</div>
+</dl>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.sgw_img dt').hover(function(){
+		$(this).children('.box').stop(true,true).delay(100).animate({'top':0,opacity:0.8},300);
+	},function(){
+		$(this).children('.box').stop(true,true).animate({'top':-482,opacity:0},200);
+	})
+	$('.sgw_img dd').hover(function(){
+		$(this).children('.box').stop(true,true).delay(100).animate({'top':0,opacity:0.8},300);
+	},function(){
+		$(this).children('.box').stop(true,true).animate({'top':-382,opacity:0},200);
+	})
+})
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

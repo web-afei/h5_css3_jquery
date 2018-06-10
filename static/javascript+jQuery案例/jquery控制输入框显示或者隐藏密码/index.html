@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>jQuery控制输入框显示或者隐藏密码</title>
+<!--手机端需要添加-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--基础样式-->
+<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/mobile_base.css">
+<!--页面样式-->
+<link rel="stylesheet" type="text/css" href="css/me.css">
+<!--js-->
+<script src="js/jquery-1.8.3.min.js"></script> 
+<script src="js/app_mian.js"></script>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="login_reg all_center_box">
+  <ul>
+    <li> <i class="icon iconfont" >&#xe620;</i>
+      <input name="" type="text" class="input_text_user ClearInput " placeholder="用户名/手机" required  ><a href="javascript:" class="clear_input">x</a>
+    </li>
+    <li> <i class="icon iconfont " >&#xe606;</i>
+      <input name="" type="password" class="input_text_password mima_dd " placeholder="请输入密码" >
+      <input name="" type="text" class="input_text_password mima_wz" style="display:none;" placeholder="请输入密码" >
+      <a class="eyes_box " data-show="1" href="javascript:void(0);"><i class="icon iconfont" >&#xe624;</i></a> </li>
+  </ul>
+  <a href="#" class="denglu_but" >登录</a>
+  <p align="center"> <a href="#" class="f12 c999" >忘记密码</a></p>
+</div>
+</div>
+<!-- 代码部分end -->
+</body>
+</html>

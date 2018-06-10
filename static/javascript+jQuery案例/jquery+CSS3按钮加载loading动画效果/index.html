@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+CSS3按钮加载loading动画效果</title>
+<link rel="stylesheet" href="css/lanrenzhijia.css" />
+<link rel="stylesheet" href="css/loda-button.css" />
+</head>
+<body>
+<div class="container">		
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-lock"></span>
+			Lock
+		</a>
+
+		<a href = "#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-drawer"></span> Archive
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-upload"></span> Upload
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-download"></span> Download
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-connection"></span> Connect
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-user"></span> User
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-search"></span> Search
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-phone"></span>
+			Phone
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-star"></span>
+			Star
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-remove"></span>
+			Remove
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-mail"></span>
+			Mail
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-flickr"></span>
+			Flickr
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-share"></span>
+			Share
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-file-pdf"></span>
+			PDF
+		</a>
+
+		<a href="#" class="loda-btn">
+			<span aria-hidden="true" class="loda-icon icon-disk"></span>
+			Save
+		</a>
+
+	</div>
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/loda-button.js"></script>
+	<script>
+		$('.loda-btn')
+			.lodaButton()
+			.click(function(e) {
+				e.preventDefault();
+				var _self = $(this);
+				_self.lodaButton('start');
+				setTimeout(function() {
+					_self.lodaButton('stop');
+				}, 2000);
+			});
+	</script>
+</body>
+</html>

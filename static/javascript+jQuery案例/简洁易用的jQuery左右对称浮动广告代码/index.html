@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>简洁易用的jQuery左右对称浮动广告代码</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div style="height:2000px;"></div>
+		<!-- 代码部分begin -->
+		<div id="floatright" style="position: absolute; z-index: 10; "><img src="images/weixin_qurode.png" border="0"></div>
+		<script src="js/jquery.js" ></script>
+		<script src="js/floatAd.js" ></script>
+		<script>
+		window.onload = function(){
+			var ad = new FloatAd({
+				//nodeLink : "<a href='#'><img src='img/weixin_qurode.png' border=0 /></a>" ,
+				floatObj : "floatright",
+				x : 10,
+				y : 250,
+				locate : "right"
+			});
+			var ad2 = new FloatAd({
+				nodeLink : "<a href='#'><img src='images/weixin_qurode.png' border=0 /></a>" ,
+				floatObj : "floatleft",
+				x : 10,
+				y : 250,
+				locate : "left"
+			});
+			ad.play();
+			ad2.play();
+		}
+		</script>
+		<!-- 代码部分end -->
+	</body>
+</html>

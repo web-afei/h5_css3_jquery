@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS3实现的点击按钮背景图片不断切换的JS代码</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" />
+        <link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<!--[if lt IE 10]>
+			<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+		<![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            
+            <h1>Experiments with <span>background-clip: text</span></h1>
+			<h2>Example 3: Background image + transition</h2>
+			<p class="demos">
+				<a href="index.html">Demo 1</a>
+				<a href="index2.html">Demo 2</a>
+				<a class="current-demo" href="index3.html">Demo 3</a>
+			</p>
+			<div class="it-wrapper">
+				<h3 id="it-text">Lovely!</h3>
+			</div>
+			<a id="it-toggle-button" class="it-toggle-button" href="#">Animate!</a>
+        </div>
+		<script type="text/javascript" src="http://www.lanrenzhijia.com/ajaxjs/1.7.1/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			
+				$('#it-toggle-button').on( 'click', function() {
+					$('#it-text').toggleClass('it-animate');
+					return false;
+				});
+			
+			});
+		</script>
+    </body>
+</html>

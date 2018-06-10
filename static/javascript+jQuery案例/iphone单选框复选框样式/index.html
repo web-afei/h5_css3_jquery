@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iphone单选框复选框样式</title>
+
+	
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){ 
+	$(".cb-enable").click(function(){
+		var parent = $(this).parents('.switch');
+		$('.cb-disable',parent).removeClass('selected');
+		$(this).addClass('selected');
+		$('.checkbox',parent).attr('checked', true);
+	});
+	$(".cb-disable").click(function(){
+		var parent = $(this).parents('.switch');
+		$('.cb-enable',parent).removeClass('selected');
+		$(this).addClass('selected');
+		$('.checkbox',parent).attr('checked', false);
+	});
+});
+</script>
+
+<style type="text/css">
+body{font-family:Arial, Sans-serif;padding:0 20px;}
+.field{width:100%;float:left;margin:0 0 20px;}
+.field input{margin:0 0 0 20px;}
+
+/* Used for the Switch effect:*/
+.cb-enable, .cb-disable, .cb-enable span, .cb-disable span{background:url(images/switch.gif) repeat-x;display:block;float:left;}
+.cb-enable span, .cb-disable span{line-height:30px;display:block;background-repeat:no-repeat;font-weight:bold;}
+.cb-enable span{background-position:left -90px;padding:0 10px;}
+.cb-disable span{background-position:right -180px;padding:0 10px;}
+.cb-disable.selected{background-position:0 -30px;}
+.cb-disable.selected span{background-position:right -210px;color:#fff;}
+.cb-enable.selected{background-position:0 -60px;}
+.cb-enable.selected span{background-position:left -150px;color:#fff;}
+.switch label{cursor:pointer;}
+</style>
+
+</head>
+<body>
+
+<div style="width:620px;margin:40px auto 0 auto;">
+
+	<h2>iPhone风格的单选框和复选框</h2>
+
+	<p class="field switch">
+		<input type="radio" id="radio1" name="field"  checked />有效 
+		<input type="radio" id="radio2" name="field" />无效
+		<label for="radio1" class="cb-enable selected"><span>有效</span></label>
+		<label for="radio2" class="cb-disable"><span>无效</span></label>
+	</p>
+	<p class="field switch">
+		<label class="cb-enable selected"><span>选中</span></label>
+		<label class="cb-disable"><span>取消</span></label>
+		<input type="checkbox" id="checkbox" class="checkbox" name="field2" /> 复选框
+	</p>
+
+</div>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

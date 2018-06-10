@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 www.mysite.com */
+body {
+	background:#ccc;
+}
+#lanrenzhijia {
+}
+#lanrenzhijia .turn-page {
+	background-color:#ccc;
+	background-size:100% 100%;
+}

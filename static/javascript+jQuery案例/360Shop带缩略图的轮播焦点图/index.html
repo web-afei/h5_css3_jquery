@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>360Shop网站首页轮播焦点图 - 站长素材</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/zzsc.js"></script>
+<link href="css/zzsc.css" type="text/css" rel="stylesheet" />
+<!--[if IE 6]>
+<script src="js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="gw_zzsc">
+	<ul class="fix_flash">
+        <li imglink="images/banner_05.jpg">
+        	<a style="background:url(images/banner_05.jpg) center top no-repeat" href="http://sc.chinaz.com/"></a>
+        </li>
+		<li imglink="images/banner_08.jpg">
+        	<a style="background:url(images/banner_08.jpg) center top no-repeat" href="http://sc.chinaz.com/"></a>
+        </li>
+		<li imglink="images/banner_06.jpg">
+        	<a style="background:url(images/banner_06.jpg) center top no-repeat" href="http://sc.chinaz.com/"></a>
+        </li>
+    </ul>
+    <div class="gw_zzsc_center">
+    	<div class="gw_zzsc_flash_v">
+        	<div style="width:96px; height:54px; overflow:hidden;">
+            	<img src="images/banner_05.jpg">
+            </div>
+		</div>
+    	<div class="gw_zzsc_flash_s"></div>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$(".gw_zzsc li").css("width",$("body").width()+"px");
+	$(".gw_zzsc li").css("cursor","pointer");
+	$(".gw_zzsc ul").css("width","999999px");
+	var str = "";
+	for(i=0;i<$(".fix_flash li").length;i++){
+		str += "<div class='gw_zzsc_sele' number="+i+" onclick='GW_FIX_scroll(this)'></div>"
+		}
+	$(".gw_zzsc_center").css("left",$("body").width()*0.5+250+"px")
+	$(".gw_zzsc_flash_s").html(str);
+	$(".gw_zzsc_sele").eq(0).addClass("gw_zzsc_over")
+})
+</script>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+</div>
+</body>
+</html>

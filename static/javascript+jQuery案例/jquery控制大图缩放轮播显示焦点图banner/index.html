@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery控制大图缩放轮播显示焦点图banner</title>
+<link href="css/lanren.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="bnspic">
+	<div class="big_pic">
+		<ul>
+        <li class="on"><a href="http://www.mysite.com" target="_blank"><img src="images/ookamikodomo.jpg" /><span class="txt">细田守《狼之子雨与雪》狼孩子的伟大母亲</span></a></li>
+        <li><a href="http://www.mysite.com" target="_blank"><img src="images/hotarubi.jpg" /><span class="txt">绿川幸《萤火之森》——凄美伤感的半人半妖与人类之恋</span></a></li>
+        <li><a href="http://www.mysite.com" target="_blank"><img src="images/tsuioku.jpg" /><span class="txt">犬村小六《对某个飞行员的追忆》——相爱不能相守的空战罗曼剧</span></a></li>
+        <li><a href="http://www.mysite.com" target="_blank"><img src="images/tokikake.jpg" /><span class="txt">细田守《穿越时空的少女》——在未来等你</span></a></li>
+        <li><a href="http://www.mysite.com" target="_blank"><img src="images/aura.jpg" /><span class="txt">田中罗密欧《AURA 魔龙院光牙最后的战斗》——中二先驱妄想战士</span></a></li>
+        <li><a href="http://www.mysite.com" target="_blank"><img src="images/neragaku.jpg" /><span class="txt">眉村卓《被狙击的学园》——穿越时间的警示</span></a></li>
+		</ul>
+	</div>
+	<div class="small_pic clearfix">
+		<ul>
+			<li class="on"><a href="javascript:;"><img src="images/ookamikodomo_.jpg" /></a></li>
+			<li><a href="javascript:;"><img src="images/hotarubi_.jpg" /></a></li>
+			<li><a href="javascript:;"><img src="images/tsuioku_.jpg" /></a></li>
+			<li><a href="javascript:;"><img src="images/tokikake_.jpg" /></a></li>
+			<li><a href="javascript:;"><img src="images/aura_.jpg" /></a></li>
+			<li><a href="javascript:;"><img src="images/neragaku_.jpg" /></a></li>
+		</ul>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".small_pic li").mouseover(function(){
+		$(this).siblings().removeClass("on");
+		$(this).addClass("on");
+		var preNumber=$(this).prevAll().size()+1;
+		$(".big_pic li").removeClass("on");
+		$(".big_pic li:nth-child("+preNumber+")").addClass("on");
+	})
+})
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

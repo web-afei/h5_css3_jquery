@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生纯js(不依赖现有框架)焦点文字滚动效果</title>
+<style >
+*{margin:0;padding:0; list-style:none;}
+
+#slider{overflow:hidden;width:470px;height:150px;position:relative; margin:100px auto;}
+#slider .pics{width:470px;height:150px}
+#slider .pics li{height:150px;width:470px;float:left}
+#slider #nav {position:absolute;bottom:5px;right:5px;}
+#slider #nav li.nav{background:#F47500; color:#fff;}
+#slider #nav li{border:1px solid #f47500; color:#d94b01; cursor:pointer;background:#fff;font-size:12px; height:15px;width:15px;float:left;margin-left:4px;display:inline;text-align:center}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<div id="slider">
+	<ul class="pics">
+		<li><img alt="原生焦点图效果" src="images/lanren01.jpg" /></li>
+		<li><img alt="原生焦点图效果" src="images/lanren02.jpg" /></li>
+		<li><img alt="原生焦点图效果" src="images/lanren03.jpg" /></li>
+		<li><img alt="原生焦点图效果" src="images/lanren04.jpg" /></li>
+		<li><img alt="原生焦点图效果" src="images/lanren05.jpg" /></li>
+	</ul>
+	<ul id="nav">
+		<li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(0)},300)">1</li>
+		<li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(1)},300)">2</li>
+		<li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(2)},300)">3</li>
+		<li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(3)},300)">4</li>
+		<li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(4)},300)">5</li>
+	</ul>
+</div>
+<script>
+var lanrenzhijia = {}, H$ = function(id){return document.getElementById(id)}, H$$ = function(c,p){return p.getElementsByTagName(c)}
+lanrenzhijia.slider = function(){
+	return{
+		init:function(id,options){
+			var ul = this.u = H$$('ul',H$(id))[0], li = H$$('li',ul); this.l=li.length; this.index = 0;
+			if(options.navId&&options.curClass){this.nav = H$$('li',H$(options.navId)), this.c = options.curClass;}
+			this.a=options.auto||0; this.v=options.vertical||0;H$(id).style.overflow = 'hidden';H$(id).style.position = 'relative';ul.style.position='absolute';
+			if(this.v){ul.style.top=0; this.h=options.height||li[0].offsetHeight; ul.style.height=(this.l*this.h)+'px';}
+			else{ul.style.left=0; this.w=options.width||li[0].offsetWidth; ul.style.width=(this.l*this.w)+'px';}
+			this.pos(options.index||0,this.a?1:0);
+		},
+		
+		pos:function(pos,a){
+			clearInterval(this.u.posAnim); clearInterval(this.u.auto);
+			var curPos=this.v?parseInt(this.u.style.top):parseInt(this.u.style.left),
+			correctPos=this.v?pos*this.h:pos*this.w, 
+			direction = correctPos>Math.abs(curPos)?1:-1;
+			correctPos*=-1; 
+			this.index = pos;
+			if(this.nav){for(var i=0;i<this.l;i++){this.nav[i].className = i==pos?this.c:''}}
+			this.u.posAnim = setInterval(function(){lanrenzhijia.slider.anim(correctPos,direction,a)},10);
+		},
+		
+		anim:function(des,dir,a){
+			var curPos=this.v?parseInt(this.u.style.top):parseInt(this.u.style.left);
+			if(curPos == des){
+				clearInterval(this.u.posAnim);
+				if(a||this.a){lanrenzhijia.slider.auto()}
+			}
+			else{
+				var v=curPos-Math.ceil(Math.abs(des-curPos)*.07)*dir+'px';
+				this.v?this.u.style.top=v:this.u.style.left=v;
+			}
+		},
+		
+		auto:function(){
+			this.u.auto=setInterval(function(){lanrenzhijia.slider.move(1,1)},this.a*1000)
+		},
+		
+		move:function(n,a){
+			var num=this.index+n, i=n==1?num==this.l?0:num:num<0?this.l-1:num; lanrenzhijia.slider.pos(i,a);
+		}
+	};
+}();
+</script>
+<script>
+lanrenzhijia.slider.init('slider',{	
+	auto:3,
+	vertical:1,
+	navId:'nav',
+	curClass:'nav',
+	index:0});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

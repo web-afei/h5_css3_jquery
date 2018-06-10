@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<title>jQuery+CSS3垂直菜单效果 - 站长素材</title> 
+	<link href="css/zzsc.css" rel="stylesheet" type="text/css"></link>
+	<script type="text/javascript" src="js/jquery-2.0.0.min.js" ></script>
+	<script>
+	$(document).ready(function() {
+		$('ul.form li a').click(
+			function(e) {
+				e.preventDefault(); // prevent the default action
+				e.stopPropagation; // stop the click from bubbling
+				$(this).closest('ul').find('.selected').removeClass('selected');
+				$(this).parent().addClass('selected');
+			});
+	});
+	</script>	
+</head>
+
+<body>
+	<h1>Vertical Menu</h1>
+	
+	<ul class="form">
+		<li><a class="profile" href="#"><i class="icon-user"></i>Edit Profile</a></li>
+		<li class="selected"><a class="messages" href="#"><i class="icon-envelope-alt"></i>Messages <em>5</em></a></li>
+		<li><a class="settings" href="#"><i class="icon-cog"></i>App Settings</a></li>
+		<li><a class="logout" href="#"><i class="icon-signout"></i>Logout</a></li>
+	</ul>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+
+</div>
+</body>
+</html>

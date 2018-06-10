@@ -1,0 +1,118 @@
+@charset "utf-8";
+html, body { 
+	min-height: 100%; 
+	margin:0; 
+	padding:0; 
+}
+/* 代码整理：小白 www.mysite.com */
+body {
+	font-family:"Open Sans",sans-serif;
+	background:#019587;
+	color:#FFF;
+	overflow-x:hidden;
+}
+
+pre, code {
+	color:#FFF;    
+	font-family: monospace;
+	font-size:18px;
+}
+
+.container {
+	margin:0 auto;		
+}
+
+h1 {
+	font-size:82px;
+	color:#FFF;
+	font-family: 'Raleway', sans-serif;
+	font-weight:100;
+}
+
+p {
+	font-size:25px;
+	line-height:46px;
+	font-weight:100;
+	color:#FFF;
+}
+
+p.example {
+	font-size:20px;
+	line-height:32px;
+	font-weight:100;
+	color:#FFF;	
+}
+
+h2 {
+	font-size:26px;
+	font-weight:300;
+	line-height:46px;
+	color:#FFF;	
+}
+
+ul li {
+	font-size:25px;
+	line-height:46px;
+	font-weight:100;
+	color:#FFF;
+}
+
+.setting {
+	font-weight:400;
+	display:inline-block;
+	width:170px;
+}
+
+
+.cursor_example {
+	width:22%;
+	height:150px;	
+	background:#fec107;
+	display:inline-block;		
+	border:2px solid #FFF;
+	border-radius:2px;
+	margin:5px;
+	transition:transform 0.25s ease;
+}
+
+.cursor_example:hover {
+	transform:scale(1.1,1.1);	
+}
+
+
+
+
+/* IPHONE */
+@media (max-width:375px){
+	.container {
+		width:375px;
+		padding-top:50px;
+	}	
+}
+
+/* IPAD */
+@media (max-width:768px){
+	.container {
+		width:500px;
+		padding-top:50px;
+	}	
+	
+	.setting {display:block;}
+}
+
+
+/* DESKTOP */
+@media (min-width:768px){
+	.container {
+		width:768px;
+		padding-top:50px;
+	}	
+}
+
+/* DESKTOP + */
+@media (min-width:1024px){
+	.container {
+		width:1000px;
+		padding-top:50px;
+	}	
+}

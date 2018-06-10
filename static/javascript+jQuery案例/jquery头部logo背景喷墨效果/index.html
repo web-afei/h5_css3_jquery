@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery头部logo背景喷墨效果</title>
+<script type="text/javascript" src="js/jquery-1.2.3.min.js"></script>
+<style type="text/css">
+body { 
+	background: #534741;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #fff;
+	width: 810px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+a {
+	color: #ff0099;
+}
+a:hover {
+	background-color: #ec008c;
+	color: #fff;
+}
+h1,h2,h3 { color: #01bef1; }
+#header {
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+	width: 400px;
+	height: 225px;
+	position: relative;
+	margin-left: -1em;
+	background: url(images/header.jpg) no-repeat;
+}
+#header a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 225px;
+	display: block;
+	border: 0;
+	background: transparent;
+	overflow: hidden;
+}
+#header .fake-hover {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	height: 225px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/header.jpg) no-repeat 0 -240px;
+}
+#content {
+	background: #332c28;
+	padding: 30px;
+	width: 750px;
+	margin: 0 auto;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+
+var Header = {
+	// Let's write in JSON to make it more modular
+	addFade : function(selector){
+		$("<span class=\"fake-hover\"></span>").css("display", "none").prependTo($(selector)); 
+		// Safari dislikes hide() for some reason
+		$(selector+" a").bind("mouseenter",function(){
+			$(selector+" .fake-hover").fadeIn("slow");
+		});
+		$(selector+" a").bind("mouseleave",function(){
+			$(selector+" .fake-hover").fadeOut("slow");
+		});
+		
+	}
+};
+
+$(function(){
+	Header.addFade("#header");
+});
+
+//]]>
+</script>
+</head>
+
+<body>
+
+<h1 id="header"><a href="#">Awesome header</a></h1>
+<div id="content">
+	<h2>Fading header example</h2>
+	<p>A simple example using jQuery and CSS</p>
+	<h3>Sample content</h3>
+
+</div>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

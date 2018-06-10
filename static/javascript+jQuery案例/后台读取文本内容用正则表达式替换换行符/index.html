@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台读取文本内容用正则表达式替换换行符\n\r</title>
+</head>
+<body>
+
+<script>
+var text = '';
+var regR = /\r/g;
+var regN = /\n/g;
+text = text.replace(regR,"<br />").replace(regN,"<br />");
+//接着可以使用文本内容了
+</script>
+
+</body>
+</html>

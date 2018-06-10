@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>适用移动网页图片左右滑动展示效果</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="page_guide_slider">
+	<div class="page_guide_balloon">
+		<div class="page_guide_title">
+			<div class="page_guide_title_text">主题名称</div>
+		</div>
+		<div class="page_guide_pointer">
+			<div class="page_guide_point"></div>
+		</div>
+		<div class="page_guide_bar">
+			<div class="page_guide_progress">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<div class="page_guide_container" onMouseDown="pageGuideMousedown(this,event)" onMouseMove="pageGuideMousemove(this,event)" onMouseUp="pageGuideMouseup(this,event)" onMouseOut="pageGuideMouseout(this,event)" ontouchstart="pageGuideTouchstart(this,event)" ontouchmove="pageGuideTouchmove(this,event)" ontouchend="pageGuideTouchend(this,event)">
+		<div class="page_guide_items">
+			<div id="3_1" class="page_guide_item">
+				<div class="page_guide_item_text">
+					<div class="page_guide_item_title">智能客服</div>
+					<div class="page_guide_item_intr">机器人托管、人工客服接管、机器人辅助; 智能的对话分配机制，灵活自如，效率翻倍，助您打造高效智能的公众号客户服务平台</div>
+				</div>
+				<div class="page_guide_item_image">
+					<img img_src="images/loading.jpg" src="images/func_quiz.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_worker.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_chat.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_diylog.jpg" />
+				</div>
+			</div>
+			<div id="3_2" class="page_guide_item">
+				<div class="page_guide_item_text">
+					<div class="page_guide_item_title">商家功能</div>
+					<div class="page_guide_item_intr">微信商家的必备利器： 公众号主页、会员卡、微信商城、附近门店、V数据表单...</div>
+				</div>
+				<div class="page_guide_item_image">
+					<img img_src="images/loading.jpg" src="images/func_actssm.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_chat.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_disc.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_diylog.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_egg.jpg" />
+				</div>
+			</div>
+			<div id="3_4" class="page_guide_item">
+				<div class="page_guide_item_text">
+					<div class="page_guide_item_title">推广活动</div>
+					<div class="page_guide_item_intr">丰富多彩的有奖活动(7款)，更注重连续性、娱乐性和参与性，有效增强用户粘性</div>
+				</div>
+				<div class="page_guide_item_image">
+					<img img_src="images/loading.jpg" src="images/func_egg.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_diylog.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_actssm.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_disc.jpg" />
+					<img img_src="images/loading.jpg" src="images/func_quiz.jpg" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/lanren.js"></script>
+<!-- 代码部分end -->
+
+</body>
+</html>

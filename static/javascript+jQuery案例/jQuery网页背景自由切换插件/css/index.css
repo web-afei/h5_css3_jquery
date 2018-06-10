@@ -1,0 +1,101 @@
+body
+{
+	margin:		0px; 
+	background:	url('monsturs.png');
+	font-family: 	'open sans';
+	color:		#373737;
+	-webkit-font-smoothing:antialiased;
+	font-size:  	20px;
+	font-weight:	300;
+	line-height: 	normal;
+	cursor:		pointer
+}
+.container
+{
+	position:	relative;
+	width:		930px;
+	background:	#fff;
+	margin:		30px auto;
+	padding:	0px  0px;
+	border-radius:	3px;
+	box-shadow:	0px 0px 5px 0px rgba(0,0,0,0.4);
+	cursor:		default;
+}
+.modal
+{
+	cursor:		default;
+}
+.header
+{
+	padding:	30px 0px;
+	text-align: 	center;
+	background:	#1769cf;
+	border-radius: 	3px 3px 0px 0px;
+	color:		#fff;
+	font-size:  	25px;
+}
+.header span
+{
+	font-size:		27px;
+	font-weight:  		400;
+	margin-right: 		10px;
+}
+hr
+{
+	background:		#d0d0d0;
+}
+.content
+{
+	padding:		50px 75px;
+}
+.head
+{
+	font-size:  		25px;
+}
+.scroll-to
+{
+	margin:		20px;
+	clear: 			both;
+	cursor:			pointer;
+}
+p 
+{
+	margin:		20px 0px;
+}
+ol.sum
+{
+	margin:		-5px 0px 0px 55px;
+}
+ol.sum li
+{
+	line-height: 		normal;
+}
+strong
+{
+	font-weight: 		400;
+}
+.table thead tr th
+{
+	font-weight: 		400;
+}
+p i.icon
+{
+	margin:		7px 10px 0px 0px;
+}
+select.speed
+{	
+	width: 			89px;
+	margin: 		0px;
+}
+.img-holder
+{		
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	margin:	10px;
+}
+.img-holder img
+{
+	max-width: 		none;
+	cursor:			pointer;
+}

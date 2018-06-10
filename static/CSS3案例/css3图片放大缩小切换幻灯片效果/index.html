@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css3图片放大缩小切换幻灯片效果</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<center>
+<script>
+var imgurl= new Array()
+var message= new Array()
+var thislink= new Array()
+
+// set the url (or path)  of your images. Add as many images as you like
+imgurl[0]="images/lanrenzhijia.jpg"
+imgurl[1]="images/lanrenzhijia2.jpg"
+
+// set the messages corresponding to the images above (no more no less than the images above)
+message[0]="Let's go fishing today"
+message[1]="You are even sweeter"
+
+// set the links corresponding to the images above (no more no less than the images above)
+// If you dont want to add a link enter a #"instead of http://www.mylink.com, see smaple below
+thislink[0]="#"
+thislink[1]="#"
+
+// width of pictures (pixel)
+var imgwidth=300
+
+// width of pictures (pixel)
+var imgheight=180
+
+// set stillstand of picture (seconds)
+var stillstand=2.5
+
+// set opacity-strength (transparency-effect). Values may range from 1 to 100
+var opacitystrength=60
+
+var tmr
+var step=10
+var i=imgwidth
+var i_imgurl=0
+stillstand*=1000
+
+var preloadedimages=new Array()
+for (iii=0;iii<imgurl.length;iii++){
+	preloadedimages[iii]=new Image()
+	preloadedimages[iii].src=imgurl[iii]
+}
+
+function shrinkpic() {
+	document.getElementById("textbox").innerHTML=""
+	if (i>0) {
+		i-=step
+		document.getElementById("picdiv").style.width=i+"px"
+		document.getElementById("picdiv").style.height=i*(imgheight/imgwidth)+"px"
+		document.getElementById("picdiv").style.left=imgwidth/2-(i/2)+"px"
+		document.getElementById("picdiv").style.top=(imgwidth/2-(i/2))*(imgheight/imgwidth)+"px"
+		tmr=setTimeout("shrinkpic()",20)
+	}
+	else {
+		i_imgurl++
+		if (i_imgurl>=imgurl.length) {
+			i_imgurl=0
+		}
+		document.getElementById("picdiv").style.background="url("+imgurl[i_imgurl]+")"
+		i=1
+		tmr=setTimeout("enlargepic()",20)
+	}
+}
+
+function enlargepic() {
+	if (i<=imgwidth) {
+		i+=step
+		document.getElementById("picdiv").style.width=i+"px"
+		document.getElementById("picdiv").style.height=i*(imgheight/imgwidth)+"px"
+		document.getElementById("picdiv").style.left=imgwidth/2-(i/2)+"px"
+		document.getElementById("picdiv").style.top=(imgwidth/2-(i/2))*(imgheight/imgwidth)+"px"
+		tmr=setTimeout("enlargepic()",20)
+	}
+	else {
+		i=imgwidth
+		showmessage()
+	}
+}
+
+function showmessage() {
+	document.getElementById("textbox").innerHTML='<span class="textboxbackgroundstyle">'+message[i_imgurl]+'</span>'
+	tmr=setTimeout("shrinkpic()",stillstand)
+}
+
+function gotothislink(){
+	document.location.href=thislink[i_imgurl]
+
+}
+
+document.write('<div id="roof" style="position:relative;width:'+imgwidth+'px;height:'+imgheight+'px;">')
+document.write('<div id="picdiv" class="curveandshadowstyle" style="position:absolute;background:url('+imgurl[0]+');width:'+imgwidth+'px;height:'+imgheight+'px;top:0px;left:0px;"></div>')
+
+document.write('<div id="tt" onClick="gotothislink()" style="position:absolute;width:'+imgwidth+'px;height:'+imgheight+'px;top:0px;left:0px;filter:alpha(opacity='+opacitystrength+');opacity:'+(opacitystrength/100)+';cursor:pointer;"><table width='+imgwidth+' height='+imgheight+'><tr><td id="textbox" class="textboxstyle"><span class="textboxbackgroundstyle">'+message[0]+'</span></td></tr></table></div>')
+
+document.write('</div>')
+
+window.onload=shrinkpic
+</script>
+</center>
+</body>
+</html>

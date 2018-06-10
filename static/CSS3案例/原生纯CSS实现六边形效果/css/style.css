@@ -1,0 +1,9 @@
+.lanren{width: 66px;height: 120px;margin:100px auto;background-color: #008000;position: relative;}
+.lanren::before{content:"";width: 0;height: 0;position:absolute;left:-35px;top:0;border-right:35px solid #008000;border-top:60px solid transparent;border-bottom:60px solid transparent;}
+.lanren::after{content:"";width: 0;height: 0;position:absolute;right:-35px;top:0;border-left:35px solid #008000;border-top:60px solid transparent;border-bottom:60px solid transparent;}
+
+/* 代码原创：小白 www.mysite.com */
+
+.lanren2{width: 66px;height: 120px;margin:100px auto;background-color: red;position: relative;}
+.lanren2 .left{width: 0;height: 0;position:absolute;left:-35px;top:0;border-right:35px solid red;border-top:60px solid transparent;border-bottom:60px solid transparent;}
+.lanren2 .right{width: 0;height: 0;position:absolute;right:-35px;top:0;border-left:35px solid red;border-top:60px solid transparent;border-bottom:60px solid transparent;}

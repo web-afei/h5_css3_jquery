@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<meta name="viewport" content="width=device-width">
+<title>jQuery+CSS3多功能下拉菜单 - 站长素材</title>
+
+<link rel="stylesheet" type="text/css" href="font/titillium/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="font/exo-demibold/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<link rel="stylesheet" type="text/css" href="css/blue/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/blue/color.css">
+
+<link rel="stylesheet" type="text/css" href="css/live-preview.css">
+<link rel="stylesheet" type="text/css" href="live-font/stylesheet.css">
+
+<script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+
+<!--[if IE 7]>
+	<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<![endif]-->
+
+<!--[if lte IE 9]>
+	<link href="css/blue/desktop-ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+</head>
+<body>
+<!-- Live Preview -->
+<div class="live">
+  <h3>His - Animated Mega Menu</h3>
+  <h4>07 Color Scheme</h4>
+  <h4>65 Animation Effects</h4>
+  <h5>Free Update</h5>
+</div>
+
+<ul class="nav">
+  
+  <!-- Start Home -->
+  <li id="first">
+    <div id="cover1"><a href="#">Home<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-home" ></i></div>
+     <ul class="one" id="home">
+     	<li>
+        	<h3><i class="icon-user"></i>Welcome</h3>
+            <p id="p-first">In the past, HTML alone provided basic formatting options for text, images, tables, and other web page elements. But today, professional web designers use CSS to style their pages. In fact, the older HTML tags used to format text and other page elements have been phased out by the World Wide Web Consortium (W3C), the organization that defines Web standards, in favor of CSS.</p>
+            <img src="img/thumb2.png">
+            <p>In the past, HTML alone provided basic formatting options for text, images, tables, and other web page elements.</p>
+        </li>
+     </ul>
+  </li>
+  
+  <!-- Start Portfolio -->
+  <li>
+    <div id="cover1"><a href="#">Portfolio<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-briefcase" ></i></div>
+    <ul class="one" id="menu">
+      <li><a href="#">sample 1</a></li>
+      
+      <!-- Start sample 2 -->
+      <li> <a href="#">sample 2<i class="icon-chevron-right"></i><i class="icon-chevron-down"></i></a>
+        <ul class="one" id="sub-menu">
+          <li><a href="#">Page 1</a></li>
+          
+          <!-- Start page 2 -->
+          <li> <a href="#">Page 2<i class="icon-chevron-right"></i></a>
+            <ul class="one test" id="sub-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+              <li><a href="#">Page 4</a></li>
+            </ul>
+          </li>
+          <!-- End page 2 -->
+          
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </li>
+      <!-- End sample 2 -->
+      
+      <li ><a href="#">sample 3</a></li>
+    </ul>
+  </li>
+  
+  <!-- Start Services -->
+  <li>
+    <div id="cover1"><a href="#">Service<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-truck" ></i></div>
+    <ul class="one" id="menu">
+      <li><a href="#">Sample 1</a></li>
+      <li><a href="#">Sample 2</a></li>
+      
+      <!-- Start Sample 3 -->
+      <li> <a href="#" class="sub-menu">Sample 3<i class="icon-chevron-right"></i><i class="icon-chevron-down"></i></a>
+        <ul class="one" id="sub-menu">
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </li>
+      <!-- End Sample 3 -->
+      
+      <li ><a href="#">Sample 4</a></li>
+    </ul>
+  </li>
+  
+  <!-- Start Links -->
+  <li>
+    <div id="cover1"><a href="#">Links<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-list" ></i></div>
+    <ul class="one" id="links">
+      <li>
+        <div id="link-1" class="link-block light-color">
+          <h4><i class="icon-laptop"></i>Links 1</h4>
+          <ul>
+            <li><a href="#"><i class="icon-ok"></i> Css</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Html5</a></li>
+            <li><a href="#"><i class="icon-ok"></i> java Script</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Php</a></li>
+            <li><a href="#"><i class="icon-ok"></i> JQuery</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Css 3</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Asp.Net</a></li>
+          </ul>
+        </div>
+        <div id="link-2" class="link-block light-color">
+          <h4><i class="icon-camera-retro"></i>Links 2</h4>
+          <ul>
+            <li><a href="#"><i class="icon-ok"></i> Photoshop</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Dreamweaver</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Fireworks</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Expression Web</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Corel</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Visual Studio</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Adobe</a></li>
+          </ul>
+        </div>
+        <div id="link-3" class="link-block light-color">
+          <h4><i class="icon-desktop"></i>Links 3</h4>
+          <ul>
+            <li><a href="#"><i class="icon-ok"></i> Forms</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Sliders</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Navigation</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Layouts</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Buttons</a></li>
+            <li><a href="#"><i class="icon-ok"></i> tabs</a></li>
+            <li><a href="#"><i class="icon-ok"></i> Menu</a></li>
+          </ul>
+        </div>
+        
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start About -->
+  <li>
+    <div id="cover1"><a href="#">About<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-book" ></i></div>
+    <ul class="one" id="about">
+      <li><img src="img/thumb1.png" alt="image">
+        <h3><i class="icon-user"></i>About Us</h3>
+        <p>In the past, HTML alone provided basic formatting options for text, images, tables, and other web page elements. But today, professional web designers use CSS to style their pages. In fact, the older HTML tags used to format text and other page elements have been phased out by the World Wide Web Consortium (W3C), the organization that defines Web standards, in favor of CSS.</p>
+        <h6><i class="icon-quote-left"></i>Is there a way to apply styles to an element only if it’s embedded within a
+          particular element, rather than universally? In other words, can you ask for
+          example that italics within headlines be boldface<i class="icon-quote-right"></i></h6>
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Contact -->
+  <li>
+    <div id="cover1"><a href="#">Contact<i class="icon-chevron-down"></i></a></div>
+    <div id="icon"><i class="icon-envelope" ></i></div>
+    <ul class="one" id="contact">
+      <li id="part-right">
+        <p>Name<em>*</em></p>
+        <input name="name" type="text" id="name">
+        <p>E-mail<em>*</em></p>
+        <input name="email" type="text" id="email">
+        <p>Message<em>*</em></p>
+        <textarea name="comment" cols="" rows="" id="comment"></textarea>
+        <input name="send" type="button" id="send" value="Send">
+      </li>
+    </ul>
+  </li>
+  
+  <!-- Start Search -->
+  <li id="search">
+    <input name="search" type="text" placeholder="Search" id="txt_search2">
+    <a href="#"><i class="icon-search"></i></a> 
+  </li>
+  
+  <!-- Start Social -->
+  <li id="social">
+    <div><a href="#"><i class="icon-facebook-sign" ></i></a>
+    	 <a href="#"><i class="icon-twitter-sign" ></i></a>
+         <a href="#"><i class="icon-linkedin-sign" ></i></a>
+         <a href="#"><i class="icon-google-plus-sign" ></i></a>
+    </div>
+  </li>
+</ul>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、360、世界之窗。</p>
+
+</div>
+</body>
+</html>

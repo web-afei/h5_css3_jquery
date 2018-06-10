@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery鼠标悬停图片放大、鼠标状态自定义切换</title>
+<link rel="stylesheet"  href="css/style.css" type="text/css" />
+<link rel="stylesheet"  href="css/jquery-boomer.css" type="text/css" />
+</head>
+<body>
+
+<!--代码部分begin-->
+<div class="container">
+	<div class="cursor_example">
+    	<div class="boomer cursor_dog"></div>
+	</div>
+	<div class="cursor_example">
+    	<div class="boomer cursor_bouncy_star"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_flower"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_heart"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_pencil_blue"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_pencil_green"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_pink_tails"></div>
+	</div>		
+	<div class="cursor_example">
+    	<div class="boomer cursor_star"></div>
+	</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="js/jquery-boomer.js"></script>
+<script>
+$(function(){
+	$('body').boomer();
+	$('.cursor_example').boomer();
+});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

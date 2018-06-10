@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jquery轻量级顶部下滑弹窗效果</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/messagebox.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="container">
+  <h1>jQuery Message Box Plugin Demo Page</h1>
+  <br/>
+  <button class="btn btn-danger demo-1">Alert Box</button>
+  <button class="btn btn-primary demo-2">Confirm Box</button>
+  <button class="btn btn-warning demo-3">Prompt Box</button>
+  <button class="btn btn-info demo-4">Custom Dialog</button>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/messagebox.js"></script> 
+<script>
+$(document).ready(function() {
+    $(".demo-1").click(function() {
+        $.MessageBox("小白 - www.mysite.com");
+    });
+    $(".demo-2").click(function() {
+        $.MessageBox({
+            buttonDone: "Yes",
+            buttonFail: "No",
+            message: "Are You Sure?"
+        }).done(function() {
+            $.MessageBox("You clicked Yes");
+        }).fail(function() {
+            $.MessageBox("You clicked No");
+        });
+    });
+    $(".demo-3").click(function() {
+        $.MessageBox({
+            input: true,
+            message: "What's your name?"
+        }).done(function(data) {
+            if ($.trim(data)) {
+                $.MessageBox("Hi <b>" + data + "</b>!");
+            } else {
+                $.MessageBox("You are shy, aren't you?");
+            }
+        });
+    });
+    $(".demo-4").click(function() {
+        $.MessageBox({
+            buttonDone: "OK",
+            buttonFail: "Cancel",
+            message: "You can type whatever you like",
+            input: true,
+            speed: 1000
+        }).done(function() {
+            $.MessageBox("Well done!");
+        }).fail(function() {
+            $.MessageBox("You rebel!");
+        });
+    });
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gb2312" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>jquery.nivo.slider网站焦点图 - 站长素材</title>
+<link id="color_opt" href="css/zzsc.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<div id="slider-wrapper" class="index_post ption_r">
+<div id="slider" class="nivoSlider">
+<a href="http://sc.chinaz.com/" target="_blank">
+<img src="img/1.jpg" alt="14个超棒的带有故事趣味性视差滚动网站" /></a>
+<a href="http://sc.chinaz.com/" target="_blank">
+<img src="img/2.jpg" alt="扁平化设计（Flat Design）欣赏" /></a>
+<a href="http://sc.chinaz.com/" target="_blank">
+<img src="img/3.jpg" alt="30个创意精美的体育网站设计作品欣赏" /></a>
+</div>
+</div>
+
+<script src="js/load.js" type="text/javascript"></script>
+<script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(window).load(function() {
+$('#slider').nivoSlider({
+controlNav:false,
+effect:'random',   
+animSpeed:500,
+captionOpacity:0.9,
+directionNav:true,
+controlNav:true,
+pauseTime:3000,
+directionNavHide: true,
+pauseOnHover:true
+});
+});
+</script>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+
+</div>
+</body>
+</html>

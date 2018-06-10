@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>纯CSS3伪类after实现自定义hover效果</title>
+	<style type="text/css">
+	body{text-align:center;}
+	p{margin:200px auto;}
+	.tooltip {border-bottom: 1px dotted #333;position: relative;cursor: pointer;}
+	.tooltip:hover::after {content: attr(title);position: absolute;left:30px;top:-20px;white-space: nowrap;background: rgba(0, 0, 0, .7);padding: 3px 6px;color: #FFF;border-radius: 3px;}
+</style>
+</head>
+<body>
+	<p>An <span title="This is an example of using the content property for CSS tooltips" class="tooltip">example</span> sentence for my tooltip.</p>
+</body>
+</html>

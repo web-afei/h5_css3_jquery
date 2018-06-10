@@ -1,0 +1,10 @@
+.bb-bookblock .folder-inner {
+	left: 320px;
+}
+
+.bb-bookblock .folder-fold,
+.bb-bookblock .folder-cover span,
+#folder-close {
+	display: none;
+}
+/* 代码整理：网页设计之家 */

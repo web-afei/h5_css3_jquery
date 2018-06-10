@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生css3鼠标悬停图片放大动画效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ background:#000;}
+
+.lanren{ width:960px; height:auto; margin:100px auto; overflow:hidden;}
+.lanren li{border:2px solid #112F59; width:310px; height:220px; overflow:hidden; margin:3px; float:left; cursor:pointer}
+.lanren li:hover{border:2px solid #016C93;}
+.lanren li img{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);transform:scale(1);-webkit-transition:all 2s ease;-moz-transition:all 2s ease;-o-transition:all 2s ease;transition:all 2s ease;}
+.lanren li:hover img{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transform:scale(1.15);transform:scale(1.15);-webkit-transition:all 2s ease;-moz-transition:all 2s ease;-o-transition:all 2s ease;transition:all 2s ease;}
+</style>
+</head>
+<body>
+<!--代码部分begin-->
+<ul class="lanren">
+	<li><img src="images/01.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/02.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/03.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/04.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/05.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/06.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/07.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/08.jpg" width="310" height="220" alt="原生" /></li>
+    <li><img src="images/09.jpg" width="310" height="220" alt="原生" /></li>
+</ul>
+<!--代码部分end-->
+</body>
+</html>

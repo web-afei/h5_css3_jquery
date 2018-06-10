@@ -1,0 +1,82 @@
+/* 代码整理：网页设计之家 mysite.com */
+body {
+	background:#212121;
+	margin:0;
+	padding:0;
+}
+
+.clear {
+	clear:both;
+}
+
+.push {
+	margin-bottom:50px;
+}
+	
+#header {
+	width:960px;
+	margin:0 auto;
+}
+
+#container {
+	width:960px;
+	margin:0 auto;
+}
+
+#left-column {
+	float:left;
+	width:600px;
+}
+
+#right-column {
+	float:right;
+	width:300px;
+}
+
+#footer {
+	margin:0 auto;
+	width:960px;
+}
+
+.thumb-top{
+	padding:10px 10px 30px 10px;
+	height:200px;
+	width:200px;
+	background:#fff;
+	-moz-transform:rotate(-4deg);
+	-webkit-transform:rotate(-4deg);
+	-webkit-transition: -webkit-transform 0.1s ease-in;
+	border:1px solid #ececec;
+	margin-bottom:25px;
+}
+
+.thumb-bottom{
+	padding:10px 10px 30px 10px;
+	height:200px;
+	width:200px;
+	background:#fff;
+	-moz-transform:rotate(-4deg);
+	-webkit-transform:rotate(-4deg);
+	-webkit-transition: -webkit-transform 0.1s ease-in;
+	border:1px solid #ececec;
+	margin-bottom:25px;
+}
+
+.thumb-top:hover{
+	z-index:100;
+	position:relative; /* Make the z-index work in Safari */
+	-moz-transform:rotate(-8deg) scale(1.2);
+	-webkit-transform:rotate(-8deg) scale(1.2);
+}
+
+.thumb-bottom:hover{
+	z-index:100;
+	position:relative; /* Make the z-index work in Safari */
+	-moz-transform:rotate(4deg) scale(1.2);
+	-webkit-transform:rotate(4deg) scale(1.2);
+}
+
+#gallery {
+	margin-top:20px;
+}
+/* 代码整理：网页设计之家 mysite.com */

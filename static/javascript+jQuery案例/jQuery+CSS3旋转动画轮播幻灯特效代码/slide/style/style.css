@@ -1,0 +1,350 @@
+/* 代码整理：网页设计之家 */
+
+body, html  { height: 100%}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	}
+body { line-height: 1}
+ol, ul { list-style: none}
+blockquote, q { quotes: none}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none}
+:focus { outline: 0}
+del { text-decoration: line-through}
+table { border-collapse: collapse; border-spacing: 0}
+
+body {
+	font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
+	color:#404040;
+	font-size:14px;
+	line-height:1.5em;
+	background:#f5f5f5;
+	min-width:990px;
+	position:relative;
+	z-index:1}
+
+::-moz-selection { 
+	background: #6ea004;
+	color: #fff;
+	text-shadow: none}
+	
+::selection {
+	background: #dd4436;
+	color: #fff;
+	text-shadow: none}
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto}
+
+.alignleft {
+	float: left;}
+	
+.alignright {
+	float: right;}
+	
+.text-right {
+	text-align:right}
+.text-left {
+	text-align:left}
+.text-center {
+	text-align:center}
+
+.text-green {
+	 color:#42b0e3}
+
+.text-gray {
+	 color:#808080}
+	 	
+.text-blue {
+	 color:#42b0e3}	
+
+/* Clear*/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0}
+
+.clearfix:before,
+.clearfix:after {
+	content: "\0020";
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0}
+	
+.clearfix:after {
+	clear: both}
+
+.clearfix {
+	zoom: 1; /*For IE6 + IE7.*/}
+
+* html .clearfix {
+	height: 1%}
+
+.clearfix {
+	display: block}
+	
+.fix{
+	clear: both;
+	height: 1px;
+	margin: -1px 0 0;
+	overflow: hidden}
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0}
+
+a {
+	outline:none;
+	color:#6ea004;
+	text-decoration:none}
+
+.preloader { 
+	background:url(../images/loading.gif) center center no-repeat; 
+	display:inline-block}
+	
+.container_12 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position:relative}
+
+}
+
+/*----------------------------------------------*/
+/* headernewslide */
+/*----------------------------------------------*/
+.headernewslide {
+	position:relative;
+	width:100%;
+	z-index:20}
+
+.headernewslide .container_12 {
+	z-index:10}
+
+.headernewslide_top {
+	height:73px;
+	background:#050505;
+	z-index:23}
+
+.headernewslide_mid {
+	height:474px;
+	z-index:22;
+	border-top:1px solid #525455}
+
+.headernewslide_mid .headernewslide_inner {
+	background:url(../images/header_bot.gif) center bottom no-repeat}
+
+.headernewslide_thin {
+	background:url(../images/header_bot.gif) center 0 no-repeat;
+	height:45px;
+	z-index:21}
+
+/*----------------------------------------------*/
+/* headernewslide Slider */
+/*----------------------------------------------*/
+.headernewslide_slider {
+	width:940px;
+	height:474px;
+	position:relative;
+	margin:0 auto;
+	padding:0;
+	z-index:11}
+
+.headernewslide_slider .slides_container {
+	width:940px;
+	height:474px;
+	overflow:hidden;
+	position:relative;
+	z-index:11}
+
+.headernewslide_slider .slide {
+	width:940px;
+	height:429px;
+	display:block;
+	position:relative}
+
+.headernewslide_slider .slide_image {
+	width:940px;
+	height:429px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1}
+
+.headernewslide_slider .slide_text {
+	position:absolute;
+	width:100%;
+	z-index:2;
+	top:62px;
+	left:0px;
+	text-align:center}
+
+.headernewslide_slider .slide_title {
+	font-family: 'microsoft yahei', Tahoma, Helvetica, sans-serif;
+	color:#fff;
+	font-size:47px;
+	font-weight:bold;
+	text-shadow:0 3px 1px #000;
+	margin:0 0 12px 0;
+	line-height:47px}
+
+.headernewslide_slider .slide_title a {
+	color:#fff}
+
+.headernewslide_slider .slide_description a{
+	color:#979797;	
+	font-size:15px;
+	text-shadow:0 2px 1px #222;
+	line-height:1.7em;
+	font-family: 'microsoft yahei', serif}
+
+.headernewslide_slider .slide_description strong {
+	color:#9ad32b}
+
+.headernewslide_slider .slide_list {
+	position:absolute;
+	top:125px;
+	left:77px;
+	width:494px;
+	min-height:80px;
+	font-size:17px;
+	font-weight:bold;
+	color:#fff;
+	text-align:left;	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #0d0d0d;
+	background:url(../images/slider_list_bg.png) center center no-repeat;	
+	-moz-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(66,68,69,1);
+	-webkit-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(66,68,69,1);
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(66,68,69,1);
+	}
+
+.headernewslide_slider .slide_list ul {
+	padding:0;
+	margin:20px 0 0 0}
+
+.headernewslide_slider .slide_list ul li {
+	list-style:none;
+	background:url(../images/icon_check.png) 25px 1px no-repeat;
+	line-height:23px;
+	padding-left:60px;
+	width:187px;
+	display:block;
+	float:left;
+	margin:0 0 25px 0}
+
+.headernewslide_slider .pagination {
+	display:block;
+	position:absolute;
+	bottom:12px;
+	left: 392px;
+	z-index:12}
+
+.headernewslide_slider .pagination li {
+	display:block;
+	margin:0 0 0 4px;
+	width:15px;
+	height:15px;
+	float:left;
+	text-indent: -9999px}
+
+.headernewslide_slider .pagination li a {
+	display:block;
+	float:left;
+	width:15px;
+	height:15px;
+	overflow:hidden;	
+	background:url(../images/slider_pagination.png) 0 0 no-repeat}
+
+.headernewslide_slider .pagination li.current a {
+	background-position:0 -15px}
+
+.headernewslide_slider .prev, .headernewslide_slider .next {
+	display:block;
+	position:absolute;
+	bottom:12px;
+	width:17px;
+	height:17px;
+	background:url(slider_arrows.png) 0 0 no-repeat;
+	overflow:hidden;
+	text-indent:-500px;
+	z-index:13}	
+
+.headernewslide_slider .prev {
+	left:0}
+
+.headernewslide_slider .next {
+	right:0;
+	background-position:-17px 0px}
+
+.headernewslide_slider .prev:hover {
+	background-position:0 -17px}
+
+.headernewslide_slider .prev:active {
+	background-position:0 0}
+
+.headernewslide_slider .next:hover {
+	background-position:-17px -17px}
+
+.headernewslide_slider .next:active {
+	background-position:-17px 0px}
+
+/* topSlider oneByOne */
+.topSlider {
+	position: absolute}
+
+.oneByOne1 {
+	width:940px;
+	height:474px; 
+	top: 0;
+	left: 0;
+	position: relative;
+	overflow: hidden}
+
+.topSlider .oneByOne_slide {
+	position: absolute;
+	width:940px;
+	height:429px;
+	overflow: hidden}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3制作360度旋转时钟表</title>
+<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	createPan();
+	createZhen();
+	setInterval(function(){
+		run();
+	},1000);
+});
+
+function createPan(){
+	for(var i =0;i<60;i++){
+		var h = 7;
+		var w = 3;
+		if((i%5)==0){
+			h = 10;
+			w = 4;
+			$("<div/>").css({
+				width:w,
+				height:h,
+				background:"#000",
+				position:"absolute",
+				top:0,
+				left:100,
+				"transform-origin":"0px 100px",
+				"transform":"rotate("+(6*i)+"deg)"
+			}).appendTo($("#outer"));
+			$("<div></div>").css({
+				position:"absolute",
+				top:10,
+				left:100,
+				"transform-origin":"0px 90px",
+				"transform":"rotate("+(6*i)+"deg)"
+			}).html((i/5) == 0 ? 12 : (i/5)).appendTo($("#outer"));
+		}else{
+			$("<div/>").css({
+				width:w,
+				height:h,
+				background:"#000",
+				position:"absolute",
+				top:0,
+				left:100,
+				"transform-origin":"0px 100px",
+				"transform":"rotate("+(6*i)+"deg)"
+			}).appendTo($("#outer"));
+		}
+	}
+}
+function createZhen(){
+	$("<div id='hour'/>").css({
+		width:70,
+		height:4,
+		background:"#f00",
+		position:"absolute",
+		top:100,
+		left:100
+	}).appendTo($("#outer"));
+	$("<div id='minute'/>").css({
+		width:80,
+		height:4,
+		position:"absolute",
+		top:100,
+		left:100,
+		background:"#0f0"
+	}).appendTo($("#outer"));
+	$("<div id='second'/>").css({
+		width:90,
+		height:4,
+		position:"absolute",
+		top:100,
+		left:100,
+		"background-color":"#00f"
+	}).appendTo($("#outer"));
+	run();
+}
+function run(){
+	var d = new Date();
+	var h = d.getHours()%12;
+	var m = d.getMinutes();
+	var s = d.getSeconds();
+	$("#hour").css({
+		 "transform-origin":"0px 0px",
+		 "transform":"rotate("+(h*30-90 + 30*m/60)+"deg)"
+	 });
+  $("#minute").css({
+		 "transform-origin":"0px 0px",
+		 "transform":"rotate("+(m*6-90)+"deg)"
+	 });
+  $("#second").css({
+		 "transform-origin":"0px 0px",
+		 "transform":"rotate("+(s*6-90)+"deg)"
+	 });
+}
+</script>
+
+<style type="text/css">
+.outer{
+	border:1px solid #ccc;
+	width:200px;
+	height:200px;
+	position:relative;
+	margin:40px auto 0 auto;
+	border-radius:50%;
+	box-shadow:2px 2px 3px #000000;
+	background:-webkit-gradient(radial,50% 50%,0,50% 50%,100,from(#aaa),to(#ccc));
+	background:-moz-radial-gradient:(circle,#111 0%,#ccc 100%);
+	background:-moz-radial-gradient(circle,#aaa 0%,#ccc 100%);
+}
+</style>
+
+</head>
+<body>
+
+	<div id="outer" class="outer"></div>
+<div style="text-align:center;clear:both;margin-top:50px">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

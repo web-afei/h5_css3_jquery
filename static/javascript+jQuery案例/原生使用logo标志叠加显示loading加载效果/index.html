@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生使用logo标志叠加显示loading加载效果</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="loading">
+		<div class="loading1"></div>
+		<div class="loading2" style=""></div>
+	</div>
+	<script>
+		var loading = document.getElementsByClassName("loading2")[0];
+		var h = 0;
+		var bigger = setInterval(function(){
+			h++;
+			if(h > 120) return;
+			loading.style.height = h + "px";
+		}, 10);
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* 代码整理：小白 www.mysite.com */
+*{margin:0;padding:0; list-style:none;}
+
+.header-widht{height:50px; margin:0 auto;}
+/*nav*/
+.nav{width:735px;position:relative;z-index:10;}
+.nav ul{margin-right:-8px;}
+.nav .li{float:left;width:11%;z-index:10;height:55px;line-height:55px;}
+.nav .li:hover{height:51px;line-height:51px;border-bottom:4px solid #b2cf6b;}
+.nav_cell{display:block;text-align:center;}
+.nav_lev2{background:#fff none repeat;box-shadow:0 2px 8px rgba(0, 0, 0, 0.2);display:none;overflow:hidden;position:absolute;right:0;top:55px;width:600px;}
+.nav_lev2_6{width:655px;}
+.navtoplev1{right:-1px;}
+.nav_lev2 .shadow{bottom:auto;top:0;}
+.percent30{width:32%;}
+.nav_menu{background:#ededed;margin-bottom:-9999px;padding-bottom:9999px;}
+.nav_menu li{border-bottom:1px solid #ccc;height:30px;line-height:30px;overflow:hidden;font-size:13px;}
+.percent70{width:68%;}
+.nav_lev2 .cont{padding:30px 35px 35px;}
+.nav_lev2 .cont p{font-size:12px;}
+.picshow{width:45%;height:180px;}
+.nav_lev2 .t{color:#333;font-size:14px;font-weight:bold;margin-top:0.5em;}
+.nav_block{bottom:0;height:4px;left:0;overflow:hidden;width:100%;z-index:-1;}
+.nav_line{background:url("../images/navline.png") repeat;bottom:0;height:4px;left:0;overflow:hidden;width:100%;}
+.nav .hover .nav_lev2{display:block;}

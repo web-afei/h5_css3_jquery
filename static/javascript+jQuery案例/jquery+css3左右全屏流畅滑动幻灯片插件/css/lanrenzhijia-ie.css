@@ -1,0 +1,12 @@
+/* 代码整理：网页设计之家 www.mysite.com */
+#demo-details li{
+	display: inline;
+}
+
+#content #product-links li{
+	display: inline;
+}
+
+#footer li {
+	display: inline;
+}

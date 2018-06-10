@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>另外一种简洁易用的win8风格在线客服代码</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div style="height:1000px;"></div>
+	
+	<!-- 代码部分begin -->
+	<div id="lanren">
+		<div class="kfleft" title="点击查看联系方式"></div>
+		<ul>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="销售咨询" target="_blank"></a></li>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="美工咨询" target="_blank"></a></li>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="技术咨询" target="_blank"></a></li>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="优化咨询" target="_blank"></a></li>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="售后咨询" target="_blank"></a></li>
+			<li><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" title="财务咨询" target="_blank"></a></li>
+			<li><a href="http://www.mysite.com/" title="联系方式" target="_blank"></a></li>
+		</ul>
+	</div>
+	<script src="js/jQuery.js"></script>
+	<script>
+		$(function(){
+			$(".kfleft").on("click",function(){
+				var target = $("#lanren");
+				var distance = target.css("right");
+				if (distance == '0px'){
+					target.animate({right:-80}, 200);
+				} else {
+					target.animate({right:0}, 200);
+				}
+			});
+		})
+	</script>
+	<!-- 代码部分end -->
+</body>
+</html>

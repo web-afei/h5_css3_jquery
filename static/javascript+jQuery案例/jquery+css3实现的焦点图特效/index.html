@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3实现的焦点图特效</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<div style="width: 815px; margin: 0 auto 0 auto;">
+
+<h1 class="title">jquery+css3实现的焦点图特效</h1>
+
+<p style="text-align: center; font-size: 14px;">This is a demo page of the MLB.com content switcher, recreated using jQuery and CSS3.</p>
+
+	<div id="mlb-wrapper">
+
+		<div id="details" class="base">	
+
+			<div id="photo" class="base">
+
+			<ul id="photos">
+				<li><a href="#1"><img src="images/mlb-1.jpg" alt="Caption 1" width="480" height="270" /></a></li>
+				<li><a href="#2"><img src="images/mlb-2.jpg" alt="Caption 2" width="480" height="270" /></a></li>
+				<li><a href="#3"><img src="images/mlb-3.jpg" alt="Caption 3" width="480" height="270" /></a></li>
+				<li><a href="#4"><img src="images/mlb-4.jpg" alt="Caption 4" width="480" height="270" /></a></li>
+				<li><a href="#5"><img src="images/mlb-5.jpg" alt="Caption 5" width="480" height="270" /></a></li>
+				<li><a href="#6"><img src="images/mlb-6.jpg" alt="Caption 6" width="480" height="270" /></a></li>
+			</ul>
+
+			</div><!-- photo ends -->
+
+			<div id="hover-box">
+
+				<div id="thumbs" class="base">
+
+				<ul>
+					<li><a href="#1" class="highlight"><img src="images/mlb-1-thumb.jpg" alt="Caption 1" width="74" height="41" /><span></span></a></li>
+					<li><a href="#2"><img src="images/mlb-2-thumb.jpg" alt="Caption 2" width="74" height="41" /></a></li>
+					<li><a href="#3"><img src="images/mlb-3-thumb.jpg" alt="Caption 3" width="74" height="41" /></a></li>
+					<li><a href="#4"><img src="images/mlb-4-thumb.jpg" alt="Caption 4" width="74" height="41" /></a></li>
+					<li><a href="#5"><img src="images/mlb-5-thumb.jpg" alt="Caption 5" width="74" height="41" /></a></li>
+					<li><a href="#6"><img src="images/mlb-6-thumb.jpg" alt="Caption 6" width="74" height="41" /></a></li>
+				</ul>
+
+				<p>Roy Halladay struck out 11 Marlins batters and threw 115 pitches Saturday.</p>
+				</div><!-- thumbs -->
+	
+				<div id="navigation" class="base">
+				<a href="#" id="prev" class="prev-next"><span>&lt;&lt;</span> prev</a>
+				<a href="#" id="play-pause" class="play pause" title="Play or Pause the slider">Play/Pause</a>
+				<ul>
+					<li><a href="#1" class="highlight">Story 1</a></li>
+					<li><a href="#2">Story 2</a></li>
+					<li><a href="#3">Story 3</a></li>
+					<li><a href="#4">Story 4</a></li>
+					<li><a href="#5">Story 5</a></li>
+					<li><a href="#6">Story 6</a></li>
+				</ul>
+				<a href="#" id="next" class="prev-next">next <span>&gt;&gt;</span></a>
+				</div><!-- navigation -->
+			</div><!-- hover box -->
+
+			<div id="description" class="base">
+
+				<p id="small-caption">Roy Halladay struck out 11 Marlins batters and threw 115 pitches Saturday.</p>
+
+				<h1 id="title"><a href="#">Perfect prescription: History for Doc in Miami</a></h1>
+
+				<p id="long-desc">Phillies ace Roy Halladay made history in Miami on Saturday, tossing the 20th perfect game in MLB history vs. the Marlins in a 1-0 win. It was the first no-hitter of Halladay's brilliant career.</p>
+				
+			</div><!-- description -->
+
+		</div><!-- base -->
+
+	</div><!-- mlb wrapper -->
+	
+	
+	
+</div>
+<script type="text/javascript" src="http://www.lanrenzhijia.com/ajaxjs/1.4.0/jquery-1.4.0.min.js"></script>
+<script type="text/javascript" src="js/data.js?v=2.0"></script>
+<script type="text/javascript" src="js/general.js?v=2.0"></script>
+</body>
+</html>

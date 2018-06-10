@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>qrcode.js插件将你的内容转换成二维码格式</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="lanren">
+		<h1>请在下面输入框中输入内容</h1>
+		<input type="text" placeholder="请在这里输入内容" id="demo">
+		<button id="send">点击生成二维码</button>
+		<div id="qrcode"></div>
+	</div>
+	<script src="js/qrcode.js"></script>
+	<script>
+	window.onload =function(){
+		(function(){
+			var defaultContent = 'http://www.mysite.com';
+			var content = document.getElementById("qrcode");
+			var qrcode = new QRCode(content,{
+				width:200,
+				height:200
+			});
+			document.getElementById("send").onclick =function(){
+				var value = document.getElementById("demo").value || defaultContent;
+				qrcode.makeCode(value);
+				content.style.display = "block";
+			}
+		})();
+	}
+</script>
+</body>
+</html>

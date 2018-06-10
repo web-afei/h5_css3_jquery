@@ -1,0 +1,49 @@
+/*** Color **************************/
+
+.nav a, .nav p, .nav i, .nav h3, .nav h4, .menu a, .menu p, .menu li i.icon-chevron-right{
+	color:#ffffff;
+}
+.nav em{
+	color:#CC0000;
+}
+.menu h3,
+.menu h4,
+.menu i{
+	color:rgba(51,51,51,.6);
+}
+/*** Background **************************/
+body{                   /* For demo preview */
+	background-image:url(../../img/back.png);
+	background-repeat:repeat;	
+}
+.nav{
+	background: #fcfff4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+}
+.menu li:hover > a{
+	background-color:rgba(51,51,51,.2);
+	color:#FFFFFF;	
+}
+.icon,
+#search{                    /* Color 1 */
+	background-color:#2E8B57;       
+}
+#top-block li:hover a,
+#top-block li a:hover i{
+	color:#FFFF66;
+}
+.menu li,
+.text,
+#search:hover,
+#top-block{                 /* Color 2 */
+	background-color:#2E688B;
+}
+img{
+	background-color:rgba(255,255,255,.3);
+}

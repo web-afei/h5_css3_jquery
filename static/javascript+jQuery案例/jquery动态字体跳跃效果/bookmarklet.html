@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja-JP">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="Author" content="Bitmeister Inc.">
+		<title>Bookmarklets for MOA Text</title>
+	</head>
+	<body>
+<h1>Bookmarklets for MOA Text</h1>
+<hr>
+<h2>Lens</h2>
+<p><a href="javascript:(function(){var c='http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';var a='http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';var f=document.createElement('script');f.setAttribute('src',c);if(!window.jQuery){document.getElementsByTagName('head')[0].appendChild(f)}var d=document.createElement('script');d.setAttribute('src',a);var b=false;var e=window.setInterval(function(){if(window.jQuery&&window.jQuery['fn']&&window.jQuery['fn']['offset']){b=true;if(!window.jQuery['fn']['moatext']){document.getElementsByTagName('head')[0].appendChild(d)}}if(b==true&&window.jQuery['fn']['moatext']&&window.jQuery['fn']['moatext']['class_no']){window.clearInterval(e);jQuery('body').moatext()}},100)})();">Enforce MOA(Lens)</a></p>
+<p>Source</p>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+javascript:
+(function(){
+  // config
+  var jq_url = 'http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';
+  var moa_url = 'http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';
+
+  // jQuery loading
+  var jq=document.createElement('script');
+  jq.setAttribute('src',jq_url);
+  if (!window['jQuery']){
+    document.getElementsByTagName('head')[0].appendChild(jq);
+  }
+  var moa=document.createElement('script');
+  moa.setAttribute('src',moa_url);
+  var isJQ = false;
+  var id = window.setInterval(function(){
+    if (window['jQuery'] &&
+      window['jQuery']['fn'] && 
+      window['jQuery']['fn']['offset']
+    ){
+      isJQ = true;
+      // jQueryが読み込み終わったら、moatextを読み込む
+      if (!window['jQuery']['fn']['moatext'])
+        document.getElementsByTagName('head')[0].appendChild(moa);
+    }
+    if (isJQ == true &&
+      window['jQuery']['fn']['moatext'] &&
+      window['jQuery']['fn']['moatext']['class_no']
+    ){
+      window.clearInterval(id);
+      jQuery('body').moatext();
+    }
+  },100);
+})();
+</pre>
+<br>
+<h2>Lens + Wave</h2>
+<p><a href="javascript:(function(){var c='http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';var a='http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';var f=document.createElement('script');f.setAttribute('src',c);if(!window.jQuery){document.getElementsByTagName('head')[0].appendChild(f)}var d=document.createElement('script');d.setAttribute('src',a);var b=false;var e=window.setInterval(function(){if(window.jQuery&&window.jQuery['fn']&&window.jQuery['fn']['offset']){b=true;if(!window.jQuery['fn']['moatext']){document.getElementsByTagName('head')[0].appendChild(d)}}if(b==true&&window.jQuery['fn']['moatext']&&window.jQuery['fn']['moatext']['class_no']){window.clearInterval(e);jQuery('body').moatext({effects:['lens','wave']});}},100)})();">Enforce MOA(Lens+Wave)</a></p>
+<p>Source</p>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+javascript:
+(function(){
+  // config
+  var jq_url = 'http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';
+  var moa_url = 'http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';
+
+  // jQuery loading
+  var jq=document.createElement('script');
+  jq.setAttribute('src',jq_url);
+  if (!window['jQuery']){
+    document.getElementsByTagName('head')[0].appendChild(jq);
+  }
+  var moa=document.createElement('script');
+  moa.setAttribute('src',moa_url);
+  var isJQ = false;
+  var id = window.setInterval(function(){
+    if (window['jQuery'] &&
+      window['jQuery']['fn'] && 
+      window['jQuery']['fn']['offset']
+    ){
+      isJQ = true;
+      // jQueryが読み込み終わったら、moatextを読み込む
+      if (!window['jQuery']['fn']['moatext'])
+        document.getElementsByTagName('head')[0].appendChild(moa);
+    }
+    if (isJQ == true &&
+      window['jQuery']['fn']['moatext'] &&
+      window['jQuery']['fn']['moatext']['class_no']
+    ){
+      window.clearInterval(id);
+      jQuery('body').moatext({effects:['lens','wave']});
+    }
+  },100);
+})();
+</pre>
+<br>
+<h2>Emphasis</h2>
+<p><a href="javascript:(function(){var c='http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';var a='http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';var f=document.createElement('script');f.setAttribute('src',c);if(!window.jQuery){document.getElementsByTagName('head')[0].appendChild(f)}var d=document.createElement('script');d.setAttribute('src',a);var b=false;var e=window.setInterval(function(){if(window.jQuery&&window.jQuery['fn']&&window.jQuery['fn']['offset']){b=true;if(!window.jQuery['fn']['moatext']){document.getElementsByTagName('head')[0].appendChild(d)}}if(b==true&&window.jQuery['fn']['moatext']&&window.jQuery['fn']['moatext']['class_no']){window.clearInterval(e);jQuery('body').moatext({hover:[function(target){jQuery(target).css({fontWeight:'bold',fontSize:'200%'});},function(target){jQuery(target).css({fontWeight:'normal',fontSize:'100%'});}],action_type:'hover'});}},100)})();">Enforce MOA(Emphasis)</a></p>
+<p>Source</p>
+<pre style="background-color:#000000; padding: 5px 5px 5px 5px; font-size: 11px; color: #ffffff">
+javascript:
+(function(){
+  // config
+  var jq_url = 'http://labs.bitmeister.jp/moamoa/js/jquery-1.3.2.min.js';
+  var moa_url = 'http://labs.bitmeister.jp/moamoa/js/jquery.moatext-min.js';
+
+  // jQuery loading
+  var jq=document.createElement('script');
+  jq.setAttribute('src',jq_url);
+  if (!window['jQuery']){
+    document.getElementsByTagName('head')[0].appendChild(jq);
+  }
+  var moa=document.createElement('script');
+  moa.setAttribute('src',moa_url);
+  var isJQ = false;
+  var id = window.setInterval(function(){
+    if (window['jQuery'] &&
+      window['jQuery']['fn'] && 
+      window['jQuery']['fn']['offset']
+    ){
+      isJQ = true;
+      // jQueryが読み込み終わったら、moatextを読み込む
+      if (!window['jQuery']['fn']['moatext'])
+        document.getElementsByTagName('head')[0].appendChild(moa);
+    }
+    if (isJQ == true &&
+      window['jQuery']['fn']['moatext'] &&
+      window['jQuery']['fn']['moatext']['class_no']
+    ){
+      window.clearInterval(id);
+      jQuery('body').moatext({hover:[function(target){jQuery(target).css({fontWeight:'bold',fontSize:'200%'});},function(target){jQuery(target).css({fontWeight:'normal',fontSize:'100%'});}],action_type:'hover'});
+    }
+  },100);
+})();
+</pre>
+<hr>
+
+	</body>
+</html>

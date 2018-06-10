@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery背景墙图片高亮显示代码</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{padding:100px 50px 50px 50px; background:#000;}
+
+.lanrenzhijia{background:#000; overflow:hidden;}
+.lanrenzhijia ul li {float:left;position:relative; padding:2px;}
+.lanrenzhijia ul li a img { width:200px;position:absolute;border:none;}
+.lanrenzhijia ul li.active a img { filter: alpha(opacity=20);opacity : 0.2}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<div class='lanrenzhijia'>
+  <ul>
+		<li><a href='http://www.mysite.com/'><img src='images/lanren1.jpg'></a></li>
+        <li><a href='http://www.mysite.com/'><img src='images/lanren2.jpg'></a></li>
+        <li><a href='http://www.mysite.com/'><img src='images/lanren3.jpg'></a></li>
+        <li><a href='http://www.mysite.com/'><img src='images/lanren4.jpg'></a></li>
+        <li><a href='http://www.mysite.com/'><img src='images/lanren5.jpg'></a></li>
+  </ul>
+</div>
+<script src='http://www.lanrenzhijia.com/ajaxjs/1.3.2/jquery-1.3.2.min.js'></script>
+<script>
+window.onload=function(){
+	var spotlight = {
+        imgWidth : $('.lanrenzhijia ul li').find('img').width(), 
+        imgHeight : $('.lanrenzhijia ul li').find('img').height() 
+    };
+	$('.lanrenzhijia ul li').css({ 'width' : spotlight.imgWidth, 'height' : spotlight.imgHeight });
+	$('.lanrenzhijia ul li').hover(function(){
+		$(this).removeClass('active').siblings().addClass('active');
+    }, function(){
+		$(this).siblings().removeClass('active');
+	});
+}
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

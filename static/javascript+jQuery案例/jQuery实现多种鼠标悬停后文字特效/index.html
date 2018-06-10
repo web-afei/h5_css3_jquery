@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>jQuery实现多种鼠标悬停后文字特效</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<link href="css/anchorHoverEffect.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="container">
+	<h2>Default animation</h2>
+	<ul class="demo-1">
+		<li><a href="#">jQuery</a></li>
+		<li><a href="#">jQueryScript</a></li>
+		<li><a href="#">ReactJS</a></li>
+		<li><a href="#">React Native</a></li>
+	</ul>
+	<h2>Brackets effect</h2>
+	<ul class="demo-2">
+		<li><a href="#">jQuery</a></li>
+		<li><a href="#">jQueryScript</a></li>
+		<li><a href="#">ReactJS</a></li>
+		<li><a href="#">React Native</a></li>
+	</ul>
+	<h2>Flip effect</h2>
+	<ul class="demo-3">
+		<li><a href="#">jQuery</a></li>
+		<li><a href="#">jQueryScript</a></li>
+		<li><a href="#">ReactJS</a></li>
+		<li><a href="#">React Native</a></li>
+	</ul>
+	<h2>borderBottom effect</h2>
+	<ul class="demo-4">
+		<li><a href="#">jQuery</a></li>
+		<li><a href="#">jQueryScript</a></li>
+		<li><a href="#">ReactJS</a></li>
+		<li><a href="#">React Native</a></li>
+	</ul>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/anchorHoverEffect.js"></script>
+<script>
+	$(function(){
+		$(".demo-1 a").anchorHoverEffect();
+		$(".demo-2 a").anchorHoverEffect({type: 'brackets'});
+		$(".demo-3 a").anchorHoverEffect({type: 'flip'});
+		$(".demo-4 a").anchorHoverEffect({type: 'borderBottom'});
+	})
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

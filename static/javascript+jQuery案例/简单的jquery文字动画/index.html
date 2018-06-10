@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简单的jquery文字动画</title>
+<link href="css/lanrenzhijia.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="grid grid-pad">
+  <section class="col-1-1">
+    <h2>Playground</h2>
+    <div class="playground grid">
+      <div class="col-1-1 viewport">
+        <div class="tlt">
+          <ul class="texts" style="display: none">
+            <li>Grumpy wizards make toxic brew for the evil Queen and Jack.</li>
+            <li>The quick brown fox jumps over the lazy dog.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-1 controls" style="padding-right: 0">
+        <form class="grid grid-pad">
+          <div class="control col-1-2">
+            <label>In Animation</label>
+            <select data-key="effect" data-type="in">
+            </select>
+            <label class="inline checkbox">
+            <input type="checkbox" data-key="sync" data-type="in" />
+            Sync</label>
+            <label class="inline checkbox">
+            <input type="checkbox" data-key="shuffle" data-type="in" />
+            Shuffle</label>
+          </div>
+          <div class="control col-1-2">
+            <label>Out Animation</label>
+            <select data-key="effect" data-type="out">
+            </select>
+            <label class="inline checkbox">
+            <input type="checkbox" data-key="sync" data-type="out" />
+            Sync</label>
+            <label class="inline checkbox">
+            <input type="checkbox" data-key="shuffle" data-type="out" checked="checked" />
+            Shuffle</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="js/lanrenzhijia.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/** css Reset star like yahoo **/
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, th, td {
+	padding: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset, img {
+	border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+/** css Reset end **/
+#wrapper {border:1px #ccc solid;
+overflow:hidden;
+	width:980px;
+	height:1120px;
+	margin:auto;
+	font-size:14px;
+	font-family:Tahoma, Geneva, sans-serif;
+}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 www.mysite.com */
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background: #4f3b5b;
+	background: -moz-radial-gradient(center, ellipse cover, #4f3b5b 0%, #231733 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #4f3b5b), color-stop(100%, #231733));
+	background: -webkit-radial-gradient(center, ellipse cover, #4f3b5b 0%, #231733 100%);
+	background: -o-radial-gradient(center, ellipse cover, #4f3b5b 0%, #231733 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #4f3b5b 0%, #231733 100%);
+	background: radial-gradient(ellipse at center, #4f3b5b 0%, #231733 100%);
+}
+.share-button {
+	margin: 100px auto;
+}
+.fork img {
+	opacity: .6;
+-webkit-transition: all .5s ease;
+transition: all .5s ease;
+}
+.fork img:hover {
+	opacity: 1;
+}
+/* 代码整理：网页设计之家 www.mysite.com */

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jquery+css3立体式动画百叶窗切换效果_demo1</title>
+<link rel="stylesheet" href="css/odometer-theme-car.css" />
+<style>
+.odometer {
+  font-size: 40px;
+}
+</style>
+<script>
+window.odometerOptions = {
+  format: '(ddd).dd'
+};
+</script>
+</head>
+<body>
+<script src="js/jquery.min.js"></script>
+<script src="js/odometer.js"></script>
+<div class="odometer">3252</div>
+<script>
+  setTimeout(function(){
+    $('.odometer').html(423234234);
+  }, 1000);
+</script>
+</body>
+</html>

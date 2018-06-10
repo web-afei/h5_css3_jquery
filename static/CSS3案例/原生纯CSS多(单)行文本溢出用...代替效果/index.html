@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生纯CSS多(单)行文本溢出用"..."代替效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-size:12px;}
+.demo1{ width:200px; height:20px; line-height:20px; margin:100px auto; border:1px solid #ccc; padding:5px;
+	white-space:nowrap; 
+	-webkit-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.demo2{ width:200px; height:40px; line-height:20px; margin:100px auto; border:1px solid #ccc; padding:4px;
+	display:-webkit-box !important;
+	overflow:hidden;
+	-webkit-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+	-o-box-orient:vertical;
+	-ms-box-orient:vertical;
+	box-orient:vertical;
+	
+	-webkit-line-clamp:2;
+	-moz-line-clamp:2;
+	-o-line-clamp:2;
+	-ms-line-clamp:2;
+	line-clamp:2;
+}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="demo1">小白--可能是JS网页特效代码收集最全的懒站！</div>
+<div class="demo2">小白致力于网页脚本代码以及Flash素材的收集与整理，努力为国内前端工作者提供最全面的素材，帮您节约时间做更多的事情！</div>
+<!-- 代码部分end -->
+
+</body>
+</html>

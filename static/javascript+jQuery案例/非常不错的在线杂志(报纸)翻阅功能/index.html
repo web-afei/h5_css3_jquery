@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>非常不错的在线杂志(报纸)翻阅功能</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/turn.min.js"></script>
+</head>
+<body>
+<div id="lanrenzhijia" style="margin:0 auto;">
+  <div style="background-image:url(images/lanrenzhijia01.jpg);"></div>
+  <div style="background-image:url(images/lanrenzhijia02.jpg);"></div>
+  <div style="background-image:url(images/lanrenzhijia03.jpg);"></div>
+  <div style="background-image:url(images/lanrenzhijia04.jpg);"></div>
+  <div style="background-image:url(images/lanrenzhijia05.jpg);"></div>
+  <div style="background-image:url(images/lanrenzhijia06.jpg);"></div>
+</div>
+<script type="text/javascript">
+	$('#lanrenzhijia').bind('turned', function(e, page) {
+		console.log('Current view: ', $('#lanrenzhijia').turn('view'));
+	})
+	$('#lanrenzhijia').turn({width: 1152, height: 752, acceleration: true, shadows: !$.isTouch});
+</script>
+</body>
+</html>

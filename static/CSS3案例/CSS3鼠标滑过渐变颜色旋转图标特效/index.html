@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>CSS3鼠标滑过渐变颜色旋转图标特效</title>
+<link rel="stylesheet" type="text/css" href="css/lanren.css">
+</head>
+<body>
+<!-- 代码部分begin -->
+<div id="order_nav">
+    <ul class="list not_ie">
+      <li>
+        <div class="ico _1"><a href="#"></a></div>
+        <p><span>网站建设</span></p>
+      </li>
+      <li>
+        <div class="ico _2"><a href="#"></a></div>
+        <p><span>网站设计</span></p>
+      </li>
+      <li>
+        <div class="ico _3"><a href="#"></a></div>
+        <p><span>网站策划</span></p>
+      </li>
+      <li>
+        <div class="ico _4"><a href="#"></a></div>
+        <p><span>SEO优化</span></p>
+      </li>
+      <li>
+        <div class="ico _5"><a href="#"></a></div>
+        <p><span>WAP/APP</span></p>
+      </li>
+      <li>
+        <div class="ico _6"><a href="#"></a></div>
+        <p><span>网站营销</span></p>
+      </li>
+    </ul>
+</div>
+<!-- 代码部分end -->
+<script>
+var orderNav = document.getElementById("order_nav");
+var lis = orderNav.getElementsByTagName("li");
+for(var i =0;i<lis.length;i++){
+   lis[i].onmouseover = function(){
+     this.className = "on";
+   };
+   lis[i].onmouseout = function(){
+     this.className = "";
+   }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* 代码整理：小白 www.mysite.com */
+*{margin:0;padding:0;font-size:12px;text-decoration:none;list-style:none}
+a:hover{text-decoration:none}
+#treediv{display:none;position:absolute;overflow:scroll;width:150px;height:200px;padding:5px;background:#fff;color:#fff;border:1px solid#ccc}
+.dtree{font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:11px;color:#666;white-space:nowrap}
+.dtree img{border:0px;vertical-align:middle}
+.dtree a{color:#0000FF;text-decoration:none}
+.dtree a.node,.dtree a.nodeSel{white-space:nowrap;padding:1px 2px 1px 2px}
+.dtree a.node:hover,.dtree a.nodeSel:hover{color:#CC6600;text-decoration:underline}
+.dtree a.nodeSel{background-color:#c0d2ec}
+.dtree.clip{overflow:hidden}

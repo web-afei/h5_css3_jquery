@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 */
+*{
+	margin:0;
+	padding:0;
+	outline:none;
+}
+
+body{
+   background:#000;
+}
+
+a:link,a:visited {
+	color:#FFF;
+	text-decoration:none;
+}
+
+a:hover,a:active {
+	color:#FFF;
+	text-decoration:none;
+}
+
+#logo{
+	background:url(../images/lamborghini.png);
+	position:absolute;
+	width:60px;
+	height:67px;
+	top:120px;
+	left:50px;
+	display:none;
+}
+
+.container{
+	background:url(../images/splash-bg-small.jpg) top center no-repeat #000;
+	position:absolute;
+	width:1024px;
+	height:100%;
+}
+
+.title{
+    text-align:center;
+    font:90px 'Bickham Script Pro', 'Edwardian Script ITC', 'Palace Script MT', Zapfino, cursive;
+	text-shadow:0 0 30px #fff;
+	color:#fff;
+	margin-top:110px;
+	display:none;
+}
+
+
+.light{
+	background:#333;
+	background:rgba(0,0,0,0.9);
+	width:210px;
+	height:auto;
+	position:absolute;
+	top:30px;
+	right:30px;
+	border-radius:20px;
+	padding:5px 10px;
+}
+
+.color{
+	float:left;
+	width:50px;
+	height:50px;
+	margin:10px;
+	border-radius:50px;	
+	cursor:pointer;
+}
+
+.color:hover{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+}
+
+#red{
+	background:#EC4012;
+	background:rgba(236,64,18,0.7);
+	box-shadow:0 0 70px #EC4012;
+}
+
+#yellow{
+	background:#FBFB24;
+	background:rgba(251,251,36,0.7);
+	box-shadow:0 0 70px #FBFB24;
+}
+
+
+#green{
+	background:#BCEC61;
+	background:rgba(188,236,97,0.7);
+	box-shadow:0 0 70px #BCEC61;
+}
+
+.car{
+	position:absolute;
+	left:250px;
+	top:160px;
+	width:545px;
+	height:395px;
+	background:url(../images/lamborghiniR.png);
+	z-index:1;
+}
+
+.small{
+	-webkit-transform:scale(0.05);
+	-moz-transform:scale(0.05);
+	-ms-transform:scale(0.05);
+	-o-transform:scale(0.05);
+}
+
+
+.door{
+	background:url(../images/doors.png);
+	position:absolute;
+	left:250px;
+	top:160px;
+	width:545px;
+	height:395px;
+	opacity:0;
+	z-index:2px;
+}
+
+.door.hover{
+	opacity:1;
+
+}
+
+
+.red{
+		background:url(../images/lamborghiniR.png);
+
+}
+
+.yellow{
+		background:url(../images/lamborghiniY.png);
+
+}
+
+.green{
+		background:url(../images/lamborghiniG.png);
+
+}
+
+
+ul{
+	width:120px;
+	list-style:none;
+    font:36px 'Bickham Script Pro', 'Edwardian Script ITC', 'Palace Script MT', Zapfino, cursive;
+	text-shadow:0 0 8px #fff;
+	color:#fff;	
+	margin-left:-120px;
+
+}
+
+li{
+    margin:5px 0;
+    cursor:pointer;
+}
+
+li:hover{
+    margin-left:10px;
+}
+p{margin:550px 0 0 0;}
+

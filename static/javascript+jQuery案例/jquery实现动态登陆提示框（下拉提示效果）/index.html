@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery实现动态登陆提示框（下拉提示效果）</title>
+<link type="text/css" rel="stylesheet" href="css/lanrenzhijia.css" />
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+</head>
+<body>
+<div id="lrzj">
+  <h1>下拉提示框登陆页面</h1>
+  <form id="login">
+    <ul>
+      <li>
+        <label for="username">用户名：</label>
+        <span>
+        <input id="username" name="username" type="text" />
+        </span> </li>
+      <li>
+        <label for="pswd">密码：</label>
+        <span>
+        <input id="pswd" type="password" name="pswd" />
+        </span> </li>
+      <li>
+        <button type="submit">注册</button>
+      </li>
+    </ul>
+  </form>
+  <div id="pswd_info">
+    <h4>sorry,还有如下信息填写不完整哦</h4>
+    <ul>
+      <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+      <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+      <li id="number" class="invalid">At least <strong>one number</strong></li>
+      <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+    </ul>
+  </div>
+</div>
+<p style=" text-align:center; padding-top:10px;">网页设计之家版权所有：转载请注明来源：<a href="http://www.mysite.com" target="_blank">网页设计之家</a></p>
+</body>
+</html>

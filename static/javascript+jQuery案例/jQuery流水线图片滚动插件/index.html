@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>jQuery流水线循环滚动 - 站长素材</title>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$('#carousel').carouFredSel({
+					width: '100%',
+					items: {
+						visible: 'odd+2'
+					},
+					scroll: {
+						pauseOnHover: true,
+						onBefore: function() {
+							$(this).children().removeClass( 'hover' );
+						}
+					},
+					auto: {
+						items: 1,
+						easing: 'linear',
+						duration: 1250,
+						timeoutDuration: 0
+					},
+					pagination: {
+						container: '#pager',
+						items: 1,
+						duration: 0.5,
+						queue: 'last',
+						onAfter: function() {
+							var cur = $(this).triggerHandler( 'currentVisible' ),
+								mid = Math.floor( cur.length / 2 );
+
+							cur.eq( mid ).addClass( 'hover' );
+						}
+					}
+				});
+
+			});
+		</script>
+		<style type="text/css">
+			html, body {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background-color: #ffe;
+				position: relative;
+				min-height: 300px;
+			}
+			body * {
+				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+				font-size: 14px;
+				color: #333;
+				line-height: 22px;
+			}
+
+			#wrapper {
+				background-color: #fff;
+				border-top: 1px solid #ccc;
+				width: 100%;
+				height: 350px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			#carousel {
+				margin-top: -60px;
+			}
+			#carousel div {
+				text-align: center;
+				width: 125px;
+				height: 140px;
+				padding: 0 20px;
+				float: left;
+				position: relative;
+			}
+			#carousel div img {
+				border: none;
+				width: 100%;
+				height: auto;
+			}
+			#carousel div span {
+				display: none;
+			}
+			#carousel div:hover span,
+			#carousel div.hover span {
+				background-color: #333;
+				color: #fff;
+				display: inline-block;
+				width: 100px;
+				padding: 2px 0;
+				margin: 0 0 0 -50px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				border-radius: 3px;
+			}
+			#pager {
+				text-align: center;
+				padding-top: 20px;
+			}
+			#pager a {
+				background: #ccc;
+				display: inline-block;
+				border-radius: 5px;
+				width: 10px;
+				height: 10px;
+				margin: 0 2px;
+			}
+			#pager a.selected {
+				background: #999;
+			}
+			#pager a:hover {
+				background: #666;
+			}
+			#pager a span {
+				display: none;
+			}
+			
+			#donate-spacer {
+				height: 100%;
+			}
+			#donate {
+				width: 750px;
+				padding: 50px 75px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			#donate p, #donate form {
+				margin: 0;
+				float: left;
+			}
+			#donate p {
+				width: 650px;
+			}
+			#donate form {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="carousel">
+				<div>
+					<img src="img/fruit1.png" alt="fruit1" width="200" height="200" />
+					<span>Apple</span>
+				</div>
+				<div>
+					<img src="img/fruit2.png" alt="fruit2" width="200" height="200" />
+					<span>Mandarin</span>
+				</div>
+				<div>
+					<img src="img/fruit3.png" alt="fruit3" width="200" height="200" />
+					<span>Banannas</span>
+				</div>
+				<div>
+					<img src="img/fruit4.png" alt="fruit4" width="200" height="200" />
+					<span>Cherries</span>
+				</div>
+				<div>
+					<img src="img/fruit5.png" alt="fruit5" width="200" height="200" />
+					<span>Orange</span>
+				</div>
+				<div>
+					<img src="img/fruit6.png" alt="fruit6" width="200" height="200" />
+					<span>Melon</span>
+				</div>
+				<div>
+					<img src="img/fruit7.png" alt="fruit7" width="200" height="200" />
+					<span>Lemon</span>
+				</div>
+				<div>
+					<img src="img/fruit8.png" alt="fruit8" width="200" height="200" />
+					<span>Grapes</span>
+				</div>
+				<div>
+					<img src="img/fruit9.png" alt="fruit9" width="200" height="200" />
+					<span>Peach</span>
+				</div>
+				<div>
+					<img src="img/fruit10.png" alt="fruit10" width="200" height="200" />
+					<span>Pear</span>
+				</div>
+				<div>
+					<img src="img/fruit11.png" alt="fruit11" width="200" height="200" />
+					<span>Strawberry</span>
+				</div>
+				<div>
+					<img src="img/fruit12.png" alt="fruit12" width="200" height="200" />
+					<span>Melon</span>
+				</div>
+			</div>
+			<div id="pager"></div>
+		</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+	</body>
+</html>

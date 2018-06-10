@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jQuery三屏同时滚动轮播切换 - 站长素材</title>
+
+<style type="text/css">
+body{margin:0;font-size:12px;font-family:'微软雅黑','宋体';;}
+ul{padding:0;margin:0;list-style:none;}
+a{text-decoration:none;}
+/* box */
+.box{width:1200px;height:338px;border:1px solid #aaa;border-bottom:4px solid #f9514e;margin:30px auto;background:url(images/wood.jpg) no-repeat center;position:relative;}
+.b1,.b2,.b3{position:absolute;overflow:hidden;}
+.b1{width:600px;height:338px;top:0;left:0;}
+.b2,.b3{width:280px;height:158px;right:0;}
+.b2{top:0;}
+.b3{top:180px;}
+.lst{width:2000em;position:absolute;}
+.lst li{float:left;}
+.lst1 li{width:600px;height:338px;}
+.lst2 li,.lst3 li{width:280px;height:158px;}
+.lst3 li{float:none;}
+.lst img{width:100%;}
+.cen{width:300px;height:318px;padding:10px;background:rgba(0,0,0,.4);position:absolute;top:0;left:600px;}
+.cenTit{padding-bottom:5px;border-bottom:1px solid #aaa;font-size:18px;color:#eee;font-weight:normal;}
+.wrd{padding-top:5px;border-top:1px solid #;font-size:14px;line-height:20px;color:#e1e1e1;}
+.wrd a{font-size:12px;color:#f60;}
+.cen1{width:280px;height:22px;background:rgba(0,0,0,.6);color:#fff;line-height:22px;text-align:center;position:absolute;top:158px;right:0;}
+.arr{display:inline-block;width:51px;height:45px;background:url(images/arr.png) no-repeat;cursor:pointer;position:absolute;bottom:10px;z-index:9;}
+.lef{background-position:0 0;left:700px;}
+.rig{background-position:-52px 0;right:380px;}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+	<div class="b b1">
+		<ul class="lst lst1">
+			<li><img src="images/1.jpg" alt="" /></li>
+			<li><img src="images/2.jpg" alt="" /></li>
+			<li><img src="images/3.jpg" alt="" /></li>
+			<li><img src="images/4.jpg" alt="" /></li>
+			<li><img src="images/5.jpg" alt="" /></li>
+		</ul>
+	</div>
+	<div class="b b2">
+		<ul class="lst lst2">
+			<li><img src="images/2.jpg" alt="" /></li>
+			<li><img src="images/3.jpg" alt="" /></li>
+			<li><img src="images/4.jpg" alt="" /></li>
+			<li><img src="images/5.jpg" alt="" /></li>
+			<li><img src="images/1.jpg" alt="" /></li>
+		</ul>
+	</div>
+	<div class="b3">
+		<ul class="lst lst3">
+			<li><img src="images/3.jpg" alt="" /></li>
+			<li><img src="images/4.jpg" alt="" /></li>
+			<li><img src="images/5.jpg" alt="" /></li>
+			<li><img src="images/1.jpg" alt="" /></li>
+			<li><img src="images/2.jpg" alt="" /></li>
+		</ul>
+	</div>
+	<div class="cen">
+		<h3 class="cenTit">娱乐一刻</h3>
+		<p class="wrd">朋友聚餐，差一人没到，我们就先点菜，饭店给力菜很快上齐了，我们等了会没忍住就先吃了，盘子全见底了那朋友还没来，服务员特勤快把空盘子全收了。这时正好朋友到了，他看看空荡荡的桌子，忙说真不好意思让你们饿着肚子等到现在，点菜吧！这顿我请！听了这话我们都没解释，默默地拿起菜单…<a target="_blank" href="http://sc.chinaz.com/">【查看更多】</a></p>
+	</div>
+	<div class="cen1">极品100全力打造最具实力的前端动效</div>
+	<span class="arr lef"></span>
+	<span class="arr rig"></span>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $(".b").scrollable({
+		size:1,
+		items:".b ul",
+		loop:true,
+		next:".lef",
+		prev:".rig",
+		clickable:false,
+		circular:true
+	});  
+	  
+    $(".b3").scrollable({
+		size:1,
+		items:".b3 ul",
+		loop:true,
+		next:".lef",
+		prev:".rig",
+		vertical:true,
+		clickable:false,
+		circular:true
+	});  
+	  
+})
+</script>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+
+</div>
+</body>
+</html>

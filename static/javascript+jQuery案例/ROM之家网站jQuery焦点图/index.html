@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ROM之家网站jQuery焦点图 - 站长素材</title>
+<link rel="stylesheet" href="css/zzsc.css" type="text/css" />
+<link type="text/css" href="css/flexslider.min.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+$(window).load(function() {
+$('.flexslider').flexslider();
+});
+
+$(document).ready(function() {
+$('.flexslider').hover(function() {
+$('.flex-direction-nav li a.prev').css('display', 'block');
+$('.flex-direction-nav li a.next').css('display', 'block');
+}, function() {
+$('.flex-direction-nav li a.prev').css('display', 'none');
+$('.flex-direction-nav li a.next').css('display', 'none');
+});
+
+});
+
+</script>
+<center>
+<div class="moduletable-banner">
+	<div class="flexslider">
+		<ul class="slides">
+			<li>
+			<a href="http://sc.chinaz.com/" target="_blank">
+			<img src="images/banner.png" /></a>
+			</li>
+			<li>
+			<a href="http://sc.chinaz.com/" target="_blank">
+			<img src="images/kitkat.png" /></a>
+			</li>
+			<li>
+			<a href="http://sc.chinaz.com/" target="_blank">
+			<img src="images/miui.png" /></a> 
+			</li>
+			<li>
+			<a href="http://sc.chinaz.com/" target="_blank">
+			<img src="images/ios.png" /></a>
+			</li>
+		</ul>
+	</div>
+</div>
+</center>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br>
+
+</div>
+</body>
+</html>

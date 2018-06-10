@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery图文列表鼠标点击下拉显示文字说明内容</title>
+<link href="css/lanren.css" type="text/css" rel="stylesheet" />
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ font-family:"微软雅黑";}
+img{ border:0;}
+.wrap{ width:1120px; margin:0 auto;}
+.solutions{width:1120px;overflow: hidden}
+.solutions ul{width:1140px}
+.solutions li{height:300px;background: #fff; width:263px;border:1px solid #e5e5e5;border-bottom: 5px solid #efefef; float:left; margin-right:20px; position:relative;}
+.solutit{display: block;width:100%;}
+.solutit img{ margin:30px auto;text-align: center;display: block;}
+.solutit h4{color: #333;font-size: 16px;text-align: center;font-weight: bold;line-height: 30px;}
+.solutit p{color: #72ac2d;line-height: 20px;font-size: 14px;text-align: center;}
+.solutit a{line-height: 30px;height:30px;width: 100px;background: #72ac2d;color: #fff;font-size: 14px;font-weight: bold;text-align: center;display: block;margin:20px auto 0;border-radius: 5px;}
+.solutit:hover a{background: #ec8000;}
+.solutit2{width:223px;padding:0 20px;position:absolute;left:0px;top:0px;overflow: hidden;height:0px;background: #fff;z-index: 99;display: block;border-bottom:5px solid #72ac2d;}
+.solutit2 h4{color: #333;font-weight: bold;font-size: 16px;line-height: 16px;margin-bottom: 10px;text-align: center;margin-top:40px;}
+.solutit2 h5{text-align: center;color: #72ac2d;display: block;}
+.solutit2 span{display: block;background: #bbbbbb;height:2px;width:50px;margin:10px auto;}
+.solutit2 p{line-height: 24px;color: #666666;height:144px;display: block;overflow: hidden;}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class='wrap'>
+	<div class='solutions' id="solutions">
+		<ul>
+			 <li>
+				<div class="solutit">
+					<img src="images/abouticon1.png">
+					<h4>物流优势</h4>
+					<p>LOGISTICS ADVANTAGE</p>
+					<a class="aaa" href="javascript:void(0)">了解详情</a>
+				</div>
+				<div class="solutit2">
+					<h4>品牌优势</h4>
+					<h5>BRAND ADVANTAGE</h5>
+					<span></span>
+					<p>物流信息内容是</p>
+				</div>
+			 </li>
+			 <li>
+				<div class="solutit">
+					<img src="images/abouticon2.png">
+					<h4>物流优势</h4>
+					<p>LOGISTICS ADVANTAGE</p>
+					<a class="aaa" href="javascript:void(0)">了解详情</a>
+				</div>
+				
+				<div class="solutit2">
+					<h4>品牌优势</h4>
+					<h5>BRAND ADVANTAGE</h5>
+					<span></span>
+					<p>内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</p>
+				</div>
+			 </li>
+			 <li>
+				<div class="solutit">
+					<img src="images/abouticon3.png">
+					<h4>物流优势</h4>
+					<p>LOGISTICS ADVANTAGE</p>
+					<a href="javascript:void(0)">了解详情</a>
+				</div>
+				
+				<div class="solutit2">
+					<h4>品牌优势</h4>
+					<h5>BRAND ADVANTAGE</h5>
+					<span></span>
+					<p>内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</p>
+				</div>
+			 </li>
+			 <li>
+				<div class="solutit">
+					<img src="images/abouticon1.png">
+					<h4>物流优势</h4>
+					<p>LOGISTICS ADVANTAGE</p>
+					<a href="javascript:void(0)">了解详情</a>
+				</div>
+				
+				<div class="solutit2">
+					<h4>品牌优势</h4>
+					<h5>BRAND ADVANTAGE</h5>
+					<span></span>
+					<p>内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</p>
+				</div>
+			 </li>
+		</ul>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    $('#solutions li').click(function(){
+    	$('#solutions .solutit2').stop().animate({
+            height:'0'
+        },600);
+        $(this).find('.solutit2').stop().animate({
+            height:'300'
+
+        },600);
+    });
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

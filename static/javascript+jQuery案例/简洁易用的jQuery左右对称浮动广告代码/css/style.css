@@ -1,0 +1,78 @@
+*{padding: 0;margin: 0;}
+.fl{float:left;display: inline;}
+.fr{float: right;display: inline;}
+.clearfix{*zoom: 1;}
+.clearfix:after{ display: block; content: ""; height: 0;line-height: 0;visibility: hidden; clear: both;}
+/*tab 切换*/
+.tab_title{ line-height: 30px; border-bottom: 1px solid #ccc; width: 360px;margin: 0 auto;}
+.tab_title a{ display: inline-block; font-size: 16px;color: #333; text-decoration: none; margin-right: 20px;}
+.tab_title a.active{color: red;}
+.tab_content{width: 340px; padding:5px 10px;margin: 0 auto; border: 1px solid #ccc; height: 120px;}
+/*文字滚动*/
+.moveScroll{ width: 360px; height: 120px; border: 1px solid #ccc; margin: 50px auto;}
+.moveparent{ width: 330px;height: 90px;overflow: hidden; margin:15px auto;}
+.moveScroll .content{  color: #333; }
+/*文本输入框*/
+.inputText{ width: 320px; padding:10px; line-height: 22px;margin: 10px auto;display: block;color: #999;}
+/*幻灯片*/
+ .wrapper {
+  width: 324px;
+  height: 325px;
+  _height: 321px;
+  position: relative;
+  z-index: 1;
+  margin: 20PX auto;
+}
+ .wrapper .main {
+  width: 324px;
+  height: 222px;
+  overflow: hidden;
+}
+.wrapper li {
+  float: left;
+  display: inline;
+}
+.wrapper ul img {
+  width: 324px;
+  height: 222px;
+  position: relative;
+  z-index: 1;
+}
+.wrapper ul span {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 324px;
+  height: 20px;
+  overflow: hidden;
+  bottom: 10px;
+  left: 0;
+}
+.wrapper ol {
+  margin-right: -4px;
+  height: 58px;
+  *zoom: 1;
+}
+.wrapper ol:after {
+  display: block;
+  content: "";
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.wrapper ol img {
+  width: 78px;
+  height: 52px;
+  margin: 6px 4px 0 0;
+}
+.wrapper ol li {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+}
+.wrapper ol .active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+

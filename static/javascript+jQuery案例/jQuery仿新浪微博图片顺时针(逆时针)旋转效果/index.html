@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery仿新浪微博图片顺时针(逆时针)旋转效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+.lanren{width:500px; margin:0 auto; font-size:12px; overflow:hidden}
+.lanren p{ overflow:hidden;}
+.lanren p a{ margin:5px 0; display:inline-block; color:#333; text-decoration:none; margin-right:10px;}
+.lanren .left{ float:left;}
+.lanren .right{ float:right;}
+.lanren .image_box{text-align:center;}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="lanren">
+	<p>
+    	<a id="rotLeft" class="left" href="javascript:void(0);">&lt;&lt;向左转</a>
+        <a id="rotRight" class="right" href="javascript:void(0);">向右转&gt;&gt;</a>
+    </p>
+	<div id="imgBox" class="image_box">
+		<img id="rotImg" src="images/lanren.jpg" />
+	</div>
+</div>
+<script src="js/jquery-1.2.6.pack.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script>
+$(function(){
+	var rot = 0;
+	$("#rotRight").click(function(){
+		if(rot === 360){
+			rot = 0;
+		}
+		rot += 90;
+		$("#rotImg").rotate(90);
+	});
+	$("#rotLeft").click(function(){
+		if(rot === -360){
+			rot = 0;
+		}
+		rot -= 90;
+		$("#rotImg").rotate(-90);
+	});		   
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

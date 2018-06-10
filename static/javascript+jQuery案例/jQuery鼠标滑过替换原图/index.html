@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jQuery鼠标悬停自动替换大图 - 站长素材</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// 判断img轮转，实现a跳转
+	// 推荐品牌滑动翻转效果
+	brandPicTurn();
+});
+function brandPicTurn(){
+	$(".brand_detail").hide();
+	$(".brand_item").hover(
+		function(){
+			$(this).children(".brand_name").hide();
+			$(this).children(".brand_detail").show();
+		}
+		, function(){
+			$(this).children(".brand_detail").hide();
+			$(this).children(".brand_name").show();
+		}
+	);
+}
+</script>
+
+</head>
+<body>
+
+<div class="brandbox">
+
+	<ul class="ui_brands">
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_jy_name.gif"><span>九阳 Joyoung</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_jy_product.gif"><span>九阳 Joyoung</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_sx_name.gif"><span>三星 Samsung</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_sx_product.gif"><span>三星 Samsung</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_oly_name.gif"><span>欧莱雅 LOREAL</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_oly_product.gif"><span>欧莱雅 LOREAL</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_jn_name.gif"><span>佳能 Cannon</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_jn_product.gif"><span>佳能 Cannon</span></a>
+		</li>
+	</ul>
+	
+	<ul class="ui_brands">
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_bl_name.gif"><span>百丽 Belle</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_bl_product.gif"><span>百丽 Belle</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_shlsq_name_1.jpg"><span>施华洛世奇 Swarovski</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_shlsq_product.gif"><span>施华洛世奇 Swarovski</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/hp_logo_3.jpg"><span>惠普 HP </span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/hp-elitebook_3.jpg"><span>惠普 HP </span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_dmz_name.gif"><span>多美滋 DUMEX </span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_dmz_product.gif"><span>多美滋 DUMEX </span></a>
+		</li>
+	</ul>
+	
+	<ul class="ui_brands">
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_qpl_name.gif"><span>七匹狼 Septwolves</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_qpl_product.gif"><span>七匹狼 Septwolves</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_lklk_name.gif"><span>乐扣乐扣 LOCK&amp;LOCK</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_lklk_product.gif"><span>乐扣乐扣 LOCK&amp;LOCK</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_dsn_name.gif"><span>迪士尼 Disney</span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_dsn_product.gif"><span>迪士尼 Disney</span></a>
+		</li>
+		<li class="brand_item">
+			<a class="brand_name" href="http://sc.chinaz.com"><img src="images/pic_elh_name.gif"><span>e路航 eroda </span></a>
+			<a class="brand_detail" href="http://sc.chinaz.com"><img src="images/pic_elh_product.gif"><span>e路航 eroda </span></a>
+		</li>
+	</ul>
+	
+	<div style="clear:both"></div>
+
+</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+
+</div>
+</body>
+</html>

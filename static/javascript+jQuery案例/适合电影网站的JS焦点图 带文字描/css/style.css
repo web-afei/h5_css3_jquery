@@ -1,0 +1,149 @@
+﻿body {
+	color:#888;
+	font:12px/22px sans-serif,"宋体";
+}
+body,ul,li,h1,h2,h3,h4,form,dl {
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+}
+img {
+	border:medium none;
+}
+a {
+	color:#222;
+	outline:medium none;
+	text-decoration:none;
+}
+a:hover {
+	color:#8c4600;
+}
+.index_mov_list a:hover img,.top_list a:hover img {
+	border-color:#8c4600;
+}
+
+
+.pgmiddle {
+	background:#333;
+	color:#fff;
+	margin-bottom:8px;
+}
+.pages a,.pages em,.pages span,.more,.submit,.face_bat {
+	background:#448000;
+	border-radius:2px 2px 2px 2px;
+	color:#fff;
+	font-size:12px;
+	line-height:12px;
+	padding:2px 3px;
+}
+.pages a:hover,.pages span,.more:hover,#msg a:hover {
+	background:#8c4600;
+	color:#fff;
+}
+#example {
+	background:url(images/slidesbg.png) no-repeat -49px 0;
+	height:330px;
+	margin:0 auto;
+	padding:20px 26px;
+	position:relative;
+	width:950px;
+}
+#ribbon_1,#ribbon_2 {
+	background:url(../images/main.png) repeat  -140px -50px;
+	height:90px;
+	left:auto;
+	position:absolute;
+	right:22px;
+	top:17px;
+	width:93px;
+	z-index:3;
+}
+#ribbon_2 {
+	background:url(../images/main.png) no-repeat  -140px 0;
+	height:33px;
+	top:297px;
+	width:120px;
+}
+#slides {
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+#next,#prev {
+	background:url(../images/main.png) no-repeat  -140px -150px;
+	cursor:pointer;
+	display:block;
+	height:57px;
+	left:3px;
+	position:absolute;
+	top:157px;
+	width:22px;
+	z-index:2;
+}
+#next {
+	background-position:-162px -150px;
+	left:977px;
+}
+#next:hover {
+	background-position:-212px -150px;
+}
+#prev:hover {
+	background-position:-190px -150px;
+}
+#slides .scroimg {
+	background:url("images/loading.gif") no-repeat  center center;
+	height:330px;
+	left:950px;
+	margin:0;
+	position:absolute;
+	width:950px;
+}
+.scrotext {
+	background:#000;
+	bottom:-70px;
+	height:70px;
+	left:0;
+	opacity:.7;
+	filter:alpha(opacity=70);
+	padding:0 150px 0 20px;
+	position:absolute;
+	top:auto;
+	width:780px;
+	z-index:1;
+}
+.scrotext a {
+	color:#87ff00;
+	font-size:16px;
+	line-height:25px;
+}
+.scrotext a:hover {
+	color:#fff;
+}
+.scrotext p {
+	line-height:20px;
+	margin:0;
+}
+#pagination {
+	height:12px;
+	left:50%;
+	margin-left:-45px;
+	overflow:hidden;
+	position:absolute;
+	text-align:center;
+	top:287px;
+	width:100px;
+	z-index:5;
+}
+#pagination span {
+	background:url(../images/main.png) no-repeat  -250px -50px;
+	cursor:pointer;
+	float:left;
+	font-size:0;
+	line-height:0;
+	margin:0 3px;
+	overflow:hidden;
+	padding:6px;
+}
+#pagination span.current {
+	background-position:-250px -62px;
+}

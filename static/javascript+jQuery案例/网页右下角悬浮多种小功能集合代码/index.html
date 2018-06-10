@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页右下角悬浮多种小功能集合代码</title>
+<style>
+/* 代码整理：小白www.mysite.com */
+*{ margin:0; padding:0;}
+body{background-color: #F1F1F1;color: #333}
+.dn{display: none;}
+
+.go-top{position: fixed;bottom: 40px;right: 20px;width: 46px;z-index: 999;}
+.go-top a{display: block;width: 46px;height: 46px;margin-bottom: 10px;background-image: url(http://demo.lanrenzhijia.com/2015/nav0128/images/go-top.png?);}
+.go-top a:last-child{margin-bottom: 0;}
+.go-top .go{background-position: 0 -150px;}
+.go-top .go:hover{background-position: 0 -250px;}
+.go-top .feedback{background-position: 0 -100px;}
+.go-top .feedback:hover{background-position: 0 -300px;}
+.go-top .uc-2vm{background-position: 0 0;}
+.go-top .uc-2vm:hover{background-position: 0 -350px;}
+.go-top .uc-2vm-pop{position: absolute;right: 60px;top: -100px;	width: 220px;box-shadow: 0px 1px 4px rgba(0,0,0,.1);background: #fff;}
+.go-top .uc-2vm-pop .title-2wm{font-size: 14px; margin: 10px 20px;}
+.go-top .uc-2vm-pop .logo-2wm-box{position: relative;}
+</style>
+</head>
+<body style="height:2000px;">
+
+<!-- 代码部分begin -->
+<div class="go-top dn" id="go-top">
+    <a href="javascript:;" class="uc-2vm"></a>
+	<div class="uc-2vm-pop dn">
+		<h2 class="title-2wm">用微信扫一扫</h2>
+		<div class="logo-2wm-box">
+			<img src="http://demo.lanrenzhijia.com/2015/nav0128/images/weixin.jpg" alt="小白二维码" width="220" height="220">
+		</div>
+	</div>
+    <a href="http://www.mysite.com/" target="_blank" class="feedback"></a>
+    <a href="javascript:;" class="go"></a>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$(window).on('scroll',function(){
+		var st = $(document).scrollTop();
+		if( st>0 ){
+			if( $('#main-container').length != 0  ){
+				var w = $(window).width(),mw = $('#main-container').width();
+				if( (w-mw)/2 > 70 )
+					$('#go-top').css({'left':(w-mw)/2+mw+20});
+				else{
+					$('#go-top').css({'left':'auto'});
+				}
+			}
+			$('#go-top').fadeIn(function(){
+				$(this).removeClass('dn');
+			});
+		}else{
+			$('#go-top').fadeOut(function(){
+				$(this).addClass('dn');
+			});
+		}	
+	});
+	$('#go-top .go').on('click',function(){
+		$('html,body').animate({'scrollTop':0},500);
+	});
+
+	$('#go-top .uc-2vm').hover(function(){
+		$('#go-top .uc-2vm-pop').removeClass('dn');
+	},function(){
+		$('#go-top .uc-2vm-pop').addClass('dn');
+	});
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

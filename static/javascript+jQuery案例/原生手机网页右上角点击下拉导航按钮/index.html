@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8">
+<title>原生手机网页右上角点击下拉导航按钮</title>
+<meta content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<script>
+    var fontSize = 100;
+    var elm = document.documentElement;
+        elm.style.fontSize = fontSize * (elm.clientWidth/320) + 'px';
+</script>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+#header{background-color: #00a1e9;text-align: center;height: 0.44rem;line-height: 0.44rem;color: #fff;position: relative;}
+#header span.right{width: 0.44rem;height: 0.44rem;position: absolute;right: 0;top: 0;background: url("img/btn.jpg") no-repeat center center;background-size: 80%;
+transform:rotate(0deg);
+-ms-transform:rotate(0deg);     /* IE 9 */
+-moz-transform:rotate(0deg);    /* Firefox */
+-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+-o-transform:rotate(0deg);
+-webkit-transition: all 0.3s linear;
+-ms-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
+}
+#header span.right.on{background: url("img/btn.png") no-repeat center center;background-size: 55%;
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);     /* IE 9 */
+-moz-transform:rotate(135deg);    /* Firefox */
+-webkit-transform:rotate(135deg); /* Safari 和 Chrome */
+-o-transform:rotate(135deg);
+-webkit-transition: all 0.3s linear;
+-ms-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;}
+#header h1{font-size: 0.16rem;font-weight: normal;}
+#header span.left{position:absolute;left:0;top:0;display: block;width: 0.44rem;height: 0.44rem;font-size: 0.14rem;padding-left:0.08rem;}
+
+.menu{overflow: hidden;background-color: #00a1e9;width: 100%;position: absolute;left: 0;top: 0.44rem;right: 0;z-index: 9999;height: 0;
+-webkit-transition: all 0.3s linear;
+-ms-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;}
+.menu li{width: 100%;text-align: center;border-bottom: 0.01rem solid #0097da;font-size: 0.16rem;height: 0.4rem;line-height: 0.4rem;}
+.menu li a{color: #fff;display: inline-block;width: 100%;text-align: center; text-decoration:none;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<header id="header">
+    <span class="left" onclick="javascript:history.go(-1);">返回</span>
+    <h1>首页</h1>
+    <span class="right"></span>
+</header>
+<div class="menu">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">指南</a></li>
+    <li><a href="#">票务</a></li>
+    <li><a href="#">魅力昆山</a></li>
+    <li><a href="#">赛程</a></li>
+    <li><a href="#">图文</a></li>
+    <li><a href="#">视频</a></li>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$("#header span.right").on("click",function(){
+        var val = $(this).attr('class');
+        if(val.indexOf('on') == -1){
+            $(this).addClass('on');
+            $(".menu").show(0).stop().animate({
+                height:'4.1rem'
+            },0);
+        }else{
+            $(this).removeClass('on');
+            $(".menu").hide(0).stop().animate({
+                height:'0'
+            },0);
+        }
+    })
+	
+	$(".menu a").on("click",function(){
+        $(this).parents(".menu").hide();
+        $("#header span.right").removeClass('on');
+    })
+	
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* 代码整理：小白 lanrenzhijia.com */
+*{ margin:0; padding:0;}
+img{ border:none;}
+.absolute{
+	position:absolute; 	
+}
+.relative{
+	position:relative;	
+}
+ul,li{ list-style:none;}
+.pointer {
+    cursor: pointer;
+}
+.frame960 {
+	width:960px;
+	margin:0 auto;
+}
+.lanrenzhijia {
+	height:423px;
+	background:url(../images/banner-bg.png) center no-repeat;
+	overflow:hidden;
+}
+.lanrenzhijia .frame960 {
+	height:423px;
+}
+.banner-img {
+	height:420px;
+}
+.banner-bt {
+	height:83px;
+	padding:0 130px;
+	bottom:0;
+	left:0;
+	z-index:9999;
+}
+.banner-bt li {
+	float:left;
+	width:78px;
+	height:83px;
+	padding:0 11px;
+}
+.banner-bt li .pointer {
+	display:block;
+	width:78px;
+	height:50px;
+	padding:33px 0 0 0
+}
+.banner-bt li .pointer.active {
+	background:url(../images/pointer.png) -1px 10px no-repeat;
+}
+.banner-bt li .pointer .ico {
+	display:block;
+	width:46px;
+	height:46px;
+	margin:0 auto;
+}
+.banner-bt li .pointer.active .ico, .banner-bt li .pointer .ico:hover {
+	background-position:0 -46px;
+}
+.banner-img .leftimg, .banner-img .rightimg {
+	left:-999em;
+	position:absolute;
+	top:0;
+	width:960px;
+	height:340px;
+}
+.banner-img .rightimg {
+	text-align:right;
+	-webkit-transform: translate(0px, 0px) rotate(0);
+}
+/* 代码整理：小白 lanrenzhijia.com */

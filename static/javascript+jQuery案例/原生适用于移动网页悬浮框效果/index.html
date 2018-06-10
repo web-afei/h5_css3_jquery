@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生适用于移动网页悬浮框效果</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<div class="float-menu">
+		<div class="plus"><div class="cross"></div></div>
+		<div class="menu-list">
+			<a href="#index" class="link-home">首页</a>
+			<a href="#my" class="link-my">我的</a>
+			<a href="#cart" class="link-cart">购物车<span id="float-cart">6</span></a>
+		</div>
+	</div>
+	<!-- 代码部分end -->
+	<script>
+		if(document.querySelector(".float-menu")){
+			var plus = document.querySelector(".plus");
+			var floatMenu = document.querySelector(".float-menu");
+			plus.addEventListener("click", function(){
+				floatMenu.className.indexOf("open") > -1?floatMenu.className = "float-menu":floatMenu.className = "float-menu open";
+			},false);
+		}
+	</script>
+</body>
+</html>

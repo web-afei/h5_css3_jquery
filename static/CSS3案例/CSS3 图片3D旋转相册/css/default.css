@@ -1,0 +1,43 @@
+/* ------ general
+-----------------------------------------------*/
+
+body {
+font-family:Arial, Helvetica, sans-serif;
+background:#fff;
+font-size:11px;
+}
+
+.wrapper {
+margin:200px auto 0;
+width:840px;
+}
+
+
+ul.reset,
+ul.reset li {
+display:block;
+list-style:none;
+padding:0;
+margin:0;
+}
+
+
+.gallery ul li {
+width:200px;
+height:200px;
+margin:0 10px 10px 0;
+float:left;
+position:relative;
+}
+
+.holder {
+position:absolute;
+top:0;
+left:0;
+margin:-100px 0 0 -100px;
+}
+
+a img {
+border:none;
+}
+

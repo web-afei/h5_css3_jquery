@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+CSS3在线模拟时钟日期效果</title>
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<ul id="clock">
+  <li id="sec"></li>
+  <li id="hour"></li>
+  <li id="min"></li>
+</ul>
+<div class="cube">
+  <div class="topFace">
+    <div>
+      <div id="three"></div>
+      <div id="three" style="left:60px"></div>
+      <div id="three" style="left:120px"></div>
+    </div>
+  </div>
+  <div class="leftFace">
+    <div id="five"></div>
+    <div id="five" style="top:-50px;left:120px"></div>
+    <div id="five" style="top:-30px;left:60px"></div>
+    <div id="five" style="top:-10px;"></div>
+    <div id="five" style="top:-60px;left:120px"></div>
+  </div>
+  <div class="rightFace">
+    <div class="one"></div>
+  </div>
+</div>
+<script type="text/javascript"> 
+//时间——————————————————————————————————————————
+var d=new Date()
+var weekday=new Array()
+weekday[0]="星期日"
+weekday[1]="星期一"
+weekday[2]="星期二"
+weekday[3]="星期三"
+weekday[4]="星期四"
+weekday[5]="星期五"
+weekday[6]="星期六"
+
+document.write("<div id='calendar'>")
+document.write("<div id='day'><span>" + weekday[d.getDay()]+"</span></div>")
+document.write("<div id='date'><span>" +d.getDate()+"</span></div>")
+document.write("</div>")
+
+</script>
+</body>
+<script type="text/javascript" src="js/lanrenzhijia.js"></script>
+</html>

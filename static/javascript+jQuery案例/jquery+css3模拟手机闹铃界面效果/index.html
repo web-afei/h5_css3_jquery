@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3模拟手机闹铃界面效果</title>
+<link rel="stylesheet"href="css/lanrenzhijia.css" type="text/css"  />
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+</head>
+<body>
+<!--*****************icons***********************-->
+<div class="icon" id="icon_reminder">reminder</div>
+<div class="icon" id="icon_clock">clock</div>
+<div class="icon" id="icon_alarm">alarm</div>
+<div class="icon" id="icon_blue">weather</div>
+<div class="icon" id="icon_contact">contact</div>
+<div class="icon" id="icon_mail">mail</div>
+<div class="icon" id="icon_cut">find</div>
+<div class="icon" id="icon_hole">math</div>
+<!--*****************container***********************-->
+<div class="container">
+  <div class="ask"><span></span></div>
+  <div class="answer"><span></span></div>
+  <!--*****************reminder***********************-->
+  <div class="module rotate" id="reminder">
+    <div class="dateInfo">
+      <div class="date"></div>
+      <div class="day">
+        <div class="weekday"></div>
+        <span class="month"></span> <span class="year"></span> </div>
+    </div>
+    <div class="line">
+      <div class="mark"></div>
+      <input type="text" />
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--*****************timer***********************-->
+  <div class="module rotate" id="timer" >
+    <div class="city">Beijing</div>
+    <div class="clock"> <img src="images/minute.png" id="min" /> <img src="images/hour.png" id="hour" /> </div>
+    <div class="time"></div>
+    <div class="clear"></div>
+  </div>
+  <!--*****************alarm***********************-->
+  <div class="module rotate" id="alarm"  style="padding:0">
+    <div class="alarmClock"> <span> 7</span> <span>00</span> </div>
+    <div class="slide"></div>
+    <div class="clear"></div>
+  </div>
+  <!--*****************contact***********************-->
+  <div class="module2 rotate" id="contact">
+    <div class="infoList">
+      <div class="portrait"><img src="images/linda_mitchell@2x.jpg" /></div>
+      <div class="name">LuoJia.K.Sunny</div>
+    </div>
+    <div class="infoList"><span class="small">mobile:</span><span class="big">(510)555-0182</span></div>
+    <div class="infoList"><span class="small">email:</span><span class="big">luojiayu@me.com</span></div>
+    <div class="infoList"><span class="small">address:</span><span class="big">New York City</span></div>
+    <div class="shadow"></div>
+  </div>
+  <!--*****************mail***********************-->
+  <div class="module2 rotate" id="mail">
+    <div class="infoList"><span class="grey">To:</span>
+      <input class="big" type="text" value="LuoJia.K.Sunny">
+    </div>
+    <div class="infoList"><span class="grey">Subject:</span>
+      <input class="big" type="text" value="Sales Number">
+    </div>
+    <div class="infoList" style="border:none"> <span class="big">Can you please send me the sales number from last quarter?</span> </div>
+    <div class="shadow"></div>
+  </div>
+  <!--*****************find***********************-->
+  <div class="module2 rotate" id="cut" >
+    <div class="cutTop"></div>
+    <div class="cutContent">
+      <div class="row">
+        <div class="logo"><img src="images/starbuks2.png" /></div>
+        <span class="big">STARBUCKS COFFEE</span> <span class="grey">0.4 KM</span> </div>
+      <div class="row blue">
+        <div class="logo"><img src="images/CostaLogo.svg.png" /></div>
+        <span class="big">COSTA COFFEE</span> <span class="grey">0.5 KM</span> </div>
+      <div class="row">
+        <div class="logo"><img src="images/McCafe Logo.png" style="width:100px; margin-left:5px;" /></div>
+        <span class="big">McCafe</span> <span class="grey">0.6 KM</span> </div>
+    </div>
+    <div class="cutDown"></div>
+  </div>
+  <!--*****************question***********************-->
+  <div class="module2 rotate" id="hole" >
+    <div class="holeside"></div>
+    <div class="holeContent"> “1+1=?”That's pretty easy...<br />
+      According to the Arithmetic Rule
+      The result is 2. </div>
+    <div class="holeside"></div>
+  </div>
+  <!--*****************weather***********************-->
+  <div class="module2 rotate" id="blue" >
+    <div class="bluecutTop"></div>
+    <div class="bluecutContent">
+      <div class="weekly">Weekly Forcast</div>
+      <div class="colume"> <span class="days">MON</span> <img src="images/sun.png" /> <span class="temp">25°</span> <span class="grey">17°</span> </div>
+      <div class="colume"> <span class="days">TUES</span> <img src="images/sun.png" /> <span class="temp">25°</span> <span class="grey">18°</span> </div>
+      <div class="colume"> <span class="days">WED</span> <img src="images/sun.png" /> <span class="temp">27°</span> <span class="grey">20°</span> </div>
+      <div class="colume"> <span class="days">THU</span> <img src="images/sun.png" /> <span class="temp">27°</span> <span class="grey">22°</span> </div>
+      <div class="colume"> <span class="days">FRI</span> <img src="images/sun.png" /> <span class="temp">27°</span> <span class="grey">21°</span> </div>
+      <div class="colume"> <span class="days selected">SAT</span> <img src="images/sun.png" /> <span class="temp selected">26°</span> <span class="grey selected">17°</span> </div>
+      <div class="colume"> <span class="days selected">SUN</span> <img src="images/sun.png" /> <span class="temp selected">27°</span> <span class="grey selected">21°</span> </div>
+    </div>
+  </div>
+  <div class="buttonSet">
+    <div class="button">Cancel</div>
+    <div class="button confirm">Confirm</div>
+  </div>
+  <div id="siri"><img src="images/siri.png"/></div>
+</div>
+</body>
+</html>

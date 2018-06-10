@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery模拟skype按钮效果 - 站长素材</title>
+   <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".button").hover(function(){
+                $(".button img")
+                .animate({top:"-10px"}, 200).animate({top:"-4px"}, 200) // first jump
+                .animate({top:"-7px"}, 100).animate({top:"-4px"}, 100) // second jump
+                .animate({top:"-6px"}, 100).animate({top:"-4px"}, 100); // the last jump
+            });
+        }); 
+    </script>
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-size: 12px;
+            margin: 20px;
+        }
+        .button {
+            padding: 4px 10px 3px 25px;
+            border: solid 1px #8AB134;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            background-image: url( 'bkg.png' );
+            background-repeat: repeat-x;
+            font-size: 11px;
+            height: 16px;
+            text-decoration: none;
+            color: #40740D;
+            -moz-border-radius-bottomleft: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+        }
+        .button img {
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            border: none;
+        }
+        .button:hover {
+            color: #8AB134;
+        }
+        input, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body><center>
+<br><br>
+    <label for="name">
+        Your name</label>
+    <input type="text" id="name" />
+    <label for="message">
+        Your message</label>
+    <textarea cols="20" rows="5" id="message"></textarea>
+
+    <a class="button" href="#">
+        <img src="button.png" alt="" />Send info</a> or <a href="#">cancel</a><br />
+	<img src="click_here.png" alt="Click here"></center>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+
+</div>
+</body>
+</html>

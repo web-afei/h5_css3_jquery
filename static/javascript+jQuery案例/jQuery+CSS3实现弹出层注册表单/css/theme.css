@@ -1,0 +1,334 @@
+BODY {
+	FONT-FAMILY: Arial; BACKGROUND: url(Images/bgPatteren.png); COLOR: #89919a; FONT-SIZE: 12px
+}
+P {
+	LINE-HEIGHT: 19px
+}
+#allOptions P {
+	LINE-HEIGHT: 15px
+}
+H1 {
+	FONT-FAMILY: "Open Sans", sans-serif; COLOR: #888; FONT-WEIGHT: normal
+}
+H2 {
+	FONT-FAMILY: "Open Sans", sans-serif; COLOR: #888; FONT-WEIGHT: normal
+}
+H3 {
+	FONT-FAMILY: "Open Sans", sans-serif; COLOR: #888; FONT-WEIGHT: normal
+}
+H4 {
+	FONT-FAMILY: "Open Sans", sans-serif; COLOR: #888; FONT-WEIGHT: normal
+}
+.posts LI {
+	MARGIN-BOTTOM: 10px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+HR {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.heightLight {
+	COLOR: #97cf62; drop-shadow: 1px 0px 0px #000000
+}
+#headerLoginMenu {
+	POSITION: absolute; TOP: 88px; LEFT: 0px
+}
+#headerLoginMenu A {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: inline-block; FLOAT: left; MARGIN-RIGHT: 10px; PADDING-TOP: 4px; border-radius: 4px
+}
+.codecode {
+	LINE-HEIGHT: 25px; MARGIN-TOP: 6px; WHITE-SPACE: nowrap; HEIGHT: 70px; border-radius: 5px
+}
+P {
+	MARGIN-TOP: 0px; PADDING-TOP: 0px
+}
+H2 {
+	MARGIN-BOTTOM: 10px; FONT-SIZE: 16px
+}
+H1 {
+	MARGIN-BOTTOM: 10px; FONT-SIZE: 16px
+}
+H1 {
+	MARGIN-BOTTOM: 10px; FONT-SIZE: 20px
+}
+LI {
+	LIST-STYLE-POSITION: inside; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	LIST-STYLE-POSITION: inside; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	LIST-STYLE-POSITION: inside; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+HR {
+	BORDER-BOTTOM: white 1px solid; BORDER-LEFT: medium none; HEIGHT: 1px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+#siteContainer {
+	POSITION: relative; MIN-HEIGHT: 100%; WIDTH: 100%
+}
+#paddingFix {
+	PADDING-BOTTOM: 267px
+}
+.clear {
+	CLEAR: both
+}
+#headerBot {
+	BORDER-BOTTOM: black 1px solid; POSITION: relative; PADDING-BOTTOM: 30px; MIN-HEIGHT: 194px; WIDTH: 100%; BACKGROUND: url(Images/downloadSetBg.png)
+}
+#headerBotTopLine {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 100%; BACKGROUND: url(Images/bgTop.png) 0px -275px; HEIGHT: 50px; TOP: 0px; LEFT: 0px
+}
+#header {
+	BACKGROUND: url(Images/bgTop.png) 0px -43px; HEIGHT: 232px
+}
+#topMenu {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline-block; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+#topMenu LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+#topMenu LI A {
+	COLOR: #8491a0; MARGIN-RIGHT: 20px
+}
+#forgotPass {
+	POSITION: absolute; FONT-SIZE: 11px; TOP: 6px; LEFT: -110px
+}
+#topMenu LI A:hover {
+	COLOR: #aabbcf
+}
+.inlineBtn {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; PADDING-TOP: 3px
+}
+#footer {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; BACKGROUND: url(Images/bgBot.png); HEIGHT: 217px; LEFT: 0px
+}
+.ct {
+	POSITION: relative; MARGIN: 0px auto; WIDTH: 982px
+}
+* {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+#login {
+	POSITION: absolute; WIDTH: 100%; BACKGROUND: url(Images/bgTop.png) 50% top; HEIGHT: 43px; TOP: -43px; LEFT: 0px
+}
+#topRight {
+	MARGIN-TOP: 9px; DISPLAY: inline-block; FLOAT: right
+}
+.topLeft {
+	POSITION: absolute; DISPLAY: inline-block; TOP: 17px; LEFT: 0px
+}
+#invisLoginArea {
+	WIDTH: 100%; DISPLAY: none; BACKGROUND: url(Images/bgTop.png) 50% top; HEIGHT: 43px
+}
+#login INPUT {
+	FLOAT: left; MARGIN-LEFT: 5px
+}
+#login .button {
+	FLOAT: left; MARGIN-LEFT: 5px
+}
+.dark INPUT[type='text'] {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 8px; LINE-HEIGHT: 12px; MARGIN: 0px; PADDING-LEFT: 13px; PADDING-RIGHT: 13px; FONT-FAMILY: Arial; COLOR: #a5a5a5; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 8px; border-radius: 6px; box-shadow: inset 0px 1px 8px rgba(0, 0, 0, .25), 0px 1px 0px rgba(255, 255, 255, .15), 0px 0px 3px rgba(255, 255, 255, 0); text-shadow: 0px 1px 2px rgba(0, 0, 0, .3)
+}
+.dark INPUT[type='password'] {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 8px; LINE-HEIGHT: 12px; MARGIN: 0px; PADDING-LEFT: 13px; PADDING-RIGHT: 13px; FONT-FAMILY: Arial; COLOR: #a5a5a5; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 8px; border-radius: 6px; box-shadow: inset 0px 1px 8px rgba(0, 0, 0, .25), 0px 1px 0px rgba(255, 255, 255, .15), 0px 0px 3px rgba(255, 255, 255, 0); text-shadow: 0px 1px 2px rgba(0, 0, 0, .3)
+}
+.dark#login INPUT[type='text'] {
+	PADDING-BOTTOM: 5px !important; PADDING-LEFT: 13px !important; PADDING-RIGHT: 13px !important; PADDING-TOP: 5px !important
+}
+.dark#login INPUT[type='password'] {
+	PADDING-BOTTOM: 5px !important; PADDING-LEFT: 13px !important; PADDING-RIGHT: 13px !important; PADDING-TOP: 5px !important
+}
+.dark#login .button {
+	PADDING-BOTTOM: 4px !important; PADDING-LEFT: 10px !important; PADDING-RIGHT: 10px !important; PADDING-TOP: 4px !important
+}
+.dark INPUT[type='text']:focus {
+	box-shadow: inset 0px 1px 8px rgba(0, 0, 0, .25), 0px 1px 0px rgba(255, 255, 255, .05), 0px 0px 3px rgba(255, 255, 255, 0.3)
+}
+.dark INPUT[type='password']:focus {
+	box-shadow: inset 0px 1px 8px rgba(0, 0, 0, .25), 0px 1px 0px rgba(255, 255, 255, .05), 0px 0px 3px rgba(255, 255, 255, 0.3)
+}
+.animate {
+	-webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out
+}
+.button {
+	-webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out
+}
+.iconBox {
+	-webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out
+}
+#tHeader * {
+	-webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out
+}
+.dark A {
+	-webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out
+}
+.dark .button {
+	BORDER-BOTTOM: black 1px solid; POSITION: relative; FILTER: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a545e', endColorstr='#3a424b',GradientType=0 ); BORDER-LEFT: black 1px solid; PADDING-BOTTOM: 7px; PADDING-LEFT: 13px; PADDING-RIGHT: 13px; DISPLAY: inline-block; FONT-FAMILY: Arial; BACKGROUND: rgb(74,84,94); COLOR: #a5a5a5; BORDER-TOP: black 1px solid; CURSOR: pointer; BORDER-RIGHT: black 1px solid; PADDING-TOP: 7px; border-radius: 6px; box-shadow: 0px 1px 0px rgba(255, 255, 255, .05), inset 0px 1px 0px rgba(255, 255, 255, .15), inset 0px 1px 30px rgba(255, 255, 255, 0); text-shadow: 0px 1px 2px rgba(0, 0, 0, .7); -webkit-transition: all 0.3; -o-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s
+}
+.dark .button:hover {
+	COLOR: #efefef; box-shadow: 0px 1px 0px rgba(255, 255, 255, .05), inset 0px 1px 0px rgba(255, 255, 255, .15), inset 0px 1px 30px rgba(255, 255, 255, .08)
+}
+.dark {
+	COLOR: #90999c; text-shadow: 0px 1px 2px rgba(0, 0, 0, .3)
+}
+.dark B {
+	COLOR: #8491a0; FONT-WEIGHT: bold
+}
+.dark A {
+	COLOR: #90999c; text-shadow: 0px 1px 2px rgba(0, 0, 0, .3)
+}
+#seccondBar {
+	POSITION: relative; WIDTH: 100%
+}
+.dark H3 {
+	MARGIN: 0px 0px 15px; COLOR: #bababa; FONT-SIZE: 15px; FONT-WEIGHT: normal; text-shadow: 0px 1px 0px rgba(0, 0, 0, .8)
+}
+#seccondBarRight H3 {
+	PADDING-LEFT: 30px
+}
+H3.check {
+	LINE-HEIGHT: 19px; TEXT-INDENT: 34px; BACKGROUND: url(images/checkBig.png) no-repeat; HEIGHT: 19px
+}
+A {
+	CURSOR: pointer; TEXT-DECORATION: none
+}
+
+.button DIV {
+	FLOAT: left
+}
+.button .spacer {
+	POSITION: relative; WIDTH: 3px; DISPLAY: inline-block; FLOAT: left; HEIGHT: 4px; MARGIN-LEFT: 11px; MARGIN-RIGHT: 11px
+}
+.button .spacer DIV {
+	POSITION: absolute; WIDTH: 3px; BACKGROUND: url(Images/btnGreenSpacer.png); HEIGHT: 21px; TOP: -3px; LEFT: 0px
+}
+
+.checkbox {
+	LINE-HEIGHT: 19px; TEXT-INDENT: 33px; WIDTH: 100%; MARGIN-BOTTOM: 10px; BACKGROUND: url(images/checkBoxDark.png) no-repeat; HEIGHT: 21px; CURSOR: pointer
+}
+.checkbox:hover {
+	BACKGROUND: url(images/checkBoxDark.png) no-repeat 0px -21px
+}
+.checked.checkbox {
+	BACKGROUND: url(images/checkBoxDark.png) no-repeat 0px -42px
+}
+.checked.checkbox:hover {
+	BACKGROUND: url(images/checkBoxDark.png) no-repeat 0px -63px
+}
+
+.popup {
+	Z-INDEX: 120; BORDER-BOTTOM: #252a2e 1px solid; POSITION: fixed; BORDER-LEFT: #252a2e 1px solid; MARGIN-TOP: -140px; WIDTH: 500px; DISPLAY: none; BACKGROUND: #3e454e; HEIGHT: 280px; MARGIN-LEFT: -250px; BORDER-TOP: #252a2e 1px solid; TOP: 50%; BORDER-RIGHT: #252a2e 1px solid; LEFT: 50%; opacity: 0; border-radius: 9px; box-shadow: 0px 2px 7px 0px black
+}
+.topBar {
+	POSITION: absolute; FILTER: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383f47', endColorstr='#31373e',GradientType=0 ); LINE-HEIGHT: 40px; TEXT-INDENT: 20px; WIDTH: 100%; BACKGROUND: rgb(56,63,71); HEIGHT: 40px; TOP: 0px; LEFT: 0px; border-radius: 9px; box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .2), 0px 1px 0px 0px rgba(0, 0, 0, .58); border-bottom-right-radius: 0px; border-bottom-left-radius: 0px
+}
+.botBar {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; HEIGHT: 65px; LEFT: 0px; box-shadow: 0px -1px 0px 0px #343a41, inset 0px 1px 0px 0px #555c64
+}
+.popupClose {
+	POSITION: absolute; WIDTH: 16px; BACKGROUND: url(images/closePopup.png); HEIGHT: 15px; TOP: 14px; CURSOR: pointer; RIGHT: 20px; opacity: .7
+}
+.posts H2 {
+	MARGIN: 0px
+}
+time {
+	COLOR: #aaa; FONT-WEIGHT: normal
+}
+.popupClose:hover {
+	opacity: 1
+}
+.popupContent {
+	POSITION: relative; MARGIN: 60px 20px 20px
+}
+.popupContent INPUT[type='text'] {
+	MARGIN-TOP: 7px; WIDTH: 190px; MARGIN-BOTTOM: 15px
+}
+.popupContent INPUT[type='password'] {
+	MARGIN-TOP: 7px; WIDTH: 190px; MARGIN-BOTTOM: 15px
+}
+.popupButtons {
+	POSITION: absolute; BOTTOM: 16px; RIGHT: 20px
+}
+.popupBottonText {
+	POSITION: absolute; BOTTOM: 22px; LEFT: 20px
+}
+.white.button {
+	BORDER-BOTTOM: medium none; FILTER: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#b2b2b2',GradientType=0 ); BORDER-LEFT: medium none; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: rgb(198,198,198); COLOR: #232123; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none; box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, .4), 0px 1px 2px 0px rgba(0, 0, 0, .5); text-shadow: 0px 1px 0px rgba(255, 255, 255, .2)
+}
+.white.button:hover {
+	COLOR: #232123; box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, .4), 0px 1px 2px 0px rgba(0, 0, 0, .5), inset 0px 0px 30px 0px rgba(255, 255, 255, 1); text-shadow: 0px 1px 0px rgba(255, 255, 255, .2)
+}
+.unselectable {
+	-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none
+}
+.iconContainer {
+	TEXT-ALIGN: center; DISPLAY: inline-block; FLOAT: left
+}
+.iconContainer DIV {
+	MARGIN: 0px auto
+}
+.hr {
+	TEXT-ALIGN: center; WIDTH: 100%; MARGIN-BOTTOM: 18px; HEIGHT: 20px; box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, .4)
+}
+.hr DIV {
+	MARGIN-TOP: 12px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; DISPLAY: inline-block; BACKGROUND: #3e454e
+}
+.dark A:hover {
+	
+}
+.inputHolder {
+	POSITION: relative
+}
+.inputHolder IMG {
+	POSITION: absolute; DISPLAY: none; TOP: 16px; RIGHT: 7px
+}
+.tooltip {
+	POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; DISPLAY: none; BACKGROUND: url(images/tooltipMiddle.png); HEIGHT: 45px; PADDING-TOP: 0px
+}
+.tooltip .tRight {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 40px; BACKGROUND: url(images/tooltipRight.png); HEIGHT: 45px; TOP: 0px; RIGHT: -40px
+}
+.tooltip .tLeft {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 19px; BACKGROUND: url(images/tooltipLeft.png); HEIGHT: 45px; TOP: 0px; LEFT: -19px
+}
+.tooltip .text {
+	Z-INDEX: 20; POSITION: relative; MARGIN-TOP: 10px; MARGIN-LEFT: -16px; MARGIN-RIGHT: -34px
+}
+UL.iconList LI IMG {
+	MARGIN-RIGHT: 8px; opacity: .6
+}
+UL.iconList LI {
+	MARGIN-TOP: 10px
+}
+UL.iconList LI A:hover IMG {
+	opacity: .8
+}
+.tooltipLeft {
+	POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; DISPLAY: none; BACKGROUND: url(images/tooltipLeftSideMiddle.png); HEIGHT: 45px; PADDING-TOP: 0px
+}
+.tooltipLeft .tRight {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 19px; BACKGROUND: url(images/tooltipLeftSideRight.png); HEIGHT: 45px; TOP: 0px; RIGHT: -19px
+}
+.tooltipLeft .tLeft {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 40px; BACKGROUND: url(images/tooltipLeftSideLeft.png); HEIGHT: 45px; TOP: 0px; LEFT: -40px
+}
+.tooltipLeft .text {
+	Z-INDEX: 20; POSITION: relative; MARGIN-TOP: 10px; MARGIN-LEFT: -34px; MARGIN-RIGHT: -16px
+}
+UL.circleList LI {
+	TEXT-INDENT: 20px; BACKGROUND: url(images/circle.png) no-repeat 5px 5px
+}
+BODY {
+	OVERFLOW-Y: scroll
+}
+
+* {
+	OUTLINE-STYLE: none !important; OUTLINE-COLOR: invert !important; OUTLINE-WIDTH: medium !important
+}

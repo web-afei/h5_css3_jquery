@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery+CSS3打造效果绚丽的跑车开场动画特效</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet"  />
+</head>
+<body>
+<div class="container">
+      <div id="logo"></div>
+      <div class="title">Lamborghini</div>
+       <div class="light">
+            <div class="color" id="red"></div>
+            <div class="color" id="yellow"></div>
+            <div class="color" id="green"></div>
+      </div>
+      
+      <ul>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Models</a></li>
+          <li><a href="#">Museum</a></li>
+          <li><a href="#">Store</a></li>
+      </ul>
+      <div class="car small"></div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script> 
+<script type='text/javascript'> 	
+	$(document).ready(function(){
+	var n = 0.05;		
+    
+	$(".car").removeClass("small");
+	var running = setInterval(function(){
+		if(n<1){
+		n+=0.05;
+		var scale = "scale("+n+")"	
+		$(".car").css({"-ms-transform":scale,
+					   "-webkit-transform":scale,
+					   "-moz-transform": scale,
+					   "-o-transform" : scale
+							});
+		}
+		else{
+			clearInterval(running);
+			fadeIn();
+		}
+	},70)
+	
+	var i = 0;
+
+	function fadeIn(){
+		$("#logo,.title").fadeIn(500,show);	
+	}
+	
+	function show(){
+			$("ul").animate({"margin-left":40});
+									 
+	}
+	
+	$("#red").click(function(){
+			$(".car").css({"background":"url(images/lamborghiniR.png)"})				 
+							 })
+	$("#green").click(function(){
+			$(".car").css({"background":"url(images/lamborghiniG.png)"})				 							 
+							 })
+	$("#yellow").click(function(){
+			$(".car").css({"background":"url(images/lamborghiniY.png)"})				 							 
+							 })
+	
+	$(".car").hover(function(){
+				$(".door").addClass("hover");			 
+							 },function(){
+								 				$(".door").removeClass("hover");			 
+
+							 })
+
+});
+
+</script> 
+</body>
+</html>

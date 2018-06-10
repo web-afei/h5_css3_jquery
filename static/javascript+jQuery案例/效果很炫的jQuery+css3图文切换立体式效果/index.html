@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>效果很炫的jQuery+css3图文切换立体式效果</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- Google Webfonts and our stylesheet -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/demo1.css" />
+<!-- JavaScript includes -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/ipresenter.packed.js"></script>
+<script>
+			$(document).ready(function(){
+				$('#ipresenter').iPresenter({
+					timerPadding: -1,
+					controlNav: true,
+					controlNavThumbs: true,
+					controlNavNextPrev: false
+				});
+			});
+		</script>
+</head>
+<body>
+<ul class="examples">
+  <li class="logo">iPresenter v2.0</li>
+   <li><a href="index2.html" class="active">Demo 2</a></li>
+  <li><a href="index.html">Demo 1</a></li>
+ 
+  
+</ul>
+<div class="container">
+  <div id="ipresenter">
+    <div id="intro" class="step" data-x="0" data-y="0" data-thumbnail="img/thumbnails/1.jpg"> <img src="img/details.png" />
+      <h2>A phone that sees the world like you do, in 3D</h2>
+      <p> Now your photos can have as much depth as the moment itself. HTC EVO 3D captures your photos and videos in 3D, plus you can view them without the glasses. The stunning 4.3-inch qHD display gives you crisp websites, vivid images and incredibly fluid videos. </p>
+    </div>
+    <div id="capture" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="180" data-thumbnail="img/thumbnails/2.jpg"> <img src="img/ksp1.png" />
+      <h2>Capture life in 3D</h2>
+      <p> HTC EVO 3D allows you to shoot 3D movies and snap 3D photos via dual cameras, so no matter where you are, capture life as it should be. And see it all in true-to-life detail without 3D glasses. </p>
+    </div>
+    <div id="view" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270" data-thumbnail="img/thumbnails/3.jpg"> <img src="img/ksp2.png" />
+      <h2>An incredible view</h2>
+      <p> The large 4.3 inch display serves up incredibly crisp websites, vivid images and fluid video on a pixel-packed qHD screen. Catch the latest blockbusters straight from HTC Watch ?a new service that starts the show just seconds into the download and monitors your Internet connection to ensure uninterrupted viewing. </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

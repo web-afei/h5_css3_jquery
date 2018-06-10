@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery右侧悬浮框控制楼层切换-改良版</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ font-size:14px; font-family:'微软雅黑';}
+#lanrenzhijia{ position:fixed; left:0; top:0;}
+#lanrenzhijia .main{ position:relative;}
+#lanrenzhijia .lanren{ float:left; overflow:hidden; color:#fff;}
+#lanrenzhijia .list{ width:100%; float:left; overflow:hidden; position:absolute; left:0; top:0;}
+
+#float-right{ width:50px; height:auto; position:absolute; right:0; top:200px; z-index:200; background:#fff;}
+#float-right a{ width:100%; height:35px; line-height:35px; display:block; color:#333; text-align:center; text-decoration:none;}
+#float-right a:hover,#float-right a.on{ color:#fff; background:#c40000; text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div id="lanrenzhijia">
+	<div class="main">
+    	<div class="list">
+    		<div class="lanren" style="background:#009999">111</div>
+    		<div class="lanren" style="background:#333399">222</div>
+    		<div class="lanren" style="background:#990066">333</div>
+    		<div class="lanren" style="background:#660000">444</div>
+        	<div class="lanren" style="background:#333333">555</div>
+        	<div class="lanren" style="background:#666699">666</div>
+    	</div>
+    </div>
+</div>
+
+<div id="float-right">
+	<a href="javascript:;" class="on">一楼</a>
+    <a href="javascript:;">二楼</a>
+    <a href="javascript:;">三楼</a>
+    <a href="javascript:;">四楼</a>
+    <a href="javascript:;">五楼</a>
+    <a href="javascript:;">六楼</a>
+</div>
+
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	var wHeight = $(window).height(); //获取浏览器窗口宽度
+	var wWidth = $(window).width(); //获取浏览器窗口高度
+	$('#lanrenzhijia .list').height($('.lanren').length*wHeight);
+	$('#lanrenzhijia,#lanrenzhijia .main,#lanrenzhijia .lanren').height(wHeight).width(wWidth);
+	$(window).resize(function(){
+		var wHeight = $(window).height(); //获取浏览器窗口宽度
+		var wWidth = $(window).width(); //获取浏览器窗口高度
+		$('#lanrenzhijia .list').height($('.lanren').length*wHeight);
+		$('#lanrenzhijia,#lanrenzhijia .main,#lanrenzhijia .lanren').height(wHeight).width(wWidth);
+	});
+	// 点击定位
+	$('#float-right a').on('click',function(){
+		var index = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on');
+		$('#lanrenzhijia .list').stop().animate({top:-wHeight*index});
+	})
+	
+	//右侧导航固定
+	var defaultTop = (wHeight-$('#float-right a').height()*($('#float-right a').length+1))/2; // 悬浮框默认居中
+	console.log(defaultTop);
+	$(window).scroll(function(){
+	var offsetTop = defaultTop + $(window).scrollTop()+'px';
+	$('#float-right').animate({top:offsetTop},
+	{	duration: 600,	//滑动速度
+     	queue: false    //此动画将不进入动画队列
+    });
+						  
+});
+	
+});
+</script>
+</body>
+</html>

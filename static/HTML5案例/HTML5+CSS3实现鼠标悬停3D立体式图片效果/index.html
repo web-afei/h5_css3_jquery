@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5+CSS3实现鼠标悬停3D立体式图片效果</title>
+<style>
+#lanrenzhijia {width: 500px;height: 500px;background: #fefefe;perspective: 900px;border:1px solid #DDD;	margin:50px auto;}
+.phone{position: absolute;top: 50%;left: 50%;width: 200px;height: 340px;	margin: -220px 0 0 -100px;
+	background: url(http://demo.lanrenzhijia.com/2015/css0122/images/lanrenzhijia.jpg) 0 0 / 200px 340px no-repeat;
+	box-shadow: -7px 10px 10px #333;
+	transform: rotateX(60deg) rotateY(3deg) rotateZ(-25deg);
+	transform-origin:50% 50%;
+	transition: all 1s;
+}
+#lanrenzhijia:hover .phone {transform: rotate3d(0, 0, 0, 0deg);	box-shadow: -100px 100px 20px #fff;}
+</style>
+</head>
+<body>
+<!--代码部分 begin-->
+<div id="lanrenzhijia">
+  <div class="phone" href="javascript:;"></div>
+</div>
+<!--代码部分 end-->
+</body>
+</html>

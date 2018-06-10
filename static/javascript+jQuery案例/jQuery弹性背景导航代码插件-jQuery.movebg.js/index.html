@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery弹性背景导航代码插件-jQuery.movebg.js</title>
+<style>
+*{ margin:0; padding:0; list-style:none; text-decoration:none;}
+/* 代码整理：小白 www.mysite.com */
+/* 正文 */
+.wraper{ width:960px; padding-top:100px; margin:0 auto}
+.nav{ position:relative; width:100%; height:40px; background:#C70757; overflow:hidden}
+.nav-item{ position:relative; float:left; width:120px; height:40px; line-height:40px; text-align:center; font-size:14px; z-index:1}
+.nav-item a{ display:block; height:40px; color:#fff;}
+.nav-item a:hover{ color:#fff}
+.move-bg{ display:none;position:absolute;left:0;top:0; width:120px; height:40px; background:#4D0B33; z-index:0}
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="wraper">
+    <div class="nav">
+        <ul>
+            <li class="nav-item"><a href='http://www.mysite.com/'>小白</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/nav/'>菜单导航</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/time/'>时间日期</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/banner/'>焦点图</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/tab/'>tab标签</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/jquery/'>jquery特效</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/service/'>在线客服</a></li>
+    		<li class="nav-item"><a href='http://www.mysite.com/ads/'>广告代码</a></li>
+        </ul>
+        <!--移动的滑动-->
+        <div class="move-bg"></div>
+        <!--移动的滑动 end-->
+    </div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/1.7.2/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.movebg.js"></script>
+<script>
+$(function(){
+	$(".nav").movebg({width:120/*滑块的大小*/,extra:40/*额外反弹的距离*/,speed:300/*滑块移动的速度*/,rebound_speed:400/*滑块反弹的速度*/});
+})
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>
